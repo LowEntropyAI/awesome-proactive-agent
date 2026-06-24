@@ -19,6 +19,11 @@
 
 > If this list is useful, a ⭐ helps others find it.
 
+## Companion Guides
+
+- [Research Map](RESEARCH_MAP.md): question-driven clusters for quickly locating papers by intervention timing, inference, long-term intent, personalization, evaluation, and safety.
+- [Benchmark Matrix](BENCHMARKS.md): side-by-side benchmark comparison by domain, input stream, proactive target, user model, data type, and metrics.
+
 ---
 
 ## Contents
