@@ -29,7 +29,6 @@
 ## Contents
 
 - [Scope](#scope)
-- [Research Taxonomy](#research-taxonomy)
 - [Must Read](#must-read)
 - [Papers](#papers)
   - [Foundations, Surveys and Human Factors](#foundations-surveys-and-human-factors)
@@ -62,16 +61,6 @@ Resource labels:
 - **Website**: project page, conference page, lab page, or documentation.
 - **Code / Dataset**: GitHub, released code, released benchmark, or released dataset.
 - **Notes**: short English decision card with why the paper matters, proactivity signal, evaluation setup, limitations, and use cases.
-
----
-
-## Research Taxonomy
-
-<p align="center">
-  <img src="assets/taxonomy.png" alt="Proactive Agent Research Taxonomy" width="100%">
-</p>
-
-> **Four research dimensions:** *When* to act (intervention timing) · *What* to infer (intent & memory) · *How* to respond (GUI, dialogue, multimodal) · *Who* for whom (personalization & safety) — unified by an evaluation layer of 22+ benchmarks.
 
 ---
 
