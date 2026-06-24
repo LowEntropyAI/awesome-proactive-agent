@@ -1,80 +1,21 @@
 # ProactiveMobile: A Comprehensive Benchmark for Boosting Proactive Intelligence on Mobile Devices
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2602.21858](https://arxiv.org/abs/2602.21858) |
-| **提交日期** | 2026 年 2 月 25 日 |
-| **领域** | cs.AI |
+ProactiveMobile defines a clear mobile-agent benchmark where the user intent is latent and the agent must translate context into executable API sequences.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The agent infers what the user may need from mobile context and plans actions without receiving a fully specified instruction.
 
-移动端主动智能综合评测基准：形式化「推断隐性用户意图 → 生成可执行操作序列」的任务，包含 3660+ 实例、14 个场景、63 个 API，揭示当前 MLLM 主动性能力的严重不足。
+## Evaluation Setup
 
----
+The benchmark evaluates mobile context understanding, latent-intent inference, and API-sequence generation across proactive mobile scenarios.
 
-## 动机
+## Key Limitations
 
-多模态大模型（MLLM）在移动代理领域已取得显著进展，但几乎全部停留于**被动执行显式指令**的范式。真正的主动移动智能需要：
-- 感知设备上丰富的上下文信号（通知、日历、位置、应用状态等）
-- 推断用户**尚未说出口的需求**
-- 自主生成完整的可执行操作序列
+The benchmark is closer to offline planning than live phone interaction. Real interruption cost, consent, and app-state volatility remain under-modeled.
 
-缺乏能评测这一能力的基准，是领域瓶颈所在。
+## Use For
 
----
-
-## Benchmark 设计
-
-### 任务形式化
-
-```
-输入：4 个维度的设备上下文信号
-  ├── 通知与消息
-  ├── 日历与日程
-  ├── 应用使用状态
-  └── 位置与时间
-
-输出：从 63 个 API 中选择并组合，生成可执行操作序列
-```
-
-### 数据规模
-
-| 维度 | 数量 |
-|------|------|
-| 总实例数 | 3,660+ |
-| 场景类别 | 14 个 |
-| API 函数池 | 63 个 |
-| 标注专家 | 30 人团队 |
-| 标注维度 | 事实准确性 · 逻辑一致性 · 操作可行性 |
-
----
-
-## 核心实验结果
-
-| 模型 | 成功率 |
-|------|--------|
-| **Qwen2.5-VL-7B-Instruct (微调)** | **19.15%** 🥇 |
-| o1 | 15.71% |
-| GPT-5 | 7.39% |
-
-> 🔑 **关键发现**：7B 微调小模型超越 o1 和 GPT-5，说明主动性是**可学习的专项能力**，而非靠通用智能自然涌现。
-
----
-
-## 核心贡献
-
-1. 首个系统性的移动端主动智能评测基准
-2. 提出 4 维上下文信号 × 63 API 的任务形式化框架
-3. 实验证明主动性可通过微调显著提升
-4. 揭示当前顶尖 MLLM 在主动性上的严重短板
-
----
-
-## 关键词
-
-`Mobile Agent` · `Proactive Intelligence` · `MLLM Benchmark` · `Latent Intent` · `API Calling` · `Fine-tuning`
+Use this for mobile latent-intent inference and API-level proactive task planning.

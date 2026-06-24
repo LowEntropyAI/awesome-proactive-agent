@@ -1,73 +1,21 @@
 # Measuring Proactive Problem Solving in LLM Agents
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2510.19771](https://arxiv.org/abs/2510.19771) |
-| **提交日期** | 2024 年 10 月 |
-| **领域** | cs.AI · cs.CL |
+This paper moves proactive-agent evaluation from "can the agent complete a specified task?" to "can the agent discover the task-relevant problem before being told what it is?" It is useful because it treats problem finding as a first-class capability.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The agent must inspect a personal datastore, infer bottlenecks from user priorities, and decide what action to take without receiving an explicit problem statement.
 
-提出评测 LLM 代理**主动问题发现与解决**能力的 benchmark：给定用户优先级和个人数据库，代理需自主识别"瓶颈"并采取行动，无需被告知问题是什么。
+## Evaluation Setup
 
----
+The benchmark provides user priorities plus a document/database environment. Models are evaluated on search quality, bottleneck identification, and downstream action success.
 
-## 动机
+## Key Limitations
 
-大多数代理研究评测的是"给定任务，能否完成"。但现实中，优秀的助手更重要的能力是：
-- **主动发现**用户还没意识到的问题
-- **不等指令**，自主搜索、判断、行动
+The setup still depends on curated personal datastores and benchmark-defined bottlenecks. It does not fully model live interruption, consent, or user feedback during action.
 
-这种**主动问题解决（Proactive Problem Solving）**能力几乎没有被系统评测过。
+## Use For
 
----
-
-## 任务设计
-
-### 核心流程
-
-```
-输入：
-  - 用户优先级列表（高层目标/偏好）
-  - 个人数据库（文档、邮件、日程等）
-
-代理任务：
-  1. 自主搜索文档，发现相关问题
-  2. 识别最关键的"瓶颈"（Bottleneck）
-  3. 执行相应行动解决瓶颈
-
-评测：代理发现了哪些瓶颈？解决了多少？
-```
-
----
-
-## 模型评测结果
-
-| 模型 | 搜索 F1 | 综合性能 |
-|------|---------|---------|
-| GPT-5 | 最高 | 🥇 最佳 |
-| Claude 4.1 Opus | 较高 | 强 |
-| Kimi-K2 | 中等 | 中 |
-| DeepSeek-R1 | 中等 | 中 |
-| GPT-4.1-mini | 较低 | 弱 |
-
-> **发现**：即便是 GPT-5，在主动搜索和级联推理链路上仍存在显著错误传播问题——先出错后续全错。
-
----
-
-## 核心挑战
-
-1. **瓶颈识别的主观性**：什么是"最关键"的问题因人而异
-2. **级联错误**：搜索阶段的错误会放大为行动阶段的失败
-3. **个性化推断**：需要深刻理解用户的优先级体系
-
----
-
-## 关键词
-
-`Proactive Problem Solving` · `Bottleneck Detection` · `Personal Datastore` · `LLM Evaluation` · `Autonomous Action`
+Use this as a reference for proactive problem discovery, autonomous bottleneck detection, and evaluation beyond reactive task completion.

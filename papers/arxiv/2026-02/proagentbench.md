@@ -1,69 +1,21 @@
 # ProAgentBench: Evaluating LLM Agents for Proactive Assistance with Real-World Data
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2602.04482](https://arxiv.org/abs/2602.04482) |
-| **提交日期** | 2026 年 2 月 4 日 |
-| **领域** | cs.HC |
+ProAgentBench is one of the strongest reminders that proactive-agent benchmarks need real workflow traces; synthetic data can make agents look better than they are.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The agent must decide both when to assist and what assistance to provide from workflow history and current context.
 
-基于**真实世界工作流数据**的主动代理严格评测基准，系统评估 LLM 代理在连续真实环境中"何时主动、如何主动"的能力。
+## Evaluation Setup
 
----
+The benchmark uses hundreds of hours of real workflows, long-term histories, and event sequences to test timing and content quality.
 
-## 动机
+## Key Limitations
 
-现有主动代理评测存在两大问题：
-1. **数据不真实**：基于合成或实验室场景，与真实用户需求脱节
-2. **评测不严格**：缺乏对"主动性"本身的系统性定义与量化指标
+Real workflow data is expensive and privacy-sensitive, so domain coverage is limited. The benchmark does not solve deployment-time consent or UI integration.
 
-ProAgentBench 用真实世界数据填补这一空白。
+## Use For
 
----
-
-## Benchmark 设计
-
-### 核心评测维度
-
-| 维度 | 描述 |
-|------|------|
-| **主动时机判断** | 代理是否在合适的时机发起主动行为 |
-| **主动内容质量** | 主动提供的帮助是否准确、相关、有用 |
-| **过度主动惩罚** | 不必要的主动介入造成的干扰评分 |
-| **连续性** | 跨多个任务步骤保持主动监控的能力 |
-
-### 数据特点
-
-- 来源于 **500+ 小时真实用户工作流会话**
-- 包含 **28,000+ 事件**
-- 保留真实工作流中的 bursty temporal patterns
-- 覆盖多种工作场景与用户任务类型
-- 包含正例（需要主动）和负例（不应主动）
-
----
-
-## 评测发现
-
-- 当前 LLM 代理在主动性上与人类期望有显著差距
-- 模型倾向于**过度主动**（false positive）或完全不主动
-- 主动时机判断比主动内容生成更难
-
----
-
-## 核心贡献
-
-1. 首个使用真实世界数据的主动代理评测基准
-2. 提出多维度主动性量化指标体系
-3. 揭示现有 LLM 主动性能力的具体短板
-
----
-
-## 关键词
-
-`Benchmark` · `Proactive Assistance` · `Real-World Data` · `LLM Evaluation` · `Proactive Timing` · `Human-AI`
+Use this as the primary reference for real-data proactive assistance and sim-to-real gaps in proactive agents.

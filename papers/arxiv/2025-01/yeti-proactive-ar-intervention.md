@@ -1,78 +1,21 @@
-# YETI (YET to Intervene): Proactive Interventions by Multimodal AI Agents in Augmented Reality
+# YETI: Proactive Interventions by Multimodal AI Agents in Augmented Reality Tasks
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2501.09355](https://arxiv.org/abs/2501.09355) |
-| **提交日期** | 2025 年 1 月 16 日 |
-| **领域** | cs.AI · cs.HC · cs.CV |
+YETI pushes proactive assistance into physical, multimodal task environments where timing and modality matter as much as text quality.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The agent observes AR task progress and decides whether, when, and how to intervene before the user explicitly asks for help.
 
-在**增强现实（AR）**环境中，YETI 通过多模态感知监控用户的日常任务执行，在合适时机**主动介入**提供信息或引导——而非等待用户呼唤。
+## Evaluation Setup
 
----
+The system is evaluated on augmented-reality task assistance scenarios using multimodal context such as visual task state and user behavior.
 
-## 动机
+## Key Limitations
 
-AR 助手的理想形态不是"被动的信息查询工具"，而是能够：
-- 感知用户正在做什么（通过摄像头、麦克风、传感器）
-- 判断用户是否需要帮助（即使用户没开口）
-- 在正确的时机、以正确的方式主动介入
+AR task settings are narrower than general computer-use workflows, and results depend on perception fidelity and task-state recognition.
 
-YETI（YET to Intervene）这一命名也暗示了代理的核心挑战：**判断"何时介入"**。
+## Use For
 
----
-
-## 系统架构
-
-```
-[AR 设备传感器]
-  视频 / 音频 / 位置
-       ↓
-[多模态感知模块]
-  场景理解 + 用户行为识别
-       ↓
-[主动介入决策器]
-  需要介入？ 介入时机？ 介入方式？
-       ↓
-[AR 界面输出]
-  悬浮提示 / 语音 / 视觉叠加层
-```
-
----
-
-## 核心挑战与解决方案
-
-| 挑战 | YETI 的解决方案 |
-|------|----------------|
-| 何时介入（Timing）| 基于任务进展状态和用户困惑信号的时机预测 |
-| 介入什么（Content）| 多模态上下文驱动的相关信息生成 |
-| 如何介入（Modality）| 根据用户当前状态选择 AR 展示方式 |
-| 不打扰用户（Unobtrusiveness）| 低干扰度介入策略，避免注意力打断 |
-
----
-
-## 应用场景
-
-- 🔧 **设备维修**：发现用户操作失误前主动提示正确步骤
-- 🍳 **烹饪辅助**：在用户遗漏步骤前主动提醒
-- 🏥 **医疗培训**：实时监测操作并在关键节点主动提供指导
-
----
-
-## 核心结论
-
-- 多模态感知是 AR 主动代理的关键基础
-- 主动介入显著提升任务完成率与用户体验
-- 介入时机（Timing）是比介入内容更难解决的核心问题
-
----
-
-## 关键词
-
-`Proactive Agent` · `Augmented Reality` · `Multimodal AI` · `Intervention Timing` · `Wearable AI` · `Task Assistance`
+Use this as a reference for multimodal intervention timing, wearable assistance, and proactive help in physical workflows.

@@ -1,74 +1,21 @@
 # ProAgent: Harnessing On-Demand Sensory Contexts for Proactive LLM Agent Systems
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2512.06721](https://arxiv.org/abs/2512.06721) |
-| **提交日期** | 2024 年 12 月 |
-| **领域** | cs.AI · cs.CL · cs.HC |
+This paper addresses a practical deployment problem for proactive wearable agents: always-on sensing is expensive, but sparse sensing misses context. It frames sensing itself as an active decision.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The agent proactively decides which sensory context to retrieve, when to retrieve it, and how much context is needed before making an assistance decision.
 
-提出**按需感知（On-Demand Sensing）**机制：主动代理不是持续摄入所有传感器流，而是根据当前不确定性**动态决定查询哪些感知输入**，以应对边缘平台的资源约束。
+## Evaluation Setup
 
----
+The system compares on-demand sensing against fixed or always-on sensing strategies in proactive LLM-agent scenarios with multimodal context and edge-resource constraints.
 
-## 动机
+## Key Limitations
 
-基于传感器的主动代理面临一个实际工程矛盾：
-- **全量感知**：信息完整，但计算开销大，边缘设备无法承受
-- **稀疏感知**：计算高效，但信息不足，主动判断不准
+The central contribution is sensing orchestration, not a complete user-facing consent or interruption policy. Performance also depends heavily on upstream perception quality.
 
-ProAgent 的核心思路：让代理**主动决定"现在需要看/听什么"**，像人一样按需关注。
+## Use For
 
----
-
-## 方法
-
-### 按需感知框架
-
-```
-[当前任务状态 + 不确定性评估]
-           ↓
-[感知需求规划器]
-  ← 决定查询哪些传感器/哪个时间窗口
-           ↓
-[选择性感知数据获取]
-           ↓
-[主动性判断 + 工具调用]
-```
-
-### 与传统方案对比
-
-| 感知策略 | 优点 | 缺点 |
-|----------|------|------|
-| **Always-on（全量持续）** | 信息完整 | 高功耗，边缘不可用 |
-| **Rule-based Trigger（规则触发）** | 低开销 | 覆盖不全，灵活性差 |
-| **ProAgent（按需感知）** | 平衡精度与效率 | 需要感知规划能力 |
-
----
-
-## 核心挑战
-
-1. **感知时机决策**：何时需要额外的感知输入？
-2. **感知类型选择**：视频、音频还是其他传感器？
-3. **时间窗口确定**：查看过去多久的数据？
-4. **边缘推理约束**：如何在低算力平台上运行 LLM 推理？
-
----
-
-## 核心结论
-
-- 按需感知机制在精度和效率之间取得显著更好的平衡
-- 代理的"感知规划"能力与"主动行为规划"能力同等重要
-- 为边缘部署主动代理系统提供了可行路径
-
----
-
-## 关键词
-
-`Proactive Agent` · `On-Demand Sensing` · `Sensory Context` · `Edge Deployment` · `Resource-Constrained` · `Wearable AI`
+Use this when studying proactive agents under wearable, edge, or resource-constrained multimodal sensing.

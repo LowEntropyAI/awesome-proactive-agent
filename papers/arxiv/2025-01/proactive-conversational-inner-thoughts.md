@@ -1,64 +1,21 @@
 # Proactive Conversational Agents with Inner Thoughts
 
-## 基本信息
+## Why It Matters
 
-| 字段 | 内容 |
-|------|------|
-| **来源** | arXiv preprint |
-| **arXiv ID** | [arXiv:2501.00383](https://arxiv.org/abs/2501.00383) |
-| **提交日期** | 2025 年 1 月 1 日 |
-| **领域** | cs.HC · cs.AI |
+This paper gives proactive dialogue a concrete internal mechanism: the agent maintains latent "inner thoughts" instead of only generating outward replies.
 
----
+## Proactivity Signal
 
-## 一句话总结
+The proactive behavior is deciding when to interject, clarify, redirect, or suggest next steps based on inferred user state and dialogue gaps.
 
-为对话代理引入**内心思维（Inner Thoughts）机制**，使代理能追踪用户潜在状态与目标，主动推进对话方向——在用户未明确要求时，主动追问或建议下一步。
+## Evaluation Setup
 
----
+The work evaluates proactive conversational behavior in multi-turn interaction settings, comparing agents with and without explicit inner-thought state tracking.
 
-## 动机
+## Key Limitations
 
-传统对话代理是"回答机器"：用户说什么，代理回应什么，缺乏对对话走向的主动把控。真实的好助手会：
-- 主动追问澄清模糊意图
-- 在合适时机建议用户考虑相关事项
-- 感知用户的潜在目标并提前布局
+The work is dialogue-centric and does not address tool execution, real-world workflow state, or consent-aware proactive actions.
 
----
+## Use For
 
-## 方法
-
-### Inner Thought 机制
-
-代理维护一个**内部思维状态**，持续追踪：
-- 用户当前的**显式意图**（表达出来的）
-- 用户的**隐式目标**（背后的深层需求）
-- 对话的**进展与缺口**
-
-```
-用户输入 → [Inner Thought 更新] → 主动性判断 → 是否主动介入？
-                ↑                        ↓
-           历史对话状态              主动提问/建议 OR 正常回复
-```
-
-### 主动行为类型
-
-| 类型 | 描述 |
-|------|------|
-| **澄清追问** | 用户意图不明确时，主动提出针对性问题 |
-| **预见性建议** | 预判用户下一步需求，提前给出建议 |
-| **话题引导** | 发现对话偏离用户真实目标时，主动重新聚焦 |
-
----
-
-## 核心结论
-
-- Inner Thought 机制显著提升了代理的对话主动性评分
-- 在多轮任务完成场景中，主动澄清减少了用户的迭代次数
-- 为构建"有内心"的对话代理提供了可行路径
-
----
-
-## 关键词
-
-`Proactive Conversation` · `Inner Thoughts` · `User Intent` · `Conversational Agent` · `Clarification` · `HCI`
+Use this for modeling proactive turn-taking, latent user-state tracking, and when-to-speak decisions in conversational agents.
