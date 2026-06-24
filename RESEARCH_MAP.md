@@ -25,6 +25,7 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **Ask-before-Plan** | Infers missing constraints and asks before generating a plan. | Clarification-before-execution policies. |
 | **ProMISe** | Turns information-seeking intent resolution into a proactive multi-turn task. | Dialogue-focused missing-intent inference. |
 | **PIRA-Bench** | Reframes GUI agents as proactive intent recommenders from continuous screenshots. | GUI latent-intent recommendation. |
+| **GUIDE** | Evaluates whether models can understand GUI workflow state, infer user intent, and predict helpful assistance. | Open-ended GUI user-understanding and help-prediction evaluation. |
 | **ProactiveMobile** | Infers mobile latent intent and maps it to API execution sequences. | Mobile-context intent-to-action evaluation. |
 | **Beyond Reactivity / PROBE** | Requires agents to discover hidden bottlenecks in personal data. | Proactive problem finding rather than task following. |
 | **Anticipate and Learn / ProAct** | Uses idle time to anticipate future needs and prepare evidence. | Future-need prediction with persistent memory. |
@@ -64,6 +65,7 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | **ProactiveEval** | Splits proactive dialogue into target planning and dialogue guidance. | Dialogue benchmark design and LLM-as-judge protocols. |
 | **ProAgentBench** | Uses real workflow logs to evaluate when-to-assist and how-to-assist. | Measuring sim-to-real gaps in proactive assistance. |
 | **PIRA-Bench** | Measures proactive GUI intent recommendation from continuous screenshots. | GUI-specific proactive evaluation. |
+| **GUIDE** | Adds video-based behavior state, intent, and help-prediction tasks for open-ended GUI workflows. | Evaluating whether GUI agents can understand users before assisting them. |
 | **Pare** | Provides active-user simulation and finite-state apps for proactive assistant evaluation. | Closed-loop environment-level evaluation. |
 | **π-Bench** | Separates proactive hidden-intent resolution from final checklist completion. | Evaluating proactivity independently from task completion. |
 | **VitaBench 2.0** | Evaluates long-term personalization and proactive missing-information acquisition. | Long-term user-interaction benchmark design. |
@@ -92,4 +94,3 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
 | Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, ProAct, VitaBench 2.0 |
 | Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, PIRA-Bench, π-Bench, BENCHMARKS.md |
-

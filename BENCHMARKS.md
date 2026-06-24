@@ -5,7 +5,7 @@ This page compares benchmarks by what they actually test. The goal is to make be
 ## Quick Takeaways
 
 - **Best long-horizon personal assistant benchmarks**: π-Bench, VitaBench 2.0, ChronosBench.
-- **Best computer-use benchmarks**: ProAgentBench, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench.
+- **Best computer-use benchmarks**: ProAgentBench, PIRA-Bench, GUIDE, KnowU-Bench, Pare-Bench, ProCodeBench.
 - **Best dialogue benchmarks**: ProactiveEval, ProMISe, Ψ-Bench.
 - **Best memory-oriented benchmarks**: CogEval-Bench, MemEye, VitaBench 2.0.
 - **Best human-factor / timing benchmarks**: RealHumanEval, Pare-Bench, ProAgentBench, ProactiveBench (MLLM).
@@ -27,6 +27,7 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | **ProactiveMobile** | ProactiveMobile | Mobile | Phone context, state, and API list | Infer latent intent and plan API sequence | Mobile context user | Synthetic / offline benchmark | API sequence success, proactive intelligence | [arXiv](https://arxiv.org/abs/2602.21858) |
 | **ProEvent** | ProEvent | Event tracking | Future events and reminders | Maintain future-event obligations | Event-driven user needs | Benchmark | Event tracking, reminder correctness | [OpenReview](https://openreview.net/forum?id=wypdOy0HrM) |
 | **PIRA-Bench** | PIRA-Bench | GUI | Continuous GUI screenshots | Recommend proactive intents | GUI user state | Benchmark | Intent recommendation accuracy, timing | [Dataset](https://huggingface.co/datasets/Yuxiang007/PIRA-Bench-data) |
+| **GUIDE** | GUIDE | GUI / desktop workflows | Screen recordings with think-aloud narration | Detect behavior state, infer intent, and predict helpful assistance | Novice GUI users | Video benchmark | Behavior state detection, intent prediction, help prediction | [Website](https://guide-bench.github.io/) · [Dataset](https://huggingface.co/datasets/saelyne/GuideBench) |
 | **ProactiveBench (MLLM)** | ProactiveBench / Trento | Multimodal perception | Images with occlusion, poor quality, or ambiguity | Ask for help when visual evidence is insufficient | Visual collaborator | Repurposed visual datasets | Help-seeking, false positive rate, RL generalization | [Dataset](https://huggingface.co/datasets/tdemin16/ProactiveBench) |
 | **Pare-Bench** | Pare | Multi-app digital environment | FSM app states and active user simulation | Intervene, execute, or stay silent | Active simulated users | Simulator | Intervention timing, task success, user disruption | [GitHub](https://github.com/deepakn97/pare) |
 | **KnowU-Bench** | KnowU-Bench | Android personal agents | Behavior logs, app states, preferences | Clarify, act, personalize, and respect consent | Personalized Android users | Emulator benchmark | Task success, consent handling, rejection response | [GitHub](https://github.com/ZJU-REAL/KnowU-Bench) |
@@ -43,9 +44,8 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | Research Question | Start With | Why |
 |---|---|---|
 | When should a proactive agent interrupt? | RealHumanEval, Pare-Bench, ProAgentBench | They expose acceptance, disruption, or timing rather than only final task success. |
-| How do we evaluate hidden intent inference? | π-Bench, PIRA-Bench, ProactiveMobile, ProactiveBench | They require agents to infer goals that are not fully specified. |
+| How do we evaluate hidden intent inference? | π-Bench, GUIDE, PIRA-Bench, ProactiveMobile, ProactiveBench | They require agents to infer goals that are not fully specified. |
 | How do we evaluate long-term intent maintenance? | ChronosBench, VitaBench 2.0, π-Bench | They require persistent state across time or sessions. |
 | How do we evaluate personalization? | KnowU-Bench, FingerTip 20K, VitaBench 2.0, UserVille, Ψ-Bench | They include profiles, preferences, or user-specific trajectories. |
 | How do we evaluate memory as a proactive substrate? | CogEval-Bench, MemEye, VitaBench 2.0, ProActEval | They test memory formation, retrieval, evidence preparation, or intent emergence. |
-| How do we evaluate computer-use agents? | ProAgentBench, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
-
+| How do we evaluate computer-use agents? | ProAgentBench, GUIDE, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
