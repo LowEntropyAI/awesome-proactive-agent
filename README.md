@@ -17,6 +17,8 @@
 
 > A curated research map for **proactive agents**: AI systems that infer latent user needs, decide when to intervene, ask for missing context or consent, and initiate useful assistance before a complete explicit command.
 
+> If this list is useful, a ⭐ helps others find it.
+
 ---
 
 ## Contents
