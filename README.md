@@ -24,6 +24,7 @@
 ## Contents
 
 - [Scope](#scope)
+- [Research Taxonomy](#research-taxonomy)
 - [Must Read](#must-read)
 - [Papers](#papers)
   - [Foundations, Surveys and Human Factors](#foundations-surveys-and-human-factors)
@@ -56,6 +57,16 @@ Resource labels:
 - **Website**: project page, conference page, lab page, or documentation.
 - **Code / Dataset**: GitHub, released code, released benchmark, or released dataset.
 - **Notes**: short English decision card with why the paper matters, proactivity signal, evaluation setup, limitations, and use cases.
+
+---
+
+## Research Taxonomy
+
+<p align="center">
+  <img src="assets/taxonomy.png" alt="Proactive Agent Research Taxonomy" width="100%">
+</p>
+
+> **Four research dimensions:** *When* to act (intervention timing) · *What* to infer (intent & memory) · *How* to respond (GUI, dialogue, multimodal) · *Who* for whom (personalization & safety) — unified by an evaluation layer of 22+ benchmarks.
 
 ---
 
@@ -95,14 +106,14 @@ Selected starting points for understanding the field.
 | Date | Title | Venue / Source | Tags | Resources |
 |---|---|---|---|---|
 | 2024-03 | **ProMISe: A Proactive Multi-turn Dialogue Dataset for Information-seeking Intent Resolution** | Findings of EACL 2024 | `Clarification` · `Dialogue` · `Benchmark` | [![ACL](https://img.shields.io/badge/ACL-Anthology-1f6feb.svg)](https://aclanthology.org/2024.findings-eacl.124/) |
-| 2024-06 | **Ask-before-Plan: Proactive Language Agents for Real-World Planning** | arXiv 2406 | `Clarification` · `Planning` · `Intent Inference` | [![arXiv](https://img.shields.io/badge/arXiv-2406.12639-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12639) |
+| 2024-06 | **Ask-before-Plan: Proactive Language Agents for Real-World Planning** | Findings of EMNLP 2024 | `Clarification` · `Planning` · `Intent Inference` | [![arXiv](https://img.shields.io/badge/arXiv-2406.12639-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12639) |
 | 2024-10 | **Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance** | ICLR 2025 | `Intent Inference` · `Benchmark` · `Desktop` | [![arXiv](https://img.shields.io/badge/arXiv-2410.12361-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.12361) [![OpenReview](https://img.shields.io/badge/OpenReview-Page-8c1b13.svg)](https://openreview.net/forum?id=sRIU6k2TcU) [![Star](https://img.shields.io/github/stars/thunlp/ProactiveAgent.svg?style=social&label=Star)](https://github.com/thunlp/ProactiveAgent) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/conference/ICLR2025/proactive-agent-shifting-llm.md) |
 | 2025-01 | **Proactive Conversational Agents with Inner Thoughts** | CHI 2025 | `Dialogue` · `Intent Inference` · `Intervention Timing` | [![arXiv](https://img.shields.io/badge/arXiv-2501.00383-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.00383) [![Star](https://img.shields.io/github/stars/xybruceliu/thoughtful-agents.svg?style=social&label=Star)](https://github.com/xybruceliu/thoughtful-agents) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2025-01/proactive-conversational-inner-thoughts.md) |
 | 2025-01 | **ProTOD: Proactive Task-oriented Dialogue System Based on LLMs** | COLING 2025 | `Dialogue` · `Planning` · `Tool Use` | [![ACL](https://img.shields.io/badge/ACL-Anthology-1f6feb.svg)](https://aclanthology.org/2025.coling-main.614/) |
 | 2025-07 | **Tunable LLM-based Proactive Recommendation Agent** | ACL 2025 | `Recommendation` · `Personalization` · `Intent Inference` | [![ACL](https://img.shields.io/badge/ACL-Anthology-1f6feb.svg)](https://aclanthology.org/2025.acl-long.944/) |
 | 2025-09 | **PRINCIPLES: Synthetic Strategy Memory for Proactive Dialogue Agents** | Findings of EMNLP 2025 | `Dialogue` · `Memory` · `Simulation` | [![arXiv](https://img.shields.io/badge/arXiv-2509.17459-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.17459) |
 | 2025-10 | **ProMediate: A Socio-cognitive Framework for Evaluating Proactive Agents in Multi-party Negotiation** | arXiv 2510 | `Dialogue` · `Collaboration` · `Benchmark` | [![arXiv](https://img.shields.io/badge/arXiv-2510.25224-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.25224) |
-| 2026-01 | **Proactivity-driven Personalized Agents for Advancing Human Learning through Engagement, Reflection, and Self-Efficacy** | arXiv 2601 | `Personalization` · `Intent Inference` · `Education` | [![arXiv](https://img.shields.io/badge/arXiv-2601.09926-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.09926) |
+| 2026-01 | **Proactivity-driven Personalized Agents for Advancing Human Learning through Engagement, Reflection, and Self-Efficacy** | ACM CHIIR 2026 Workshop | `Personalization` · `Intent Inference` · `Education` | [![arXiv](https://img.shields.io/badge/arXiv-2601.09926-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.09926) |
 | 2026-01 | **Long-term Task-oriented Agent: Proactive Long-term Intent Maintenance in Dynamic Environments** | arXiv 2601 | `Long-horizon` · `Intent Inference` · `Benchmark` | [![arXiv](https://img.shields.io/badge/arXiv-2601.09382-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.09382) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2026-01/long-term-task-oriented-agent.md) |
 | 2026-05 | **Anticipate and Learn: Unleashing Idle-Time Compute in Proactive Agents** | arXiv 2605 | `Intent Inference` · `Memory` · `Benchmark` | [![arXiv](https://img.shields.io/badge/arXiv-2605.25971-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.25971) [![Website](https://img.shields.io/badge/Website-9cf.svg)](https://agentace-ai.github.io/proact-showcase/) [![Star](https://img.shields.io/github/stars/AgentACE-AI/ProAct.svg?style=social&label=Star)](https://github.com/AgentACE-AI/ProAct) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2026-05/proact-idle-time-compute.md) |
 
@@ -130,7 +141,7 @@ Selected starting points for understanding the field.
 
 | Date | Title | Venue / Source | Tags | Resources |
 |---|---|---|---|---|
-| 2024-09 | **AssistantX: An LLM-Powered Proactive Assistant in Collaborative Human-Populated Environments** | arXiv 2409 | `Embodied` · `Collaboration` · `Planning` | [![arXiv](https://img.shields.io/badge/arXiv-2409.17655-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.17655) |
+| 2024-09 | **AssistantX: An LLM-Powered Proactive Assistant in Collaborative Human-Populated Environments** | IROS 2025 | `Embodied` · `Collaboration` · `Planning` | [![arXiv](https://img.shields.io/badge/arXiv-2409.17655-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.17655) |
 | 2025-01 | **YETI: Proactive Interventions by Multimodal AI Agents in Augmented Reality Tasks** | arXiv 2501 | `Multimodal / Wearable` · `Intervention Timing` · `Human Factors` | [![arXiv](https://img.shields.io/badge/arXiv-2501.09355-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.09355) [![Website](https://img.shields.io/badge/Website-9cf.svg)](https://research.google/pubs/yeti-yet-to-intervene-proactive-interventions-by-multimodal-ai-agents-in-augmented-reality-tasks/) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2025-01/yeti-proactive-ar-intervention.md) |
 | 2025-01 | **AiGet: Transforming Everyday Moments into Hidden Knowledge Discovery with AI Assistance on Smart Glasses** | CHI 2025 | `Multimodal / Wearable` · `Intent Inference` · `Personalization` | [![arXiv](https://img.shields.io/badge/arXiv-2501.16240-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.16240) [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3706598.3713953-blue.svg)](https://doi.org/10.1145/3706598.3713953) |
 | 2025-02 | **Mirai: A Wearable Proactive AI Inner-Voice for Contextual Nudging** | CHI EA 2025 | `Multimodal / Wearable` · `Intervention Timing` · `Human Factors` | [![arXiv](https://img.shields.io/badge/arXiv-2502.02370-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.02370) [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3706599.3719881-blue.svg)](https://doi.org/10.1145/3706599.3719881) |
