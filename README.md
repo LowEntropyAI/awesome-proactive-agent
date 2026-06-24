@@ -24,7 +24,6 @@
 ## Contents
 
 - [Scope](#scope)
-- [Tag Vocabulary](#tag-vocabulary)
 - [Must Read](#must-read)
 - [Papers](#papers)
   - [Foundations, Surveys and Human Factors](#foundations-surveys-and-human-factors)
@@ -35,6 +34,7 @@
 - [Benchmarks](#benchmarks)
 - [Research Map](RESEARCH_MAP.md)
 - [Benchmark Matrix](BENCHMARKS.md)
+- [Tag Vocabulary](#tag-vocabulary)
 - [Contributing](#contributing)
 
 ---
@@ -56,46 +56,6 @@ Resource labels:
 - **Website**: project page, conference page, lab page, or documentation.
 - **Code / Dataset**: GitHub, released code, released benchmark, or released dataset.
 - **Notes**: short English decision card with why the paper matters, proactivity signal, evaluation setup, limitations, and use cases.
-
----
-
-## Tag Vocabulary
-
-Tags are intentionally compact and reusable. They describe the paper's main contribution, not every detail.
-
-| Tag | Meaning |
-|---|---|
-| `Definition` | Defines or reframes proactive agents, proactive dialogue, or design-space boundaries. |
-| `Survey` | Synthesizes a broad proactive-agent subfield or taxonomy. |
-| `Human Factors` | Studies interruption, control, satisfaction, workload, adoption, or developer experience. |
-| `Trust` | Focuses on competence perception, calibrated reliance, or trustworthy interaction. |
-| `Safety & Consent` | Covers confirmation, autonomy boundaries, reversibility, rejection, or risk control. |
-| `Privacy` | Centers privacy management, data minimization, or personal-context governance. |
-| `Intervention Timing` | Focuses on when an agent should act, ask, suggest, or remain silent. |
-| `Intent Inference` | Infers latent goals, hidden constraints, future tasks, or missing information. |
-| `Clarification` | Proactively asks questions before planning, execution, or recommendation. |
-| `Dialogue` | Proactive behavior in conversational, persuasive, or task-oriented interaction. |
-| `Planning` | Proactive decomposition, task planning, scheduling, or future-state reasoning. |
-| `Tool Use` | Tool calling, API execution, GUI operation, or action orchestration. |
-| `Recommendation` | Proactive recommendation or suggestion ranking. |
-| `Collaboration` | Multi-party or human-agent collaborative problem solving. |
-| `Education` | Learning, tutoring, reflection, or student engagement contexts. |
-| `Long-horizon` | Multi-session, dynamic, future-event, or long-running task maintenance. |
-| `Personalization` | User preferences, personas, profiles, long-term user history, or user-specific adaptation. |
-| `Memory` | Persistent memory, episodic memory, visual memory, skill memory, or cognitive memory structures. |
-| `Simulation` | User simulation, environment simulation, synthetic users, or synthetic workflows. |
-| `Optimization` | RL, reward modeling, multi-objective optimization, self-evolution, or behavior tuning. |
-| `Skill Learning` | Skill creation, skill internalization, skill memory, or reusable procedure learning. |
-| `Benchmark` | Introduces a dataset, evaluation suite, benchmark, simulator, or diagnostic protocol. |
-| `Real-world Data` | Uses real user traces, field-study data, or deployment-like logs. |
-| `Desktop` | Desktop activity streams, workstation context, or event logs. |
-| `GUI` | Graphical interface agents, browser/app screens, or visual UI interaction. |
-| `Mobile` | Mobile GUI, Android/iOS workflows, phone sensors, or mobile user context. |
-| `OS` | Operating-system agents, cross-app workflows, or OS-level verification. |
-| `IDE` | Programming assistants, code editors, or developer tooling. |
-| `Multimodal / Wearable` | Video, audio, AR, smart glasses, egocentric streams, or open-world sensory context. |
-| `Sensing` | Active context acquisition, sensor selection, or on-demand sensory capture. |
-| `Embodied` | Robots, physical environments, or human-populated embodied settings. |
 
 ---
 
@@ -232,6 +192,46 @@ For detailed comparison, see [BENCHMARKS.md](BENCHMARKS.md).
 | 2026-05 | **ProActEval** | Anticipate and Learn | proactive assistant scenarios | idle-time anticipation, evidence acquisition, user effort and hallucination reduction | [![arXiv](https://img.shields.io/badge/arXiv-2605.25971-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.25971) [![Website](https://img.shields.io/badge/Website-9cf.svg)](https://agentace-ai.github.io/proact-showcase/) [![Star](https://img.shields.io/github/stars/AgentACE-AI/ProAct.svg?style=social&label=Star)](https://github.com/AgentACE-AI/ProAct) |
 | 2026-05 | **VitaBench 2.0** | VitaBench 2.0 | long-term user interaction sequences | preference extraction, memory use, updates, and proactive missing-information acquisition | [![arXiv](https://img.shields.io/badge/arXiv-2605.27141-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.27141) [![HF Paper](https://img.shields.io/badge/HF-Paper-ffcc00.svg?logo=huggingface&logoColor=black)](https://huggingface.co/papers/2605.27141) [![Star](https://img.shields.io/github/stars/meituan-longcat/VitaBench-2.0.svg?style=social&label=Star)](https://github.com/meituan-longcat/VitaBench-2.0) |
 | 2026-06 | **Ψ-Bench** | Ψ-Bench | persuasive dialogue | persona-sensitive influencing with simulated clients and user profiles | [![arXiv](https://img.shields.io/badge/arXiv-2606.02754-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02754) [![Star](https://img.shields.io/github/stars/Hanpx20/Psi-Bench.svg?style=social&label=Star)](https://github.com/Hanpx20/Psi-Bench) |
+
+---
+
+## Tag Vocabulary
+
+Tags are intentionally compact and reusable. They describe the paper's main contribution, not every detail.
+
+| Tag | Meaning |
+|---|---|
+| `Definition` | Defines or reframes proactive agents, proactive dialogue, or design-space boundaries. |
+| `Survey` | Synthesizes a broad proactive-agent subfield or taxonomy. |
+| `Human Factors` | Studies interruption, control, satisfaction, workload, adoption, or developer experience. |
+| `Trust` | Focuses on competence perception, calibrated reliance, or trustworthy interaction. |
+| `Safety & Consent` | Covers confirmation, autonomy boundaries, reversibility, rejection, or risk control. |
+| `Privacy` | Centers privacy management, data minimization, or personal-context governance. |
+| `Intervention Timing` | Focuses on when an agent should act, ask, suggest, or remain silent. |
+| `Intent Inference` | Infers latent goals, hidden constraints, future tasks, or missing information. |
+| `Clarification` | Proactively asks questions before planning, execution, or recommendation. |
+| `Dialogue` | Proactive behavior in conversational, persuasive, or task-oriented interaction. |
+| `Planning` | Proactive decomposition, task planning, scheduling, or future-state reasoning. |
+| `Tool Use` | Tool calling, API execution, GUI operation, or action orchestration. |
+| `Recommendation` | Proactive recommendation or suggestion ranking. |
+| `Collaboration` | Multi-party or human-agent collaborative problem solving. |
+| `Education` | Learning, tutoring, reflection, or student engagement contexts. |
+| `Long-horizon` | Multi-session, dynamic, future-event, or long-running task maintenance. |
+| `Personalization` | User preferences, personas, profiles, long-term user history, or user-specific adaptation. |
+| `Memory` | Persistent memory, episodic memory, visual memory, skill memory, or cognitive memory structures. |
+| `Simulation` | User simulation, environment simulation, synthetic users, or synthetic workflows. |
+| `Optimization` | RL, reward modeling, multi-objective optimization, self-evolution, or behavior tuning. |
+| `Skill Learning` | Skill creation, skill internalization, skill memory, or reusable procedure learning. |
+| `Benchmark` | Introduces a dataset, evaluation suite, benchmark, simulator, or diagnostic protocol. |
+| `Real-world Data` | Uses real user traces, field-study data, or deployment-like logs. |
+| `Desktop` | Desktop activity streams, workstation context, or event logs. |
+| `GUI` | Graphical interface agents, browser/app screens, or visual UI interaction. |
+| `Mobile` | Mobile GUI, Android/iOS workflows, phone sensors, or mobile user context. |
+| `OS` | Operating-system agents, cross-app workflows, or OS-level verification. |
+| `IDE` | Programming assistants, code editors, or developer tooling. |
+| `Multimodal / Wearable` | Video, audio, AR, smart glasses, egocentric streams, or open-world sensory context. |
+| `Sensing` | Active context acquisition, sensor selection, or on-demand sensory capture. |
+| `Embodied` | Robots, physical environments, or human-populated embodied settings. |
 
 ---
 
