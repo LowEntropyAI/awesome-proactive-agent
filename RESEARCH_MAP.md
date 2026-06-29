@@ -12,6 +12,7 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Assistance or Disruption?** | Frames proactive AI programming support as a tradeoff between efficiency and workflow disruption. | Arguing that interruption cost must be a first-class metric. |
 | **Developer Interaction Patterns with Proactive AI** | Uses real IDE field data to show suggestions at workflow boundaries are more likely to be accepted. | Designing timing policies for deployed coding assistants. |
 | **ProactiveVA** | Studies help-seeking behavior in visual analytics logs and turns it into proactive UI-agent design requirements. | Proactive assistance timing and intervention design in complex analytical tools. |
+| **Do Proactive Agents Really Need an LLM?** | Recasts wake-up triggering and anchor selection as lightweight temporal-graph prediction instead of always-on LLM calls. | Efficient on-device triggers and grounded context routing for proactive assistants. |
 | **Pare** | Simulates active users in multi-app environments and evaluates timing-sensitive intervention. | Testing policies that must decide help / execute / stay silent. |
 | **ProactiveBench (MLLM)** | Tests whether MLLMs ask for help under visual uncertainty. | Studying intervention as uncertainty-aware help-seeking. |
 | **YETI** | Proactive AR interventions require recognizing task state and choosing unobtrusive timing. | Multimodal timing in physical or wearable workflows. |
@@ -89,7 +90,7 @@ Proactive agents need boundaries. The most important failure mode is not only be
 
 | Problem | Current Gap | Representative Starting Points |
 |---|---|---|
-| Timing under uncertainty | Most systems still lack explicit interruption-cost models. | Need Help?, Assistance or Disruption?, Pare, ProAgentBench |
+| Timing under uncertainty | Most systems still lack explicit interruption-cost models. | Need Help?, Assistance or Disruption?, Pare, ProAgentBench, Do Proactive Agents Really Need an LLM? |
 | Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0 |
 | Consent-aware execution | Proactive execution needs preview, confirmation, undo, and permission tiers. | VeriOS, KnowU-Bench, Privacy Management Design Space |
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
