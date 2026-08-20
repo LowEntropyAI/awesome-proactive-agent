@@ -5,10 +5,10 @@ This page compares benchmarks by what they actually test. The goal is to make be
 ## Quick Takeaways
 
 - **Best long-horizon personal assistant benchmarks**: VibeLifeBench, π-Bench, VitaBench 2.0, ChronosBench.
-- **Best computer-use benchmarks**: ProAgentBench, PIRA-Bench, GUIDE, KnowU-Bench, Pare-Bench, ProCodeBench.
+- **Best computer-use benchmarks**: Act2Intention Bench, ProAgentBench, PIRA-Bench, GUIDE, KnowU-Bench, Pare-Bench, ProCodeBench.
 - **Best dialogue benchmarks**: ProactiveEval, ProMISe, Ψ-Bench.
 - **Best memory-oriented benchmarks**: CogEval-Bench, MemEye, VitaBench 2.0.
-- **Best human-factor / timing benchmarks**: RealHumanEval, Pare-Bench, ProAgentBench, ProactiveBench (MLLM).
+- **Best human-factor / timing benchmarks**: JarvisBench, RealHumanEval, Pare-Bench, ProAgentBench, ProactiveBench (MLLM).
 
 ## Benchmark Matrix
 
@@ -39,14 +39,16 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | **VitaBench 2.0** | VitaBench 2.0 | Long-term personalized interaction | Multi-session user interaction sequence | Extract, update, and use preferences; acquire missing info | Long-term user profile | Benchmark | Preference extraction, memory use, proactive acquisition | [GitHub](https://github.com/meituan-longcat/VitaBench-2.0) |
 | **Ψ-Bench** | Ψ-Bench | Persuasive dialogue | User profiles and simulated client dialogues | Tailor influence strategies to personas | Profile-conditioned simulated clients | Benchmark | Persuasion quality, profile use, dialogue quality | [GitHub](https://github.com/Hanpx20/Psi-Bench) |
 | **VibeLifeBench** | VibeLifeBench | Long-horizon life assistance | Multi-week timelines, 22 mock services, silent world mutations | Decide when to act, ask, or stay silent while preserving a coherent plan | Persona, implicit constraints, authorization boundaries | Scripted living-world benchmark | Weighted stage checks, avg@3, max@3, interaction cost | [arXiv](https://arxiv.org/abs/2608.10875) |
+| **JarvisBench** | JarvisBench | Human-agent attention coordination | Ongoing single-agent trajectories and coupled multi-agent workstreams | Recognize user-owned decisions, request judgment, and inject scoped guidance | Concise benchmark user decisions | Adapted public agent tasks | Task outcome gain, request count, attention efficiency, response quality, latency | [Website](https://cchen1436.github.io/jarvis/) · [GitHub](https://github.com/cchen1436/JarvisBench) |
+| **Act2Intention Bench** | Act2Intention | Mobile GUI | Continuous personalized intention-action trajectories | Predict and suggest the next intention, then execute after confirmation | 90 real users plus generated personas | Real + synthetic trajectories | Understanding accuracy, prediction accuracy, execution success rate | [GitHub](https://github.com/npuNancy/Act2Intention) |
 
 ## Selection Guide
 
 | Research Question | Start With | Why |
 |---|---|---|
-| When should a proactive agent interrupt? | RealHumanEval, Pare-Bench, ProAgentBench | They expose acceptance, disruption, or timing rather than only final task success. |
-| How do we evaluate hidden intent inference? | π-Bench, GUIDE, PIRA-Bench, ProactiveMobile, ProactiveBench | They require agents to infer goals that are not fully specified. |
+| When should a proactive agent interrupt? | JarvisBench, RealHumanEval, Pare-Bench, ProAgentBench | They expose attention needs, acceptance, disruption, or timing rather than only final task success. |
+| How do we evaluate hidden intent inference? | Act2Intention Bench, π-Bench, GUIDE, PIRA-Bench, ProactiveMobile, ProactiveBench | They require agents to infer goals that are not fully specified. |
 | How do we evaluate long-term intent maintenance? | VibeLifeBench, ChronosBench, VitaBench 2.0, π-Bench | They require persistent state across time or sessions; VibeLifeBench also advances the world while the agent is not being prompted. |
 | How do we evaluate personalization? | KnowU-Bench, FingerTip 20K, VitaBench 2.0, UserVille, Ψ-Bench | They include profiles, preferences, or user-specific trajectories. |
 | How do we evaluate memory as a proactive substrate? | CogEval-Bench, MemEye, VitaBench 2.0, ProActEval | They test memory formation, retrieval, evidence preparation, or intent emergence. |
-| How do we evaluate computer-use agents? | ProAgentBench, GUIDE, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
+| How do we evaluate computer-use agents? | Act2Intention Bench, ProAgentBench, GUIDE, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
