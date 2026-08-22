@@ -9,6 +9,7 @@ This page compares benchmarks by what they actually test. The goal is to make be
 - **Best dialogue benchmarks**: ProactiveEval, ProMISe, Ψ-Bench.
 - **Best memory-oriented benchmarks**: CogEval-Bench, MemEye, VitaBench 2.0.
 - **Best human-factor / timing benchmarks**: JarvisBench, RealHumanEval, Pare-Bench, ProAgentBench, ProactiveBench (MLLM).
+- **Best streaming multimodal benchmarks**: StreamArena, IPIBench, EgoServe, StreamSoccer.
 
 ## Benchmark Matrix
 
@@ -41,6 +42,7 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | **VibeLifeBench** | VibeLifeBench | Long-horizon life assistance | Multi-week timelines, 22 mock services, silent world mutations | Decide when to act, ask, or stay silent while preserving a coherent plan | Persona, implicit constraints, authorization boundaries | Scripted living-world benchmark | Weighted stage checks, avg@3, max@3, interaction cost | [arXiv](https://arxiv.org/abs/2608.10875) |
 | **JarvisBench** | JarvisBench | Human-agent attention coordination | Ongoing single-agent trajectories and coupled multi-agent workstreams | Recognize user-owned decisions, request judgment, and inject scoped guidance | Concise benchmark user decisions | Adapted public agent tasks | Task outcome gain, request count, attention efficiency, response quality, latency | [Website](https://cchen1436.github.io/jarvis/) · [GitHub](https://github.com/cchen1436/JarvisBench) |
 | **Act2Intention Bench** | Act2Intention | Mobile GUI | Continuous personalized intention-action trajectories | Predict and suggest the next intention, then execute after confirmation | 90 real users plus generated personas | Real + synthetic trajectories | Understanding accuracy, prediction accuracy, execution success rate | [GitHub](https://github.com/npuNancy/Act2Intention) |
+| **StreamSoccer** | StreamSoccer | Streaming soccer commentary | Causal match video, active event state, recent events, historical records | Select current, recent, or historical commentary, or remain silent | Broadcast audience rather than an individualized user | SoccerNet + MatchTime derived dataset | BLEU-4, CIDEr, BERTScore-F1, output coverage, real-time factor | [arXiv](https://arxiv.org/abs/2608.19723) |
 
 ## Selection Guide
 
@@ -52,3 +54,4 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | How do we evaluate personalization? | KnowU-Bench, FingerTip 20K, VitaBench 2.0, UserVille, Ψ-Bench | They include profiles, preferences, or user-specific trajectories. |
 | How do we evaluate memory as a proactive substrate? | CogEval-Bench, MemEye, VitaBench 2.0, ProActEval | They test memory formation, retrieval, evidence preparation, or intent emergence. |
 | How do we evaluate computer-use agents? | Act2Intention Bench, ProAgentBench, GUIDE, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
+| How do we evaluate proactive streaming video? | StreamArena, IPIBench, EgoServe, StreamSoccer | They require causal processing of an ongoing stream and timely outputs rather than offline clip answering. |
