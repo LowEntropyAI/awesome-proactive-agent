@@ -13,6 +13,8 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Developer Interaction Patterns with Proactive AI** | Uses real IDE field data to show suggestions at workflow boundaries are more likely to be accepted. | Designing timing policies for deployed coding assistants. |
 | **ProactiveVA** | Studies help-seeking behavior in visual analytics logs and turns it into proactive UI-agent design requirements. | Proactive assistance timing and intervention design in complex analytical tools. |
 | **Do Proactive Agents Really Need an LLM?** | Recasts wake-up triggering and anchor selection as lightweight temporal-graph prediction instead of always-on LLM calls. | Efficient on-device triggers and grounded context routing for proactive assistants. |
+| **When not to help** | Plans assistance over latent user engagement so repeated help does not cause alert fatigue. | Long-term help-or-silence policies and counterfactual need estimation. |
+| **AI Assistants Overassist / Int-Bench** | Shows LLM tutors intervene earlier and more often than humans, often trading learning opportunity for immediate correctness. | Measuring over-assistance, timing, content directness, and transfer. |
 | **Pare** | Simulates active users in multi-app environments and evaluates timing-sensitive intervention. | Testing policies that must decide help / execute / stay silent. |
 | **ProactiveBench (MLLM)** | Tests whether MLLMs ask for help under visual uncertainty. | Studying intervention as uncertainty-aware help-seeking. |
 | **YETI** | Proactive AR interventions require recognizing task state and choosing unobtrusive timing. | Multimodal timing in physical or wearable workflows. |
@@ -31,6 +33,8 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **ProactiveMobile** | Infers mobile latent intent and maps it to API execution sequences. | Mobile-context intent-to-action evaluation. |
 | **Beyond Reactivity / PROBE** | Requires agents to discover hidden bottlenecks in personal data. | Proactive problem finding rather than task following. |
 | **Anticipate and Learn / ProAct** | Uses idle time to anticipate future needs and prepare evidence. | Future-need prediction with persistent memory. |
+| **ProactBench** | Scores grounded unstated-need inference at emergent, critical, and post-completion recovery triggers. | Separating conversational proactivity from generic helpfulness. |
+| **Value of Information** | Weighs expected utility from clarification against user effort and decision stakes. | Cost-sensitive ask-versus-act policies. |
 
 ## How To Maintain Long-Term Intent
 
@@ -44,6 +48,8 @@ Long-horizon proactivity depends on remembering what matters, monitoring changin
 | **CogniFold** | Models always-on memory where concepts and intents emerge from event streams. | Memory architectures that surface proactive opportunities. |
 | **MemEye** | Diagnoses visual long-term memory and changing state tracking. | Multimodal memory as a prerequisite for long-horizon agents. |
 | **ProEvent** | Focuses on event-centric proactive maintenance and reminders. | Future events and reminder-style proactivity. |
+| **PASK / LatentNeeds-Bench** | Combines streaming demand detection with hierarchical memory and explicit silent, fast, or full assistance actions. | Always-on intent maintenance under latency constraints. |
+| **Claw-Anything** | Simulates months of cross-service activity and multi-device state for personal-assistant tasks. | Broad-context long-horizon proactivity amid irrelevant events. |
 
 ## How To Personalize
 
@@ -57,6 +63,7 @@ Personalization moves proactivity from generic helpfulness to user-specific timi
 | **ProPerSim** | Simulates proactive personalized assistants through user-assistant interaction. | Persona-based proactive adaptation. |
 | **Ψ-Bench** | Evaluates persona-sensitive influence in persuasive dialogue. | Profile-aware dialogue strategy selection. |
 | **Tunable LLM-based Proactive Recommendation Agent** | Tunes proactive recommendation behavior to latent user interests. | Recommendation-focused proactive personalization. |
+| **EgoPro-Bench** | Conditions attention-or-silence decisions on egocentric video and user memory. | Personalized intervention timing in continuous streams. |
 
 ## How To Evaluate Proactivity
 
@@ -72,6 +79,9 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | **π-Bench** | Separates proactive hidden-intent resolution from final checklist completion. | Evaluating proactivity independently from task completion. |
 | **VitaBench 2.0** | Evaluates long-term personalization and proactive missing-information acquisition. | Long-term user-interaction benchmark design. |
 | **CogEval-Bench** | Evaluates proactive memory emergence and cognitive structure formation. | Memory-centric proactive evaluation. |
+| **ClarifyBench** | Evaluates which tool argument to clarify and when further questions are not worth their cost. | Dynamic tool-calling disambiguation and interaction efficiency. |
+| **OmniPro** | Requires models to initiate multiple responses in continuous audio-visual streams and penalizes over-triggering. | True online when-and-what-to-speak evaluation. |
+| **ProactBench** | Uses phase-specific trigger rubrics for emergent, critical, and recovery proactivity. | Grounded multi-turn conversational proactivity. |
 
 ## How To Avoid Disruption / Privacy Risk
 
@@ -85,14 +95,16 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | **Privacy Management Design Space** | Explores autonomy and privacy boundaries for agents managing personal data. | Consent, reversibility, and permission-tier design. |
 | **VeriOS** | Uses proactive querying to calibrate trust and avoid unsafe OS actions. | Human-in-the-loop confirmation for GUI/OS agents. |
 | **KnowU-Bench** | Tests consent, rejection handling, and personalized mobile execution. | Evaluating restraint in personal assistant workflows. |
+| **Selectively Quitting** | Treats withdrawal under compounded uncertainty as a useful agent action. | First-line stopping policies for tool agents. |
+| **Abstention Competence** | Distinguishes specification, verification, and authority gaps and scores safe pause against useful execution. | Auditable abstention, authorization, and recovery routing. |
 
 ## High-Leverage Open Problems
 
 | Problem | Current Gap | Representative Starting Points |
 |---|---|---|
-| Timing under uncertainty | Most systems still lack explicit interruption-cost models. | Need Help?, Assistance or Disruption?, Pare, ProAgentBench, Do Proactive Agents Really Need an LLM? |
-| Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0 |
-| Consent-aware execution | Proactive execution needs preview, confirmation, undo, and permission tiers. | VeriOS, KnowU-Bench, Privacy Management Design Space |
+| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, Value of Information |
+| Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0, PASK, Claw-Anything |
+| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | VeriOS, KnowU-Bench, Abstention Competence, Selectively Quitting |
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
 | Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, ProAct, VitaBench 2.0 |
-| Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, PIRA-Bench, π-Bench, BENCHMARKS.md |
+| Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, ProactBench, OmniPro, Int-Bench, π-Bench, BENCHMARKS.md |
