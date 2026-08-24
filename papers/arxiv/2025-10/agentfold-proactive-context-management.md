@@ -1,4 +1,4 @@
-# AgentFold: Long-Horizon Web Agents with Proactive Context Management
+# AgentFold: Long-Horizon Web Agents with Proactive Context Folding
 
 ## Why It Matters
 
