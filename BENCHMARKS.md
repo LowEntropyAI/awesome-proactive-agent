@@ -6,10 +6,10 @@ This page compares benchmarks by what they actually test. The goal is to make be
 
 - **Best long-horizon personal assistant benchmarks**: VibeLifeBench, π-Bench, VitaBench 2.0, ChronosBench.
 - **Best computer-use benchmarks**: Act2Intention Bench, ProAgentBench, PIRA-Bench, GUIDE, KnowU-Bench, Pare-Bench, ProCodeBench.
-- **Best dialogue benchmarks**: AskBench, ClarifyBench, ProactBench, ProactiveEval, ProMISe, Ψ-Bench.
+- **Best dialogue benchmarks**: AskBench, ClarifyBench, Interactive Visual Grounding, ProactBench, ProactiveEval, ProMISe, Ψ-Bench.
 - **Best memory-oriented benchmarks**: CogEval-Bench, MemEye, VitaBench 2.0.
 - **Best human-factor / timing benchmarks**: Int-Bench, JarvisBench, RealHumanEval, Pare-Bench, ProAgentBench, ProactiveBench (MLLM).
-- **Best streaming multimodal benchmarks**: OmniPro, EgoPro-Bench, OmniMMI, StreamArena, IPIBench, EgoServe, StreamSoccer.
+- **Best streaming multimodal benchmarks**: OmniAssistBench, OmniPro, EgoPro-Bench, OmniMMI, StreamArena, IPIBench, EgoServe, StreamSoccer.
 
 ## Benchmark Matrix
 
@@ -53,6 +53,9 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | **JarvisBench** | JarvisBench | Human-agent attention coordination | Ongoing single-agent trajectories and coupled multi-agent workstreams | Recognize user-owned decisions, request judgment, and inject scoped guidance | Concise benchmark user decisions | Adapted public agent tasks | Task outcome gain, request count, attention efficiency, response quality, latency | [Website](https://cchen1436.github.io/jarvis/) · [GitHub](https://github.com/cchen1436/JarvisBench) |
 | **Act2Intention Bench** | Act2Intention | Mobile GUI | Continuous personalized intention-action trajectories | Predict and suggest the next intention, then execute after confirmation | 90 real users plus generated personas | Real + synthetic trajectories | Understanding accuracy, prediction accuracy, execution success rate | [GitHub](https://github.com/npuNancy/Act2Intention) |
 | **StreamSoccer** | StreamSoccer | Streaming soccer commentary | Causal match video, active event state, recent events, historical records | Select current, recent, or historical commentary, or remain silent | Broadcast audience rather than an individualized user | SoccerNet + MatchTime derived dataset | BLEU-4, CIDEr, BERTScore-F1, output coverage, real-time factor | [arXiv](https://arxiv.org/abs/2608.19723) |
+| **OmniAssistBench** | OmniAssistBench | Streaming task assistance | Continuous video, user goal, interaction history, source-video priors | Guide the user, interpret visual prompts, and delay advice until the relevant event | Simulated interaction path reconstructed from source video | Expert-curated multi-turn video benchmark | 100-point assistant score; visual-prompt, history, and delayed-response diagnostics | [Website](https://xianyunsun.github.io/OmniAssistBench/) · [arXiv](https://arxiv.org/abs/2608.21360) |
+| **Interactive Visual Grounding** | When Seeing Is Not Enough | Interactive visual grounding | Image, incomplete target description, and follow-up dialogue | Ask questions, integrate answers, and identify the intended target | Human description providers and task-level human baselines | Four visual contexts × four interaction protocols | Grounding performance, task-level human gap, confidence calibration | [arXiv](https://arxiv.org/abs/2608.23978) |
+| **MMPCBench** | MMPCBench | Multimodal critique | Text-image inputs containing one of 12 error subcategories | Detect, diagnose, and resolve flawed input without a checking prompt | User supplies a potentially faulty premise | Curated benchmark across four primary error types | Detection, diagnosis, resolution, reasoning–answer alignment | [GitHub](https://github.com/ALIENS32/MMPCBench) · [arXiv](https://arxiv.org/abs/2608.29286) |
 
 ## Selection Guide
 
@@ -64,4 +67,4 @@ This page compares benchmarks by what they actually test. The goal is to make be
 | How do we evaluate personalization? | KnowU-Bench, FingerTip 20K, VitaBench 2.0, UserVille, Ψ-Bench | They include profiles, preferences, or user-specific trajectories. |
 | How do we evaluate memory as a proactive substrate? | CogEval-Bench, MemEye, VitaBench 2.0, ProActEval | They test memory formation, retrieval, evidence preparation, or intent emergence. |
 | How do we evaluate computer-use agents? | Act2Intention Bench, ProAgentBench, GUIDE, PIRA-Bench, KnowU-Bench, Pare-Bench, ProCodeBench | They connect proactive behavior to GUI, mobile, IDE, or workflow contexts. |
-| How do we evaluate proactive streaming video? | OmniPro, EgoPro-Bench, OmniMMI, StreamArena, IPIBench, EgoServe, StreamSoccer | They require causal processing of an ongoing stream and timely outputs rather than offline clip answering; OmniPro and EgoPro-Bench also score false triggers or silence. |
+| How do we evaluate proactive streaming video? | OmniAssistBench, OmniPro, EgoPro-Bench, OmniMMI, StreamArena, IPIBench, EgoServe, StreamSoccer | They require causal processing of an ongoing stream and timely outputs rather than offline clip answering; OmniAssistBench additionally tests assistant guidance and delayed responses. |

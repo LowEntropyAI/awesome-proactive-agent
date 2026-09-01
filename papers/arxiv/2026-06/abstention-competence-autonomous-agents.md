@@ -1,4 +1,4 @@
-# What Benchmarks Don't Measure: The Case for Evaluating Abstention Competence in Autonomous Agents
+# Designing for Doubt: The Case for Informed Abstention in Autonomous Agents
 
 ## Why It Matters
 

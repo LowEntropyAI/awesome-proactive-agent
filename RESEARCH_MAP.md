@@ -18,6 +18,9 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Pare** | Simulates active users in multi-app environments and evaluates timing-sensitive intervention. | Testing policies that must decide help / execute / stay silent. |
 | **ProactiveBench (MLLM)** | Tests whether MLLMs ask for help under visual uncertainty. | Studying intervention as uncertainty-aware help-seeking. |
 | **YETI** | Proactive AR interventions require recognizing task state and choosing unobtrusive timing. | Multimodal timing in physical or wearable workflows. |
+| **Why2Speak** | Makes speak-versus-silence an explicit action policy and shows that exposed reasoning can change the policy being audited. | Intervention timing, abstention, and faithful-policy evaluation. |
+| **InsightToast** | Pushes source-grounded text and charts into a peripheral meeting channel when discourse reveals an information need. | Low-friction meeting interventions and side-channel UI design. |
+| **Cognitive Process-Aware Writing Support** | Infers the writer's cognitive process to select one of 14 proactive support types. | Separating what-to-suggest from when-to-intervene. |
 
 ## What To Proactively Infer
 
@@ -35,6 +38,9 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **Anticipate and Learn / ProAct** | Uses idle time to anticipate future needs and prepare evidence. | Future-need prediction with persistent memory. |
 | **ProactBench** | Scores grounded unstated-need inference at emergent, critical, and post-completion recovery triggers. | Separating conversational proactivity from generic helpfulness. |
 | **Value of Information** | Weighs expected utility from clarification against user effort and decision stakes. | Cost-sensitive ask-versus-act policies. |
+| **PASSING** | Actively probes query-specific user expertise before tailoring the final answer. | Expertise elicitation and personalization-before-response. |
+| **Severity-Aware Medical Dialogue** | Selects questions by expected reduction in consequence-weighted diagnostic risk. | Risk-sensitive clarification under unequal error costs. |
+| **DEDUCE** | Detects and corrects misleading factual premises instead of complying with them. | Proactive misconception correction and verification-before-answering. |
 
 ## How To Maintain Long-Term Intent
 
@@ -64,6 +70,7 @@ Personalization moves proactivity from generic helpfulness to user-specific timi
 | **Ψ-Bench** | Evaluates persona-sensitive influence in persuasive dialogue. | Profile-aware dialogue strategy selection. |
 | **Tunable LLM-based Proactive Recommendation Agent** | Tunes proactive recommendation behavior to latent user interests. | Recommendation-focused proactive personalization. |
 | **EgoPro-Bench** | Conditions attention-or-silence decisions on egocentric video and user memory. | Personalized intervention timing in continuous streams. |
+| **PASSING** | Acquires query-specific expertise through targeted What-to-Ask and How-to-Ask probes. | Interactive personalization when a static user profile is insufficient. |
 
 ## How To Evaluate Proactivity
 
@@ -82,6 +89,9 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | **ClarifyBench** | Evaluates which tool argument to clarify and when further questions are not worth their cost. | Dynamic tool-calling disambiguation and interaction efficiency. |
 | **OmniPro** | Requires models to initiate multiple responses in continuous audio-visual streams and penalizes over-triggering. | True online when-and-what-to-speak evaluation. |
 | **ProactBench** | Uses phase-specific trigger rubrics for emergent, critical, and recovery proactivity. | Grounded multi-turn conversational proactivity. |
+| **OmniAssistBench** | Evaluates continuous visual guidance, visual prompts, interaction history, and delayed responses. | Assistant-style omni-modal interaction rather than offline video QA. |
+| **Interactive Visual Grounding** | Requires LVLMs to ask for missing visual-reference information under controlled dialogue protocols. | Multimodal ask-versus-guess evaluation and confidence calibration. |
+| **MMPCBench** | Measures autonomous detection, diagnosis, and repair of flawed multimodal inputs. | Proactive critique and reasoning-to-response consistency. |
 
 ## How To Avoid Disruption / Privacy Risk
 
@@ -97,6 +107,8 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | **KnowU-Bench** | Tests consent, rejection handling, and personalized mobile execution. | Evaluating restraint in personal assistant workflows. |
 | **Selectively Quitting** | Treats withdrawal under compounded uncertainty as a useful agent action. | First-line stopping policies for tool agents. |
 | **Abstention Competence** | Distinguishes specification, verification, and authority gaps and scores safe pause against useful execution. | Auditable abstention, authorization, and recovery routing. |
+| **AI Watchdog** | Proactively warns users about conversational dark patterns and separates awareness from behavioral resistance. | Safety-sidecar timing and manipulation-defense interfaces. |
+| **MMPCBench** | Tests whether MLLMs surface faulty premises instead of suppressing detected errors to remain compliant. | Compliance-bias and proactive-correction evaluation. |
 
 ## High-Leverage Open Problems
 
