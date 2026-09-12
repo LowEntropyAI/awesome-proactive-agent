@@ -21,6 +21,17 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Why2Speak** | Makes speak-versus-silence an explicit action policy and shows that exposed reasoning can change the policy being audited. | Intervention timing, abstention, and faithful-policy evaluation. |
 | **InsightToast** | Pushes source-grounded text and charts into a peripheral meeting channel when discourse reveals an information need. | Low-friction meeting interventions and side-channel UI design. |
 | **Cognitive Process-Aware Writing Support** | Infers the writer's cognitive process to select one of 14 proactive support types. | Separating what-to-suggest from when-to-intervene. |
+| **StreamReady** | Learns an answer-readiness gate for continuous video and penalizes both early guesses and late answers. | Evidence-conditioned wait-versus-answer policies in streaming multimodal agents. |
+| **ProActor** | Replaces point triggers with opportunity windows and trains pending, ready-to-trigger, and triggered action states. | Timing-aware RL for conversational task scheduling. |
+| **Designing Proactive Thought Partners for Writing** | Lets writers configure partner roles and timing conditions for system-initiated ideation, reflection, and revision support. | User-steerable intervention policies and low-disruption writing assistance. |
+| **Proactive Service Agents** | Unifies silent, ask, assist, and act decisions with timing, delivery, authorization, and intervention cost. | Operational definitions and end-to-end proactive-service policy design. |
+| **Speak for Me** | Tracks meeting state and conversational floor to decide whether, when, and what to contribute for an absent participant. | Meeting delegation and speak-versus-silence controllers. |
+| **CC-Mediation** | Separates conflict-intervention timing from mediation strategy and scores persistent post-intervention stance change. | Social intervention timing with downstream outcome evidence. |
+| **Time-Aware Assistive Navigation / TIMELI** | Couples instruction content with a safety-aware speak-or-silence gate in continuous urban navigation. | Closed-loop timing policies where excessive speech can itself create risk. |
+| **Ambient @ EgoProactive** | Recasts imbalanced interrupt-versus-silent generation as a calibrated one-token decision. | Lightweight wearable triggers and cross-domain supervision for rare interventions. |
+| **Em-Garde** | Compiles a standing query into visual proposals and uses lightweight streaming matching to trigger the expensive responder. | Efficient fast/slow event gates for continuous video. |
+| **Gander** | Predicts listen or speak at the chunk level while an asynchronous reasoning component can return proactive progress or questions. | Full-duplex turn control and proactive updates during long-running agent work. |
+| **Governed Proactive Agency** | Frames activation as a policy over act, ask, monitor, defer, or refrain under a revocable mandate. | Connecting intervention timing to authorization, accountability, and traceable silence. |
 
 ## What To Proactively Infer
 
@@ -41,6 +52,12 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **PASSING** | Actively probes query-specific user expertise before tailoring the final answer. | Expertise elicitation and personalization-before-response. |
 | **Severity-Aware Medical Dialogue** | Selects questions by expected reduction in consequence-weighted diagnostic risk. | Risk-sensitive clarification under unequal error costs. |
 | **DEDUCE** | Detects and corrects misleading factual premises instead of complying with them. | Proactive misconception correction and verification-before-answering. |
+| **Beyond Instruction-Driven Editing / PROS** | Discovers localized structural, scientific, and spatial poster problems before the user formulates an edit instruction. | Source-grounded problem finding with user-governed repair. |
+| **RPCBench** | Requires recommenders to detect and localize corrupted premises rather than fabricate a matching item. | Evidence-grounded proactive critique and correction strategy selection. |
+| **Ask Before You Optimize / OR-Clarify** | Identifies formulation-critical gaps before converting an incomplete request into an optimization model. | Ask-versus-stop clarification and silent-assumption control. |
+| **Propose to Learn, Learn to Propose / ProSE** | Uses proactive proposals both to improve a design and to learn latent preferences and evaluation constraints. | Evaluability-aware preference inference under bounded rationality. |
+| **IdeaAMBIG** | Separates specification-readiness assessment, missing-method localization, and clarification-action generation. | Detecting when a coding agent lacks enough information to implement faithfully. |
+| **New Evidence, Same Choice** | Requires a model to answer when evidence is sufficient or choose the cheapest experiment that resolves the question. | Active evidence acquisition and value-of-information decisions beyond dialogue. |
 
 ## How To Maintain Long-Term Intent
 
@@ -71,6 +88,7 @@ Personalization moves proactivity from generic helpfulness to user-specific timi
 | **Tunable LLM-based Proactive Recommendation Agent** | Tunes proactive recommendation behavior to latent user interests. | Recommendation-focused proactive personalization. |
 | **EgoPro-Bench** | Conditions attention-or-silence decisions on egocentric video and user memory. | Personalized intervention timing in continuous streams. |
 | **PASSING** | Acquires query-specific expertise through targeted What-to-Ask and How-to-Ask probes. | Interactive personalization when a static user profile is insufficient. |
+| **Propose to Learn, Learn to Propose / ProSE** | Plans proposals from beliefs about both user value and the user's ability to evaluate a change. | Personalized proposal sequencing and probe-versus-help trade-offs. |
 
 ## How To Evaluate Proactivity
 
@@ -92,6 +110,16 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | **OmniAssistBench** | Evaluates continuous visual guidance, visual prompts, interaction history, and delayed responses. | Assistant-style omni-modal interaction rather than offline video QA. |
 | **Interactive Visual Grounding** | Requires LVLMs to ask for missing visual-reference information under controlled dialogue protocols. | Multimodal ask-versus-guess evaluation and confidence calibration. |
 | **MMPCBench** | Measures autonomous detection, diagnosis, and repair of flawed multimodal inputs. | Proactive critique and reasoning-to-response consistency. |
+| **ProReady-QA / StreamReady** | Annotates answer-evidence windows and jointly measures correctness and readiness under asymmetric early/late penalties. | Evaluating when a streaming-video assistant has enough evidence to answer. |
+| **PROS-Bench** | Separates issue discovery, user acceptance, native-object repair, validation, and realized outcome. | Evaluating epistemic initiative without conflating it with execution authority. |
+| **RPCBench** | Tests detection, localization, handling, and evidence faithfulness across recommendation-premise failures. | Evaluating proactive critique beyond generic factual-error detection. |
+| **OR-Clarify** | Measures hidden-slot recovery, premature or excessive stopping, silent assumptions, and question cost before optimization. | Evaluating selective clarification readiness rather than question generation alone. |
+| **CC-Mediation** | Measures persistent stance change after an intervention and diagnoses timing versus strategy failure. | Outcome-sensitive evaluation of proactive social mediation. |
+| **CONFLICTGUI** | Contrasts feasible GUI tasks with instruction-internal and instruction-GUI conflicts. | Evaluating whether capable GUI agents can refrain from inappropriate execution. |
+| **TIMELI** | Evaluates speak-versus-silence timing and instruction quality in open-loop, closed-loop, and sim-to-real assistive navigation. | Safety-critical multimodal timing with collision and instruction-frequency costs. |
+| **IdeaAMBIG** | Tests readiness classification, gap localization, and clarification generation on real and controlled specification defects. | Measuring silent-assumption risk before coding or research implementation. |
+| **Physical Experiment Selection** | Uses matched physical worlds and known experiment costs to test stop-versus-measure choices. | Evaluating whether action changes when evidence requirements change. |
+| **ProMediConv** | Tracks mediation-strategy selection and party behavior shifts over reconstructed multi-party legal cases. | Strategy-aware proactive dialogue and trajectory-level social effects. |
 
 ## How To Avoid Disruption / Privacy Risk
 
@@ -109,14 +137,18 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | **Abstention Competence** | Distinguishes specification, verification, and authority gaps and scores safe pause against useful execution. | Auditable abstention, authorization, and recovery routing. |
 | **AI Watchdog** | Proactively warns users about conversational dark patterns and separates awareness from behavioral resistance. | Safety-sidecar timing and manipulation-defense interfaces. |
 | **MMPCBench** | Tests whether MLLMs surface faulty premises instead of suppressing detected errors to remain compliant. | Compliance-bias and proactive-correction evaluation. |
+| **Beyond Instruction-Driven Editing / PROS** | Gives users issue-level acceptance, reversible previews, and an explicit final commit decision. | Separating proactive diagnosis from authority to alter user artifacts. |
+| **Do GUI Agents Know When Not to Act? / CONFLICTGUARD** | Verifies instruction logic and GUI evidence before shifting from execution to termination. | Conflict-aware restraint and overcompliance reduction in GUI agents. |
+| **Time-Aware Assistive Navigation / TIMELI** | Treats silence at hazardous moments, concise instructions, and collision outcomes as coupled safety requirements. | Designing assistance where an ill-timed correct message can still harm the user. |
+| **Governed Proactive Agency** | Requires standing authorization to remain revocable and distinguishes deliberate restraint from mere inactivity. | Auditing mandate boundaries, accountability, and safe activation. |
 
 ## High-Leverage Open Problems
 
 | Problem | Current Gap | Representative Starting Points |
 |---|---|---|
-| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, Value of Information |
+| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, StreamReady, ProActor, TIMELI, Ambient, Speak for Me, CC-Mediation, Value of Information |
 | Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0, PASK, Claw-Anything |
-| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | VeriOS, KnowU-Bench, Abstention Competence, Selectively Quitting |
+| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | Governed Proactive Agency, VeriOS, KnowU-Bench, CONFLICTGUARD, Abstention Competence, Selectively Quitting |
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
 | Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, ProAct, VitaBench 2.0 |
-| Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, ProactBench, OmniPro, Int-Bench, π-Bench, BENCHMARKS.md |
+| Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, ProactBench, OmniPro, ProReady-QA, TIMELI, IdeaAMBIG, Physical Experiment Selection, RPCBench, OR-Clarify, CC-Mediation, ProMediConv, Int-Bench, π-Bench, BENCHMARKS.md |
