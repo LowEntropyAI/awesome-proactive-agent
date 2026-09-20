@@ -31,6 +31,11 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Ambient @ EgoProactive** | Recasts imbalanced interrupt-versus-silent generation as a calibrated one-token decision. | Lightweight wearable triggers and cross-domain supervision for rare interventions. |
 | **Em-Garde** | Compiles a standing query into visual proposals and uses lightweight streaming matching to trigger the expensive responder. | Efficient fast/slow event gates for continuous video. |
 | **Gander** | Predicts listen or speak at the chunk level while an asynchronous reasoning component can return proactive progress or questions. | Full-duplex turn control and proactive updates during long-running agent work. |
+| **Realtime-Venus** | Couples a live full-duplex conversational loop with asynchronous reasoning and tool delegation. | Maintaining responsive speech while background tasks finish and re-enter the conversation. |
+| **Full-Duplex Speech Models Take the Floor** | Separates the opportunity to speak from content-grounded reasons such as false facts or hazards. | Diagnosing whether always-on models intervene because help is needed rather than because silence opens the floor. |
+| **PACE** | Estimates human action completion from motion and schedules robot assistance to reduce idle time. | Progress-conditioned intervention timing in collaborative physical tasks. |
+| **WatchGuardian** | Lets users define behavior triggers and delivers personalized just-in-time interventions from smartwatch sensing. | User-authorized wearable triggers, personalization, and false-alert analysis. |
+| **Oops, Not Now / PEARL** | Shows that proactive delivery can drive frustration and tool abandonment even when responses are grounded. | Treating disengagement and unwanted timing as first-class intervention outcomes. |
 | **Governed Proactive Agency** | Frames activation as a policy over act, ask, monitor, defer, or refrain under a revocable mandate. | Connecting intervention timing to authorization, accountability, and traceable silence. |
 
 ## What To Proactively Infer
@@ -41,6 +46,11 @@ This cluster asks what the agent should infer before the user says it explicitly
 |---|---|---|
 | **Proactive Agent** | Predicts likely next tasks from desktop activity event streams. | Baseline framing for task anticipation. |
 | **Ask-before-Plan** | Infers missing constraints and asks before generating a plan. | Clarification-before-execution policies. |
+| **Clarify or Answer / ContextClarify** | Detects external context missing from an image-question pair and chooses one focused clarification before answering. | Multimodal ask-versus-answer learning and ambiguity contrast sets. |
+| **Ask or Assume?** | Separates coding-task execution from a monitor that detects underspecified requirements throughout the trajectory. | Repeated ask-before-edit decisions in repository-level agents. |
+| **Ambig-SWE** | Decomposes interactive software engineering into ambiguity detection, targeted asking, and answer use. | End-to-end evaluation of clarification under tool execution. |
+| **PACT** | Uses current observation and cross-day history to decide whether a robot has enough context to act. | Continual ask-versus-act policies in embodied assistance. |
+| **PsyProbe** | Tracks structured psychological state and information gaps to choose the next exploratory question. | Interpretable user-state-driven dialogue planning in sensitive domains. |
 | **ProMISe** | Turns information-seeking intent resolution into a proactive multi-turn task. | Dialogue-focused missing-intent inference. |
 | **PIRA-Bench** | Reframes GUI agents as proactive intent recommenders from continuous screenshots. | GUI latent-intent recommendation. |
 | **GUIDE** | Evaluates whether models can understand GUI workflow state, infer user intent, and predict helpful assistance. | Open-ended GUI user-understanding and help-prediction evaluation. |
@@ -87,6 +97,8 @@ Personalization moves proactivity from generic helpfulness to user-specific timi
 | **Ψ-Bench** | Evaluates persona-sensitive influence in persuasive dialogue. | Profile-aware dialogue strategy selection. |
 | **Tunable LLM-based Proactive Recommendation Agent** | Tunes proactive recommendation behavior to latent user interests. | Recommendation-focused proactive personalization. |
 | **EgoPro-Bench** | Conditions attention-or-silence decisions on egocentric video and user memory. | Personalized intervention timing in continuous streams. |
+| **Satori** | Uses a BDI model of user state plus multimodal environmental context to select proactive AR guidance. | Interpretable personalization for physical-task assistance. |
+| **WatchGuardian** | Learns a user's custom intervention target from a handful of smartwatch examples. | User-defined proactive sensing rather than globally fixed nudges. |
 | **PASSING** | Acquires query-specific expertise through targeted What-to-Ask and How-to-Ask probes. | Interactive personalization when a static user profile is insufficient. |
 | **Propose to Learn, Learn to Propose / ProSE** | Plans proposals from beliefs about both user value and the user's ability to evaluate a change. | Personalized proposal sequencing and probe-versus-help trade-offs. |
 
@@ -97,6 +109,9 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | Paper | Contribution | Use It For |
 |---|---|---|
 | **ProactiveEval** | Splits proactive dialogue into target planning and dialogue guidance. | Dialogue benchmark design and LLM-as-judge protocols. |
+| **ContextClarify** | Pairs ambiguous VQA cases with non-ambiguous contrasts and scores both asking and final answering. | Testing whether multimodal agents ask selectively rather than universally. |
+| **Ambig-SWE** | Separates detection, question generation, and post-clarification coding success. | Locating which stage fails in interactive coding agents. |
+| **Full-Duplex Floor Selection** | Holds conversational context constant while varying whether content warrants intervention. | Measuring proactive speech initiation independently from ordinary turn taking. |
 | **ProAgentBench** | Uses real workflow logs to evaluate when-to-assist and how-to-assist. | Measuring sim-to-real gaps in proactive assistance. |
 | **PIRA-Bench** | Measures proactive GUI intent recommendation from continuous screenshots. | GUI-specific proactive evaluation. |
 | **GUIDE** | Adds video-based behavior state, intent, and help-prediction tasks for open-ended GUI workflows. | Evaluating whether GUI agents can understand users before assisting them. |
@@ -136,6 +151,8 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | **Selectively Quitting** | Treats withdrawal under compounded uncertainty as a useful agent action. | First-line stopping policies for tool agents. |
 | **Abstention Competence** | Distinguishes specification, verification, and authority gaps and scores safe pause against useful execution. | Auditable abstention, authorization, and recovery routing. |
 | **AI Watchdog** | Proactively warns users about conversational dark patterns and separates awareness from behavioral resistance. | Safety-sidecar timing and manipulation-defense interfaces. |
+| **Breaking Up is Hard to Do** | Documents companion agents proactively escalating relationships and resisting disengagement for product-aligned incentives. | Manipulation, consent, and relationship-boundary requirements for proactive systems. |
+| **Oops, Not Now / PEARL** | Finds that proactive educational support can increase frustration and cause users to minimize or abandon the assistant. | Negative-result evidence for user invocation, timing controls, and abandonment metrics. |
 | **MMPCBench** | Tests whether MLLMs surface faulty premises instead of suppressing detected errors to remain compliant. | Compliance-bias and proactive-correction evaluation. |
 | **Beyond Instruction-Driven Editing / PROS** | Gives users issue-level acceptance, reversible previews, and an explicit final commit decision. | Separating proactive diagnosis from authority to alter user artifacts. |
 | **Do GUI Agents Know When Not to Act? / CONFLICTGUARD** | Verifies instruction logic and GUI evidence before shifting from execution to termination. | Conflict-aware restraint and overcompliance reduction in GUI agents. |
@@ -146,9 +163,9 @@ Proactive agents need boundaries. The most important failure mode is not only be
 
 | Problem | Current Gap | Representative Starting Points |
 |---|---|---|
-| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, StreamReady, ProActor, TIMELI, Ambient, Speak for Me, CC-Mediation, Value of Information |
+| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, StreamReady, ProActor, TIMELI, Ambient, Speak for Me, CC-Mediation, Value of Information, Full-Duplex Floor Selection, PEARL |
 | Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0, PASK, Claw-Anything |
-| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | Governed Proactive Agency, VeriOS, KnowU-Bench, CONFLICTGUARD, Abstention Competence, Selectively Quitting |
+| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | Governed Proactive Agency, VeriOS, KnowU-Bench, CONFLICTGUARD, Abstention Competence, Selectively Quitting, Breaking Up is Hard to Do, WatchGuardian |
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
 | Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, ProAct, VitaBench 2.0 |
 | Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, ProactBench, OmniPro, ProReady-QA, TIMELI, IdeaAMBIG, Physical Experiment Selection, RPCBench, OR-Clarify, CC-Mediation, ProMediConv, Int-Bench, π-Bench, BENCHMARKS.md |
