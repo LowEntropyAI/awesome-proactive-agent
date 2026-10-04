@@ -16,7 +16,7 @@ const pages = [
   ['streaming/', 'Streaming proactive models', library(catalog, true) + supplement('STREAMING.md')],
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
   ['start/', 'Must Read: layered reading routes', guidePage(catalog, markdown('# Must Read\n' + mustRead), 'start')],
-  ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')))],
+  ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')), 'map')],
   ['projects/', 'Projects & implementations', projectPage(catalog) + supplement('PROJECTS.md')],
   ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')), 'applications')],
   ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')), 'personal')],
