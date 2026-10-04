@@ -5,7 +5,7 @@ Help keep the collection useful, traceable, and easy to maintain. Bibliographic 
 ## Add or correct a paper
 
 1. Check `README.md` for the title and canonical source URL to avoid duplicates.
-2. Confirm a user-facing proactive decision: infer an unstated need, choose an intervention moment, ask, suggest, remind, act, or deliberately stay silent. Describe the actual decision and its evaluation.
+2. Explain the connection to [proactive AI](README.md#scope): a proactive decision or capability, a foundation or human-factor question, an evaluation target, or a supporting mechanism. Describe the actual contribution and available evidence; identify proactive subsets when the work covers broader tasks.
 3. Add a row under the best-fitting `## Papers` section using the existing five-column schema: date, title, venue/source, tags, resources. Use existing tags from the vocabulary.
 4. Preserve publication uncertainty: a submission, preprint, repository claim, and verified conference acceptance are distinct statuses.
 5. Add a note under `papers/arxiv/YYYY-MM/` or `papers/conference/VENUE/`. Use the exact headings `Why It Matters`, `Proactivity Signal`, `Evaluation Setup`, `Key Limitations`, and `Use For`. Ground results in primary sources and state evaluation limits.
@@ -16,7 +16,7 @@ For a benchmark, keep all nine columns in `BENCHMARKS.md`. Do not compare scores
 
 ## Add a project
 
-Use `PROJECTS.md`. Record what triggers the assistant, what context it sees, what user-facing behavior it chooses, release/access status, evidence boundaries, canonical links, and checked date. Distinguish a memory/capture/serving component from a complete proactive assistant.
+Use `PROJECTS.md`. Record the proactive behavior or supporting role, activation mechanism, observed context, release/access status, evidence boundaries, canonical links, and checked date. For assistants, describe the behavior they choose; for components, describe how they support proactive systems. Keep these resource types explicit.
 
 ## Place a resource in the collection
 

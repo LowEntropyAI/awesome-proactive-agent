@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0EA5E9,55:14B8A6,100:F8FAFC&text=Awesome%20Proactive%20Agents&fontAlign=50&fontAlignY=40&fontColor=0F172A&fontSize=42&desc=Anticipatory,%20context-aware,%20and%20consent-aware%20AI%20assistants&descAlign=50&descAlignY=62&descSize=16" alt="Awesome Proactive Agents dynamic banner">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0EA5E9,55:14B8A6,100:F8FAFC&text=Awesome%20Proactive%20Agents&fontAlign=50&fontAlignY=40&fontColor=0F172A&fontSize=42&desc=Research,%20models,%20systems,%20and%20evaluation%20of%20proactive%20AI&descAlign=50&descAlignY=62&descSize=16" alt="Awesome Proactive Agents dynamic banner">
 </p>
 
 <h1 align="center">Awesome Proactive Agents</h1>
@@ -11,11 +11,11 @@
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/LowEntropyAI/awesome-proactive-agent/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <img src="https://img.shields.io/badge/Focus-Proactive%20Agents-0ea5e9" alt="Focus">
-  <img src="https://img.shields.io/badge/Scope-Dialogue%20%7C%20GUI%20%7C%20Mobile%20%7C%20IDE%20%7C%20Embodied-14b8a6" alt="Scope">
+  <img src="https://img.shields.io/badge/Focus-Proactive%20AI-0ea5e9" alt="Focus: Proactive AI">
+  <img src="https://img.shields.io/badge/Scope-Research%20%26%20Applications-14b8a6" alt="Scope: Research and Applications">
 </p>
 
-> A curated collection of **proactive AI agents, models, systems, and benchmarks** across **personal assistance, streaming multimodal interaction, and domain-specific and embodied assistance**.
+> A curated collection of **proactive AI research and applications**, bringing together papers, agents, models, systems, projects, products, benchmarks, and supporting infrastructure.
 
 > If this list is useful, a ⭐ helps others find it.
 
@@ -25,7 +25,7 @@
 - [Proactive Personal Agents](PERSONAL_AGENTS.md): assistants, research methods, interaction models, and evaluations across desktop, mobile, and physical-world interfaces.
 - [Supporting Infrastructure](INFRASTRUCTURE.md): observation, memory, activation, and serving roles.
 
-- [Proactive Atlas Website](https://lowentropyai.github.io/awesome-proactive-agent/): searchable Paper / Repo / Model / Dataset navigation, streaming-model routes, selected overview figures, and benchmarks under LowEntropyAI.
+- [Proactive Atlas Website](https://lowentropyai.github.io/awesome-proactive-agent/): searchable papers, projects, models, datasets, selected overview figures, and benchmarks under LowEntropyAI.
 - [Website Development & Deployment](WEBSITE.md): shared content sources, local preview, validation, and automatic GitHub Pages publishing.
 - [Projects & Products](PROJECTS.md): agent runtimes, ambient assistants, products, and supporting components, with concrete activation mechanisms.
 - [Streaming Proactivity](STREAMING.md): visual triggers, evidence-conditioned response timing, full-duplex interaction, model resources, and evaluation routes.
@@ -58,18 +58,23 @@
 
 ## Scope
 
-This collection covers **research and implemented systems where proactivity is a central target**: dialogue, planning, ambient assistants, GUI/mobile/OS and coding agents, streaming video and speech models, wearable assistance, personalization, evaluation, and human factors. Papers remain in the bibliography; implementation and product resources have their own guides.
+This collection covers **work related to proactive AI**: anticipating needs, inferring latent intent, taking initiative, and deciding when to ask, suggest, remind, act, or remain silent. It includes foundations and human factors, agent methods, interaction models, implemented systems and products, benchmarks and datasets, and supporting infrastructure.
 
-Proactivity can live in an **agent runtime** (event, schedule, or heartbeat activation), a **model policy** (speak, wait, or stay silent), or a **product workflow** (background research and contextual delivery). Streaming input, persistent memory, and tool use are supporting capabilities; record the actual activation decision when classifying a resource.
+Application settings include personal assistance, dialogue, information seeking, coding and digital workflows, streaming multimodal interaction, wearables, robotics, collaboration, and domain-specific assistance. These are starting points for browsing; the collection can grow as new proactive capabilities and applications emerge.
 
-**Personal is an application relationship; streaming is an interaction capability; model, project, product, and benchmark are resource types.** They are independent axes. A wearable assistant can be personal and streaming; a robot collaboration policy can be proactive without being a personal assistant. Device and modality are recorded separately.
+Proactivity can appear in an **agent runtime** (event, schedule, or heartbeat activation), a **model policy** (response timing, speak / wait decisions, or intent prediction), or a **product workflow** (background research and contextual delivery). Related work on memory, perception, personalization, planning, tools, safety, and user experience is welcome when its connection to proactive behavior is explained.
+
+**Application, device/modality, decision mechanism, and resource type are separate axes.** Personal assistance, streaming interaction, and embodied collaboration are overlapping routes through the collection. Papers retain canonical bibliography entries; projects, products, models, and evaluations are connected through companion guides.
 
 Typical inclusion signals:
 
-- The agent predicts latent intent or missing context before a complete user instruction.
-- The agent decides when to ask, suggest, remind, intervene, execute, or stay silent.
-- The paper evaluates proactive behavior, intervention timing, user control, consent, interruption cost, or personalization.
-- The benchmark or dataset makes proactivity the primary task rather than a side effect of general tool use.
+- Studies definitions, mechanisms, or human factors of initiative, anticipation, and proactive assistance.
+- Builds an agent, model, system, or product that infers needs or decides when and how to intervene.
+- Evaluates proactive behavior, intent prediction, response timing, utility, personalization, user control, consent, or interruption cost.
+- Provides a benchmark, dataset, or analysis relevant to training or assessing proactive capabilities, including proactive subsets of broader tasks.
+- Supports proactive systems through observation, memory, context management, activation, orchestration, or serving, with that role clearly described.
+
+For each resource, describe whether it **studies**, **implements**, **evaluates**, or **supports** proactivity, and keep evidence and limitations visible. A streaming interface, memory module, or tool-use capability can be relevant without by itself establishing proactive behavior.
 
 Resource labels:
 
