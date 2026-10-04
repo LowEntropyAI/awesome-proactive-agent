@@ -48,7 +48,7 @@ test('benchmark extraction keeps the source nine-column schema', () => {
 test('selected figures and project navigation retain original source URLs', () => {
   const selected = catalog.papers.filter(p => p.selected);
   assert.equal(selected.length, 6);
-  for (const p of selected) {
+  for (const p of selected.filter(p => p.thumbnail)) {
     const imagePath = resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-agent/', ''));
     assert.ok(existsSync(imagePath));
     assert.match(p.thumbnail.source, /^https:\/\/github.com\//);

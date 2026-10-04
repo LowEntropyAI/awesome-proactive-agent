@@ -23,15 +23,21 @@ This validates bibliography coverage, source deduplication, the repository's fiv
 
 - `README.md`: bibliographic source, five research areas, tags, essential-reading recommendations, and resource URLs.
 - `papers/**/*.md`: original English evidence cards retained in the repository. The website does not render their sections as articles.
-- `RESEARCH_MAP.md`: question-oriented guide.
+- `APPLICATIONS.md`, `PERSONAL_AGENTS.md`, `INFRASTRUCTURE.md`: shared editorial routes, rendered at `/applications/`, `/personal/`, and `/infrastructure/`.
+- `README.md` Must Read: rendered with its tier hierarchy and non-paper resources at `/start/`; balanced agent/model/benchmark selections remain a separate homepage feature.
+- `RESEARCH_MAP.md`: question-oriented guide rendered at `/map/`.
 - `BENCHMARKS.md`: structured nine-column evaluation source, searchable resource directory, and selection guide.
 - `STREAMING.md`: model/framework mechanisms, release status, capability routes, and evidence boundaries.
 - `PROJECTS.md`: assistants, implementations, products, and supporting components.
-- `website/content/selected.json`: selected visual entries, short navigation descriptions, original figure URLs, source attribution, and alternate text.
+- `website/content/selected.json`: balanced homepage picks (two agents, two streaming models, two benchmarks), short navigation descriptions, original figure URLs, source attribution, and alternate text.
+
+Homepage selections use three explicit groups: Proactive Agents, Streaming Proactive Models, and Benchmarks, with two picks each. Official overview images retain their source links; a missing image does not exclude a representative work. Colored SVG icons and the clickable collection map provide visual navigation. The Observe → Decide → Assist / wait diagram is an editorial concept, not a reconstructed paper figure.
 
 The design adapts the MIT-licensed **Minted Directory Astro** directory template to this repository's static generator. See [website/TEMPLATE.md](website/TEMPLATE.md) for the upstream source, adapted components, and retained license. The website focuses on direct Paper / Repo / Project / Model / Dataset navigation, category browsing, and selected overview figures.
 
 `website/data.mjs` normalizes the bibliography, merges repeated primary-source URLs while preserving categories, validates linked notes, and counts unique papers. Retained notes outside the bibliography are reported as `archivedNotes` in `catalog.json`. They do not inflate collection counts.
+
+The streaming, projects, and benchmarks directories also render their source guides below the browse view, preserving mechanism details and section anchors. The [restructuring plan](docs/RESTRUCTURE_PLAN.md) records the navigation design and a future optional structured-facet migration.
 
 The streaming filter is an editorial lens derived from title, tags, and note text. It includes streaming understanding, timing, duplex interaction, and memory papers. It is not a certification of autonomous need discovery. Use `STREAMING.md`'s capability routes to distinguish those mechanisms.
 

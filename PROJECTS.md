@@ -50,4 +50,4 @@ Streaming research implementations have a dedicated [model and framework matrix]
 
 Record the **resource type, activation source, context input, observable behavior, release/access status, source, and checked date**. Link a concrete heartbeat/scheduler, event hook, intervention gate, or documented product workflow. Keep a component in its supporting role unless its own implementation selects user-facing interventions.
 
-Prefer canonical upstream repositories over mirrors and forks. A paper implementation belongs here when it offers reusable code; retain its bibliographic record and decision card in the paper collection. See the [2026-10-04 curation record](docs/curation/2026-10-04.md) for search coverage and exclusions.
+Prefer canonical upstream repositories over mirrors and forks. A paper implementation belongs here when it offers reusable code; retain its bibliographic record and decision card in the paper collection.

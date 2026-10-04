@@ -11,5 +11,9 @@
     "dev": "npm run build && node website/serve.mjs",
     "test": "node --test website/test/*.test.mjs",
     "check": "npm test && npm run build && node website/check.mjs"
+  },
+  "dependencies": {
+    "marked": "16.4.1",
+    "sanitize-html": "2.18.0"
   }
 }

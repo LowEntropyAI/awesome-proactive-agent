@@ -69,4 +69,4 @@ For new experiments, report **causal input exposure, standing instructions, inte
 - [Awesome Streaming Video Understanding](https://github.com/sotayang/Awesome-Streaming-Video-Understanding): model/paper/dataset/benchmark discovery.
 - [Awesome Streaming Agents](https://github.com/lg-li/awesome-streaming-agents): continuous-input and active-activation perspective.
 
-Discovery lists help find candidates. Individual mechanism and release claims in this guide are checked against primary sources. See the [curation record](docs/curation/2026-10-04.md) for coverage and unresolved resources.
+Discovery lists help find candidates. Individual mechanism and release claims in this guide are checked against primary sources; unresolved resources are identified in the matrix above.
