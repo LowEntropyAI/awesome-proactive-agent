@@ -52,3 +52,5 @@
   .selected-card h3{min-height:3em}
 }
 .selected-card .selected-image{flex-shrink:0}
+
+.github-link{border:0;border-radius:0;background:transparent;padding:0}

@@ -102,10 +102,10 @@
       "selectionGroup": "model",
       "thumbnail": {
         "src": "/awesome-proactive-agent/assets/overviews/gander-omni-interaction-agent.png",
-        "alt": "Gander system overview connecting the streaming Cerebellum, agent orchestration runtime, and asynchronous Back Brain",
-        "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent#-system-design",
-        "caption": "Official system overview · Gander authors",
-        "original": "https://raw.githubusercontent.com/Omni-Interaction-Gander/Omni-Interaction-Agent/main/docs/assets/brain-cerebellum-runtime.png"
+        "alt": "Gander capabilities overview of omni perception, real-time full-duplex interaction, and agentic execution",
+        "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent/blob/main/docs/assets/gander-capabilities.png",
+        "caption": "Official capabilities overview · Gander authors",
+        "original": "https://raw.githubusercontent.com/Omni-Interaction-Gander/Omni-Interaction-Agent/main/docs/assets/gander-capabilities.png"
       }
     }
   }
