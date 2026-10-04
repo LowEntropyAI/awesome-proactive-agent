@@ -1,4 +1,4 @@
-# Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor?
+# Do Proactive Agents Need an LLM to Decide When to Act?
 
 ## Why It Matters
 

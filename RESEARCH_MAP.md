@@ -12,7 +12,7 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Assistance or Disruption?** | Frames proactive AI programming support as a tradeoff between efficiency and workflow disruption. | Arguing that interruption cost must be a first-class metric. |
 | **Developer Interaction Patterns with Proactive AI** | Uses real IDE field data to show suggestions at workflow boundaries are more likely to be accepted. | Designing timing policies for deployed coding assistants. |
 | **ProactiveVA** | Studies help-seeking behavior in visual analytics logs and turns it into proactive UI-agent design requirements. | Proactive assistance timing and intervention design in complex analytical tools. |
-| **Do Proactive Agents Really Need an LLM?** | Recasts wake-up triggering and anchor selection as lightweight temporal-graph prediction instead of always-on LLM calls. | Efficient on-device triggers and grounded context routing for proactive assistants. |
+| **Do Proactive Agents Need an LLM to Decide When to Act?** | Recasts wake-up triggering and anchor selection as lightweight temporal-graph prediction instead of always-on LLM calls. | Efficient on-device triggers and grounded context routing for proactive assistants. |
 | **When not to help** | Plans assistance over latent user engagement so repeated help does not cause alert fatigue. | Long-term help-or-silence policies and counterfactual need estimation. |
 | **AI Assistants Overassist / Int-Bench** | Shows LLM tutors intervene earlier and more often than humans, often trading learning opportunity for immediate correctness. | Measuring over-assistance, timing, content directness, and transfer. |
 | **Pare** | Simulates active users in multi-app environments and evaluates timing-sensitive intervention. | Testing policies that must decide help / execute / stay silent. |
@@ -33,10 +33,18 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Gander** | Predicts listen or speak at the chunk level while an asynchronous reasoning component can return proactive progress or questions. | Full-duplex turn control and proactive updates during long-running agent work. |
 | **Realtime-Venus** | Couples a live full-duplex conversational loop with asynchronous reasoning and tool delegation. | Maintaining responsive speech while background tasks finish and re-enter the conversation. |
 | **Full-Duplex Speech Models Take the Floor** | Separates the opportunity to speak from content-grounded reasons such as false facts or hazards. | Diagnosing whether always-on models intervene because help is needed rather than because silence opens the floor. |
+| **Live Assistant** | Jointly chooses silence, private memory, or a message, then selects the recipient and task in a real livestream. | Role-conditioned intervention policies in long-running social streams. |
+| **DocuTeam** | Uses document changes to trigger or redirect multi-agent discussion without requiring the user to orchestrate every turn. | Event-triggered collaboration and proactive critique around evolving artifacts. |
 | **PACE** | Estimates human action completion from motion and schedules robot assistance to reduce idle time. | Progress-conditioned intervention timing in collaborative physical tasks. |
 | **WatchGuardian** | Lets users define behavior triggers and delivers personalized just-in-time interventions from smartwatch sensing. | User-authorized wearable triggers, personalization, and false-alert analysis. |
 | **Oops, Not Now / PEARL** | Shows that proactive delivery can drive frustration and tool abandonment even when responses are grounded. | Treating disengagement and unwanted timing as first-class intervention outcomes. |
 | **Governed Proactive Agency** | Frames activation as a policy over act, ask, monitor, defer, or refrain under a revocable mandate. | Connecting intervention timing to authorization, accountability, and traceable silence. |
+| **TRACE** | Audits evidence validity, response events, delay, false alarms, missed windows, and processing workload under one streaming protocol. | Separating when-to-answer performance from offline QA accuracy and hidden system conditions. |
+| **HiThink Turn** | Separates response intent from semantic completeness and conditions interruption on system playback state. | Low-latency voice interruption, yielding, and playback-resume control. |
+| **DuplexAct-Bench** | Evaluates proactive initiation and active silence alongside interruption, yielding, and backchanneling in bilingual streams. | Testing when, whether, and how full-duplex agents participate. |
+| **Rational Clarification / REVOIR** | Asks only when expected downstream reward improvement exceeds question cost and immediate-action alternatives. | Cost-sensitive ask-versus-act policies with optional post-action correction. |
+| **HiSentinel** | Distills outcome-aware pre-execution intervention into lightweight allow, redirect, or human-escalation decisions. | Preventing coding-agent error propagation without blocking every imperfect action. |
+| **Foundations / PROACTIVITY-GYM** | Couples useful work, temporal compute allocation, and evolving trust across multi-day scenarios. | Scheduling proactive work around user focus and measuring trust damage from misalignment. |
 
 ## What To Proactively Infer
 
@@ -68,6 +76,14 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **Propose to Learn, Learn to Propose / ProSE** | Uses proactive proposals both to improve a design and to learn latent preferences and evaluation constraints. | Evaluability-aware preference inference under bounded rationality. |
 | **IdeaAMBIG** | Separates specification-readiness assessment, missing-method localization, and clarification-action generation. | Detecting when a coding agent lacks enough information to implement faithfully. |
 | **New Evidence, Same Choice** | Requires a model to answer when evidence is sufficient or choose the cheapest experiment that resolves the question. | Active evidence acquisition and value-of-information decisions beyond dialogue. |
+| **CIGAsk** | Trains when and how to clarify with counterfactual information gain and an asymmetric ambiguity reward. | Joint ask-versus-answer and question-quality learning without a separate critic. |
+| **FinInteract** | Separates plausible default answers from the user's intended financial interpretation. | Bilingual clarification and intent-integration evaluation under multiple verifiable readings. |
+| **ProRobo / ProAction** | Infers high-level robot actions from human-centered multimodal cues without an action instruction. | Unprompted embodied need inference and cognitively grounded action supervision. |
+| **PROUR** | Routes uncertainty among act, clarify the user, and verify the world instead of treating every information gap alike. | Source-aligned information acquisition for tool-using agents. |
+| **IntentFlux** | Tests whether agents discard superseded or withdrawn requirements and maintain only the active request. | Evolving-intent state estimation and stale-instruction prevention. |
+| **Horizontal and Vertical Proactivity** | Scores which unstated information an agent pursues and how deeply it follows dependency chains. | Content-aware question selection and stopping rather than trigger-only proactivity. |
+| **Bayesian Intent Disambiguation** | Selects information-gain questions over grounded formal robot-task hypotheses before planning. | Verifiable embodied clarification and active intent learning. |
+| **Knowing When to Yield / GAVA** | Arbitrates user corrections by accepting, rejecting, inspecting, or asking under declared costs. | Mixed-initiative systems where human feedback may itself be wrong. |
 
 ## How To Maintain Long-Term Intent
 
@@ -83,6 +99,9 @@ Long-horizon proactivity depends on remembering what matters, monitoring changin
 | **ProEvent** | Focuses on event-centric proactive maintenance and reminders. | Future events and reminder-style proactivity. |
 | **PASK / LatentNeeds-Bench** | Combines streaming demand detection with hierarchical memory and explicit silent, fast, or full assistance actions. | Always-on intent maintenance under latency constraints. |
 | **Claw-Anything** | Simulates months of cross-service activity and multi-device state for personal-assistant tasks. | Broad-context long-horizon proactivity amid irrelevant events. |
+| **APM-Bench** | Extends egocentric streaming memory across interrupted sessions and tests missing-evidence awareness. | Cross-session assistance under storage, latency, and recall constraints. |
+| **Drift-Bench++** | Introduces miscommunication, finite patience, and silent interaction-conditioned intent shifts into executable tasks. | Continual intent alignment when the user's goal changes during interaction. |
+| **OneStreamer** | Builds query-independent caption memory and learns wait-to-response state transitions jointly. | Connecting online perception, reusable memory, and timely answers. |
 
 ## How To Personalize
 
@@ -101,6 +120,8 @@ Personalization moves proactivity from generic helpfulness to user-specific timi
 | **WatchGuardian** | Learns a user's custom intervention target from a handful of smartwatch examples. | User-defined proactive sensing rather than globally fixed nudges. |
 | **PASSING** | Acquires query-specific expertise through targeted What-to-Ask and How-to-Ask probes. | Interactive personalization when a static user profile is insufficient. |
 | **Propose to Learn, Learn to Propose / ProSE** | Plans proposals from beliefs about both user value and the user's ability to evaluate a change. | Personalized proposal sequencing and probe-versus-help trade-offs. |
+| **Experience Activation / ExpActivator** | Activates historical GUI experience only when the present screen, time, and scenario make it applicable. | Personalized routine suggestions that abstain when retrieved history is merely relevant. |
+| **RobotEQ 3.0** | Links user profiles to individual preferences over socially proactive robot actions. | Evaluating personalized embodied behavior instead of population-average appropriateness. |
 
 ## How To Evaluate Proactivity
 
@@ -135,6 +156,19 @@ Evaluation remains fragmented. Useful benchmarks isolate proactive dimensions in
 | **IdeaAMBIG** | Tests readiness classification, gap localization, and clarification generation on real and controlled specification defects. | Measuring silent-assumption risk before coding or research implementation. |
 | **Physical Experiment Selection** | Uses matched physical worlds and known experiment costs to test stop-versus-measure choices. | Evaluating whether action changes when evidence requirements change. |
 | **ProMediConv** | Tracks mediation-strategy selection and party behavior shifts over reconstructed multi-party legal cases. | Strategy-aware proactive dialogue and trajectory-level social effects. |
+| **FinInteract** | Pairs default and intended interpretations to expose agents that guess rather than clarify. | Measuring clarification elicitation separately from downstream answer competence. |
+| **Live Assistant** | Evaluates silence, private memory, recipient selection, and grounded assistance over 13,812 streaming decisions. | Selective participation in multi-party audiovisual environments. |
+| **ProAction** | Tests unprompted high-level robot action reasoning across modalities, people, and scenes. | Embodied proactive reasoning before low-level control. |
+| **PASTABench** | Annotates earliest-signal, trigger, and optimal intervention windows in risky agent trajectories. | Timely safety monitoring rather than post-hoc trajectory grading. |
+| **TWIST** | Pairs memory-triggered detection or blocking cases with surface-matched hard negatives. | Evaluating when conversational memory should intervene and when it should remain silent. |
+| **TRACE** | Reports answer validity, delay, false alarms, missed windows, completion, reliability, and processing workload under audited evidence timing. | Condition-aware comparison of streaming-video systems. |
+| **IntentFlux** | Preserves executable graders while injecting controlled supersession and withdrawal into dialogues. | Measuring whether an agent recovers the current intent rather than obeying stale context. |
+| **PROACTIVITY-GYM** | Evaluates task capability, temporal allocation, and trust across model-harness configurations and multi-day simulations. | Avoiding benchmarks that collapse useful work and acceptable intervention into one score. |
+| **APM-Bench** | Tests persistent memory across 549 interrupted video sessions and asks systems to recognize unavailable evidence. | Evaluating cross-session memory utility, latency, and storage together. |
+| **Drift-Bench++** | Adds finite patience, miscommunication, and silent intent shifts to verified executable tasks. | Evaluating inquiry quality and adaptation under non-oracle users. |
+| **DuplexAct-Bench** | Covers six full-duplex behaviors across English and Chinese streaming conditions with separate timing and content scores. | Auditing proactive initiation, active silence, interruption, yielding, and backchannels. |
+| **SWE-Intervene** | Labels pre-execution coding actions as allow, redirect, or pause for human help with recovery feedback. | Action-level evaluation of selective intervention in autonomous coding. |
+| **OverAct** | Deterministically measures tool and data access beyond the user's request across privacy-sensitive domains. | Least-privilege evaluation without an LLM judge. |
 
 ## How To Avoid Disruption / Privacy Risk
 
@@ -158,14 +192,22 @@ Proactive agents need boundaries. The most important failure mode is not only be
 | **Do GUI Agents Know When Not to Act? / CONFLICTGUARD** | Verifies instruction logic and GUI evidence before shifting from execution to termination. | Conflict-aware restraint and overcompliance reduction in GUI agents. |
 | **Time-Aware Assistive Navigation / TIMELI** | Treats silence at hazardous moments, concise instructions, and collision outcomes as coupled safety requirements. | Designing assistance where an ill-timed correct message can still harm the user. |
 | **Governed Proactive Agency** | Requires standing authorization to remain revocable and distinguishes deliberate restraint from mere inactivity. | Auditing mandate boundaries, accountability, and safe activation. |
+| **Safety Nudges** | Delivers lightweight real-time warnings when chatbot behavior presents risks that users may miss. | Calibrating proactive safety sidecars and separating awareness from behavior change. |
+| **PASTABench** | Measures whether a safety monitor intervenes inside a useful window before risk becomes explicit or irreversible. | Trajectory-level risk detection, false-stop analysis, and lexical-robustness testing. |
+| **TWIST** | Tests contradiction blocking and sensitive-memory governance against matched do-not-intervene controls. | Preventing memory systems from either missing conflicts or flagging everything. |
+| **Agentic Teammates** | Documents how a persistent proactive workplace agent changes tacit workflows, relational boundaries, trust, and agency. | Organizational governance for multi-user agents that become continuing team actors. |
+| **OverAct** | Shows that tool agents can exceed the request's authorization boundary even while completing the task. | Request-grounded least privilege, call justification, and pre-execution filtering. |
+| **HiSentinel** | Pauses or redirects risky coding actions before execution and can route unresolved decisions to a person. | Separating autonomous recovery from cases that genuinely require human authority. |
+| **Referential Uncertainty** | Demonstrates that poorly targeted uncertainty communication can increase rather than reduce decision errors. | Designing clarification and hedging signals that human collaborators can act on. |
+| **Knowing When to Yield / GAVA** | Refuses to treat user corrections as automatically authoritative and gathers grounded evidence selectively. | Handling incorrect feedback without either blind compliance or blanket rejection. |
 
 ## High-Leverage Open Problems
 
 | Problem | Current Gap | Representative Starting Points |
 |---|---|---|
-| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, Int-Bench, Pare, ProAgentBench, StreamReady, ProActor, TIMELI, Ambient, Speak for Me, CC-Mediation, Value of Information, Full-Duplex Floor Selection, PEARL |
-| Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, cancel. | ChronosBench, π-Bench, VitaBench 2.0, PASK, Claw-Anything |
-| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, and auditable abstention. | Governed Proactive Agency, VeriOS, KnowU-Bench, CONFLICTGUARD, Abstention Competence, Selectively Quitting, Breaking Up is Hard to Do, WatchGuardian |
+| Timing under uncertainty | Most systems still lack calibrated interruption-cost models and real-user estimates of when silence is better. | When not to help, REVOIR, Int-Bench, Pare, ProAgentBench, StreamReady, TRACE, ProActor, TIMELI, Ambient, Speak for Me, CC-Mediation, DuplexAct-Bench, Full-Duplex Floor Selection, Live Assistant, PASTABench, PEARL |
+| Long-term task threads | Agents remember facts but rarely model task lifecycle: start, pause, resume, revise, or cancel. | ChronosBench, IntentFlux, Drift-Bench++, APM-Bench, π-Bench, VitaBench 2.0, PASK, Claw-Anything |
+| Consent-aware execution | Proactive execution needs preview, confirmation, undo, permission tiers, least privilege, and auditable abstention. | Governed Proactive Agency, OverAct, HiSentinel, VeriOS, KnowU-Bench, CONFLICTGUARD, Abstention Competence, Selectively Quitting, Breaking Up is Hard to Do, WatchGuardian, Safety Nudges, Agentic Teammates |
 | Real-data calibration | Synthetic user traces often overestimate proactive-agent performance. | ProAgentBench, ProCodeBench, FingerTip 20K |
-| Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, ProAct, VitaBench 2.0 |
-| Evaluation comparability | Benchmarks measure different meanings of proactivity. | ProactiveEval, ProactBench, OmniPro, ProReady-QA, TIMELI, IdeaAMBIG, Physical Experiment Selection, RPCBench, OR-Clarify, CC-Mediation, ProMediConv, Int-Bench, π-Bench, BENCHMARKS.md |
+| Memory-to-action bridge | Memory systems are improving, but deciding when memory should trigger action remains weak. | CogniFold, MemEye, OneStreamer, APM-Bench, ExpActivator, ProAct, TWIST, VitaBench 2.0 |
+| Evaluation comparability | Benchmarks measure different meanings of proactivity. | PROACTIVITY-GYM, TRACE, Drift-Bench++, IntentFlux, DuplexAct-Bench, OverAct, ProactiveEval, ProactBench, OmniPro, ProReady-QA, TIMELI, FinInteract, PASTABench, TWIST, IdeaAMBIG, Physical Experiment Selection, RPCBench, OR-Clarify, CC-Mediation, ProMediConv, Int-Bench, π-Bench, BENCHMARKS.md |
