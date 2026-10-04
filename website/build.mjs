@@ -11,16 +11,16 @@ const supplement = file => `<section class="prose guide-content">${markdown(read
 const mustRead = read('README.md').split('## Must Read\n')[1]?.split('\n## ')[0];
 if (!mustRead) throw new Error('Missing Must Read source');
 const pages = [
-  ['', 'Proactive agents & streaming models', home(catalog)],
+  ['', 'Awesome Proactive Agent', home(catalog)],
   ['library/', 'Research library', library(catalog)],
   ['streaming/', 'Streaming proactive models', library(catalog, true) + supplement('STREAMING.md')],
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
-  ['start/', 'Must Read: layered reading routes', guidePage(catalog, markdown('# Must Read\n' + mustRead))],
+  ['start/', 'Must Read: layered reading routes', guidePage(catalog, markdown('# Must Read\n' + mustRead), 'start')],
   ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')))],
   ['projects/', 'Projects & implementations', projectPage(catalog) + supplement('PROJECTS.md')],
-  ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')))],
-  ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')))],
-  ['infrastructure/', 'Supporting infrastructure', guidePage(catalog, markdown(read('INFRASTRUCTURE.md')))]
+  ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')), 'applications')],
+  ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')), 'personal')],
+  ['infrastructure/', 'Supporting infrastructure', guidePage(catalog, markdown(read('INFRASTRUCTURE.md')), 'infrastructure')]
 ];
 for (const [path, title, content] of pages) write(path + 'index.html', layout(title, content, path, catalog.stats));
 write('404.html', layout('Page not found', `<div class="page-shell page-heading"><div class="eyebrow">404 / OFF THE MAP</div>${bi('Let’s find your way back.', '回到研究地图。', 'h1')}<p>The page may have moved. Browse the library to find the paper.</p><a class="button primary" href="${url('library/')}">Explore the library →</a></div>`, '404.html', catalog.stats));

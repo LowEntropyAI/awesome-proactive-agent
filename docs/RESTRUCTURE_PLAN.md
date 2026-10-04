@@ -71,7 +71,7 @@ Awesome Proactive Agents
 2. **选择应用或机制**：ContextAgent；OpenClaw/Proactivity SDK；dot/MineContext；PersonalAlign；Satori/ProMemAssist；PACT/PACE；JoyAI/MOSS；OneStreamer/StreamReady；MiniCPM-o/Gander。
 3. **匹配评测**：ProAgentBench/KnowU；π-Bench/VibeLifeBench；OmniMMI/StreamGaze；EgoPro/EgoServe；Why2Speak。
 
-GitHub 首页使用三列表格及跨列分组标题。每条说明“为什么读、对应什么决策”，项目和模型有资源类型提示。网站单独呈现同一阅读路线；Selected 按 Proactive Agents / Streaming Proactive Models / Benchmarks 三组各选两个，分别为 Proactive Agent、ContextAgent；JoyAI、OneStreamer；π-Bench、KnowU-Bench。有没有概览图不决定入选，也不代替分层 Must Read。
+GitHub 首页使用三列表格及跨列分组标题。每条说明“为什么读、对应什么决策”，项目和模型有资源类型提示。网站单独呈现同一阅读路线；Selected 按 Proactive Agents / Models / Benchmarks 三组展示，分别为 Proactive Agent、ContextAgent、PASK；JoyAI、OneStreamer；π-Bench、KnowU-Bench、PIRA-Bench / PIRF。网页上的 Streaming 使用普通 tag，取消独立导航入口和专属标记。有没有概览图不决定入选，也不代替分层 Must Read。
 
 ## 6. 多维分类设计
 
@@ -125,9 +125,9 @@ GitHub 首页使用三列表格及跨列分组标题。每条说明“为什么�
 
 ## 8. 本次验证结果
 
-- 12 项自动测试通过；生成 10 个内容页面和 1 个 404 页面，507 个内部资源链接通过检查。
+- 12 项自动测试通过；生成 10 个内容页面和 1 个 404 页面，513 个内部资源链接通过检查。
 - 当前目录保留 188 篇论文；重构前原始 181 篇论文均能按资源链接匹配，新增资料继续保留。
 - 347 个文档本地文件链接、21 个生成页面片段链接检查通过（贡献说明中的占位路径不计入）。
-- 浏览器检查了桌面、390px 手机布局和深色模式；六张精选图均成功加载，手机页面没有整体横向溢出。
-- Selected 的 Agent / Streaming Model / Benchmark 三组各两项，配图保留官方来源；导航图使用原创 SVG 图标和概念流程，不代表具体论文结构；首页以大字号、独立强调色及渐变底线突出 Proactive。
+- 浏览器检查了桌面、390px 手机布局和深色模式；已核验精选概览图来源及加载，手机页面没有整体横向溢出。
+- Selected 覆盖 Agent / Model / Benchmark 三组，包含 PASK 和 PIRA-Bench / PIRF，配图保留官方来源；分类入口使用统一视觉权重，Streaming 无常驻高亮；导航图使用原创 SVG 图标和概念流程，不代表具体论文结构；首页以大字号、独立强调色及渐变底线突出 Proactive。
 - 完整结构化多标签目录仍属于阶段 C；本地构建通过不代表线上发布完成。

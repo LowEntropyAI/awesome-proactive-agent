@@ -9,6 +9,8 @@ These are original figures or resized previews of original figures from the name
 | `onestreamer-streaming-video.png` | [OneStreamer authors](https://github.com/MCG-NJU/OneStreamer/blob/main/assets/architecture.png) |
 | `moss-vl-realtime-proactive-video.png` | [OpenMOSS / MOSS-VL](https://github.com/OpenMOSS/MOSS-VL/blob/main/assets/architecture.png) |
 | `joyai-vl-interaction.png` | [JD / JoyAI-VL-Interaction](https://github.com/jd-opensource/JoyAI-VL-Interaction/blob/main/img/overview.png) |
+| `pask.png` | [PASK authors](https://xzf-thu.github.io/Pask/assets/images/figure1.png) |
+| `pira-bench.png` | [PIRA-Bench authors, Figure 1](https://arxiv.org/html/2603.08013v1#S1.F1) |
 | `pi-bench.png` | [π-Bench authors](https://simplified-reasoning.github.io/Pi-Bench/assets/figures/overview.png) |
 | `knowu-bench.png` | [KnowU-Bench authors](https://github.com/ZJU-REAL/KnowU-Bench/blob/main/assets/intro.png) |
 | `minicpm-o-45-full-duplex.png` | [OpenBMB / MiniCPM-o 4.5](https://github.com/OpenBMB/MiniCPM-o/blob/main/assets/minicpm-o-45-framework.png) |

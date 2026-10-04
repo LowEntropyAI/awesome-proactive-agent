@@ -21,7 +21,7 @@ document.addEventListener('keydown', event => { if (event.key === '/' && !['INPU
 let render = null, renderDirectory = null;
 function card(p) {
   const resources = navigationResources(p);
-  return `<article class="paper-card"><div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span>${p.streaming ? `<a class="stream-indicator" href="${base}streaming/">Streaming</a>` : ''}</div><h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} <span aria-hidden="true">↗</span></a></h3><div class="tags">${p.tags.slice(0, 3).map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
+  return `<article class="paper-card"><div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span></div><h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} <span aria-hidden="true">↗</span></a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
 }
 if ($('#catalog')) {
   const controls = ['category', 'tag', 'year', 'venue', 'code', 'featured', 'sort'];

@@ -30,6 +30,8 @@ test('combined facets, streaming and essential flags constrain results', () => {
   const filtered = searchPapers(catalog.papers, { tag: 'Intervention Timing', year: '2026', notes: true }, true);
   assert.ok(filtered.length);
   assert.ok(filtered.every(p => p.streaming && p.date.startsWith('2026') && p.note && p.tags.includes('Intervention Timing')));
+  const streamingTag = searchPapers(catalog.papers, { tag: 'Streaming' });
+  assert.deepEqual(new Set(streamingTag.map(p => p.id)), new Set(catalog.papers.filter(p => p.streaming).map(p => p.id)));
   const essentials = searchPapers(catalog.papers, { featured: true });
   assert.ok(essentials.length >= 8);
   assert.ok(essentials.every(p => p.featured));
@@ -47,11 +49,11 @@ test('benchmark extraction keeps the source nine-column schema', () => {
 });
 test('selected figures and project navigation retain original source URLs', () => {
   const selected = catalog.papers.filter(p => p.selected);
-  assert.equal(selected.length, 6);
+  assert.equal(selected.length, 8);
   for (const p of selected.filter(p => p.thumbnail)) {
     const imagePath = resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-agent/', ''));
     assert.ok(existsSync(imagePath));
-    assert.match(p.thumbnail.source, /^https:\/\/github.com\//);
+    assert.match(p.thumbnail.source, /^https:\/\//);
     assert.match(p.thumbnail.original, /^https:\/\//);
     assert.ok(p.thumbnail.alt && p.thumbnail.caption);
   }

@@ -51,6 +51,8 @@ export function loadCatalog() {
     const tags = [...row[3].matchAll(/`([^`]+)`/g)].map(m => m[1]);
     // Streaming is an explicit editorial lens, derived from title/tags and note evidence.
     const streaming = /streaming|streamarena|streamready|onestreamer|full.duplex|duplexact|omnimmi|omni.pro|egopro|egoserve|moss.vl|realtime.venus|hithink|gander|vinci|live assistant/i.test(title + ' ' + tags.join(' ') + ' ' + noteText);
+    // Expose the editorial lens through the same tag field and filter as every topic.
+    if (streaming && !tags.includes('Streaming')) tags.push('Streaming');
     const summaryMatch = noteText.match(/## Why It Matters\s+([\s\S]*?)(?=\n## |$)/);
     const summary = summaryMatch ? plain(summaryMatch[1]).replace(/\s+/g, ' ') : '';
     if (records.has(identity)) {

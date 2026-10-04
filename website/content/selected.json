@@ -34,7 +34,7 @@
         "caption": "Official model and system overview · JD",
         "original": "https://raw.githubusercontent.com/jd-opensource/JoyAI-VL-Interaction/main/img/overview.png"
       },
-      "selectionGroup": "streaming"
+      "selectionGroup": "model"
     },
     "onestreamer-streaming-video": {
       "displayTitle": "OneStreamer",
@@ -46,7 +46,7 @@
         "caption": "Official architecture figure · OneStreamer authors",
         "original": "https://raw.githubusercontent.com/MCG-NJU/OneStreamer/main/assets/architecture.png"
       },
-      "selectionGroup": "streaming"
+      "selectionGroup": "model"
     },
     "pi-bench-long-horizon-workflows": {
       "displayTitle": "π-Bench",
@@ -70,6 +70,30 @@
         "source": "https://github.com/ZJU-REAL/KnowU-Bench",
         "original": "https://raw.githubusercontent.com/ZJU-REAL/KnowU-Bench/main/assets/intro.png",
         "caption": "Official benchmark overview · KnowU-Bench authors"
+      }
+    },
+    "pask-intent-aware-proactive-agent": {
+      "displayTitle": "PASK",
+      "description": "Latent-need detection, long-term memory, and silence / fast / full assistance.",
+      "selectionGroup": "agent",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/pask.png",
+        "alt": "PASK overview of demand detection and continuous proactive assistance in learning, meetings and daily life",
+        "source": "https://xzf-thu.github.io/Pask/",
+        "caption": "Official system overview · PASK authors",
+        "original": "https://xzf-thu.github.io/Pask/assets/images/figure1.png"
+      }
+    },
+    "pira-bench": {
+      "displayTitle": "PIRA-Bench / PIRF",
+      "description": "GUI-based proactive intent recommendation, with a memory-aware state-tracking baseline.",
+      "selectionGroup": "benchmark",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/pira-bench.png",
+        "alt": "PIRA-Bench Figure 1 comparing reactive GUI execution with proactive intent recommendation",
+        "source": "https://arxiv.org/html/2603.08013v1#S1.F1",
+        "caption": "Paper Figure 1 · PIRA-Bench authors",
+        "original": "https://arxiv.org/html/2603.08013v1/images/proactive.png"
       }
     }
   }

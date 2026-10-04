@@ -4,11 +4,11 @@ import { markdown } from '../guides.mjs';
 import { read, loadCatalog } from '../data.mjs';
 import { base, home } from '../views.mjs';
 
-test('homepage selections balance agents, streaming models and benchmarks without requiring images', () => {
+test('homepage selections balance agents, models and benchmarks without requiring images', () => {
   const catalog = loadCatalog();
   const selected = catalog.papers.filter(p => p.selected);
-  for (const group of ['agent', 'streaming', 'benchmark']) {
-    assert.equal(selected.filter(p => p.selectionGroup === group).length, 2, group);
+  for (const [group, count] of [['agent', 3], ['model', 2], ['benchmark', 3]]) {
+    assert.equal(selected.filter(p => p.selectionGroup === group).length, count, group);
   }
   const html = home(catalog);
   for (const p of selected) assert.ok(html.includes(p.displayTitle));

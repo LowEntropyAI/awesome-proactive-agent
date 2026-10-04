@@ -11,6 +11,7 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | Setting | Starting resources | Proactive decision to inspect |
 |---|---|---|
 | Everyday digital workflows | [Proactive Agent](papers/conference/ICLR2025/proactive-agent-shifting-llm.md); [dot, GAIA, MineContext](PROJECTS.md) | Which unstated task, contextual suggestion, or background update is worth surfacing? |
+| Latent needs and GUI intent recommendation | [PASK](papers/arxiv/2026-04/pask-intent-aware-proactive-agent.md); [PIRA-Bench / PIRF](papers/arxiv/2026-03/pira-bench.md) | When should ongoing conversation or passive screen context produce assistance, an intent recommendation, or silence? |
 | Mobile preferences and routines | [PersonalAlign](papers/conference/ACL2026/personalalign-long-term-gui-intent.md); [FingerTip 20K](papers/conference/ICLR2026/fingertip-20k.md); [KnowU-Bench](papers/arxiv/2026-04/knowu-bench.md) | When does history justify a suggestion, and when should the assistant ask or respect rejection? |
 | Wearable and physical-world assistance | [Satori](papers/conference/CHI2025/satori-proactive-ar-bdi.md); [ProMemAssist](papers/conference/UIST2025/promemassist-working-memory-wearable.md); [WatchGuardian](papers/arxiv/2025-02/watchguardian-personalized-jiti.md) | Does the user's inferred task, cognitive state, or user-defined behavior warrant an intervention? |
 
