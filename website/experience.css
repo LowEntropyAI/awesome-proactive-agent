@@ -38,8 +38,7 @@ body { background: var(--bg); }
 nav { gap: clamp(16px, 1.7vw, 25px); font-size: 12px; }
 nav>a { color: var(--text); }
 nav>a:hover { color: var(--accent); }
-.add-paper-link { border-radius: 7px; padding: 8px 11px; }
-.github-link { border: 0; border-radius: 0; background: transparent; padding: 0; }
+.nav-utility { border-radius: 7px; padding: 8px 11px; }
 .header-actions button { border-radius: 6px; }
 .header-actions button:hover { background: var(--soft); }
 
@@ -210,7 +209,6 @@ footer { font-size: 11px; padding: 28px 0; width: calc(100% - 80px); }
 @media (max-width: 760px) {
   .header-inner { gap: 12px; }
   nav { gap: 6px 12px; }
-  nav .github-link { padding: 0; border: 0; }
   .cover { grid-template-columns: 1fr; padding: 38px 4px 0; text-align: center; }
   .cover::before, .cover::after { left: -20px; right: -20px; }
   .cover::after { mask-image: linear-gradient(transparent, #000); }
