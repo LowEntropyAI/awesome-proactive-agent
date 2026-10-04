@@ -7,3 +7,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .image-credit{display:block;color:var(--muted);font-size:8px;line-height:1.5;margin:-4px 0 11px}.image-credit>span{font-size:8px}.image-credit:hover{color:var(--accent)}
 .benchmark-paper{font-size:10px;color:var(--muted);line-height:1.6;max-width:760px}#directory-count{font-size:10px;color:var(--muted)}
+
+.brand-icon img{display:block;width:28px;height:28px;object-fit:contain;background:#fff;border-radius:2px}
