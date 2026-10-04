@@ -1,0 +1,15 @@
+{
+  "name": "lowentropy-proactive-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node website/build.mjs",
+    "dev": "npm run build && node website/serve.mjs",
+    "test": "node --test website/test/*.test.mjs",
+    "check": "npm test && npm run build && node website/check.mjs"
+  }
+}

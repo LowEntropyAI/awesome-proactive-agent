@@ -1,0 +1,70 @@
+{
+  "papers": {
+    "proactive-agent-shifting-llm": {
+      "displayTitle": "Proactive Agent",
+      "description": "Event streams → task anticipation → proactive assistance.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/proactive-agent-shifting-llm.png",
+        "alt": "Proactive Agent data collection, agent and evaluation pipeline",
+        "source": "https://github.com/thunlp/ProactiveAgent#overview",
+        "caption": "Official project overview · THUNLP",
+        "original": "https://raw.githubusercontent.com/thunlp/ProactiveAgent/main/assets/overall_pipeline.png"
+      }
+    },
+    "context-agent": {
+      "displayTitle": "ContextAgent",
+      "description": "Open-world sensory context → proactive assistance and tool use.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/context-agent.png",
+        "alt": "ContextAgent overview connecting sensory context to proactive assistance",
+        "source": "https://github.com/openaiotlab/ContextAgent",
+        "caption": "Official method overview · ContextAgent authors",
+        "original": "https://raw.githubusercontent.com/openaiotlab/ContextAgent/main/assets/overview_contextagent.png"
+      }
+    },
+    "onestreamer-streaming-video": {
+      "displayTitle": "OneStreamer",
+      "description": "Online perception, caption memory, and wait / response transitions.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/onestreamer-streaming-video.png",
+        "alt": "OneStreamer architecture for streaming perception, memory and response",
+        "source": "https://github.com/MCG-NJU/OneStreamer",
+        "caption": "Official architecture figure · OneStreamer authors",
+        "original": "https://raw.githubusercontent.com/MCG-NJU/OneStreamer/main/assets/architecture.png"
+      }
+    },
+    "moss-vl-realtime-proactive-video": {
+      "displayTitle": "MOSS-VL-Realtime",
+      "description": "Incremental video context with model-controlled speech and silence.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/moss-vl-realtime-proactive-video.png",
+        "alt": "MOSS-VL architecture showing continuous visual inputs and cross-attention",
+        "source": "https://github.com/OpenMOSS/MOSS-VL",
+        "caption": "Official model architecture · OpenMOSS",
+        "original": "https://raw.githubusercontent.com/OpenMOSS/MOSS-VL/main/assets/architecture.png"
+      }
+    },
+    "joyai-vl-interaction": {
+      "displayTitle": "JoyAI-VL-Interaction",
+      "description": "Continuous visual events → silent / respond / delegate decisions.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/joyai-vl-interaction.png",
+        "alt": "JoyAI-VL-Interaction overview of real-time visual interaction and delegation",
+        "source": "https://github.com/jd-opensource/JoyAI-VL-Interaction",
+        "caption": "Official model and system overview · JD",
+        "original": "https://raw.githubusercontent.com/jd-opensource/JoyAI-VL-Interaction/main/img/overview.png"
+      }
+    },
+    "minicpm-o-45-full-duplex": {
+      "displayTitle": "MiniCPM-o 4.5",
+      "description": "Full-duplex audio/video interaction and scene-conditioned initiative.",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/minicpm-o-45-full-duplex.png",
+        "alt": "MiniCPM-o 4.5 Omni-Flow full-duplex multimodal framework",
+        "source": "https://github.com/OpenBMB/MiniCPM-o#minicpm-o-45",
+        "caption": "Official MiniCPM-o 4.5 framework · OpenBMB",
+        "original": "https://raw.githubusercontent.com/OpenBMB/MiniCPM-o/main/assets/minicpm-o-45-framework.png"
+      }
+    }
+  }
+}

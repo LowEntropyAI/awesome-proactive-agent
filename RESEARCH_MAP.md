@@ -1,6 +1,17 @@
 # Research Map
 
-This map organizes core papers by the research questions they help answer. It is intentionally selective: the goal is to route readers to the right cluster, not to duplicate the full bibliography.
+This map organizes papers and implementation resources by the research questions they help answer. It is intentionally selective: the goal is to route readers to the right cluster, not to duplicate the full bibliography.
+
+For application settings, use [Agents & Applications](APPLICATIONS.md) and [Personal Agents](PERSONAL_AGENTS.md). For component roles, use [Supporting Infrastructure](INFRASTRUCTURE.md).
+
+## Where Proactivity Lives
+
+| Layer | Core question | Starting resources |
+|---|---|---|
+| Agent/runtime | What wakes the agent, and what goals persist between wakes? | [Projects & Products](PROJECTS.md): Proactive Agent, ContextAgent, OpenClaw, Letta Code, Proactivity SDK. |
+| Streaming model/framework | Does observed evidence trigger speech, continued waiting, memory formation, or delegation? | [Streaming Proactivity](STREAMING.md): JoyAI, MOSS-VL-Realtime, OneStreamer, StreamOV, Response-G1, MiniCPM-o 4.5, Gander. |
+| Product/workflow | How is initiative delivered under user controls? | [Projects & Products](PROJECTS.md#product-reference): OpenAI dot; ambient/project routes include MineContext and GAIA. |
+| Evaluation/human factors | Is initiative timely, useful, grounded, and appropriately silent? | [Benchmark Matrix](BENCHMARKS.md) and [layered Must Read](README.md#must-read). |
 
 ## When To Intervene
 
@@ -22,6 +33,9 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **InsightToast** | Pushes source-grounded text and charts into a peripheral meeting channel when discourse reveals an information need. | Low-friction meeting interventions and side-channel UI design. |
 | **Cognitive Process-Aware Writing Support** | Infers the writer's cognitive process to select one of 14 proactive support types. | Separating what-to-suggest from when-to-intervene. |
 | **StreamReady** | Learns an answer-readiness gate for continuous video and penalizes both early guesses and late answers. | Evidence-conditioned wait-versus-answer policies in streaming multimodal agents. |
+| **JoyAI-VL-Interaction / MOSS-VL-Realtime** | Model-controlled speaking and silence during continuous visual input; JoyAI also selects delegation. | Scene-triggered interaction and response-policy interfaces; see [streaming matrix](STREAMING.md). |
+| **StreamOV / Response-G1** | Use hidden-state triggering or explicit retrieved scene graphs to decide when queried evidence supports a response. | Comparing learned triggers with inference-time structured evidence. |
+| **MiniCPM-o 4.5** | Aligns perception and output through Omni-Flow, with live-scene reminders/comments. | Full-duplex interfaces; assess content-grounded initiative separately. |
 | **ProActor** | Replaces point triggers with opportunity windows and trains pending, ready-to-trigger, and triggered action states. | Timing-aware RL for conversational task scheduling. |
 | **Designing Proactive Thought Partners for Writing** | Lets writers configure partner roles and timing conditions for system-initiated ideation, reflection, and revision support. | User-steerable intervention policies and low-disruption writing assistance. |
 | **Proactive Service Agents** | Unifies silent, ask, assist, and act decisions with timing, delivery, authorization, and intervention cost. | Operational definitions and end-to-end proactive-service policy design. |

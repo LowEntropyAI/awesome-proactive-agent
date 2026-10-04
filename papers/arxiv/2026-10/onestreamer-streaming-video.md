@@ -1,5 +1,9 @@
 # OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction
 
+[Paper](https://arxiv.org/abs/2610.01762) · [Code](https://github.com/MCG-NJU/OneStreamer) · [Model card](https://huggingface.co/MCG-NJU/OneStreamer-4B) · [Dataset](https://huggingface.co/datasets/MCG-NJU/OneStreamer-1M)
+
+Release check (2026-10-04): the [Hugging Face file index](https://huggingface.co/MCG-NJU/OneStreamer-4B/tree/main) publicly lists ungated weight files. The upstream README still says public access pending, so its availability marker appears stale. Inference was not tested here.
+
 ## Why It Matters
 
 OneStreamer unifies online perception, query-independent memory formation, and timely response instead of treating past-video storage and answering as separate systems.
