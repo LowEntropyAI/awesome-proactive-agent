@@ -9,6 +9,7 @@ These are original figures or resized previews of original figures from the name
 | `onestreamer-streaming-video.png` | [OneStreamer authors](https://github.com/MCG-NJU/OneStreamer/blob/main/assets/architecture.png) |
 | `moss-vl-realtime-proactive-video.png` | [OpenMOSS / MOSS-VL](https://github.com/OpenMOSS/MOSS-VL/blob/main/assets/architecture.png) |
 | `joyai-vl-interaction.png` | [JD / JoyAI-VL-Interaction](https://github.com/jd-opensource/JoyAI-VL-Interaction/blob/main/img/overview.png) |
+| `gander-omni-interaction-agent.png` | [Gander authors, system overview](https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent/blob/main/docs/assets/brain-cerebellum-runtime.png) |
 | `pask.png` | [PASK authors](https://xzf-thu.github.io/Pask/assets/images/figure1.png) |
 | `pira-bench.png` | [PIRA-Bench authors, Figure 1](https://arxiv.org/html/2603.08013v1#S1.F1) |
 | `pi-bench.png` | [π-Bench authors](https://simplified-reasoning.github.io/Pi-Bench/assets/figures/overview.png) |

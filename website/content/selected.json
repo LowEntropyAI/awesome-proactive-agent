@@ -95,6 +95,18 @@
         "caption": "Paper Figure 1 · PIRA-Bench authors",
         "original": "https://arxiv.org/html/2603.08013v1/images/proactive.png"
       }
+    },
+    "gander-omni-interaction-agent": {
+      "displayTitle": "Gander / Omni Interaction Agent",
+      "description": "Tencent Hunyuan · full-duplex listen / speak control, proactive feedback, and asynchronous agent work.",
+      "selectionGroup": "model",
+      "thumbnail": {
+        "src": "/awesome-proactive-agent/assets/overviews/gander-omni-interaction-agent.png",
+        "alt": "Gander system overview connecting the streaming Cerebellum, agent orchestration runtime, and asynchronous Back Brain",
+        "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent#-system-design",
+        "caption": "Official system overview · Gander authors",
+        "original": "https://raw.githubusercontent.com/Omni-Interaction-Gander/Omni-Interaction-Agent/main/docs/assets/brain-cerebellum-runtime.png"
+      }
     }
   }
 }
