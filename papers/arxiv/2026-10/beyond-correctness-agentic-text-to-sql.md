@@ -4,6 +4,8 @@
 
 ## Why It Matters
 
+Scope: **active clarification and stopping**, not unsolicited need discovery. Included because the agent maintains and resolves its own clarification obligations before committing to SQL.
+
 Correct SQL can still implement an unintended interpretation. This work treats unresolved ambiguity as a planning obligation rather than silently picking a default.
 
 ## Proactivity Signal
@@ -21,4 +23,3 @@ Results concern structured database tasks and benchmark user interaction. Covera
 ## Use For
 
 Use for explicit clarification state, ambiguity coverage, and auditing assumptions in tool-using agents.
-

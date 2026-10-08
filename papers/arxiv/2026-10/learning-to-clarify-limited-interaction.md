@@ -4,6 +4,8 @@
 
 ## Why It Matters
 
+Scope: **agent-initiated clarification within an existing request**, not an always-on assistant. Included because information acquisition is optimized against user burden and downstream utility.
+
 Clarification is useful only if the information recovered is worth the user's time and interaction budget.
 
 ## Proactivity Signal
@@ -21,4 +23,3 @@ Reference-image recovery is a concrete but narrow intent proxy. Simulator traini
 ## Use For
 
 Use for clarification reward design, human validation of simulator-trained policies, and the benefit-versus-burden trade-off.
-

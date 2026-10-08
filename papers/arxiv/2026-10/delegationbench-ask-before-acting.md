@@ -4,6 +4,8 @@
 
 ## Why It Matters
 
+Scope: **autonomy and consent governance**, not a new proactive-assistance method. Included because matched cases directly test requested versus unrequested action and whether the agent must ask first.
+
 Agreement with a static permission label can hide brittle or inconsistent decisions about whether an agent should act autonomously.
 
 ## Proactivity Signal
@@ -21,4 +23,3 @@ A keyword baseline was written after seeing the benchmark and is a diagnostic, n
 ## Use For
 
 Use for consent evaluation and measuring the gap between what agents say they should do and what they actually execute.
-

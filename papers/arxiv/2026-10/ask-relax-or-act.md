@@ -4,6 +4,8 @@
 
 ## Why It Matters
 
+Scope: **ask-versus-act intervention decisions**, not unsolicited need discovery. Included for its explicit comparison of necessary and unnecessary clarification or repair.
+
 Uncertainty alone does not justify asking another question: several admissible preference interpretations may still support the same action.
 
 ## Proactivity Signal
@@ -21,4 +23,3 @@ These are formalized preference problems with declared constraints and repair pe
 ## Use For
 
 Use for ask-versus-act baselines, stopping criteria, and distinguishing missing preferences from inconsistent constraints.
-

@@ -40,7 +40,6 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [PACT](papers/arxiv/2026-05/pact-continual-robot-assistance.md) | Ask for missing context or act using cross-day interaction history. | Assistance accuracy versus clarification cost. |
 | [ProRobo](papers/arxiv/2026-09/prorobo-cognitive-action-reasoning.md) | Anticipate needs in embodied interaction. | Consult the evidence card for task and deployment limits. |
 | [Event-Driven Proactive Robot Assistance](papers/arxiv/2026-10/event-driven-proactive-robot.md), [ARISE](papers/arxiv/2026-10/arise-social-robot-interaction.md) | Translate environmental events or social context into whether and how to assist. | Three tabletop scenarios for the event-driven system; real-robot social interaction for ARISE, with no numerical effects specified in its abstract. |
-| [COOL](papers/arxiv/2026-10/cool-object-ownership-memory.md), [ProactiveVLA](papers/arxiv/2026-10/proactivevla-environment-exploration.md) | Refresh ownership evidence or acquire experience before future tasks. | Internal observation/exploration initiative supports assistance but is not a demonstrated unsolicited-intervention policy. |
 
 Personalization can overlap with this route, but a collaborative robot is not automatically a personal assistant. Household assistance is an intended application to track; controlled assembly or simulated multi-day routines do not establish an open-ended home deployment.
 
