@@ -37,6 +37,9 @@ The canonical release, licensing, and checked-date entries live in [PROJECTS.md]
 | AR glasses and wearables | [Satori](papers/conference/CHI2025/satori-proactive-ar-bdi.md), [ProMemAssist](papers/conference/UIST2025/promemassist-working-memory-wearable.md), [WatchGuardian](papers/arxiv/2025-02/watchguardian-personalized-jiti.md) | Task-specific user studies; a watch's user-defined behavior trigger differs from a learned multimodal dialogue policy. |
 | Continuous egocentric video | [Vinci2 / EgoMemo](papers/arxiv/2026-07/vinci2-egoserve-proactive-video-assistance.md) | EgoServe and [EgoPro-Bench](papers/arxiv/2026-05/egopro-bench-personalized-streaming.md); recorded video or simulated profiles do not establish longitudinal wearable deployment. |
 | Continual embodied collaboration | [PACT](https://arxiv.org/abs/2605.24350) | Cross-day ask/act adaptation in controlled embodied scenarios. Also belongs in the [robot assistance route](APPLICATIONS.md#embodied-and-robot-assistance). |
+| Cross-device personal-agent architecture | [nanoMuse](papers/arxiv/2026-10/nanomuse-personal-agent.md) | Shared conversation, relay, action mediation, and readable memory; estimates and evaluation roadmap are not demonstrated reliability. |
+| Relationship and speaker-aware memory | [DyadMem](papers/arxiv/2026-10/dyadmem-relational-agent-memory.md), [PERSIST](papers/arxiv/2026-10/persist-spoken-dialogue-memory.md) | Supporting evaluation of how to work with a user, whose fact to retrieve, and which revision remains current; no standalone initiative claim. |
+| Personalized ownership grounding | [COOL](papers/arxiv/2026-10/cool-object-ownership-memory.md) | Curiosity-driven observation refresh and ownership-conditioned navigation; internal evidence acquisition differs from unsolicited help. |
 
 ## Models for Personal Interaction
 

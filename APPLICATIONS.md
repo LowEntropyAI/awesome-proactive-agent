@@ -30,6 +30,7 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [InsightToast](papers/arxiv/2026-08/insighttoast-meeting-side-channel.md) | Retrieve and surface missing context in a peripheral meeting channel. | Information utility and disruption during collaboration. |
 | [Speak for Me](papers/arxiv/2026-09/speak-for-me-meeting-delegation.md) | Decide whether, when, and what to contribute on a participant's behalf. | Situational awareness, floor control, and delegation boundaries. |
 | [DocuTeam](papers/arxiv/2026-09/docuteam-evolving-documents.md) | Use document changes to initiate or redirect collaboration. | Relevance of contributions to the evolving artifact. |
+| [Jarvis](papers/arxiv/2026-10/jarvis-multiparty-proactive-speech.md) | Speak from shared sources only when a group misses evidence or fails to self-correct. | CHI-180-proactive silence negatives and a 23-participant live study; not a conference-acceptance claim. |
 
 ## Embodied and Robot Assistance
 
@@ -38,6 +39,8 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [PACE](papers/conference/ICRA2025/pace-action-completion-assistance.md) | Use estimated human action completion to time physical assistance. | Idle time and fluency in structured collaboration. |
 | [PACT](papers/arxiv/2026-05/pact-continual-robot-assistance.md) | Ask for missing context or act using cross-day interaction history. | Assistance accuracy versus clarification cost. |
 | [ProRobo](papers/arxiv/2026-09/prorobo-cognitive-action-reasoning.md) | Anticipate needs in embodied interaction. | Consult the evidence card for task and deployment limits. |
+| [Event-Driven Proactive Robot Assistance](papers/arxiv/2026-10/event-driven-proactive-robot.md), [ARISE](papers/arxiv/2026-10/arise-social-robot-interaction.md) | Translate environmental events or social context into whether and how to assist. | Three tabletop scenarios for the event-driven system; real-robot social interaction for ARISE, with no numerical effects specified in its abstract. |
+| [COOL](papers/arxiv/2026-10/cool-object-ownership-memory.md), [ProactiveVLA](papers/arxiv/2026-10/proactivevla-environment-exploration.md) | Refresh ownership evidence or acquire experience before future tasks. | Internal observation/exploration initiative supports assistance but is not a demonstrated unsolicited-intervention policy. |
 
 Personalization can overlap with this route, but a collaborative robot is not automatically a personal assistant. Household assistance is an intended application to track; controlled assembly or simulated multi-day routines do not establish an open-ended home deployment.
 
