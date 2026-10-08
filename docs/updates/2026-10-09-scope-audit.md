@@ -52,4 +52,3 @@ ARCS, DyaFDB, the multi-turn underspecification diagnostic, DyadMem, and SpokenT
 Re-screened all 23 primary abstracts and metadata on October 9. These are scope judgments based on each paper's stated main contribution, not full-paper reproducibility reviews. Source URLs above are the primary records; the original scan window and publication-status audit remain in the [historical October 8 record](2026-10-08.md).
 
 After cleanup, the generated catalog contains **199 papers, 180 notes, 77 benchmarks, and 14 projects**. The repository validation includes all five note sections, deduplication, benchmark schema, generated routes, and internal links. The website uses the same cleaned inputs rather than a separate bibliography.
-
