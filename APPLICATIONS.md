@@ -22,6 +22,7 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [Need Help?](papers/conference/CHI2025/need-help-proactive-programming.md), [CodingGenie](papers/arxiv/2025-03/codinggenie-proactive-programming-assistant.md) | Offer programming help at useful moments while preserving user control. | Human studies, interruption cost, acceptance, and task outcomes. |
 | [Ask or Assume?](papers/conference/EMNLP2026/ask-or-assume-coding-agents.md), [HiSentinel](papers/arxiv/2026-09/hisentinel-coding-agent-intervention.md) | Ask about missing requirements, redirect a risky action, or continue execution. | Clarification burden and downstream success; distinguish intervention on another agent from assistance initiated for a human. |
 | [ProAgentBench](papers/arxiv/2026-02/proagentbench.md), [ProCodeBench](papers/arxiv/2026-05/procodebench-proactive-coding-assistants.md) | Assess assistance opportunities in desktop or coding workflows. | See protocol and data columns in the [Benchmark Matrix](BENCHMARKS.md). |
+| [ReqClarifyBench](papers/arxiv/2026-10/reqclarifybench-repository-requirements.md), [CLEAT](papers/arxiv/2026-10/cleat-value-guided-clarification.md) | Ask about missing requirements or intent when the answer can improve execution. | Active clarification within an existing request, not unsolicited need discovery; test downstream utility and persona sensitivity. |
 
 ## Meetings and Collaboration
 
@@ -40,6 +41,7 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [PACT](papers/arxiv/2026-05/pact-continual-robot-assistance.md) | Ask for missing context or act using cross-day interaction history. | Assistance accuracy versus clarification cost. |
 | [ProRobo](papers/arxiv/2026-09/prorobo-cognitive-action-reasoning.md) | Anticipate needs in embodied interaction. | Consult the evidence card for task and deployment limits. |
 | [Event-Driven Proactive Robot Assistance](papers/arxiv/2026-10/event-driven-proactive-robot.md), [ARISE](papers/arxiv/2026-10/arise-social-robot-interaction.md) | Translate environmental events or social context into whether and how to assist. | Three tabletop scenarios for the event-driven system; real-robot social interaction for ARISE, with no numerical effects specified in its abstract. |
+| [StreamingJev / ProAgent](papers/arxiv/2026-10/streamingjev-proactive-physical-ai.md) | A streaming timing model decides whether a physical-world change warrants a response or device action. | Separate role-conditioned triggering, false alerts, content quality, and robot execution. |
 
 Personalization can overlap with this route, but a collaborative robot is not automatically a personal assistant. Household assistance is an intended application to track; controlled assembly or simulated multi-day routines do not establish an open-ended home deployment.
 
@@ -50,6 +52,7 @@ Personalization can overlap with this route, but a collaborative robot is not au
 | [See, Infer, Intervene](papers/arxiv/2026-06/see-infer-intervene-retail.md) | Retail assistance explicitly selects engagement actions or `HOLD`. | Scripted and small-scale settings; inspect the perception-to-policy gap. |
 | [AI Assistants Overassist](papers/arxiv/2026-07/ai-assistants-overassist.md) | Tutoring tests whether intervention arrives too early or supplies too much. | Learning outcomes and user independence matter alongside immediate correctness. |
 | [Oops, Not Now / PEARL](papers/arxiv/2026-09/pearl-proactive-gameplay-support.md); [Proact-VL](papers/arxiv/2026-03/proact-vl-realtime-companions.md) | Gameplay assistance and commentary expose timing and unwanted-interruption trade-offs. | Commentary, requested guidance, and spontaneous assistance have different participation expectations. |
+| [EgoVoice](papers/arxiv/2026-10/egovoice-proactive-spoken-assistance.md) | First-person video/audio triggers spoken task guidance without a fresh question. | Timing must include utterance duration; recorded, recipe-conditioned assistance is not longitudinal AR deployment. |
 
 ## How These Routes Connect
 

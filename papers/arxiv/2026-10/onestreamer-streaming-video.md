@@ -2,7 +2,9 @@
 
 [Paper](https://arxiv.org/abs/2610.01762) · [Code](https://github.com/MCG-NJU/OneStreamer) · [Model card](https://huggingface.co/MCG-NJU/OneStreamer-4B) · [Dataset](https://huggingface.co/datasets/MCG-NJU/OneStreamer-1M)
 
-Release check (2026-10-04): the [Hugging Face file index](https://huggingface.co/MCG-NJU/OneStreamer-4B/tree/main) publicly lists ungated weight files. The upstream README still says public access pending, so its availability marker appears stale. Inference was not tested here.
+Release check (2026-10-14): the [Hugging Face file index](https://huggingface.co/MCG-NJU/OneStreamer-4B/tree/main) publicly lists ungated weight files. The upstream README still says public access pending, so its availability marker appears stale. Inference was not tested here.
+
+Existing-work update: the [official repository](https://github.com/MCG-NJU/OneStreamer) adds an October 9 report of **36.7 on InteractionBench** with native streaming. This is an author-reported result, not independently reproduced or a new model release in this scan.
 
 ## Why It Matters
 

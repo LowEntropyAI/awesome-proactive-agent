@@ -1,6 +1,6 @@
-# Event-Driven Proactive Robot Assistance through Vision-Language Reasoning
+# Proactive Robot Assistance via Event-Driven Reasoning over State Changes
 
-[Primary source](https://arxiv.org/abs/2610.08344) · Checked 2026-10-08 · arXiv preprint. Review depth: abstract and arXiv metadata; no experiments rerun.
+[Primary source](https://arxiv.org/abs/2610.08344v2) · Checked 2026-10-14 · arXiv preprint. The October 12 v2 changes the title; the abstract retains the three-task event-driven protocol. Review depth: abstract and arXiv metadata; no experiments rerun.
 
 ## Why It Matters
 

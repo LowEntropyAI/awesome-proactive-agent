@@ -61,6 +61,9 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **Foundations / PROACTIVITY-GYM** | Couples useful work, temporal compute allocation, and evolving trust across multi-day scenarios. | Scheduling proactive work around user focus and measuring trust damage from misalignment. |
 | **[Jarvis](papers/arxiv/2026-10/jarvis-multiparty-proactive-speech.md)** | Waits for group self-correction before offering source-grounded speech. | Multi-party silence negatives and the cost of unnecessary contributions. |
 | **[InteractionBench](papers/arxiv/2026-10/interactionbench-streaming-video.md)** | Jointly diagnoses content, timing, negative streams, and near misses. | Exposing false alerts hidden by positive-only streaming scores. |
+| **[EgoVoice](papers/arxiv/2026-10/egovoice-proactive-spoken-assistance.md)** | Learns spoken guidance and silence from egocentric video/audio. | Distinguishing when speech begins from whether it finishes before action. |
+| **[StreamingJev / ProAgent](papers/arxiv/2026-10/streamingjev-proactive-physical-ai.md)** | Separates a causal intervention gate from response and device execution. | Explicit objectives versus standing roles, matched-gate comparisons, and false-trigger rates. |
+| **[DuplexAct: Help/Safety Interrupt](papers/arxiv/2026-10/duplexact-content-grounded-interruption.md)** | Scores taking the floor and subsequent situation-appropriate content separately. | Measuring useful unsolicited warnings rather than raw interruption occurrence. |
 
 ## What To Proactively Infer
 
@@ -103,6 +106,7 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **[Ask, Relax, or Act?](papers/arxiv/2026-10/ask-relax-or-act.md)** | Separates preference uncertainty from action-relevant ambiguity and infeasibility. | Acting without needless questions and keeping constraint-repair permission explicit. |
 | **[Learning to Clarify](papers/arxiv/2026-10/learning-to-clarify-limited-interaction.md)** | Trains limited-budget clarification and validates reference-image recovery with humans. | Value of information versus interaction burden. |
 | **[PlanPool](papers/arxiv/2026-10/beyond-correctness-agentic-text-to-sql.md)** | Keeps identified clarification obligations in an explicit question pool until asked or deliberately dropped. | Active clarification coverage and stopping; not unsolicited need discovery. |
+| **[CLEAT](papers/arxiv/2026-10/cleat-value-guided-clarification.md)** | Re-estimates the benefit of asking as the task policy improves. | Policy-dependent question value instead of uncertainty alone. |
 
 ## How To Maintain Long-Term Intent
 

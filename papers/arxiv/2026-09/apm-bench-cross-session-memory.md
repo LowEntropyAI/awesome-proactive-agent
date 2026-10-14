@@ -1,5 +1,7 @@
 # APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants
 
+[Primary source](https://arxiv.org/abs/2609.37559v2) · Checked 2026-10-14. October 12 v2 retains the abstract's 549 sessions, 104 trajectories, and 2,719 candidates; no venue acceptance is newly stated. This is a revision of an existing benchmark, not a new streaming model.
+
 ## Why It Matters
 
 APM-Bench extends streaming assistance across interrupted sessions, where useful evidence may have appeared earlier and persistent memory must decide what to retain, when to inject it, and when to admit that evidence is missing.
