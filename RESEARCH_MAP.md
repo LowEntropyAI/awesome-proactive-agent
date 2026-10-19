@@ -64,6 +64,9 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **[EgoVoice](papers/arxiv/2026-10/egovoice-proactive-spoken-assistance.md)** | Learns spoken guidance and silence from egocentric video/audio. | Distinguishing when speech begins from whether it finishes before action. |
 | **[StreamingJev / ProAgent](papers/arxiv/2026-10/streamingjev-proactive-physical-ai.md)** | Separates a causal intervention gate from response and device execution. | Explicit objectives versus standing roles, matched-gate comparisons, and false-trigger rates. |
 | **[DuplexAct: Help/Safety Interrupt](papers/arxiv/2026-10/duplexact-content-grounded-interruption.md)** | Scores taking the floor and subsequent situation-appropriate content separately. | Measuring useful unsolicited warnings rather than raw interruption occurrence. |
+| **[P3IBench / P3I-Assistant](papers/arxiv/2026-10/p3i-proactive-video-assistants.md)** | Separates event recognition, hazard prediction, and useful intervention with timing/repetition penalties. | Capability-specific proactive streaming diagnostics. |
+| **[ProPerAgent / ProPerMem](papers/arxiv/2026-10/properagent-memory-driven-proactivity.md)** | Long-term personal memory is retrieved and gated as a reason to speak without a query. | Disentangling evidence retrieval, intervention timing, and repeated reminders. |
+| **[PAM](papers/arxiv/2026-10/pam-proactive-robot-assistance.md)** | Reflects on daily routines to revise finite-state help/NO_ACT rules. | Proactive robot personalization and adaptation to changed routines. |
 
 ## What To Proactively Infer
 
@@ -107,6 +110,9 @@ This cluster asks what the agent should infer before the user says it explicitly
 | **[Learning to Clarify](papers/arxiv/2026-10/learning-to-clarify-limited-interaction.md)** | Trains limited-budget clarification and validates reference-image recovery with humans. | Value of information versus interaction burden. |
 | **[PlanPool](papers/arxiv/2026-10/beyond-correctness-agentic-text-to-sql.md)** | Keeps identified clarification obligations in an explicit question pool until asked or deliberately dropped. | Active clarification coverage and stopping; not unsolicited need discovery. |
 | **[CLEAT](papers/arxiv/2026-10/cleat-value-guided-clarification.md)** | Re-estimates the benefit of asking as the task policy improves. | Policy-dependent question value instead of uncertainty alone. |
+| **[AttriFy](papers/arxiv/2026-10/attrify-soft-attribute-clarification.md)** | Estimates softness to guide questions before constructing explicit preference attributes. | Mixed-initiative clarification and interpretable user control. |
+| **[SAFE-PRO](papers/arxiv/2026-10/safe-pro-cross-modal-inquiry.md)** | Combines risk and uncertainty to choose cross-modal safety clarification. | Intent-level ambiguity and over-refusal trade-offs. |
+| **[ProactGen](papers/arxiv/2026-10/proactgen-video-clarification.md)** | Learns questions grounded in inexpensive generated video drafts. | Preference elicitation that prompt rewriting cannot replace. |
 
 ## How To Maintain Long-Term Intent
 

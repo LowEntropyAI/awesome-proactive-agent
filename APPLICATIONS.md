@@ -42,6 +42,7 @@ Persistent goals, routines, preferences, and everyday context make assistance us
 | [ProRobo](papers/arxiv/2026-09/prorobo-cognitive-action-reasoning.md) | Anticipate needs in embodied interaction. | Consult the evidence card for task and deployment limits. |
 | [Event-Driven Proactive Robot Assistance](papers/arxiv/2026-10/event-driven-proactive-robot.md), [ARISE](papers/arxiv/2026-10/arise-social-robot-interaction.md) | Translate environmental events or social context into whether and how to assist. | Three tabletop scenarios for the event-driven system; real-robot social interaction for ARISE, with no numerical effects specified in its abstract. |
 | [StreamingJev / ProAgent](papers/arxiv/2026-10/streamingjev-proactive-physical-ai.md) | A streaming timing model decides whether a physical-world change warrants a response or device action. | Separate role-conditioned triggering, false alerts, content quality, and robot execution. |
+| [Procedural Assistance Memory / PAM](papers/arxiv/2026-10/pam-proactive-robot-assistance.md) | Repeated routines shape when a robot helps or chooses NO_ACT before a request. | Five-day desk assistance and routine changes; report false assistance as well as first-fire delay. |
 
 Personalization can overlap with this route, but a collaborative robot is not automatically a personal assistant. Household assistance is an intended application to track; controlled assembly or simulated multi-day routines do not establish an open-ended home deployment.
 
@@ -53,6 +54,8 @@ Personalization can overlap with this route, but a collaborative robot is not au
 | [AI Assistants Overassist](papers/arxiv/2026-07/ai-assistants-overassist.md) | Tutoring tests whether intervention arrives too early or supplies too much. | Learning outcomes and user independence matter alongside immediate correctness. |
 | [Oops, Not Now / PEARL](papers/arxiv/2026-09/pearl-proactive-gameplay-support.md); [Proact-VL](papers/arxiv/2026-03/proact-vl-realtime-companions.md) | Gameplay assistance and commentary expose timing and unwanted-interruption trade-offs. | Commentary, requested guidance, and spontaneous assistance have different participation expectations. |
 | [EgoVoice](papers/arxiv/2026-10/egovoice-proactive-spoken-assistance.md) | First-person video/audio triggers spoken task guidance without a fresh question. | Timing must include utterance duration; recorded, recipe-conditioned assistance is not longitudinal AR deployment. |
+| [SurgStreamer](papers/arxiv/2026-10/surgstreamer-request-driven-monitoring.md) | Monitor a standing surgical event request and emit a causal alert. | Gold-condition, retrospective tests are not evidence of prospective clinical utility. |
+| [LexPilot](papers/arxiv/2026-10/lexpilot-proactive-legal-clarification.md) | Elicit missing legal-consultation facts before claim-level prediction. | Adjacent clarification; retrospective verdict prediction is not validated legal advice. |
 
 ## How These Routes Connect
 
