@@ -17,3 +17,20 @@ These are original figures or resized previews of original figures from the name
 | `minicpm-o-45-full-duplex.png` | [OpenBMB / MiniCPM-o 4.5](https://github.com/OpenBMB/MiniCPM-o/blob/main/assets/minicpm-o-45-framework.png) |
 
 Figure rights and applicable upstream licensing remain with their original authors. The directory template's MIT license does not relicense these research figures. Checked against the upstream READMEs and HTTP image responses on 2026-10-04.
+
+## Recent gallery additions — 2026-10-21
+
+Original figure URLs, author attribution, source pages and alternative text are recorded in `website/content/recent.json` and normalized into `catalog.json`. Previews are displayed with `object-fit: contain`; scientific content is not cropped or reconstructed. A text-only research brief is explicitly labeled when no figure was collected.
+
+| Preview | Original source |
+|---|---|
+| `properagent.png` | [ProPerAgent authors, Figure 1](https://arxiv.org/html/2610.22671v1/figure1_bars_3d.png) |
+| `p3ibench.png` | [P3IBench authors, capabilities panel](https://arxiv.org/html/2610.21568v1/capabilities.png) |
+| `surgstreamer.png` | [SurgStreamer authors, Figure 1](https://arxiv.org/html/2610.21895v1/q1_walkthrough_onset_during.png) |
+| `streamingjev.png` | [ProAgent authors, architecture](https://arxiv.org/html/2610.16967v1/fig02_architecture.png) |
+| `egovoice.png` | [EgoVoice authors, project overview](https://egocentricvoice.github.io/static/images/figure1.png) |
+| `pam.png` | [PAM authors, system overview](https://davian-robotics.github.io/PAM/static/images/fig2_overview.png) |
+| `lexpilot.png` | [LexPilot authors, Figure 1](https://arxiv.org/html/2610.23141v1/fig1_0521.png) |
+| `safe-pro.png` | [SAFE-PRO authors, Figure 1](https://arxiv.org/html/2610.22068v1/fig11.png) |
+| `proactgen.png` | [ProactGen authors, teaser](https://arxiv.org/html/2610.22608v1/teaser_formal.png) |
+| `masp.png` | [MASP authors, framework](https://arxiv.org/html/2610.21156v1/main.png) |

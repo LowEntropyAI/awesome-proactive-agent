@@ -16,7 +16,7 @@ A five-day desk-assistance study reports first-fire delay decreasing from about 
 
 ## Key Limitations
 
-Structured routines and a small task set limit generalization. Greater initiative can reduce NO_ACT recall. The project is reachable, but its linked code repository returned 404 on October 19.
+Structured routines and a small task set limit generalization. Greater initiative can reduce NO_ACT recall. Release recheck on 2026-10-21: the [linked repository](https://github.com/DAVIAN-Robotics/PAM) is now reachable, but its main branch contains the project page, figures/demos, an example FSM and helper tools—not the complete robot implementation. Public trained checkpoints and an evaluation dataset were not verified. The earlier October 19 check returned 404.
 
 ## Use For
 

@@ -12,16 +12,9 @@
       },
       "selectionGroup": "agent"
     },
-    "context-agent": {
-      "displayTitle": "ContextAgent",
-      "description": "Open-world sensory context → proactive assistance and tool use.",
-      "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/context-agent.png",
-        "alt": "ContextAgent overview connecting sensory context to proactive assistance",
-        "source": "https://github.com/openaiotlab/ContextAgent",
-        "caption": "Official method overview · ContextAgent authors",
-        "original": "https://raw.githubusercontent.com/openaiotlab/ContextAgent/main/assets/overview_contextagent.png"
-      },
+    "properagent-memory-driven-proactivity": {
+      "displayTitle": "ProPerAgent / ProPerMem",
+      "description": "Personal memory → evidence retrieval → a justified reminder or silence. Separates memory recall from intervention timing.",
       "selectionGroup": "agent"
     },
     "joyai-vl-interaction": {
@@ -60,17 +53,10 @@
         "caption": "Official benchmark overview · π-Bench authors"
       }
     },
-    "knowu-bench": {
-      "displayTitle": "KnowU-Bench",
-      "description": "Personalized mobile assistance, proactive execution, consent, and rejection handling.",
-      "selectionGroup": "benchmark",
-      "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/knowu-bench.png",
-        "alt": "KnowU-Bench overview of personalized and proactive mobile agent evaluation",
-        "source": "https://github.com/ZJU-REAL/KnowU-Bench",
-        "original": "https://raw.githubusercontent.com/ZJU-REAL/KnowU-Bench/main/assets/intro.png",
-        "caption": "Official benchmark overview · KnowU-Bench authors"
-      }
+    "p3i-proactive-video-assistants": {
+      "displayTitle": "P3IBench / P3I-Assistant-4B",
+      "description": "Perception → prediction → intervention. Scores useful content at the right time and penalizes repeated alerts under standing instructions.",
+      "selectionGroup": "benchmark"
     },
     "pask-intent-aware-proactive-agent": {
       "displayTitle": "PASK",
@@ -96,17 +82,10 @@
         "original": "https://arxiv.org/html/2603.08013v1/images/proactive.png"
       }
     },
-    "gander-omni-interaction-agent": {
-      "displayTitle": "Gander / Omni Interaction Agent",
-      "description": "Tencent Hunyuan · full-duplex listen / speak control, proactive feedback, and asynchronous agent work.",
-      "selectionGroup": "model",
-      "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/gander-omni-interaction-agent.png",
-        "alt": "Gander capabilities overview of omni perception, real-time full-duplex interaction, and agentic execution",
-        "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent/blob/main/docs/assets/gander-capabilities.png",
-        "caption": "Official capabilities overview · Gander authors",
-        "original": "https://raw.githubusercontent.com/Omni-Interaction-Gander/Omni-Interaction-Agent/main/docs/assets/gander-capabilities.png"
-      }
+    "egovoice-proactive-spoken-assistance": {
+      "displayTitle": "EgoVoice",
+      "description": "Egocentric video + audio → Listen / Speak control. SFT and DPO learn when to offer spoken guidance under a supplied task recipe.",
+      "selectionGroup": "model"
     }
   }
 }

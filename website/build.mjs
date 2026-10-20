@@ -2,7 +2,7 @@ import { mkdirSync, rmSync, writeFileSync, copyFileSync, cpSync } from 'node:fs'
 import { resolve, dirname } from 'node:path';
 import { loadCatalog, root, read } from './data.mjs';
 import { markdown } from './guides.mjs';
-import { layout, home, library, benchmarkPage, projectPage, guidePage, base, url, esc, bi } from './views.mjs';
+import { layout, home, library, benchmarkPage, projectPage, guidePage, recentPage, base, url, esc, bi } from './views.mjs';
 const catalog = loadCatalog();
 const out = resolve(root, 'dist');
 rmSync(out, { recursive: true, force: true });
@@ -12,6 +12,7 @@ const mustRead = read('README.md').split('## Must Read\n')[1]?.split('\n## ')[0]
 if (!mustRead) throw new Error('Missing Must Read source');
 const pages = [
   ['', 'Awesome Proactive Agent', home(catalog)],
+  ['recent/', 'Recent papers gallery', recentPage(catalog)],
   ['library/', 'Research library', library(catalog)],
   ['streaming/', 'Streaming proactive models', library(catalog, true) + supplement('STREAMING.md')],
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
@@ -28,7 +29,7 @@ write('catalog.json', JSON.stringify({ ...catalog, selectionGuide: undefined, pa
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p => p[0]).map(path => `<url><loc>https://lowentropyai.github.io${base}${esc(path)}</loc></url>`).join('')}</urlset>`);
 write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://lowentropyai.github.io/awesome-proactive-agent/sitemap.xml\n');
 write('.nojekyll', '');
-for (const name of ['style.css', 'experience.css', 'experience.js', 'app.js', 'theme.js', 'search.mjs', 'resources.mjs', 'favicon.svg', 'social.svg']) { mkdirSync(resolve(out, 'assets'), { recursive: true }); copyFileSync(resolve(root, 'website', name), resolve(out, 'assets', name.endsWith('.mjs') ? name.replace('.mjs', '.js') : name)); }
+for (const name of ['style.css', 'experience.css', 'experience.js', 'gallery.css', 'gallery.mjs', 'gallery-client.js', 'app.js', 'theme.js', 'search.mjs', 'resources.mjs', 'favicon.svg', 'social.svg']) { mkdirSync(resolve(out, 'assets'), { recursive: true }); copyFileSync(resolve(root, 'website', name), resolve(out, 'assets', name.endsWith('.mjs') ? name.replace('.mjs', '.js') : name)); }
 copyFileSync(resolve(root, 'website/assets/lowentropyai.png'), resolve(out, 'assets/lowentropyai.png'));
 cpSync(resolve(root, 'website/assets/cover'), resolve(out, 'assets/cover'), { recursive: true });
 cpSync(resolve(root, 'website/assets/overviews'), resolve(out, 'assets/overviews'), { recursive: true });

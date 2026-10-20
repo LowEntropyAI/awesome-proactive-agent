@@ -12,6 +12,7 @@ function translate() {
   $('#language').textContent = lang === 'zh' ? 'EN' : '中文';
   $('#language').setAttribute('aria-label', tr('Switch to Chinese', '切换为英文'));
   $('#theme').setAttribute('aria-label', tr('Switch color theme', '切换颜色主题'));
+  document.dispatchEvent(new Event('atlas:language'));
 }
 function save(key, value) { try { localStorage.setItem(key, value); } catch { /* Works without storage. */ } }
 $('#language').addEventListener('click', () => { lang = lang === 'en' ? 'zh' : 'en'; save('atlas-language', lang); translate(); if (render) render(false); if (renderDirectory) renderDirectory(); });
@@ -24,7 +25,7 @@ function card(p) {
   return `<article class="paper-card"><div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span></div><h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} <span aria-hidden="true">↗</span></a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
 }
 if ($('#catalog')) {
-  const controls = ['category', 'tag', 'year', 'venue', 'code', 'featured', 'sort'];
+  const controls = ['category', 'tag', 'year', 'venue', 'code', 'featured', 'selected', 'sort'];
   const streaming = $('#catalog').dataset.streaming === 'true';
   const pageSize = 20;
   let catalog, page = 1;
@@ -52,7 +53,7 @@ if ($('#catalog')) {
     $('#paper-results').innerHTML = results.length ? results.slice((page - 1) * pageSize, page * pageSize).map(card).join('') : `<div class="empty-results"><span>⌕</span><h2>${tr('No papers in this view.', '没有匹配的论文。')}</h2><p>${tr('Try fewer filters or a broader search term.', '请减少筛选条件或尝试更宽泛的关键词。')}</p><button class="button primary" id="empty-reset">${tr('Reset filters', '重置筛选')} →</button></div>`;
     $('#empty-reset')?.addEventListener('click', reset);
     const chips = Object.entries(f).filter(([key, value]) => value && key !== 'sort').map(([key, value]) => {
-      const label = value === true ? ({ code: tr('Code / data', '代码 / 数据'), featured: tr('Essential reads', '入门必读') })[key] : key === 'category' ? catalog.categories.find(c => c.key === value)?.[lang === 'zh' ? 'zh' : 'short'] : value;
+      const label = value === true ? ({ code: tr('Code / data', '代码 / 数据'), featured: tr('Essential reads', '入门必读'), selected: tr('Editor’s picks', '编辑精选') })[key] : key === 'category' ? catalog.categories.find(c => c.key === value)?.[lang === 'zh' ? 'zh' : 'short'] : value;
       return `<button data-remove="${key}" aria-label="${esc(tr('Remove filter', '移除筛选'))}: ${esc(label)}">${esc(label)} <span aria-hidden="true">×</span></button>`;
     });
     $('#active-filters').innerHTML = chips.join('');

@@ -21,3 +21,5 @@ Memories are synthesized and trigger windows curated. These scores are not longi
 ## Use For
 
 Use for memory-conditioned intervention, justified silence, and separating retrieval failures from timing failures.
+
+Release recheck 2026-10-21: the [paper](https://arxiv.org/html/2610.22671v1) still promises ProPerAgent code and the ProPerMem evaluation set upon publication. No linked public code, trained checkpoint or evaluation-set release was verified. An open base model does not establish release of this work's trained policy.

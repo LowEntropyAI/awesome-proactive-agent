@@ -21,3 +21,5 @@ Task prompts are supplied; monitoring, prediction, and intervention subsets shou
 ## Use For
 
 Use for proactive streaming training and evaluation. Code and dataset were reachable; a public assistant checkpoint was not verified.
+
+Release recheck 2026-10-21: the [repository](https://github.com/Cuibing-fundemental/P3IBench) contains inference and evaluation scripts, not a verified training pipeline or assistant checkpoint. The [ungated benchmark](https://huggingface.co/datasets/AstroCuibing/P3IBench) contains annotation JSON and video files; these are an actual benchmark release, unlike the paper's broader planned training-data and checkpoint release.

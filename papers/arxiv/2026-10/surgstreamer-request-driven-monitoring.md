@@ -21,3 +21,5 @@ Main tests use gold conditions, not fully validated free-text requests. No prosp
 ## Use For
 
 Use for causal event alerts and separating perception, condition compilation, and response control; not independent clinical need discovery.
+
+Release recheck 2026-10-21: the [availability section](https://arxiv.org/html/2610.21895v1) still promises code, benchmark definitions, splits and protocol documents upon publication. Source datasets (Cholec80, CholecT50, HeiChole and PitVis) being public does not establish release of the new pipeline, controller weights or evaluation package.

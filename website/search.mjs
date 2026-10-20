@@ -16,6 +16,7 @@ export function searchPapers(papers, filters = {}, streaming = false) {
     if (filters.notes && !p.note && !p.hasNotes) continue;
     if (filters.code && !hasCode(p)) continue;
     if (filters.featured && !p.featured) continue;
+    if (filters.selected && !p.selected) continue;
     const title = normalized(p.title), tags = normalized(p.tags.join(' '));
     const haystack = normalized([p.title, p.displayTitle, p.tags.join(' '), p.venue, p.description, p.resources.map(r => r.label + ' ' + r.url).join(' ')].join(' '));
     if (!terms.every(t => haystack.includes(t))) continue;

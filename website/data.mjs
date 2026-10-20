@@ -67,6 +67,7 @@ export function loadCatalog() {
   }
   const papers = [...records.values()].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   const selected = JSON.parse(read('website/content/selected.json')).papers;
+  const recent = JSON.parse(read('website/content/recent.json'));
   const ids = new Set();
   for (const paper of papers) {
     if (ids.has(paper.id)) throw new Error(`Duplicate slug: ${paper.id}`);
@@ -74,9 +75,22 @@ export function loadCatalog() {
     const pick = featured.find(f => f.resources.some(r => paper.resources.some(p => p.url === r.url)));
     paper.featured = Boolean(pick); paper.reason = pick?.reason ?? '';
     paper.featureOrder = pick ? featured.indexOf(pick) : 999;
+    if (paper.note) paper.evidenceUrl = 'https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/' + paper.note;
+    if (recent.papers[paper.id]) {
+      const { figure, release, ...metadata } = recent.papers[paper.id];
+      Object.assign(paper, metadata, { dateSource: paper.primary });
+      // Audited recent-edition facet wins over incidental streaming words in notes/references.
+      paper.streaming = recent.streamingPapers.includes(paper.id);
+      paper.tags = paper.tags.filter(t => t !== 'Streaming');
+      if (paper.streaming) paper.tags.push('Streaming');
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(paper.publishedAt) || new Date(paper.publishedAt).toISOString().slice(0, 10) !== paper.publishedAt) throw new Error(`Invalid first-posted date: ${paper.id}`);
+      if (figure) paper.thumbnail = { src: '/awesome-proactive-agent/assets/overviews/' + figure.file, original: figure.original, source: figure.source ?? paper.primary, alt: figure.alt, caption: 'Original figure · paper authors' };
+      if (release) paper.release = { ...release, checkedAt: recent.checkedAt };
+    }
     if (selected[paper.id]) Object.assign(paper, selected[paper.id], { selected: true, selectedOrder: Object.keys(selected).indexOf(paper.id) });
   }
   for (const id of Object.keys(selected)) if (!ids.has(id)) throw new Error(`Selected paper missing from catalog: ${id}`);
+  for (const id of Object.keys(recent.papers)) if (!ids.has(id)) throw new Error(`Recent paper missing from catalog: ${id}`);
   const notes = [];
   function walk(dir) { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = resolve(dir, entry.name); if (entry.isDirectory()) walk(path); else if (entry.name.endsWith('.md')) notes.push(relative(root, path)); } }
   walk(resolve(root, 'papers'));

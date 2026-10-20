@@ -6,6 +6,8 @@ Streaming proactivity is a dedicated cross-cutting module: it connects **models,
 
 **Literature checked: 2026-10-19** (submission window October 14–19 UTC; newest returned submissions dated October 16). This window adds **P3I-Assistant-4B / P3IBench**, **ProPerAgent / ProPerMem**, and **SurgStreamer** to the streaming routes. Earlier resource snapshots remain unchanged unless explicitly rechecked below. Models were not run, and scores across protocols are not ranked together. See the [scan report](docs/updates/2026-10-19.md).
 
+**Targeted release recheck: 2026-10-21.** Six recently collected works were rechecked, not a new literature sweep. P3IBench exposes inference/evaluation code and benchmark JSON/videos, but its assistant checkpoint and training pipeline were not verified. ProPerAgent and SurgStreamer's new artifacts remain announced; EgoVoice's project still schedules code/models/data for November 2026; no StreamingJev release was verified. PAM's linked repository is now reachable but contains the project page, example FSM and helper tools, not the complete robot system. See the [release audit and website selection rationale](docs/updates/2026-10-21-streaming-gallery.md).
+
 ## Capability Routes
 
 These routes can overlap. They describe a behavior, not an increasing capability ranking.
