@@ -1,5 +1,7 @@
 # Clarify or Answer: Reinforcement Learning for Agentic VQA with Context Under-specification
 
+[Paper v2](https://arxiv.org/abs/2601.16400v2) · [Code](https://github.com/zwverse/clarify-or-answer) · [ContextClarify](https://huggingface.co/datasets/Helen-ZW/ContextClarify) · Revision checked 2026-10-24 (v2 posted October 20).
+
 ## Why It Matters
 
 This work turns clarification in visual question answering into an explicit agent decision rather than assuming every image-question pair is answerable. It connects multimodal uncertainty to an end-to-end interactive policy that can acquire missing external context before committing to an answer.
@@ -19,3 +21,5 @@ The interaction is limited to a single clarification turn and assumes that the u
 ## Use For
 
 Use this for multimodal ask-versus-answer policies, clarification-aware VQA, uncertainty-triggered interaction, contrast-set benchmark design, and reinforcement learning for question quality.
+
+Release check: repository training/evaluation files, ungated ContextClarify JSON/image files, and the linked [InternVL3-2B GRPO-CR model](https://huggingface.co/Helen-ZW/internvl3_2b_clarification_reasoning_grpo) weight file are publicly listed. Other linked checkpoints were not individually audited; inference was not tested. No new conference acceptance was verified.

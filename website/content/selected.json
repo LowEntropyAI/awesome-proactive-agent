@@ -13,7 +13,7 @@
       "selectionGroup": "agent"
     },
     "properagent-memory-driven-proactivity": {
-      "displayTitle": "ProPerAgent / ProPerMem",
+      "displayTitle": "MemoProAgent / MemoProBench",
       "description": "Personal memory → evidence retrieval → a justified reminder or silence. Separates memory recall from intervention timing.",
       "selectionGroup": "agent"
     },
@@ -29,15 +29,15 @@
       },
       "selectionGroup": "model"
     },
-    "onestreamer-streaming-video": {
-      "displayTitle": "OneStreamer",
-      "description": "Online perception, caption memory, and wait / response transitions.",
+    "gander-omni-interaction-agent": {
+      "displayTitle": "Gander",
+      "description": "Live audio/video → listen, speak, or delegate. A streaming interaction model coordinates proactive feedback with an asynchronous task agent.",
       "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/onestreamer-streaming-video.png",
-        "alt": "OneStreamer architecture for streaming perception, memory and response",
-        "source": "https://github.com/MCG-NJU/OneStreamer",
-        "caption": "Official architecture figure · OneStreamer authors",
-        "original": "https://raw.githubusercontent.com/MCG-NJU/OneStreamer/main/assets/architecture.png"
+        "src": "/awesome-proactive-agent/assets/overviews/gander-omni-interaction-agent.png",
+        "alt": "Gander capabilities connecting full-duplex multimodal interaction and asynchronous agent work",
+        "source": "https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent",
+        "caption": "Official capabilities overview · Gander authors",
+        "original": "https://raw.githubusercontent.com/Omni-Interaction-Gander/Omni-Interaction-Agent/main/docs/assets/gander-capabilities.png"
       },
       "selectionGroup": "model"
     },

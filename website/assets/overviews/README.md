@@ -1,5 +1,20 @@
 # Selected overview figures
 
+October 24 additions use original paper figures; exact URLs and alternative text are recorded in `website/content/recent.json`. Gander replaces OneStreamer in Selected Research; both papers and their attributed assets remain in the catalog.
+
+| Preview | Original source |
+|---|---|
+| `cowriter.png` | [Paper authors](https://arxiv.org/html/2610.31277v1/Images/ui-screenshot.png) |
+| `apa.png` | [Paper authors](https://arxiv.org/html/2610.31107v1/Method.png) |
+| `proactegomem.png` | [Paper authors](https://arxiv.org/html/2610.30089v1/teaser_edited.png) |
+| `dive.png` | [Paper authors](https://arxiv.org/html/2610.28405v1/data1.png) |
+| `pace.png` | [Paper authors](https://arxiv.org/html/2610.28323v2/pace_framework_diagram.png) |
+| `promemagent.png` | [Paper authors](https://arxiv.org/html/2610.27400v1/framework_v3.png) |
+| `pitch.png` | [Paper authors](https://arxiv.org/html/2610.25896v2/figs/fig-construction.png) |
+| `visual-tutor.png` | [Paper authors](https://arxiv.org/html/2610.26411v1/figure-01-system.png) |
+| `prov-mem.png` | [Paper authors](https://arxiv.org/html/2610.23998v1/img/fig-framework-2.png) |
+| `clariedge.png` | [Paper authors](https://arxiv.org/html/2610.28686v1/RAG_deployment.png) |
+
 These are original figures or resized previews of original figures from the named authors' official project repositories. No scientific content was reconstructed, cropped, or generated. Select the source caption on the website to visit the original project; For current homepage selections, full-resolution image URLs, attribution, and alternate text are recorded in `website/content/selected.json`.
 
 | Preview | Original project / figure |

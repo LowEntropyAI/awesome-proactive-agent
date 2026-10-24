@@ -6,19 +6,25 @@ import { loadCatalog, root, read } from '../data.mjs';
 import { recentPapers, galleryCard, galleryGroups, gallerySection } from '../gallery.mjs';
 import { recentPage, layout } from '../views.mjs';
 import { searchPapers } from '../search.mjs';
+import { marked } from 'marked';
 const catalog = loadCatalog(), recent = recentPapers(catalog.papers);
+test('new bibliography entries render inside Markdown tables, not stray pipe paragraphs', () => {
+  const bibliography = read('README.md').split('\n## Papers\n')[1].split('\n## Benchmarks\n')[0];
+  const rows = marked.lexer(bibliography).filter(t => t.type === 'table').flatMap(t => t.rows);
+  for (const paper of catalog.papers) assert.ok(rows.some(row => row.some(cell => cell.text.includes(paper.primary))), paper.id);
+});
 test('recent edition uses verified first-posted dates, not monthly alphabetical order', () => {
-  assert.equal(recent.length, 29);
+  assert.equal(recent.length, 40);
   for (const p of catalog.papers.filter(p => p.date === catalog.stats.latest)) assert.ok(p.publishedAt && p.dateSource === p.primary, p.id);
-  assert.equal(recent[0].id, 'lexpilot-proactive-legal-clarification');
+  assert.equal(recent[0].id, 'cowriter-proactive-coauthoring');
   assert.ok(recent.every((p, i) => !i || recent[i - 1].publishedAt >= p.publishedAt));
   assert.equal(recent.at(-1).publishedAt, '2026-09-25'); // October arXiv ID, September first posting.
 });
 test('gallery lenses and text search compose without adding unlisted papers', () => {
   const stream = recentPapers(catalog.papers, { lens: 'streaming' });
   assert.ok(stream.length > 5 && stream.every(p => p.streaming));
-  for (const id of ['proactgen-video-clarification', 'masp-proactive-dialogue-self-play', 'uncertainty-proactive-assistant-alignment']) assert.ok(!stream.some(p => p.id === id), id);
-  assert.deepEqual(recentPapers(catalog.papers, { lens: 'streaming', q: 'ProPerAgent' }).map(p => p.id), ['properagent-memory-driven-proactivity']);
+  for (const id of ['proactgen-video-clarification', 'masp-proactive-dialogue-self-play', 'uncertainty-proactive-assistant-alignment', 'promemagent-prospective-memory', 'pitch-multiparty-intervention-timing', 'apa-long-term-preference-acquisition']) assert.ok(!stream.some(p => p.id === id), id);
+  assert.deepEqual(recentPapers(catalog.papers, { lens: 'streaming', q: 'MemoProAgent' }).map(p => p.id), ['properagent-memory-driven-proactivity']);
   assert.equal(recentPapers(catalog.papers, { lens: 'streaming', q: 'LexPilot' }).length, 0);
   assert.ok(recentPapers(catalog.papers, { lens: 'clarification' }).every(p => p.tags.includes('Clarification')));
   assert.ok(recentPapers(catalog.papers, { lens: 'benchmark' }).every(p => p.tags.includes('Benchmark')));
@@ -33,7 +39,7 @@ test('original previews, evidence links and release checks are traceable', () =>
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
     }
     if (p.release) {
-      assert.equal(p.release.checkedAt, '2026-10-21');
+      assert.equal(p.release.checkedAt, '2026-10-24');
       assert.ok(p.release.code && p.release.model && p.release.data && p.release.sources.length);
     }
   }
@@ -43,12 +49,17 @@ test('original previews, evidence links and release checks are traceable', () =>
   assert.equal(p3i.release.data, 'Available');
   const pam = recent.find(p => p.id === 'pam-proactive-robot-assistance');
   assert.equal(pam.release.code, 'Website / tools only');
+  const memo = recent.find(p => p.id === 'properagent-memory-driven-proactivity');
+  assert.equal(memo.release.code, 'Available (harness)');
+  assert.equal(memo.release.data, 'Partial');
+  assert.match(memo.title, /^MemoProAgent:/);
+  assert.equal(catalog.papers.filter(p => p.primary === 'https://arxiv.org/abs/2610.22671').length, 1);
 });
 test('gallery has static cards, genuine dates, filters, progressive loading and honest fallbacks', () => {
   assert.equal((gallerySection(catalog, true).match(/class="gallery-card"/g) || []).length, 6);
   const page = layout('Recent papers', recentPage(catalog), 'recent/');
   assert.equal((page.match(/class="gallery-card"/g) || []).length, 9);
-  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', 'datetime="2026-10-16"', 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
+  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', 'datetime="2026-10-22"', 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
   assert.ok(galleryGroups(recent.slice(0, 3)).includes('datetime="2026-10"'));
   const fallback = galleryCard({ ...recent[0], thumbnail: undefined });
   assert.match(fallback, /no preview figure/);
@@ -62,6 +73,9 @@ test('editor picks and README must-reads are separate filters', () => {
   assert.ok(selected.some(p => p.id === 'properagent-memory-driven-proactivity'));
   assert.ok(selected.some(p => p.id === 'egovoice-proactive-spoken-assistance'));
   assert.ok(selected.some(p => p.id === 'p3i-proactive-video-assistants'));
+  assert.ok(selected.some(p => p.id === 'gander-omni-interaction-agent'));
+  assert.ok(!selected.some(p => p.id === 'onestreamer-streaming-video'));
+  assert.ok(catalog.papers.some(p => p.id === 'onestreamer-streaming-video'));
   assert.ok(!searchPapers(catalog.papers, { featured: true }).some(p => p.id === 'properagent-memory-driven-proactivity'));
   assert.doesNotMatch(read('README.md'), /^## (?:Last|Latest) [Uu]pdate/m);
 });

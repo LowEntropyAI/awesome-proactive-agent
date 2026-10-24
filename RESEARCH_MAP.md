@@ -65,7 +65,7 @@ The key question is not whether proactive help is useful in principle, but wheth
 | **[StreamingJev / ProAgent](papers/arxiv/2026-10/streamingjev-proactive-physical-ai.md)** | Separates a causal intervention gate from response and device execution. | Explicit objectives versus standing roles, matched-gate comparisons, and false-trigger rates. |
 | **[DuplexAct: Help/Safety Interrupt](papers/arxiv/2026-10/duplexact-content-grounded-interruption.md)** | Scores taking the floor and subsequent situation-appropriate content separately. | Measuring useful unsolicited warnings rather than raw interruption occurrence. |
 | **[P3IBench / P3I-Assistant](papers/arxiv/2026-10/p3i-proactive-video-assistants.md)** | Separates event recognition, hazard prediction, and useful intervention with timing/repetition penalties. | Capability-specific proactive streaming diagnostics. |
-| **[ProPerAgent / ProPerMem](papers/arxiv/2026-10/properagent-memory-driven-proactivity.md)** | Long-term personal memory is retrieved and gated as a reason to speak without a query. | Disentangling evidence retrieval, intervention timing, and repeated reminders. |
+| **[MemoProAgent / MemoProBench](papers/arxiv/2026-10/properagent-memory-driven-proactivity.md)** | Long-term personal memory is retrieved and gated as a reason to speak without a query. | Disentangling evidence retrieval, intervention timing, and repeated reminders. |
 | **[PAM](papers/arxiv/2026-10/pam-proactive-robot-assistance.md)** | Reflects on daily routines to revise finite-state help/NO_ACT rules. | Proactive robot personalization and adaptation to changed routines. |
 
 ## What To Proactively Infer

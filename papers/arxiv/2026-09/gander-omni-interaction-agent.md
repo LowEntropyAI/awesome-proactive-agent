@@ -1,4 +1,6 @@
-# Omni Interaction Agent Technical Report
+# Multimodal Duplex Interaction Agent
+
+[Paper v3](https://arxiv.org/abs/2609.08977v3) · [Code](https://github.com/Omni-Interaction-Gander/Omni-Interaction-Agent) · [Models](https://huggingface.co/Gander-Omni/Gander) · Checked 2026-10-24. Earlier title: *Omni Interaction Agent Technical Report*; same arXiv record, not a new paper.
 
 ## Why It Matters
 
@@ -10,7 +12,7 @@ The streaming interaction model explicitly predicts listen or speak at each chun
 
 ## Evaluation Setup
 
-One checkpoint is evaluated across full-duplex tool use, spoken conversation, omni understanding, and agentic workflows. Reported tests include timing-sensitive take-turn and interruption metrics, 2,052 spoken utterances, 4,369 audiovisual questions, roughly 36,000 GUI/video agent trajectories, and internal human evaluation of real-world interaction cases.
+Evaluation includes Full-Duplex-Bench v3, spoken conversation, multimodal understanding, and internal human judgments. Interaction timing and tool-task accuracy are separate outcomes. The roughly 36,000 GUI/video agent trajectories describe data construction, not an independent long-horizon execution test.
 
 ## Key Limitations
 
@@ -19,3 +21,5 @@ The report acknowledges that no dedicated Omni Interaction Agent benchmark exist
 ## Use For
 
 Use this for full-duplex proactive dialogue, asynchronous fast-and-slow agent architectures, speak/listen state control, proactive progress updates, and multimodal tool-use interfaces.
+
+Release audit (2026-10-24): public runtime and training code; ungated Thinker weight shards and Talker weights in the Hugging Face file index. The full training dataset remains marked coming soon. File availability was checked; inference was not run. Long-horizon execution still requires a separately configured Brain provider.

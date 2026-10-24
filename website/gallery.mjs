@@ -11,7 +11,7 @@ export function recentPapers(papers, { q = '', lens = 'all' } = {}) {
     terms.every(t => [p.title, p.displayTitle, p.gallerySummary, ...p.tags].join(' ').normalize('NFKC').toLowerCase().includes(t)))
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
 }
-const statusZh = { 'Available': '已开放', 'Partial': '部分开放', 'Announced': '宣布待开放', 'Not verified': '未核实开放', 'Planned Nov 2026': '计划 2026 年 11 月', 'Website / tools only': '仅网页 / 辅助工具' };
+const statusZh = { 'Available': '已开放', 'Available (harness)': '推理 / 评测框架已开放', 'Not applicable': '不适用', 'Partial': '部分开放', 'Announced': '宣布待开放', 'Not verified': '未核实开放', 'Planned Nov 2026': '计划 2026 年 11 月', 'Website / tools only': '仅网页 / 辅助工具' };
 function releaseInfo(p) {
   const r = p.release;
   if (!r) return '';
