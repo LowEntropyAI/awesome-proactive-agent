@@ -4,6 +4,22 @@
 .gallery-lenses { display: flex; flex-wrap: wrap; gap: 6px; }
 .gallery-lenses button { color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 9px 12px; font: inherit; font-size: 11px; }
 .gallery-lenses button[aria-pressed=true] { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.gallery-lenses button { cursor: pointer; min-height: 38px; }
+.gallery-lenses button:focus-visible, .gallery-clear:focus-visible, .gallery-extra summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.gallery-lenses small { font-size: 9px; margin-left: 5px; opacity: .75; font-variant-numeric: tabular-nums; }
+.gallery-facets { margin-top: 20px; border-top: 1px solid var(--line); }
+.gallery-facet { border: 0; border-bottom: 1px solid var(--line); padding: 14px 0; margin: 0; min-width: 0; }
+.gallery-facet legend { float: left; width: 165px; padding: 9px 12px 0 0; color: var(--text); font-size: 11px; font-weight: 600; }
+.gallery-facet .gallery-lenses { margin-left: 165px; }
+.gallery-filter-help { font-size: 10px; color: var(--muted); line-height: 1.8; margin: 13px 0 0; max-width: 850px; }
+.gallery-extra summary { cursor: pointer; padding: 16px 0; font-size: 11px; color: var(--accent); }
+.gallery-clear { background: none; border: 1px solid var(--line); border-radius: 7px; padding: 10px 14px; color: var(--muted); font: inherit; font-size: 11px; cursor: pointer; }
+.gallery-toolbar .gallery-search { max-width: 400px; }
+@media (max-width: 760px) {
+  .gallery-facet legend { float: none; width: auto; padding: 0 0 10px; }
+  .gallery-facet .gallery-lenses { margin-left: 0; }
+  .gallery-lenses button { min-height: 44px; }
+}
 .gallery-search { flex: 1 1 185px; max-width: 265px; }
 .gallery-search input { width: 100%; border: 1px solid var(--line); border-radius: 7px; padding: 10px 12px; background: var(--surface); color: var(--text); font: inherit; font-size: 12px; }
 .gallery-status { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 10px; padding: 18px 0 4px; }

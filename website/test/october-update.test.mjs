@@ -27,7 +27,8 @@ test('October 31 additions retain modality and release boundaries', () => {
   assert.equal(get('streamvibe-evolving-user-intent').release.model, 'Announced');
   assert.equal(get('askstream-streaming-clarification').release.model, 'Not applicable');
   assert.equal(get('live-opsd-streaming-self-distillation').release.model, 'Not verified');
-  assert.equal(get('properagent-memory-driven-proactivity').release.checkedAt, '2026-10-24');
+  assert.equal(get('properagent-memory-driven-proactivity').release.checkedAt, '2026-10-31');
+  assert.equal(get('pam-proactive-robot-assistance').release.checkedAt, '2026-10-24');
   assert.equal(get('response-g1-scene-graph-trigger').venue, 'ACL 2026');
   assert.equal(get('response-g1-scene-graph-trigger').primary, 'https://arxiv.org/abs/2605.07575');
 });

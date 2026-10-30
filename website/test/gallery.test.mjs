@@ -27,7 +27,7 @@ test('gallery lenses and text search compose without adding unlisted papers', ()
   assert.deepEqual(recentPapers(catalog.papers, { lens: 'streaming', q: 'MemoProAgent' }).map(p => p.id), ['properagent-memory-driven-proactivity']);
   assert.equal(recentPapers(catalog.papers, { lens: 'streaming', q: 'LexPilot' }).length, 0);
   assert.ok(recentPapers(catalog.papers, { lens: 'clarification' }).every(p => p.tags.includes('Clarification')));
-  assert.ok(recentPapers(catalog.papers, { lens: 'benchmark' }).every(p => p.tags.includes('Benchmark')));
+  assert.ok(recentPapers(catalog.papers, { lens: 'benchmark' }).every(p => p.facets.evidence.includes('benchmark')));
   assert.equal(recentPapers(catalog.papers, { q: 'qzxy-no-paper' }).length, 0);
 });
 test('original previews, evidence links and release checks are traceable', () => {
@@ -39,7 +39,7 @@ test('original previews, evidence links and release checks are traceable', () =>
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
     }
     if (p.release) {
-      assert.equal(p.release.checkedAt, p.publishedAt >= '2026-10-23' ? '2026-10-31' : '2026-10-24');
+      assert.equal(p.release.checkedAt, p.publishedAt >= '2026-10-23' || p.id === 'properagent-memory-driven-proactivity' ? '2026-10-31' : '2026-10-24');
       assert.ok(p.release.code && p.release.model && p.release.data && p.release.sources.length);
     }
   }

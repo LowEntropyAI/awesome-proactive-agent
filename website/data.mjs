@@ -1,6 +1,7 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
+import { validateFacets } from './facets.mjs';
 
 export const root = resolve(import.meta.dirname, '..');
 export const read = file => readFileSync(resolve(root, file), 'utf8');
@@ -68,6 +69,8 @@ export function loadCatalog() {
   const papers = [...records.values()].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   const selected = JSON.parse(read('website/content/selected.json')).papers;
   const recent = JSON.parse(read('website/content/recent.json'));
+  const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
+  validateFacets(recentFacets, recent.papers, recent.streamingPapers);
   const ids = new Set();
   for (const paper of papers) {
     if (ids.has(paper.id)) throw new Error(`Duplicate slug: ${paper.id}`);
@@ -79,6 +82,7 @@ export function loadCatalog() {
     if (recent.papers[paper.id]) {
       const { figure, release, ...metadata } = recent.papers[paper.id];
       Object.assign(paper, metadata, { dateSource: paper.primary });
+      paper.facets = recentFacets[paper.id];
       // Audited recent-edition facet wins over incidental streaming words in notes/references.
       paper.streaming = recent.streamingPapers.includes(paper.id);
       paper.tags = paper.tags.filter(t => t !== 'Streaming');

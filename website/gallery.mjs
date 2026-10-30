@@ -1,15 +1,26 @@
 // Shared by the static generator and browser. No network, clock or locale-dependent order.
+import { facetGroups, matchesFacets, normalizeFilters } from './facets.mjs';
 const base = '/awesome-proactive-agent/';
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const bi = (en, zh) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
-export function recentPapers(papers, { q = '', lens = 'all' } = {}) {
+export function recentPapers(papers, { q = '', ...filters } = {}) {
   const terms = q.normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);
   return papers.filter(p => p.publishedAt &&
-    (lens !== 'streaming' || p.streaming) &&
-    (lens !== 'clarification' || p.tags.includes('Clarification')) &&
-    (lens !== 'benchmark' || p.tags.includes('Benchmark')) &&
-    terms.every(t => [p.title, p.displayTitle, p.gallerySummary, ...p.tags].join(' ').normalize('NFKC').toLowerCase().includes(t)))
+    matchesFacets(p, filters) &&
+    terms.every(t => [p.title, p.displayTitle, p.gallerySummary, ...p.tags, ...facetGroups.flatMap(g => g.options.filter(o => p.facets?.[g.key]?.includes(o[0])).flat())].join(' ').normalize('NFKC').toLowerCase().includes(t)))
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
+}
+export function facetCounts(papers, input = {}) {
+  const filters = normalizeFilters(input);
+  return Object.fromEntries(facetGroups.map(g => {
+    const subset = recentPapers(papers, {...filters, [g.key]: 'all', q: input.q ?? ''});
+    return [g.key, Object.fromEntries([['all', subset.length], ...g.options.map(([v]) => [v, subset.filter(p => p.facets?.[g.key]?.includes(v)).length])])];
+  }));
+}
+function filterControls(papers, compact) {
+  const counts = facetCounts(papers);
+  const rows = facetGroups.map(g => `<fieldset class="gallery-facet"><legend>${bi(g.en,g.zh)}</legend><div class="gallery-lenses">${[['all','All','不限'],...g.options].map(([v,en,zh]) => `<button type="button" data-facet="${g.key}" data-value="${v}"${v === 'streaming' ? ' data-lens="streaming"' : ''} aria-pressed="${v === 'all'}">${bi(en,zh)} <small data-facet-count>${counts[g.key][v]}</small></button>`).join('')}</div></fieldset>`);
+  return `<div class="gallery-facets">${rows[0]}${compact ? `<details class="gallery-extra"><summary>${bi('Add context, mechanism or evidence filters', '进一步按场景、机制或研究贡献筛选')}</summary>${rows.slice(1).join('')}</details>` : rows.slice(1).join('')}</div>`;
 }
 const statusZh = { 'Available': '已开放', 'Available (harness)': '推理 / 评测框架已开放', 'Not applicable': '不适用', 'Partial': '部分开放', 'Announced': '宣布待开放', 'Not verified': '未核实开放', 'Planned Nov 2026': '计划 2026 年 11 月', 'Website / tools only': '仅网页 / 辅助工具' };
 function releaseInfo(p) {
@@ -31,5 +42,10 @@ export function galleryGroups(papers) {
 }
 export function gallerySection(catalog, compact = false) {
   const papers = recentPapers(catalog.papers), initial = papers.slice(0, compact ? 6 : 9);
-  return `<div id="paper-gallery" class="gallery-shell" data-page-size="${compact ? 6 : 9}"><p class="gallery-intro">${bi('A visual feed of recently collected research. Ordered by first arXiv posting, not popularity or repository update time.', '近期收录研究的可视化信息流。按 arXiv 首发日期排序，不是热度榜，也不是仓库更新时间。')}</p><div class="gallery-toolbar"><div class="gallery-lenses" role="group" aria-label="Research filters">${[['all', 'All research', '全部研究'], ['streaming', 'Streaming', '流式'], ['clarification', 'Clarification', '主动澄清'], ['benchmark', 'Benchmarks', '评测']].map(([v, en, zh]) => `<button type="button" data-lens="${v}" aria-pressed="${v === 'all'}">${bi(en, zh)}</button>`).join('')}</div><label class="gallery-search"><span class="sr-only">Search recent papers</span><input id="gallery-search" type="search" placeholder="Find a recent paper…" data-placeholder-en="Find a recent paper…" data-placeholder-zh="搜索近期论文…"></label></div><div class="gallery-status"><span id="gallery-count" role="status" aria-live="polite">${papers.length} ${bi('papers', '篇论文')}</span><span>${bi('Source dates', '日期来源')} · <a href="${esc(papers[0]?.dateSource ?? 'https://arxiv.org/')}">arXiv ↗</a></span></div><div id="gallery-results">${galleryGroups(initial)}</div><div class="gallery-more"><button id="gallery-more" type="button"${papers.length <= initial.length ? ' hidden' : ''}>${bi('Show more papers', '展示更多论文')} ↓</button><a href="${base}${compact ? 'recent/' : 'library/'}">${compact ? bi('Open the full gallery', '打开完整论文画廊') : bi('Explore the full library', '查看全部文献')} →</a></div><noscript><p>Enable JavaScript to filter or show more. All papers remain accessible in <a href="${base}library/">the library</a>.</p></noscript></div>`;
+  return `<div id="paper-gallery" class="gallery-shell" data-page-size="${compact ? 6 : 9}">
+    <p class="gallery-intro">${bi('Proactivity is the focus; streaming is one context, memory one mechanism. Explore overlapping research questions across settings and methods. Ordered by first arXiv posting, not popularity.', '以主动性为核心：流式是一种交互场景，记忆是一种技术机制。按研究问题跨场景、跨方法探索，按 arXiv 首发日期排序，而非热度。')}</p>
+    <div class="gallery-toolbar"><label class="gallery-search"><span class="sr-only">${bi('Search recent papers','搜索近期论文')}</span><input id="gallery-search" type="search" placeholder="Find a paper or direction…" data-placeholder-en="Find a paper or direction…" data-placeholder-zh="搜索论文或研究方向…"></label><button type="button" class="gallery-clear" id="gallery-clear">${bi('Reset filters','重置筛选')}</button></div>
+    ${filterControls(papers,compact)}
+    <p class="gallery-filter-help">${bi('Choose one value per row; rows combine. Papers can appear in multiple directions. Counts reflect the other active filters. These are evolving editorial lenses, not an exhaustive taxonomy.', '每行选一项，跨行取交集；同一论文可属于多个方向。数量随其他筛选联动。这是持续扩展的编辑视角，不是穷尽性的领域分类。')}</p>
+    <div class="gallery-status"><span id="gallery-count" role="status" aria-live="polite">${papers.length} ${bi('papers', '篇论文')}</span><span>${bi('Source dates', '日期来源')} · <a href="${esc(papers[0]?.dateSource ?? 'https://arxiv.org/')}">arXiv ↗</a></span></div><div id="gallery-results">${galleryGroups(initial)}</div><div class="gallery-more"><button id="gallery-more" type="button"${papers.length <= initial.length ? ' hidden' : ''}>${bi('Show more papers', '展示更多论文')} ↓</button><a href="${base}${compact ? 'recent/' : 'library/'}">${compact ? bi('Open the full gallery', '打开完整论文画廊') : bi('Explore the full library', '查看全部文献')} →</a></div><noscript><p>Enable JavaScript to filter or show more. All papers remain accessible in <a href="${base}library/">the library</a>.</p></noscript></div>`;
 }

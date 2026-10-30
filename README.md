@@ -1,18 +1,27 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0EA5E9,55:14B8A6,100:F8FAFC&text=Awesome%20Proactive%20Agents&fontAlign=50&fontAlignY=40&fontColor=0F172A&fontSize=42&desc=Research,%20models,%20systems,%20and%20evaluation%20of%20proactive%20AI&descAlign=50&descAlignY=62&descSize=16" alt="Awesome Proactive Agents dynamic banner">
-</p>
-
 <h1 align="center">Awesome Proactive Agents</h1>
 
 <p align="center">
-  <img src="assets/pro-agent.png" alt="Proactive Agent banner">
+  Understand the person. Choose the moment.
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/proactive-hero-mobile.svg">
+    <img src="assets/proactive-hero.svg" width="1120" alt="Proactivity built around people: observe across work, mobile, wearables, home and robots; understand goals, preferences, routines and boundaries; anticipate needs and decide when to ask, suggest, remind, act or stay quiet. Research spanning models, agent systems, applications and evaluation.">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://lowentropyai.github.io/awesome-proactive-agent/"><strong>Explore the Atlas</strong></a> ·
+  <a href="https://lowentropyai.github.io/awesome-proactive-agent/recent/">Recent Papers</a> ·
+  <a href="PERSONAL_AGENTS.md">Personal Agents</a> ·
+  <a href="STREAMING.md">Streaming Proactivity</a> ·
+  <a href="PROJECTS.md">Projects &amp; Products</a>
 </p>
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/LowEntropyAI/awesome-proactive-agent/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <img src="https://img.shields.io/badge/Focus-Proactive%20AI-0ea5e9" alt="Focus: Proactive AI">
-  <img src="https://img.shields.io/badge/Scope-Research%20%26%20Applications-14b8a6" alt="Scope: Research and Applications">
 </p>
 
 > A curated collection of **proactive AI research and applications**, bringing together papers, agents, models, systems, projects, products, benchmarks, and supporting infrastructure.

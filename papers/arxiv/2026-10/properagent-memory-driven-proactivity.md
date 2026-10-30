@@ -1,6 +1,6 @@
 # MemoProAgent: Toward Memory-Driven Proactive Assistance
 
-[Paper v2](https://arxiv.org/abs/2610.22671v2) · [Code](https://github.com/facebookresearch/Memo-Pro-Agent) · [Evaluation histories](https://huggingface.co/datasets/facebook/MemProBench) · Checked 2026-10-24. Review: method, evaluation and released artifacts; no experiments rerun.
+[Paper v2](https://arxiv.org/abs/2610.22671v2) · [Code](https://github.com/facebookresearch/Memo-Pro-Agent) · [Evaluation histories](https://huggingface.co/datasets/facebook/MemProBench) · Checked 2026-10-31. Review: method, evaluation and released artifacts; no experiments rerun.
 
 Renamed from **ProPerAgent / ProPerMem** to **MemoProAgent / MemoProBench** in the October 21 revision. The stable note path is retained to avoid breaking existing links. The dataset repository identifier is spelled `facebook/MemProBench`.
 
@@ -24,4 +24,4 @@ Memories are synthesized and trigger windows curated. These scores are not longi
 
 Use for memory-conditioned intervention, justified silence, and separating retrieval failures from timing failures.
 
-Release recheck 2026-10-24: inference, retrieval and evaluation code are public, with an RL launcher/reward plugin also present. The 800 evaluation histories are anonymously reachable (including a direct file check), despite stale authentication language in the dataset card. Ego4D source videos require separate authorized access and are not redistributed. Post-trained checkpoints and a complete paper-results reproduction recipe were not verified; the repository describes its initial scope as inference/evaluation.
+Release recheck 2026-10-31: [source snapshot](https://github.com/facebookresearch/Memo-Pro-Agent/tree/8563e58d3106c8e0b3108bff64c04d00e1c8f095) provides inference, retrieval and evaluation code, plus an RL launcher/reward plugin. Code is **CC-BY-NC-4.0 (noncommercial)**, not an OSI-approved open-source license. The 800 evaluation histories are ungated in the Hugging Face API; a sample file HEAD request returned HTTP 200, despite stale private-access language in the upstream README. Ego4D source videos require separate authorized access and are not redistributed. Post-trained checkpoints and a complete paper-results reproduction recipe remain unverified. The latest arXiv version is still October 21 v2; this is an existing-record recheck, not a new paper.
