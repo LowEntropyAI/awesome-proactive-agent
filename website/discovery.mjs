@@ -4,9 +4,11 @@ const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
 export function readingPaths(active = 'latest') {
   return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','recent/','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${base}${path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;
 }
-export function feedIntro(catalog) {
-  const newest = catalog.papers.filter(p => p.publishedAt).map(p => p.publishedAt).sort().at(-1);
-  return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('A field in motion', '持续演进的研究领域')}</p><h1>${bi('Discover what’s next', '发现新进展')}<br>${bi('in proactive AI.', '探索主动式 AI。')}</h1><p>${bi('Research that anticipates needs, takes initiative, and knows its boundaries.', '预判需求、主动提供帮助，也懂得边界。')}</p></div><div class="feed-edition"><span>${bi('Latest paper in this collection', '当前收录的最新首发')}</span><strong>${newest}</strong><a href="${base}projects/">${bi('Explore projects & implementations', '浏览项目与实现')} ↗</a></div></header>`;
+export function feedIntro() {
+  return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('A field in motion', '持续演进的研究领域')}</p><h1>${bi('Discover what’s next', '发现新进展')}<br>${bi('in proactive AI.', '探索主动式 AI。')}</h1><p>${bi('Research that anticipates needs, takes initiative, and knows its boundaries.', '预判需求、主动提供帮助，也懂得边界。')}</p></div></header>`;
+}
+export function homeHero() {
+  return `<section class="atlas-hero" aria-labelledby="hero-title"><img class="atlas-hero-art" src="${base}assets/proactive-field.svg" alt="" width="1120" height="620" fetchpriority="high"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('The Proactive AI Atlas','主动式 AI 研究图谱')}</p><h1 id="hero-title">${bi('Beyond answers.','不止回答。')}<br><em>${bi('Toward initiative.','更能主动。')}</em></h1><p class="hero-description">${bi('Explore AI that anticipates, collaborates and acts—with people in mind.','探索能够预判、协作和行动的 AI，始终以人为中心。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div><div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
 }
 export const concepts = [
   ['need','Anticipate Needs','预判需求','What might help before someone asks?','在用户开口前，什么可能有帮助？','PASK','pask-intent-aware-proactive-agent'],

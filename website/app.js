@@ -22,7 +22,7 @@ document.addEventListener('keydown', event => { if (event.key === '/' && !['INPU
 let render = null, renderDirectory = null;
 function card(p) {
   const resources = navigationResources(p);
-  return `<article class="paper-card"><div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span></div><h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} <span aria-hidden="true">↗</span></a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
+  return `<article class="paper-card">${p.thumbnail ? `<a class="directory-cover" href="${esc(p.primary)}"><img src="${esc(p.thumbnail.src)}" alt="${esc(p.thumbnail.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><a class="directory-credit" href="${esc(p.thumbnail.source)}">${esc(p.thumbnail.caption)} ↗</a>` : ''}<div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span></div><h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} <span aria-hidden="true">↗</span></a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
 }
 if ($('#catalog')) {
   const controls = ['category', 'tag', 'year', 'venue', 'code', 'featured', 'selected', 'sort'];
@@ -74,16 +74,25 @@ if ($('#catalog')) {
 }
 if ($('#directory-results')) {
   const input = $('#directory-search'), count = $('#directory-count');
-  const rows = [...$('#directory-results').children];
-  input.value = new URLSearchParams(location.search).get('q') || '';
+  const rows = [...$('#directory-results').querySelectorAll('[data-search]')];
+  const buttons=[...document.querySelectorAll('[data-project-group]')],groups=[...document.querySelectorAll('[data-project-section]')];
+  let group='all';
+  function readDirectoryURL(){const params=new URLSearchParams(location.search);input.value=params.get('q')||'';group=buttons.some(b=>b.dataset.projectGroup===params.get('group'))?params.get('group'):'all';}
+  readDirectoryURL();
   renderDirectory = (sync = true) => {
     const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
     let visible = 0;
-    rows.forEach(row => { row.hidden = !terms.every(term => row.dataset.search.toLowerCase().includes(term)); if (!row.hidden) visible++; });
+    const matches=row=>terms.every(term=>row.dataset.search.toLowerCase().includes(term));
+    rows.forEach(row => { row.hidden = !matches(row)||(group!=='all'&&row.dataset.group!==group); if (!row.hidden) visible++; });
+    groups.forEach(section=>{section.hidden=![...section.querySelectorAll('[data-search]')].some(row=>!row.hidden);});
+    buttons.forEach(button=>{const key=button.dataset.projectGroup;button.setAttribute('aria-pressed',String(group===key));button.querySelector('[data-group-count]').textContent=rows.filter(row=>matches(row)&&(key==='all'||row.dataset.group===key)).length;});
+    if($('#directory-empty'))$('#directory-empty').hidden=visible>0;
     count.textContent = `${visible} ${count.dataset[lang === 'zh' ? 'nounZh' : 'nounEn']}`;
-    if (sync) { const params = new URLSearchParams(); if (input.value.trim()) params.set('q', input.value.trim()); history.replaceState(null, '', location.pathname + (params.size ? '?' + params : '')); }
+    if (sync) { const params = new URLSearchParams(); if (input.value.trim()) params.set('q', input.value.trim()); if(group!=='all')params.set('group',group); history.replaceState(null, '', location.pathname + (params.size ? '?' + params : '')); }
   };
   input.addEventListener('input', () => renderDirectory());
-  window.addEventListener('popstate', () => { input.value = new URLSearchParams(location.search).get('q') || ''; renderDirectory(false); });
+  buttons.forEach(button=>button.addEventListener('click',()=>{group=button.dataset.projectGroup;renderDirectory();}));
+  $('#directory-reset')?.addEventListener('click',()=>{group='all';input.value='';renderDirectory();});
+  window.addEventListener('popstate', () => { readDirectoryURL(); renderDirectory(false); });
   renderDirectory(false);
 }

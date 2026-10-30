@@ -70,22 +70,30 @@
         "original": "https://xzf-thu.github.io/Pask/assets/images/figure1.png"
       }
     },
-    "pira-bench": {
-      "displayTitle": "PIRA-Bench / PIRF",
-      "description": "GUI-based proactive intent recommendation, with a memory-aware state-tracking baseline.",
-      "selectionGroup": "benchmark",
-      "thumbnail": {
-        "src": "/awesome-proactive-agent/assets/overviews/pira-bench.png",
-        "alt": "PIRA-Bench Figure 1 comparing reactive GUI execution with proactive intent recommendation",
-        "source": "https://arxiv.org/html/2603.08013v1#S1.F1",
-        "caption": "Paper Figure 1 · PIRA-Bench authors",
-        "original": "https://arxiv.org/html/2603.08013v1/images/proactive.png"
-      }
-    },
-    "egovoice-proactive-spoken-assistance": {
-      "displayTitle": "EgoVoice",
-      "description": "Egocentric video + audio → Listen / Speak control. SFT and DPO learn when to offer spoken guidance under a supplied task recipe.",
+    "streamvibe-evolving-user-intent": {
+      "displayTitle": "StreamVibe",
+      "description": "Evolving intent in live video: a response/silence policy and stateful harness track requests, task progress and prior replies. Code and weights remain announced, not verified released.",
       "selectionGroup": "model"
+    },
+    "ask-less-attention-budgets": {
+      "displayTitle": "Ask Less, Ask Better",
+      "description": "Treat user attention as a budget. Memory-guided review decides which clarifying questions justify another interruption.",
+      "selectionGroup": "interaction"
+    },
+    "attrify-soft-attribute-clarification": {
+      "displayTitle": "AttriFy",
+      "description": "Make ambiguous preferences inspectable: clarify soft attributes, then let people accept, reject and refine executable interpretations.",
+      "selectionGroup": "interaction"
+    },
+    "safe-pro-cross-modal-inquiry": {
+      "displayTitle": "SAFE-PRO",
+      "description": "Risk-conditioned uncertainty guides when to ask. Safety and cross-modal ambiguity constrain proactive clarification.",
+      "selectionGroup": "interaction"
+    },
+    "halo-human-grounded-proactivity": {
+      "displayTitle": "HALO",
+      "description": "Human-grounded evaluation of whether to help, when to intervene and how far to go. Useful initiative must be distinguished from overreach.",
+      "selectionGroup": "benchmark"
     }
   }
 }

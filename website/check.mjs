@@ -18,4 +18,9 @@ function check(path) {
   assert.doesNotMatch(html, /(?:\/Users\/|\/home\/|file:\/\/)/, `${path}: private path`);
 }
 walk(root);
+const catalog=JSON.parse(readFileSync(resolve(root,'catalog.json'),'utf8'));
+for(const item of [...catalog.papers,...catalog.projects,...catalog.benchmarks]){
+  assert.ok(item.thumbnail?.src,`Missing cover: ${item.title||item.name}`);
+  assert.ok(existsSync(resolve(root,item.thumbnail.src.slice(base.length))),`Missing cover asset: ${item.thumbnail.src}`);
+}
 console.log(`Validated ${pages} HTML files and ${links} internal links.`);

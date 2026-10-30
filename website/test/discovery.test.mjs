@@ -1,20 +1,41 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { read, loadCatalog } from '../data.mjs';
-import { home, selectedPage, understandPage } from '../views.mjs';
+import { home, selectedPage, understandPage, projectPage, paperCard, benchmarkPage } from '../views.mjs';
+import { renderCover } from '../covers.mjs';
 import { paperDetail, paperPath } from '../paper-detail.mjs';
 import { galleryCard } from '../gallery.mjs';
 import { concepts } from '../discovery.mjs';
 const catalog=loadCatalog();
-test('home opens on the research feed with all three reading paths',()=>{
+test('home opens with an editorial hero before the research feed',()=>{
  const html=home(catalog);
  assert.match(html,/gallery-results/);
  assert.doesNotMatch(html,/class="cover"|selected-route-grid/);
  for(const path of ['recent/','understand/','selected/','projects/'])assert.ok(html.includes(path));
  assert.ok(html.indexOf('gallery-results')<html.indexOf('feed-next'));
+ assert.ok(html.indexOf('atlas-hero')<html.indexOf('directory-sidebar'));
+ assert.match(html,/href="#discover"/);
+ assert.doesNotMatch(html,/Latest paper in this collection|Last updated|当前收录的最新首发|最后更新/);
  assert.match(selectedPage(catalog),/not a popularity ranking/);
  assert.match(understandPage(catalog),/not its definition/);
  for(const c of concepts)assert.ok(catalog.papers.some(p=>p.id===c[6]),c[6]);
+});
+test('all paper, benchmark and project cards have sourced or explicitly editorial covers',()=>{
+ for(const p of [...catalog.papers,...catalog.projects,...catalog.benchmarks]){
+  assert.ok(p.thumbnail?.src,p.title||p.name);
+  assert.ok(p.thumbnail.source&&p.thumbnail.alt&&p.thumbnail.caption);
+  if(p.thumbnail.editorial){const svg=renderCover(p.thumbnail);assert.match(svg,/NOT AN AUTHOR FIGURE/);assert.doesNotMatch(svg,/<script|<foreignObject/);}
+ }
+ assert.match(paperCard(catalog.papers[0]),/<img/);
+ assert.equal((benchmarkPage(catalog).match(/class="directory-cover"/g)||[]).length,catalog.benchmarks.length);
+});
+test('projects have five distinct groups, each entry rendered exactly once',()=>{
+ const html=projectPage(catalog);
+ assert.equal((html.match(/data-project-section=/g)||[]).length,5);
+ assert.equal((html.match(/class="project-card"/g)||[]).length,catalog.projects.length);
+ for(const g of catalog.projectGroups)assert.match(html,new RegExp('data-project-group="'+g.key+'"'));
+ assert.match(html,/directory-reset/);assert.match(html,/directory-empty/);
+ assert.equal(catalog.projects.find(p=>p.title.includes('WakeGate')).group,'component');
 });
 test('recent and selected cards have shareable progressive-enhancement brief pages',()=>{
  for(const p of catalog.papers.filter(p=>p.publishedAt||p.selected)) {

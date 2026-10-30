@@ -4,6 +4,7 @@ import { loadCatalog, root, read } from './data.mjs';
 import { markdown } from './guides.mjs';
 import { layout, home, library, benchmarkPage, projectPage, guidePage, recentPage, understandPage, selectedPage, base, url, esc, bi } from './views.mjs';
 import { paperDetail } from './paper-detail.mjs';
+import { renderCover } from './covers.mjs';
 const catalog = loadCatalog();
 const out = resolve(root, 'dist');
 rmSync(out, { recursive: true, force: true });
@@ -21,12 +22,13 @@ const pages = [
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
   ['start/', 'Must Read: layered reading routes', guidePage(catalog, markdown('# Must Read\n' + mustRead), 'start')],
   ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')), 'map')],
-  ['projects/', 'Projects & implementations', projectPage(catalog) + supplement('PROJECTS.md')],
+  ['projects/', 'Projects & implementations', projectPage(catalog) + `<details class="project-source-notes"><summary>Source guide / 完整来源说明</summary>${supplement('PROJECTS.md')}</details>`],
   ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')), 'applications')],
   ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')), 'personal')],
   ['infrastructure/', 'Supporting infrastructure', guidePage(catalog, markdown(read('INFRASTRUCTURE.md')), 'infrastructure')]
 ];
-for (const p of catalog.papers.filter(p => p.publishedAt || p.selected)) pages.push([`papers/${p.id}/`, p.title, `<div class="standalone-brief"><a class="back-to-feed" href="${url('recent/')}">← ${bi('Back to research', '返回研究信息流')}</a>${paperDetail(p)}</div>`]);
+// Preserve the previously published PIRA brief even after it leaves Essential Reading.
+for (const p of catalog.papers.filter(p => p.publishedAt || p.selected || p.id === 'pira-bench')) pages.push([`papers/${p.id}/`, p.title, `<div class="standalone-brief"><a class="back-to-feed" href="${url('recent/')}">← ${bi('Back to research', '返回研究信息流')}</a>${paperDetail(p)}</div>`]);
 for (const [path, title, content] of pages) write(path + 'index.html', layout(title, content, path, catalog.stats));
 write('404.html', layout('Page not found', `<div class="page-shell page-heading"><div class="eyebrow">404 / OFF THE MAP</div>${bi('Let’s find your way back.', '回到研究地图。', 'h1')}<p>The page may have moved. Browse the library to find the paper.</p><a class="button primary" href="${url('library/')}">Explore the library →</a></div>`, '404.html', catalog.stats));
 write('catalog.json', JSON.stringify({ ...catalog, selectionGuide: undefined, papers: catalog.papers.map(({ noteText, summary, reason, note, ...p }) => ({ ...p, hasNotes: Boolean(note) })) }));
@@ -35,7 +37,8 @@ write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://lowentropyai.gith
 write('.nojekyll', '');
 for (const name of ['discovery.css', 'catalog-client.js', 'paper-detail-client.js', 'style.css', 'experience.css', 'experience.js', 'gallery.css', 'gallery.mjs', 'gallery-client.js', 'app.js', 'theme.js', 'search.mjs', 'resources.mjs', 'favicon.svg', 'social.svg']) { mkdirSync(resolve(out, 'assets'), { recursive: true }); copyFileSync(resolve(root, 'website', name), resolve(out, 'assets', name.endsWith('.mjs') ? name.replace('.mjs', '.js') : name)); }
 copyFileSync(resolve(root, 'website/assets/lowentropyai.png'), resolve(out, 'assets/lowentropyai.png'));
-for (const name of ['proactive-hero.svg', 'proactive-hero-mobile.svg']) copyFileSync(resolve(root, 'assets', name), resolve(out, 'assets', name));
+for (const name of ['proactive-hero.svg', 'proactive-hero-mobile.svg', 'proactive-field.svg']) copyFileSync(resolve(root, 'assets', name), resolve(out, 'assets', name));
+for(const item of [...catalog.papers,...catalog.projects,...catalog.benchmarks]) if(item.thumbnail?.editorial) write(item.thumbnail.src.replace(base,''),renderCover(item.thumbnail));
 copyFileSync(resolve(root, 'website/paper-detail.mjs'), resolve(out, 'assets/paper-detail.mjs'));
 copyFileSync(resolve(root, 'website/facets.mjs'), resolve(out, 'assets/facets.mjs'));
 cpSync(resolve(root, 'website/assets/cover'), resolve(out, 'assets/cover'), { recursive: true });

@@ -7,7 +7,7 @@ import { base, selectedPage } from '../views.mjs';
 test('essential reading balances agents, models and benchmarks without requiring images', () => {
   const catalog = loadCatalog();
   const selected = catalog.papers.filter(p => p.selected);
-  for (const [group, count] of [['agent', 3], ['model', 3], ['benchmark', 3]]) {
+  for (const [group, count] of [['agent', 3], ['model', 3], ['interaction', 3], ['benchmark', 3]]) {
     assert.equal(selected.filter(p => p.selectionGroup === group).length, count, group);
   }
   const html = selectedPage(catalog);

@@ -1,0 +1,9 @@
+{
+  "pira-bench": {
+    "src": "/awesome-proactive-agent/assets/overviews/pira-bench.png",
+    "alt": "PIRA-Bench Figure 1 comparing reactive GUI execution with proactive intent recommendation",
+    "source": "https://arxiv.org/html/2603.08013v1#S1.F1",
+    "caption": "Paper Figure 1 · PIRA-Bench authors",
+    "original": "https://arxiv.org/html/2603.08013v1/images/proactive.png"
+  }
+}

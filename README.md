@@ -7,7 +7,7 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/proactive-hero-mobile.svg">
-    <img src="assets/proactive-hero.svg" width="1120" alt="Proactive AI: anticipate needs and take initiative. Complementary capabilities include understanding context, anticipating needs, preparing and planning, communicating and collaborating, acting with permission, and adapting with restraint. Across work, mobile, wearables, home and robots—not one fixed workflow.">
+    <img src="assets/proactive-hero.svg" width="1120" alt="Understand You. Help Thoughtfully. A person-centered constellation of context, anticipation, preparation, help, permission, memory and feedback—complementary capabilities, not an exhaustive definition of proactive AI.">
   </picture>
 </p>
 

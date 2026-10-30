@@ -33,7 +33,7 @@ test('gallery lenses and text search compose without adding unlisted papers', ()
 test('original previews, evidence links and release checks are traceable', () => {
   for (const p of recent) {
     assert.ok(p.evidenceUrl?.endsWith(p.note));
-    if (p.thumbnail) {
+    if (p.thumbnail && !p.thumbnail.editorial) {
       assert.ok(existsSync(resolve(root, 'website', p.thumbnail.src.replace('/awesome-proactive-agent/', ''))));
       assert.match(p.thumbnail.original, /^https:\/\//);
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
@@ -69,9 +69,10 @@ test('gallery has static cards, genuine dates, filters, progressive loading and 
 });
 test('editor picks and README must-reads are separate filters', () => {
   const selected = searchPapers(catalog.papers, { selected: true });
-  assert.equal(selected.length, 9);
+  assert.equal(selected.length, 12);
   assert.ok(selected.some(p => p.id === 'properagent-memory-driven-proactivity'));
-  assert.ok(selected.some(p => p.id === 'egovoice-proactive-spoken-assistance'));
+  assert.ok(selected.some(p => p.id === 'streamvibe-evolving-user-intent'));
+  assert.ok(catalog.papers.some(p => p.id === 'egovoice-proactive-spoken-assistance'));
   assert.ok(selected.some(p => p.id === 'p3i-proactive-video-assistants'));
   assert.ok(selected.some(p => p.id === 'gander-omni-interaction-agent'));
   assert.ok(!selected.some(p => p.id === 'onestreamer-streaming-video'));

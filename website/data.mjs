@@ -2,6 +2,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { validateFacets } from './facets.mjs';
+import { editorialThumbnail } from './covers.mjs';
 
 export const root = resolve(import.meta.dirname, '..');
 export const read = file => readFileSync(resolve(root, file), 'utf8');
@@ -68,6 +69,7 @@ export function loadCatalog() {
   }
   const papers = [...records.values()].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   const selected = JSON.parse(read('website/content/selected.json')).papers;
+  const covers = JSON.parse(read('website/content/covers.json'));
   const recent = JSON.parse(read('website/content/recent.json'));
   const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
   validateFacets(recentFacets, recent.papers, recent.streamingPapers);
@@ -93,6 +95,7 @@ export function loadCatalog() {
       if (release) paper.release = { ...release, checkedAt: release.checkedAt ?? recent.checkedAt };
     }
     if (selected[paper.id]) Object.assign(paper, selected[paper.id], { selected: true, selectedOrder: Object.keys(selected).indexOf(paper.id) });
+    paper.thumbnail ??= covers[paper.id] ?? editorialThumbnail(paper.id, paper.displayTitle ?? paper.title, paper.primary, Object.values(sections).find(c=>c.key===paper.categories[0])?.short);
   }
   for (const id of Object.keys(selected)) if (!ids.has(id)) throw new Error(`Selected paper missing from catalog: ${id}`);
   for (const id of Object.keys(recent.papers)) if (!ids.has(id)) throw new Error(`Recent paper missing from catalog: ${id}`);
@@ -111,6 +114,7 @@ export function loadCatalog() {
     benchmark.primary = paper?.primary ?? benchmark.resources[0]?.url;
     benchmark.date = paper?.date;
     benchmark.venue = paper?.venue;
+    benchmark.thumbnail = paper?.thumbnail ?? editorialThumbnail('benchmark-'+slug(benchmark.name),benchmark.name,benchmark.primary,'Benchmark');
     if (!benchmark.primary) throw new Error(`Benchmark has no navigation destination: ${benchmark.name}`);
   }
   const projects = [];
@@ -130,5 +134,6 @@ export function loadCatalog() {
     const paper = papers.find(p => links.some(r => r.url === p.primary));
     projects.push({ id: slug(name), title: name, description: plain(row[1]), group: group.key, groupLabel: group.label, groupZh: group.zh, resources: links.map(r => ({ ...r, label: r.label === 'Repository' ? 'Repo' : r.label })), primary: links.find(r => r.label === 'Repository')?.url ?? links[0]?.url, ...(paper?.thumbnail ? { thumbnail: paper.thumbnail, selected: true } : {}) });
   }
+  for(const p of projects) p.thumbnail ??= editorialThumbnail('project-'+p.id,p.title,p.primary,p.groupLabel);
   return { papers, projects, projectGroups: Object.values(projectGroups), benchmarks, categories: Object.values(sections), archivedNotes: unlinked, stats: { papers: papers.length, notes: linked.size, streaming: papers.filter(p => p.streaming).length, benchmarks: benchmarks.length, projects: projects.length, latest: papers[0]?.date } };
 }
