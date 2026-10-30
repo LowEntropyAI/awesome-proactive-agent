@@ -1,5 +1,9 @@
 # Selected overview figures
 
+## Recent gallery additions — 2026-10-31
+
+Eight original author figures were added for AskStream, StreamVibe, SyncPro, Live-OPSD, HALO, Omni-InteractScope, EvoLife and iPrefBench. Exact upstream URLs, source pages and alternative text are preserved in `website/content/recent.json`. Figures are displayed without cropping; entries without an original preview retain the explicitly labeled text-only brief. Upstream rights remain with the authors.
+
 October 24 additions use original paper figures; exact URLs and alternative text are recorded in `website/content/recent.json`. Gander replaces OneStreamer in Selected Research; both papers and their attributed assets remain in the catalog.
 
 | Preview | Original source |

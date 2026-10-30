@@ -14,9 +14,9 @@ test('new bibliography entries render inside Markdown tables, not stray pipe par
   for (const paper of catalog.papers) assert.ok(rows.some(row => row.some(cell => cell.text.includes(paper.primary))), paper.id);
 });
 test('recent edition uses verified first-posted dates, not monthly alphabetical order', () => {
-  assert.equal(recent.length, 40);
+  assert.equal(recent.length, 51);
   for (const p of catalog.papers.filter(p => p.date === catalog.stats.latest)) assert.ok(p.publishedAt && p.dateSource === p.primary, p.id);
-  assert.equal(recent[0].id, 'cowriter-proactive-coauthoring');
+  assert.equal(recent[0].id, 'evolife-active-navigation-clarification');
   assert.ok(recent.every((p, i) => !i || recent[i - 1].publishedAt >= p.publishedAt));
   assert.equal(recent.at(-1).publishedAt, '2026-09-25'); // October arXiv ID, September first posting.
 });
@@ -39,7 +39,7 @@ test('original previews, evidence links and release checks are traceable', () =>
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
     }
     if (p.release) {
-      assert.equal(p.release.checkedAt, '2026-10-24');
+      assert.equal(p.release.checkedAt, p.publishedAt >= '2026-10-23' ? '2026-10-31' : '2026-10-24');
       assert.ok(p.release.code && p.release.model && p.release.data && p.release.sources.length);
     }
   }
@@ -59,7 +59,7 @@ test('gallery has static cards, genuine dates, filters, progressive loading and 
   assert.equal((gallerySection(catalog, true).match(/class="gallery-card"/g) || []).length, 6);
   const page = layout('Recent papers', recentPage(catalog), 'recent/');
   assert.equal((page.match(/class="gallery-card"/g) || []).length, 9);
-  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', 'datetime="2026-10-22"', 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
+  for (const marker of ['gallery-client.js', 'gallery.css', 'gallery-search', 'gallery-more', 'datetime="2026-10-29"', 'data-lens="streaming"']) assert.ok(page.includes(marker), marker);
   assert.ok(galleryGroups(recent.slice(0, 3)).includes('datetime="2026-10"'));
   const fallback = galleryCard({ ...recent[0], thumbnail: undefined });
   assert.match(fallback, /no preview figure/);

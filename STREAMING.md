@@ -4,9 +4,21 @@
 
 Streaming proactivity is a dedicated cross-cutting module: it connects **models, inference frameworks, memory, training data, and evaluation**. Paper entries remain in the bibliography. This guide asks who chooses the next output and what evidence can cause that choice.
 
-**Literature checked: 2026-10-24** (submission window October 17–24 UTC; newest returned submissions dated October 22). New routes include **ProactEgoMem**, **DIVE**, **PACE**, and a backfilled **ProV-Mem**. Periodic visual tutoring is an application, while **ProMemAgent** uses discrete sensory events and is not a native streaming model. See the [scan and release report](docs/updates/2026-10-24.md).
+**Literature checked: 2026-10-31** (submission window October 23–31 UTC; newest returned submissions dated October 29). New video-model methods are **StreamVibe**, **SyncPro**, and **Live-OPSD**; **AskStream** and **Omni-InteractScope** add evaluation routes. **ProactMem / ProactiveStream** processes structured events, not native audiovisual streams. See the [scan and release report](docs/updates/2026-10-31.md).
 
 **Release recheck: 2026-10-24.** MemoProAgent (formerly ProPerAgent) now has public inference/evaluation code and eval800 memory histories; Ego4D videos need separate access and post-trained weights were not verified. Gander has public runtime/training files and Thinker/Talker weights; its full dataset remains pending. P3IBench still exposes inference/evaluation code and benchmark files, not a verified assistant checkpoint. SurgStreamer remains announced; EgoVoice still schedules release for November; StreamingJev has no verified release; PAM remains a website/helper-tool repository. These are artifact checks, not successful inference or reproduced scores.
+
+## October 31: New Models and Evaluation
+
+| Work | Core decision / mechanism | Verified release snapshot | Scope boundary |
+|---|---|---|---|
+| **StreamVibe-VL / Harness** | Adaptive silence/response SFT plus localized trajectory GRPO; persistent intent lifecycles and hierarchical memory track goals as they change. | [Project](https://stream-vibe.github.io/) · [Notes](papers/arxiv/2026-10/streamvibe-evolving-user-intent.md). Code, weights and benchmark/training data **announced**, pending approval. | Covers explicit, implicit and dynamic goals, but implicit help still operates under a supplied high-level goal. Pointwise scores and full-trajectory behavior are different protocols. |
+| **SyncPro** | Independently activated Inner and Response branches share causal history and decode concurrently; responses need not wait for internal reasoning to finish. | [Code](https://github.com/Eureka-Maggie/SyncPro) · [SFT weights](https://huggingface.co/EurekaTian/SyncPro-SFT) · [RL weights](https://huggingface.co/EurekaTian/SyncPro-RL) · [SFT annotations](https://huggingface.co/datasets/EurekaTian/SyncPro-189k) · [Notes](papers/arxiv/2026-10/syncpro-dual-stream-reasoning.md). Public files verified; source videos and RL annotations excluded. | Qwen3.5-4B, 1-FPS proactive evaluation under a user-specified condition. Evidence-conditioned timing, not unrestricted need discovery. |
+| **Live-OPSD** | Score the policy's own continuation again with training-only evidence hints; distill the hinted distribution into the unhinted policy. | [Paper](https://arxiv.org/abs/2610.36959) · [Notes](papers/arxiv/2026-10/live-opsd-streaming-self-distillation.md). Method code, weights and data **not verified**. | Qwen-Omni post-training method. Response-level on-policy learning uses recorded histories; not full online trajectory self-training. |
+| **AskStream / StreamHarness** | Add ASK to WAIT/ANSWER; request missing visual evidence, concepts or preferences before responding. | [Code](https://github.com/wanglu-cs/AskStream) · [Data](https://huggingface.co/datasets/wanglucs/AskStream) · [Notes](papers/arxiv/2026-10/askstream-streaming-clarification.md). Public evaluation/annotation tools and task media; streaming adapters are user-supplied. | Benchmark/harness, not a new trained model. Explicit query, at most one ask and answer per turn; Ask-F1 is a timing-weighted harmonic score. |
+| **Omni-InteractScope** | Evaluate event-timed tool calls, reminders under general needs and complete guidance sequences. | [Code](https://github.com/YinsongYan/Omni-InteractScope) · [Data](https://huggingface.co/datasets/Darden7/Omni-InteractScope) · [Notes](papers/arxiv/2026-10/omni-interactscope-proactive-evaluation.md). Public source and annotation/media files verified. | Benchmark, not a new backbone. Task groups and query-free subsets require separate reporting; tool selection alone does not establish event grounding. |
+
+Checks establish public artifacts, not successful inference or reproduced results. Older entries retain their own release-check dates.
 
 ## Capability Routes
 
@@ -14,6 +26,8 @@ These routes can overlap. They describe a behavior, not an increasing capability
 
 | Route | Decision being made | Representative resources | Evidence boundary |
 |---|---|---|---|
+| **Intent-aware sustained assistance** | Which goals remain active, and what help is now warranted? | StreamVibe | Distinguish supplied high-level goals from unconstrained intent discovery; test history-induced errors. |
+| **Streaming information seeking** | Should the assistant wait, ask for missing information, or answer? | AskStream | Query-conditioned clarification; repeated asking and query-free initiative are outside its main protocol. |
 | **Scene-triggered intervention** | Does an unfolding event merit speech, an alert, guidance, or continued silence? | EgoVoice, StreamingJev / ProAgent, JoyAI-VL-Interaction, MOSS-VL-Realtime, Proact-VL | Check the standing instruction, scene trigger, and negative/silent cases. |
 | **Evidence-conditioned response timing** | Has enough evidence arrived to answer a standing question? | StreamReady, Eyes Wide Open, StreamOV, Response-G1; OneStreamer's QA branch | This establishes wait/respond behavior; discovering a new user need requires additional evidence. |
 | **Proactive evidence recording** | What should be recorded before a future query is known? | OneStreamer's caption-memory branch | Internal memory generation and user-visible intervention are different outputs. |

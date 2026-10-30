@@ -26,6 +26,8 @@ The collection's umbrella remains **proactive agents**. A personal chatbot, pers
 
 The canonical release, licensing, and checked-date entries live in [PROJECTS.md](PROJECTS.md). Memory and sensing components are routed through [INFRASTRUCTURE.md](INFRASTRUCTURE.md).
 
+October 31 product references: [Meta Muse, Manus Cue, and Grok Bot](PROJECTS.md#product-reference) cover persistent personal-agent work, goal continuity and/or configured routines. Their official documentation is not a comparative research evaluation; Cue's personal-agent infrastructure is not by itself evidence of autonomous need detection. [WakeGate](PROJECTS.md#wakegate-implemented-mechanism-versus-integration-design) belongs to supporting activation components, separate from the agent that ultimately chooses whether to help.
+
 ## Research across Devices
 
 | Interface / setting | Methods and systems | Matching evaluation or human evidence |
@@ -38,7 +40,7 @@ The canonical release, licensing, and checked-date entries live in [PROJECTS.md]
 | Continuous egocentric video | [Vinci2 / EgoMemo](papers/arxiv/2026-07/vinci2-egoserve-proactive-video-assistance.md) | EgoServe and [EgoPro-Bench](papers/arxiv/2026-05/egopro-bench-personalized-streaming.md); recorded video or simulated profiles do not establish longitudinal wearable deployment. |
 | Continual embodied collaboration | [PACT](https://arxiv.org/abs/2605.24350) | Cross-day ask/act adaptation in controlled embodied scenarios. Also belongs in the [robot assistance route](APPLICATIONS.md#embodied-and-robot-assistance). |
 | First-person spoken guidance | [EgoVoice](papers/arxiv/2026-10/egovoice-proactive-spoken-assistance.md) | Per-second silence/guidance on held-out procedural sessions with task/recipe context. Code, models, and data are planned for November, not verified released. |
-| Long-memory-triggered assistance | [ProPerAgent / ProPerMem](papers/arxiv/2026-10/properagent-memory-driven-proactivity.md) | No explicit query: retrieved personal evidence must justify one timely reminder, with correct silence elsewhere. Controlled histories do not establish longitudinal deployment. |
+| Long-memory-triggered assistance | [MemoProAgent / MemoProBench](papers/arxiv/2026-10/properagent-memory-driven-proactivity.md) | No explicit query: retrieved personal evidence must justify one timely reminder, with correct silence elsewhere. Controlled histories do not establish longitudinal deployment. |
 | Routine-conditioned robot help | [PAM](papers/arxiv/2026-10/pam-proactive-robot-assistance.md) | Five-day help/NO_ACT evaluation with reflected finite-state assistance memory and routine-shift tests. |
 
 ## Models for Personal Interaction

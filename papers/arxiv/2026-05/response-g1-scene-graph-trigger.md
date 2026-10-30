@@ -1,6 +1,6 @@
 # Response-G1: Explicit Scene Graph Modeling for Proactive Streaming Video Understanding
 
-[Paper](https://arxiv.org/abs/2605.07575) · [Code](https://github.com/PolyX-Research/Response-G1)
+[Paper](https://arxiv.org/abs/2605.07575) · [ACL 2026 long paper](https://aclanthology.org/2026.acl-long.2042/) · [Code](https://github.com/PolyX-Research/Response-G1). Venue verified against ACL Anthology on 2026-10-31; original arXiv identity retained.
 
 ## Why It Matters
 
