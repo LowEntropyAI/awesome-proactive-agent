@@ -1,5 +1,6 @@
 import { recentPapers, galleryGroups, facetCounts } from './gallery.js';
 import { facetGroups, normalizeFilters } from './facets.mjs';
+import { fetchCatalog } from './catalog-client.js';
 const root = document.querySelector('#paper-gallery');
 if (root) {
   const results = root.querySelector('#gallery-results'), input = root.querySelector('#gallery-search');
@@ -11,7 +12,7 @@ if (root) {
     const params = new URLSearchParams(location.search);
     filters = normalizeFilters(Object.fromEntries(params));
     input.value = params.get('q') ?? '';
-    if (facetGroups.slice(1).some(g => filters[g.key] !== 'all')) root.querySelector('.gallery-extra')?.setAttribute('open','');
+    if (facetGroups.some(g => filters[g.key] !== 'all')) root.querySelector('.gallery-extra')?.setAttribute('open','');
   };
   readURL();
   const translate = () => root.querySelectorAll('[data-en]').forEach(el => { el.textContent = el.dataset[document.documentElement.lang === 'zh' ? 'zh' : 'en']; });
@@ -37,15 +38,32 @@ if (root) {
       b.setAttribute('aria-pressed', b.dataset.value === filters[b.dataset.facet]);
       b.querySelector('[data-facet-count]').textContent = counts[b.dataset.facet][b.dataset.value];
     });
+    const active=facetGroups.filter(g=>filters[g.key]!=='all');
+    root.querySelector('#filter-badge').textContent=active.length ? ` · ${active.length}` : '';
+    const activeRoot=root.querySelector('#gallery-active');
+    activeRoot.replaceChildren();
+    for(const g of active){
+      const choice=g.options.find(o=>o[0]===filters[g.key]);
+      const button=document.createElement('button');
+      const label=document.createElement('span');
+      label.dataset.en=choice[1];label.dataset.zh=choice[2];label.textContent=choice[1];
+      button.type='button';button.append(label,' ×');
+      button.addEventListener('click',()=>{filters[g.key]='all';render();syncURL();root.querySelector('.gallery-extra summary').focus();});
+      activeRoot.append(button);
+    }
     translate();
   };
   controls.forEach(b => b.addEventListener('click', () => { filters[b.dataset.facet] = b.dataset.value; shown = pageSize; render(); syncURL(); }));
   root.querySelector('#gallery-clear').addEventListener('click', reset);
   input.addEventListener('input', () => { shown = pageSize; render(); syncURL(); });
-  more.addEventListener('click', () => { shown += pageSize; render(); });
+  more.addEventListener('click', () => {
+    const previous=shown;shown += pageSize;render();
+    // Continue reading from the newly revealed batch instead of losing keyboard focus.
+    results.querySelectorAll('.gallery-card')[previous]?.querySelector('a')?.focus({preventScroll:true});
+  });
   document.addEventListener('atlas:language', translate);
   window.addEventListener('popstate', () => { readURL(); shown = pageSize; render(); });
-  try { const response = await fetch(document.body.dataset.base + 'catalog.json'); if (!response.ok) throw new Error('Catalog unavailable'); papers = (await response.json()).papers; render(); }
+  try { papers = (await fetchCatalog()).papers; render(); }
   catch {
     count.innerHTML = '<span data-en="Filters unavailable. Static previews and paper links still work." data-zh="筛选暂不可用，静态概览和论文链接仍可访问。">Filters unavailable. Static previews and paper links still work.</span>';
     controls.forEach(b => b.disabled = true); input.disabled = true; more.hidden = true; translate();

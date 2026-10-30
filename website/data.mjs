@@ -88,7 +88,7 @@ export function loadCatalog() {
       paper.tags = paper.tags.filter(t => t !== 'Streaming');
       if (paper.streaming) paper.tags.push('Streaming');
       if (!/^\d{4}-\d{2}-\d{2}$/.test(paper.publishedAt) || new Date(paper.publishedAt).toISOString().slice(0, 10) !== paper.publishedAt) throw new Error(`Invalid first-posted date: ${paper.id}`);
-      if (figure) paper.thumbnail = { src: '/awesome-proactive-agent/assets/overviews/' + figure.file, original: figure.original, source: figure.source ?? paper.primary, alt: figure.alt, caption: 'Original figure · paper authors' };
+      if (figure) paper.thumbnail = { src: '/awesome-proactive-agent/assets/overviews/' + figure.file, original: figure.original, source: figure.source ?? paper.primary, alt: figure.alt, caption: 'Original figure · paper authors', description: figure.caption ?? '' };
       // A targeted new audit must not silently refresh older artifact checks.
       if (release) paper.release = { ...release, checkedAt: release.checkedAt ?? recent.checkedAt };
     }

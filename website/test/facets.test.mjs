@@ -32,8 +32,8 @@ test('counts reflect other filters and filters stay semantic and accessible', ()
   const html = gallerySection({papers});
   for (const g of facetGroups) assert.match(html,new RegExp(`data-facet="${g.key}"`));
   assert.equal((html.match(/<fieldset/g)||[]).length,4);
-  assert.match(html,/not an exhaustive taxonomy/);
-  assert.match(gallerySection({papers},true),/<details class="gallery-extra">/);
+  assert.match(html,/not a complete taxonomy/);
+  assert.match(gallerySection({papers},true),/<details class="gallery-extra gallery-filter-panel">/);
 });
 test('README hero is local SVG with accessible desktop and mobile variants', () => {
   const header = read('README.md').split('## Companion Guides')[0];
@@ -43,7 +43,7 @@ test('README hero is local SVG with accessible desktop and mobile variants', () 
     const svg = read(file);
     assert.match(header,new RegExp(file));
     assert.match(svg,/<title/); assert.match(svg,/<desc/);
-    for (const label of ['Understand you','Intervene','Stay quiet','Agent systems','Mobile','Wearables','Home','Robots']) assert.ok(svg.includes(label),label);
+    for (const label of ['Anticipate Needs.','Take Initiative.','Memory + Feedback','Agent Systems','Mobile','Wearables','Home','Robots','Not One Fixed Workflow']) assert.ok(svg.includes(label),label);
     assert.doesNotMatch(svg,/system\s*1/i);
     assert.doesNotMatch(svg,/<script|<foreignObject|<image|<animate|https?:\/\/[^w]/);
   }

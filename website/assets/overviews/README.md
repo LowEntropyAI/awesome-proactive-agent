@@ -1,5 +1,9 @@
 # Selected overview figures
 
+## Quick-read covers
+
+Ask Less, Ask Better (Figure 2), AttriFy (Figure 1) and DuplexAct (Figure 1) use original vector figures from the papers. Exact versioned URLs and source anchors are retained in `website/content/recent.json`. Descriptive captions are explicitly labeled editorial captions; they are not copied author captions. Figures remain uncropped and original author rights apply. SVGs are embedded as images, never executable inline markup.
+
 ## Recent gallery additions — 2026-10-31
 
 Eight original author figures were added for AskStream, StreamVibe, SyncPro, Live-OPSD, HALO, Omni-InteractScope, EvoLife and iPrefBench. Exact upstream URLs, source pages and alternative text are preserved in `website/content/recent.json`. Figures are displayed without cropping; entries without an original preview retain the explicitly labeled text-only brief. Upstream rights remain with the authors.

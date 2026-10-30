@@ -2,20 +2,20 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { markdown } from '../guides.mjs';
 import { read, loadCatalog } from '../data.mjs';
-import { base, home } from '../views.mjs';
+import { base, selectedPage } from '../views.mjs';
 
-test('homepage selections balance agents, models and benchmarks without requiring images', () => {
+test('essential reading balances agents, models and benchmarks without requiring images', () => {
   const catalog = loadCatalog();
   const selected = catalog.papers.filter(p => p.selected);
   for (const [group, count] of [['agent', 3], ['model', 3], ['benchmark', 3]]) {
     assert.equal(selected.filter(p => p.selectionGroup === group).length, count, group);
   }
-  const html = home(catalog);
+  const html = selectedPage(catalog);
   for (const p of selected) assert.ok(html.includes(p.displayTitle));
   const withoutFigures = { ...catalog, papers: catalog.papers.map(p => ({ ...p, thumbnail: undefined })) };
-  const textOnly = home(withoutFigures);
+  const textOnly = selectedPage(withoutFigures);
   for (const p of selected) assert.ok(textOnly.includes(p.displayTitle));
-  assert.ok(html.includes('data-selection-group="benchmark"'));
+  assert.ok(html.includes('Evaluation'));
 });
 
 test('Must Read preserves tiers and non-paper resources in the website', () => {
