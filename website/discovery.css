@@ -27,7 +27,7 @@ html[data-theme=dark] .initiative-scene {color:#deebe8;--rim:#76918f;--face:#2c4
 .brief-sheet>strong {display:block;margin:1.1cqw 0 1.3cqw;font:normal 3.9cqw/1.08 Georgia,serif;letter-spacing:-.035em;}
 .brief-offer {margin:0;font-size:clamp(11px,1.9cqw,20px);line-height:1.35;opacity:.82;}
 .brief-choices {margin-top:1.5cqw;display:flex;gap:1cqw;font:600 clamp(10px,1.7cqw,18px)/1 system-ui,sans-serif;}
-.brief-choices>span {padding:.9cqw 1.7cqw;border:1px solid var(--accent-ink);border-radius:5cqw;color:var(--accent-ink);}
+.brief-choices>span {white-space:nowrap;padding:.9cqw 1.7cqw;border:1px solid var(--accent-ink);border-radius:5cqw;color:var(--accent-ink);}
 .brief-choices>span:first-child {background:var(--accent-ink);color:var(--sheet);}
 .initiative-scene figcaption {position:absolute;bottom:-2%;left:9%;right:2%;font-size:clamp(12px,1.9cqw,20px);line-height:1.45;}
 .initiative-scene figcaption>span:first-child {font:italic 1.25em Georgia,serif;margin-right:1ch;color:var(--accent-ink);}
@@ -417,4 +417,73 @@ html[data-theme=dark] .compare-proactive th,html[data-theme=dark] .compare-proac
   .concept-grid {grid-template-columns:1fr;}
   .definition-page {padding-top:40px;}
   .definition-page>section {margin-top:44px;}
+}
+
+/* One warm palette from the hero outward: paper neutrals with a single deep green. */
+:root {--bg:#faf9f5;--surface:#fffefb;--text:#1c2a2e;--muted:#5d6d70;--line:#e5e3d9;--soft:#f2f0e8;--accent:#176357;--accent-soft:#e2efe9;--radius:12px;--shadow:0 1px 2px #2b3a3a0a;}
+html[data-theme=dark] {--bg:#101a1c;--surface:#172427;--text:#e8efec;--muted:#a3b5b1;--line:#2b3c3e;--soft:#1f2e30;--accent:#93e2c7;--accent-soft:#1d3a36;--shadow:0 1px 2px #0000002e;}
+h1,h2,h3,h4 {text-wrap:balance;}
+:is(a,button,summary,input,select):focus-visible {outline:2px solid var(--accent);outline-offset:2px;}
+
+/* The navigation floats above the page on a glass bar, so it never sits on a card. */
+.site-header {top:12px;margin:12px clamp(10px,1.4vw,20px) 0;border:1px solid color-mix(in srgb,var(--line) 75%,transparent);border-radius:16px;background:color-mix(in srgb,var(--surface) 76%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 8px 28px -14px #1c2a2e33;}
+.site-header .header-inner {height:60px;border:0;padding-inline:clamp(14px,1.6vw,24px);}
+.header-inner nav {gap:2px;}
+.header-inner nav>a:not(.nav-utility) {padding:7px 12px;border-radius:9px;font-size:13px;}
+.header-inner nav>a:not(.nav-utility):after {display:none;}
+.header-inner nav>a:not(.nav-utility):hover {background:var(--soft);color:var(--text);}
+.header-inner nav>a[aria-current=page]:not(.nav-utility) {background:var(--accent-soft);color:var(--accent);}
+.header-inner nav .nav-utility {margin-left:10px;background:transparent;}
+body[data-page=""] .atlas-hero {margin:12px clamp(10px,1.4vw,20px) 0;border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:24px;}
+.hero-actions .button {background:#1f5249;box-shadow:0 8px 20px -10px #1f5249aa;transition:transform .18s,box-shadow .18s;}
+.hero-actions .button:hover {color:#fff;transform:translateY(-1px);box-shadow:0 12px 24px -10px #1f5249cc;}
+
+/* A steady measure and rhythm keep wide screens composed. */
+.atlas-section {padding-block:88px;scroll-margin-top:84px;}
+.atlas-section>* {max-width:1320px;margin-inline:auto;}
+.atlas-more {display:block;margin-top:32px;}
+.directory-content {max-width:1320px;margin-inline:auto;}
+.feed-kicker {font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);}
+.atlas-tinted {background:var(--soft);}
+html[data-theme=dark] .atlas-tinted {background:var(--soft);}
+
+/* Cards: hairline edge, soft lift, and figures matted on their own surface. */
+.gallery-card,.concept-card,.test-cards li,.role-card,.landscape,.selected-card,.paper-card,.project-card {border-color:var(--line);border-radius:16px;box-shadow:var(--shadow);}
+.gallery-card,.concept-card,.selected-card,.paper-card,.project-card {transition:transform .22s,box-shadow .22s,border-color .22s;}
+@media(hover:hover) {.gallery-card:hover,.concept-card:hover,.selected-card:hover,.paper-card:hover,.project-card:hover {transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 28%,var(--line));box-shadow:0 18px 36px -22px #1c2a2e55;}}
+.gallery-preview,.concept-cover {background:#fff;border-bottom-color:var(--line);}
+html[data-theme=dark] :is(.gallery-preview,.concept-cover,.directory-cover,.selected-image,.pick-cover) img {filter:brightness(.94);}
+.gallery-day-heading h3 {font:400 24px/1.2 Georgia,serif;letter-spacing:-.01em;}
+.gallery-body h3 {font-weight:580;}
+.gallery-brief {color:var(--muted);line-height:1.65;font-size:13px;}
+.gallery-credit {opacity:.75;}
+.gallery-lenses button {border-radius:999px;padding-inline:14px;font-size:12px;color:var(--muted);transition:color .15s,border-color .15s,background .15s;}
+.gallery-lenses button:hover {color:var(--text);border-color:color-mix(in srgb,var(--accent) 35%,var(--line));}
+.gallery-search input {border-radius:12px;}
+.concept-card h3 {color:var(--text);}
+.concept-number {font:italic 18px/1 Georgia,serif;color:var(--muted);}
+.concept-body li a {color:var(--text);}
+.concept-body li a:hover {color:var(--accent);}
+.action-ladder li {transition:background .18s;}
+.action-ladder li:hover {background:var(--accent-soft);}
+.action-ladder li:last-child strong {color:var(--accent);}
+footer {border-top:1px solid var(--line);}
+
+@media(prefers-reduced-motion:no-preference) {
+  @supports(animation-timeline:view()) {
+    @keyframes atlas-rise {from {opacity:.35;transform:translateY(14px);}to {opacity:1;transform:none;}}
+    .atlas-section>* {animation:atlas-rise linear both;animation-timeline:view();animation-range:entry 0 entry 26%;}
+  }
+}
+
+/* On phones it becomes a pill at the thumb, and steps aside while reading down. */
+@media(max-width:760px) {
+  .site-header {position:static;margin:8px 8px 0;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surface);box-shadow:none;}
+  .site-header .header-inner {height:auto;min-height:54px;padding:8px 14px;flex-wrap:nowrap;justify-content:space-between;}
+  .site-header .header-inner nav {position:fixed;z-index:30;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);width:max-content;max-width:calc(100vw - 16px);height:auto;margin:0;padding:4px;gap:0;justify-content:center;overflow:visible;white-space:nowrap;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 12px 30px -12px #1c2a2e66;transition:transform .24s ease;}
+  .site-header .header-inner nav>a:not(.nav-utility) {display:flex;align-items:center;min-height:44px;padding:0 13px;border-radius:999px;font-size:12px;}
+  .nav-tucked .site-header .header-inner nav {transform:translate(-50%,calc(100% + 28px));}
+  body[data-page=""] .atlas-hero {margin:8px 8px 0;border-radius:20px;}
+  .atlas-section {padding-block:56px;}
+  footer {padding-bottom:84px;}
 }

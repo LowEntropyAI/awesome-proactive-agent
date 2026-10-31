@@ -1,6 +1,13 @@
 // Animation is opt-in to this script, so a missing script never hides content
 // or leaves an animation running without an available pause control.
 const cover = document.querySelector('.cover');
+// The phone navigation pill steps aside while reading down and returns on the way up.
+let lastY = scrollY;
+addEventListener('scroll', () => {
+  if (Math.abs(scrollY - lastY) < 8) return;
+  document.body.classList.toggle('nav-tucked', scrollY > lastY && scrollY > 120);
+  lastY = scrollY;
+}, { passive: true });
 const toggle = document.querySelector('#motion-toggle');
 if (cover && toggle) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
