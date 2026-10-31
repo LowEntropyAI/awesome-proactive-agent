@@ -60,6 +60,7 @@ for(const item of [...catalog.papers,...catalog.projects,...catalog.benchmarks])
 copyFileSync(resolve(root, 'website/paper-detail.mjs'), resolve(out, 'assets/paper-detail.mjs'));
 copyFileSync(resolve(root, 'website/facets.mjs'), resolve(out, 'assets/facets.mjs'));
 cpSync(resolve(root, 'website/assets/cover'), resolve(out, 'assets/cover'), { recursive: true });
+cpSync(resolve(root, 'website/assets/fonts'), resolve(out, 'assets/fonts'), { recursive: true });
 cpSync(resolve(root, 'website/assets/overviews'), resolve(out, 'assets/overviews'), { recursive: true });
 cpSync(resolve(root, 'website/assets/brands'), resolve(out, 'assets/brands'), { recursive: true });
 cpSync(resolve(root, 'website/assets/figures'), resolve(out, 'assets/figures'), { recursive: true });

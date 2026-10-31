@@ -9,3 +9,5 @@ Other project mastheads also use transparent versions of the listed artwork. mem
 Figures and marks remain credited to their respective authors and owners; inclusion here does not relicense them.
 
 Choose by caption and visual content, not by figure number or the first downloadable image. For a system, show what initiates its behavior; for an evaluation, show its tasks or protocol. Inspect the complete figure in the paper, including vector illustrations embedded as HTML objects. A screenshot or results plot can be appropriate when it actually illustrates the main contribution. Credit the specific figure or PDF page.
+
+Fonts: Inter (The Inter Project Authors) and Newsreader (The Newsreader Project Authors), Latin subsets from Fontsource 5.3.0, under the SIL Open Font License 1.1. License texts are in `website/assets/fonts/`.

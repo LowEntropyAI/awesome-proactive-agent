@@ -121,6 +121,12 @@ test('the navigation offers four jobs and marks directory pages as Directory',()
 test('the AttriFy figure is not hidden behind its unfilled root mask',()=>{
  assert.doesNotMatch(read('website/assets/overviews/attrify.svg'),/<g mask="url\(#mask_0\)">/);
 });
+test('fonts are self-hosted, preloaded and licensed',()=>{
+ const css=read('website/discovery.css'),page=layout('Home',home(catalog),'');
+ for(const file of [...css.matchAll(/url\(fonts\/([^)]+)\)/g)].map(m=>m[1]))assert.ok(read('website/assets/fonts/'+file).length>1000,file);
+ assert.match(page,/rel="preload"[^>]*inter-latin/);assert.doesNotMatch(page,/fonts\.googleapis/);
+ for(const name of ['Inter','Newsreader'])assert.match(read('website/assets/fonts/'+name+'-OFL.txt'),/Open Font License/);
+});
 test('all paper, benchmark and project cards have sourced or explicitly editorial covers',()=>{
  for(const p of [...catalog.papers,...catalog.projects,...catalog.benchmarks]){
   assert.ok(p.thumbnail?.src,p.title||p.name);
