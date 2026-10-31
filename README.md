@@ -7,13 +7,13 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/proactive-hero-mobile.svg">
-    <img src="assets/proactive-hero.svg" width="1120" alt="Understand You. Help Thoughtfully. A person-centered constellation of context, anticipation, preparation, help, permission, memory and feedback—complementary capabilities, not an exhaustive definition of proactive AI.">
+    <img src="assets/proactive-hero.svg" width="1120" alt="Proactive AI: Before you ask. An illustrated map shows a closed stop and a prepared detour that respects your preference for step-free travel.">
   </picture>
 </p>
 
 <p align="center">
   <a href="https://lowentropyai.github.io/awesome-proactive-agent/"><strong>Explore the Atlas</strong></a> ·
-  <a href="https://lowentropyai.github.io/awesome-proactive-agent/recent/">Recent Papers</a> ·
+  <a href="https://lowentropyai.github.io/awesome-proactive-agent/#discover">Recent Papers</a> ·
   <a href="PERSONAL_AGENTS.md">Personal Agents</a> ·
   <a href="STREAMING.md">Streaming Proactivity</a> ·
   <a href="PROJECTS.md">Projects &amp; Products</a>

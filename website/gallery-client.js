@@ -62,7 +62,8 @@ if (root) {
     results.querySelectorAll('.gallery-card')[previous]?.querySelector('a')?.focus({preventScroll:true});
   });
   document.addEventListener('atlas:language', translate);
-  window.addEventListener('popstate', () => { readURL(); shown = pageSize; render(); });
+  // Native cover/feed fragment travel must not reset an in-progress reading session.
+  if (document.body.dataset.page === 'recent/') window.addEventListener('popstate', () => { readURL(); shown = pageSize; render(); });
   try { papers = (await fetchCatalog()).papers; render(); }
   catch {
     count.innerHTML = '<span data-en="Filters unavailable. Static previews and paper links still work." data-zh="筛选暂不可用，静态概览和论文链接仍可访问。">Filters unavailable. Static previews and paper links still work.</span>';

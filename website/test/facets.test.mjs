@@ -43,7 +43,7 @@ test('README hero is local SVG with accessible desktop and mobile variants', () 
     const svg = read(file);
     assert.match(header,new RegExp(file));
     assert.match(svg,/<title/); assert.match(svg,/<desc/);
-    for (const label of ['Understand You.','Help Thoughtfully.','Memory + Feedback','Your Context','With Permission']) assert.ok(svg.includes(label),label);
+    for (const label of ['Proactive AI','Before you ask.','step-free','Usual Route','Prepared Detour']) assert.ok(svg.includes(label),label);
     assert.ok((svg.match(/<text /g)||[]).length<=10,'Keep the hero concise');
     assert.doesNotMatch(svg,/system\s*1/i);
     assert.doesNotMatch(svg,/<script|<foreignObject|<image|<animate|https?:\/\/[^w]/);

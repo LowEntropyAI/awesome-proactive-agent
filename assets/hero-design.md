@@ -1,21 +1,9 @@
-# Proactive outreach hero
+# Hero: Before You Ask
 
-## Visual contract
+An editorial illustration for the README and research atlas, not a product demo or a definition of all proactivity. One fictional transit example makes initiative visible: the usual stop closes; a remembered step-free preference shapes the prepared detour. The agent proposes a route, it does not choose for the traveler.
 
-- **Destination:** README/outreach infographic, not a paper architecture figure or empirical result.
-- **Format:** Pure editable SVG, desktop 1120 × 660 and mobile 600 × 880; graphic-only website companion.
-- **Core idea:** Proactivity includes anticipatory initiative and appropriate assistance, not only personalized interruption timing.
-- **Source:** README Scope, RESEARCH_MAP.md, PERSONAL_AGENTS.md and the curated catalog.
-- **Composition:** A person-centered constellation around Understand You. Six graphic metaphors express context, anticipation, preparation, help, permission and memory/feedback. One headline, short labels, no text-card panels or obligatory sequence.
-- **Personal understanding:** Goals, people and environments; Memory + Feedback. Important capabilities without defining the whole field.
-- **Boundary:** Editorial orientation, neither an exhaustive taxonomy nor a claim that each project implements every capability.
-- **Palette:** Low-saturation blue, lilac and mint radial washes, dark slate typography and translucent circular fields. Color is decorative rather than evidence encoding.
-- **Typography:** Title Case for short labels; sentence case for explanatory sentences.
-- **Assets:** Native SVG shapes and live text; no raster, remote fonts, animation or scripts. The prior Lucide license is retained for historical assets.
-- **Rebuild:** Run `node scripts/build-readme-hero.mjs`. Generated SVGs remain committed for GitHub rendering.
+The visual anchor is a dimensional street map. A dashed usual route meets a crossed stop; a solid alternative reaches a flag. Shape and line style carry this distinction without color. Layered paper edges, lit building faces, a river and a restrained mint/lilac wash provide depth. The README uses a landscape desktop composition and a vertical mobile poster; the web uses its own localized live text with the same map. No external images, fonts, animation, or illustration dependencies.
 
-## Render QA
+Scope references: README Scope and PERSONAL_AGENTS.md. The location, map, buildings and transit event are illustrative, not sourced geographic data. No method or benchmark claims are depicted.
 
-Inspect both variants at their actual presentation sizes, checking text bounds, contrast and gradient subtlety. The mobile layout recomposes the constellation around the person. Alt text describes complementary capabilities, not an exhaustive definition.
-
-Card artwork: author figures take precedence; generated covers are labeled editorial, never presented as method diagrams or research results. The website opens on a spacious hero and uses native scrolling into the research feed, with no scroll interception.
+Only the two README compositions are SVG illustrations. The website uses native HTML and CSS for its streets, buildings, trees, and alternate route. The street grid fades into the hero background; colors follow the active theme, including the system preference until the reader explicitly chooses. Rebuild the README art with `node scripts/build-readme-hero.mjs`. Inspect the home hero and bottom browse menu at desktop and phone widths in both themes.

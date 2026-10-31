@@ -1,14 +1,17 @@
+import {transitScene} from './transit-scene.mjs';
+const landscape=transitScene();
 // Reading paths, not a mutually exclusive taxonomy of the field.
 const base = '/awesome-proactive-agent/';
 const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
-export function readingPaths(active = 'latest') {
-  return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','recent/','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${base}${path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;
+export function readingPaths(active = 'latest', onHome = false) {
+  return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','#discover','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${onHome && id === 'latest' ? path : base + path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;
 }
 export function feedIntro() {
   return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('A field in motion', '持续演进的研究领域')}</p><h1>${bi('Discover what’s next', '发现新进展')}<br>${bi('in proactive AI.', '探索主动式 AI。')}</h1><p>${bi('Research that anticipates needs, takes initiative, and knows its boundaries.', '预判需求、主动提供帮助，也懂得边界。')}</p></div></header>`;
 }
 export function homeHero() {
-  return `<section class="atlas-hero" aria-labelledby="hero-title"><img class="atlas-hero-art" src="${base}assets/proactive-field.svg" alt="" width="1120" height="620" fetchpriority="high"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('The Proactive AI Atlas','主动式 AI 研究图谱')}</p><h1 id="hero-title">${bi('Beyond answers.','不止回答。')}<br><em>${bi('Toward initiative.','更能主动。')}</em></h1><p class="hero-description">${bi('Explore AI that anticipates, collaborates and acts—with people in mind.','探索能够预判、协作和行动的 AI，始终以人为中心。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div><div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
+  return `<section class="atlas-hero" aria-labelledby="hero-title"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('A Research Atlas','研究图谱')}</p><h1 id="hero-title">${bi('Proactive AI.','主动式 AI。')}<br><em>${bi('Before you ask.','在你开口之前。')}</em></h1><p class="hero-description">${bi('Explore agents that anticipate needs and offer help on your terms.','探索如何预判需求、准备帮助，并把选择留给用户。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div><figure class="atlas-scene">${landscape}<figcaption><small>${bi('An Illustrated Example','情境示例')}</small><strong>${bi('Your usual stop just closed.','常去的车站临时关闭。')}</strong><span>${bi('A step-free detour is ready, just as you prefer.','按你的无台阶出行偏好，绕行路线已备好。')}</span></figcaption></figure><div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
+
 }
 export const concepts = [
   ['need','Anticipate Needs','预判需求','What might help before someone asks?','在用户开口前，什么可能有帮助？','PASK','pask-intent-aware-proactive-agent'],

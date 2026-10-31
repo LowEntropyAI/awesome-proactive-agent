@@ -1,0 +1,62 @@
+{
+  "screenpipe": [
+    "https://raw.githubusercontent.com/screenpipe/screenpipe/HEAD/apps/screenpipe-app-tauri/src-tauri/icons/128x128.png",
+    "Project icon"
+  ],
+  "openclaw": [
+    "https://raw.githubusercontent.com/openclaw/openclaw/HEAD/apps/ios/Sources/Assets.xcassets/AppIcon.appiconset/180.png",
+    "Project icon"
+  ],
+  "hermes-agent": [
+    "https://raw.githubusercontent.com/NousResearch/hermes-agent/HEAD/apps/desktop/assets/appx/Square150x150Logo.png",
+    "Project icon"
+  ],
+  "gaia": [
+    "https://raw.githubusercontent.com/theexperiencecompany/gaia/HEAD/apps/desktop/resources/icons/512x512.png",
+    "Project icon"
+  ],
+  "minecontext": [
+    "https://raw.githubusercontent.com/volcengine/MineContext/HEAD/frontend/src/renderer/src/assets/images/logo.png",
+    "Project logo"
+  ],
+  "memubot": [
+    "https://raw.githubusercontent.com/NevaMind-AI/memUBot/HEAD/assets/memubot-logo.png",
+    "Project logo"
+  ],
+  "memu": [
+    "https://raw.githubusercontent.com/NevaMind-AI/memU/HEAD/assets/banner.png",
+    "Project banner"
+  ],
+  "live-vlm-webui": [
+    "https://raw.githubusercontent.com/NVIDIA-AI-IOT/live-vlm-webui/HEAD/src/live_vlm_webui/static/favicon/apple-touch-icon.png",
+    "Project icon"
+  ],
+  "proactivity-sdk": [
+    "https://raw.githubusercontent.com/refixai/proactivity-sdk/HEAD/docs/logo/refix-logo.png",
+    "Publisher mark · Refix"
+  ],
+  "manus-cue": [
+    "https://cue.im/assets/cue/favicon-192.png",
+    "Official site icon"
+  ],
+  "meta-muse": [
+    "https://static.xx.fbcdn.net/rsrc.php/yQ/r/0eWKxz9kEoF.webp",
+    "Publisher site icon · Meta"
+  ],
+  "grok-bot": [
+    "https://docs.x.ai/_next/static/media/icon.2jebtfdg6783w.png",
+    "Documentation icon · xAI"
+  ],
+  "contextagent": [
+    "https://raw.githubusercontent.com/openaiotlab/ContextAgent/HEAD/assets/teaser_contextagent.png",
+    "Author illustration"
+  ],
+  "openai-dot": [
+    "https://avatars.githubusercontent.com/u/14957082?v=4",
+    "Publisher mark · OpenAI"
+  ],
+  "letta-code": [
+    "https://avatars.githubusercontent.com/u/177780362?v=4",
+    "Publisher mark · Letta"
+  ]
+}

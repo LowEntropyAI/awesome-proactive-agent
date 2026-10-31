@@ -1,0 +1,1578 @@
+{
+  "act2intention-active-mobile-agents": {
+    "alt": "Figure 1 from Act2Intention: A Benchmark For Developing Active Mobile Agents Through Inferring User Intention from GUI Actions",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.14132v1/figure/intro.png",
+    "source": "https://arxiv.org/html/2608.14132v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/act2intention-active-mobile-agents.webp"
+  },
+  "active-swe-proactive-bug-fixing": {
+    "alt": "Figure 1 from Active-SWE: Benchmarking Coding Agents for Proactive Bug Fixing without Issue Reports",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.04682v2/fig1.png",
+    "source": "https://arxiv.org/html/2608.04682v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/active-swe-proactive-bug-fixing.webp"
+  },
+  "agentfold-proactive-context-management": {
+    "alt": "Figure 1 from AgentFold: Long-Horizon Web Agents with Proactive Context Folding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2510.24699v1/teaser_v3_logo.png",
+    "source": "https://arxiv.org/html/2510.24699v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/agentfold-proactive-context-management.webp"
+  },
+  "ai-assistants-overassist": {
+    "alt": "Figure 2 from AI Assistants Overassist",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2607.21306v1/frequency_timing.png",
+    "source": "https://arxiv.org/html/2607.21306v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/ai-assistants-overassist.webp"
+  },
+  "ai-watchdog-dark-pattern-alerts": {
+    "alt": "Figure 1 from AI Watchdog: Agent Interfaces for Detecting and Defending Against Manipulative Dark Patterns in AI Conversations",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.21841v1/Figures/AIWatchdogteaser.png",
+    "source": "https://arxiv.org/html/2608.21841v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ai-watchdog-dark-pattern-alerts.webp"
+  },
+  "aiget-transforming-everyday-moments-into-hidden-knowledge-discovery-with-ai-assistanc-453d93f": {
+    "alt": "Figure 1 from AiGet: Transforming Everyday Moments into Hidden Knowledge Discovery with AI Assistance on Smart Glasses",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2501.16240v2/Artboard_1.png",
+    "source": "https://arxiv.org/html/2501.16240v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/aiget-transforming-everyday-moments-into-hidden-knowledge-discovery-with-ai-assistanc-453d93f.webp"
+  },
+  "ambient-egoproactive-visually-grounded-supervision": {
+    "alt": "Figure 1 from Ambient @ EgoProactive 2026: Proactive Egocentric Assistance with Visually Grounded Supervision",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.07099#page=3",
+    "source": "https://arxiv.org/pdf/2609.07099#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/ambient-egoproactive-visually-grounded-supervision.webp"
+  },
+  "apm-bench-cross-session-memory": {
+    "alt": "Figure 1 from APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.37559v2/teaser_cropped.png",
+    "source": "https://arxiv.org/html/2609.37559v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/apm-bench-cross-session-memory.webp"
+  },
+  "appagent-pro": {
+    "alt": "Figure 1 from AppAgent-Pro: A Proactive GUI Agent System for Multidomain Information Integration and User Assistance",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2508.18689v2/main.png",
+    "source": "https://arxiv.org/html/2508.18689v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/appagent-pro.webp"
+  },
+  "arise-social-robot-interaction": {
+    "alt": "Figure 2 from From Social Reasoning to Embodied Interaction: An Agentic Framework for Social Robots",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.05964v1/fig2.png",
+    "source": "https://arxiv.org/html/2610.05964v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/arise-social-robot-interaction.webp"
+  },
+  "ask-before-plan-proactive-language-agents-for-real-world-planning-7e5166b": {
+    "alt": "Figure 1 from Ask-before-Plan: Proactive Language Agents for Real-World Planning",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2406.12639v2/task.drawio.png",
+    "source": "https://arxiv.org/html/2406.12639v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ask-before-plan-proactive-language-agents-for-real-world-planning-7e5166b.webp"
+  },
+  "ask-before-you-optimize": {
+    "alt": "Figure 1 from Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.05258v2/Figures/pre_modeling_clarification_update.png",
+    "source": "https://arxiv.org/html/2609.05258v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ask-before-you-optimize.webp"
+  },
+  "ask-or-assume-coding-agents": {
+    "alt": "Figure 1 from Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.26233v3/clarify_agent_final.png",
+    "source": "https://arxiv.org/html/2603.26233v3#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ask-or-assume-coding-agents.webp"
+  },
+  "ask-relax-or-act": {
+    "alt": "Figure 1 from Ask, Relax, or Act? Evaluating Actionable Indeterminacy in LLM Preference Reasoning",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.03102#page=2",
+    "source": "https://arxiv.org/pdf/2610.03102#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/ask-relax-or-act.webp"
+  },
+  "askbench-rubric-guided-clarification": {
+    "alt": "Figure 1 from When and What to Ask: AskBench and Rubric-Guided RLVR for LLM Clarification",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 5. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.findings-acl.845.pdf#page=5",
+    "source": "https://aclanthology.org/2026.findings-acl.845.pdf#page=5",
+    "src": "/awesome-proactive-agent/assets/figures/askbench-rubric-guided-clarification.webp"
+  },
+  "asking-for-what-was-never-requested": {
+    "alt": "Figure 2 from Asking for What Was Never Requested: Horizontal and Vertical Proactivity in Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure excerpt from page 7. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.37236#page=7",
+    "source": "https://arxiv.org/pdf/2609.37236#page=7",
+    "src": "/awesome-proactive-agent/assets/figures/asking-for-what-was-never-requested.webp"
+  },
+  "assistance-or-disruption-proactive-programming": {
+    "alt": "Figure 1 from Assistance or Disruption? Exploring and Evaluating the Design and Trade-offs of Proactive AI Programming Support",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2502.18658v4/figures/Theory_Diagram.png",
+    "source": "https://arxiv.org/html/2502.18658v4#S2.F1",
+    "src": "/awesome-proactive-agent/assets/figures/assistance-or-disruption-proactive-programming.webp"
+  },
+  "assistantx-an-llm-powered-proactive-assistant-in-collaborative-human-populated-enviro-6876766": {
+    "alt": "Figure 1 from AssistantX: An LLM-Powered Proactive Assistant in Collaborative Human-Populated Environments",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2409.17655v3/image617/introdution.jpg",
+    "source": "https://arxiv.org/html/2409.17655v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/assistantx-an-llm-powered-proactive-assistant-in-collaborative-human-populated-enviro-6876766.webp"
+  },
+  "aura-always-on-video-assistance": {
+    "alt": "Figure 1 from AURA: Always-On Understanding and Real-Time Assistance via Video Streams",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.04184v1/3_context_management_2.png",
+    "source": "https://arxiv.org/html/2604.04184v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/aura-always-on-video-assistance.webp"
+  },
+  "bayesian-intent-disambiguation-robot-planning": {
+    "alt": "Figure 1 from Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.34270#page=3",
+    "source": "https://arxiv.org/pdf/2609.34270#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/bayesian-intent-disambiguation-robot-planning.webp"
+  },
+  "beyond-correctness-agentic-text-to-sql": {
+    "alt": "Figure 2 from Beyond Correctness: Resolving Underspecification in Agentic Text-to-SQL",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.02739#page=4",
+    "source": "https://arxiv.org/pdf/2610.02739#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/beyond-correctness-agentic-text-to-sql.webp"
+  },
+  "cc-mediation-cross-cultural-conflict": {
+    "alt": "Figure 1 from CC-Mediation: Evaluating Large Language Models for Cross-Cultural Conflict Mediation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.04855#page=1",
+    "source": "https://arxiv.org/pdf/2609.04855#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/cc-mediation-cross-cultural-conflict.webp"
+  },
+  "chatmuse-proactive-mr-conversation": {
+    "alt": "Figure 2 from ChatMuse: Supporting In-Person Small-Group Conversation Experience with a Proactive Assistive AI Agent in Mixed Reality",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2607.18556v4/prelim-prototype-v2.png",
+    "source": "https://arxiv.org/html/2607.18556v4#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/chatmuse-proactive-mr-conversation.webp"
+  },
+  "cigask-counterfactual-information-gain": {
+    "alt": "Figure 1 from When and How Should an Agent Clarify? CIGAsk: Teaching LLMs to Clarify via Counterfactual Information Gain",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.24290#page=1",
+    "source": "https://arxiv.org/pdf/2609.24290#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/cigask-counterfactual-information-gain.webp"
+  },
+  "claim-active-clarification": {
+    "alt": "Figure 1 from CLAIM: Leading Open-domain Active Clarification of Large Language Models with Uncertainty Measurement",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.11631v1/intro_cases.png",
+    "source": "https://arxiv.org/html/2608.11631v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/claim-active-clarification.webp"
+  },
+  "clarify-or-answer-agentic-vqa": {
+    "alt": "Figure 1 from Clarify or Answer: Reinforcement Learning for Agentic VQA with Context Under-specification",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.16400v2/system.png",
+    "source": "https://arxiv.org/html/2601.16400v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/clarify-or-answer-agentic-vqa.webp"
+  },
+  "claw-anything-always-on-assistants": {
+    "alt": "Figure 1 from Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.26086v1/demo_merge_2.png",
+    "source": "https://arxiv.org/html/2605.26086v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/claw-anything-always-on-assistants.webp"
+  },
+  "cleat-value-guided-clarification": {
+    "alt": "Figure 1 from CLEAT: Learning Value-Guided Clarification for Interactive Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.12655v1/intro_fig.png",
+    "source": "https://arxiv.org/html/2610.12655v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/cleat-value-guided-clarification.webp"
+  },
+  "codinggenie-proactive-programming-assistant": {
+    "alt": "Figure 1 from CodingGenie: A Proactive LLM-Powered Programming Assistant",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2503.14724#page=2",
+    "source": "https://arxiv.org/pdf/2503.14724#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/codinggenie-proactive-programming-assistant.webp"
+  },
+  "cognifold-always-on-proactive-memory": {
+    "alt": "Figure 1 from CogniFold: Always-On Proactive Memory via Cognitive Folding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.13438v5/example.png",
+    "source": "https://arxiv.org/html/2605.13438v5#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/cognifold-always-on-proactive-memory.webp"
+  },
+  "cognitive-process-aware-writing-support": {
+    "alt": "Figure 1 from Towards Cognitive Process-Aware Proactive Writing Support",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2608.30424#page=1",
+    "source": "https://arxiv.org/pdf/2608.30424#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/cognitive-process-aware-writing-support.webp"
+  },
+  "colabscience-proactive-scientific-collaboration": {
+    "alt": "Figure 1 from \"Excuse me, may I say something...\" CoLabScience, A Proactive AI Assistant for Biomedical Discovery and LLM-Expert Collaborations",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.1671.pdf#page=1",
+    "source": "https://aclanthology.org/2026.acl-long.1671.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/colabscience-proactive-scientific-collaboration.webp"
+  },
+  "conflictguard-gui-termination": {
+    "alt": "Figure 2 from Do GUI Agents Know When Not to Act? Enabling Conflict-Aware Termination for Multimodal GUI Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.03438v1/x3.png",
+    "source": "https://arxiv.org/html/2609.03438v1#S4.F2",
+    "src": "/awesome-proactive-agent/assets/figures/conflictguard-gui-termination.webp"
+  },
+  "context-agent": {
+    "alt": "Figure 1 from ContextAgent: Context-Aware Proactive LLM Agents with Open-World Sensory Perceptions",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2505.14668v2/teaser_ours.png",
+    "source": "https://arxiv.org/html/2505.14668v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/context-agent.webp"
+  },
+  "cpe-communication-policy-evolution": {
+    "alt": "Figure 1 from Communication Policy Evolution for Proactive LLM Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2606.14314v1/fig1_v3.png",
+    "source": "https://arxiv.org/html/2606.14314v1#S2.F1",
+    "src": "/awesome-proactive-agent/assets/figures/cpe-communication-policy-evolution.webp"
+  },
+  "deduce-proactive-fact-correction": {
+    "alt": "Figure 1 from From Passive Response to Proactive Correction: Enhancing LLM Robustness Against Input Fact Perturbations",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.25894v1/F1.png",
+    "source": "https://arxiv.org/html/2608.25894v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/deduce-proactive-fact-correction.webp"
+  },
+  "delegationbench-ask-before-acting": {
+    "alt": "Figure 6 from DelegationBench: Measuring When AI Agents Should Ask Before Acting",
+    "caption": "Paper Figure 6 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.05532v1/figures/model_extension_v1/expanded_decision_composition.png",
+    "source": "https://arxiv.org/html/2610.05532v1#A3.F6",
+    "src": "/awesome-proactive-agent/assets/figures/delegationbench-ask-before-acting.webp"
+  },
+  "developer-interaction-patterns-proactive-ai": {
+    "alt": "Figure 1 from Developer Interaction Patterns with Proactive AI: A Five-Day Field Study",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.10253v1/study_flow_2.png",
+    "source": "https://arxiv.org/html/2601.10253v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/developer-interaction-patterns-proactive-ai.webp"
+  },
+  "do-proactive-agents-need-llm-wake-anchor": {
+    "alt": "Figure 1 from Do Proactive Agents Need an LLM to Decide When to Act?",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2605.30152#page=1",
+    "source": "https://arxiv.org/pdf/2605.30152#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/do-proactive-agents-need-llm-wake-anchor.webp"
+  },
+  "docuteam-evolving-documents": {
+    "alt": "Figure 1 from DocuTeam: Mixed-Initiative Multi-Agent Discussions around Evolving Documents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.29309v1/figures/teaser.png",
+    "source": "https://arxiv.org/html/2609.29309v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/docuteam-evolving-documents.webp"
+  },
+  "drift-bench-interactive-intent-alignment": {
+    "alt": "Figure 1 from Beyond Oracle Communication: Benchmarking Interactive Intent Alignment Under Miscommunication and Evolving User Intent",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.38604v1/task.png",
+    "source": "https://arxiv.org/html/2609.38604v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/drift-bench-interactive-intent-alignment.webp"
+  },
+  "duplexact-bench": {
+    "alt": "Figure 1 from DuplexAct-Bench: Broadening Full-Duplex Speech Evaluation toward Proactive Interaction across Diverse Behavioral Requirements",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.39446v1/proact_scenarios.jpeg",
+    "source": "https://arxiv.org/html/2609.39446v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/duplexact-bench.webp"
+  },
+  "dynamic-llm-conversations-software-development": {
+    "alt": "Figure 5 from On the Prospects of Dynamic LLM Conversations in Software Development",
+    "caption": "Paper Figure 5 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.30756v1/conversations/ConversationLengthOvertime.png",
+    "source": "https://arxiv.org/html/2608.30756v1#S4.F5",
+    "src": "/awesome-proactive-agent/assets/figures/dynamic-llm-conversations-software-development.webp"
+  },
+  "egopro-bench-personalized-streaming": {
+    "alt": "Figure 2 from EgoPro-Bench: Benchmarking Personalized Proactive Interaction in Egocentric Video Streams",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.07299v1/fig_motivationV3.png",
+    "source": "https://arxiv.org/html/2605.07299v1#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/egopro-bench-personalized-streaming.webp"
+  },
+  "em-garde-proactive-streaming-video": {
+    "alt": "Figure 1 from Em-Garde: A Propose-Match Framework for Proactive Streaming Video Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.19054v2/teaser.png",
+    "source": "https://arxiv.org/html/2603.19054v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/em-garde-proactive-streaming-video.webp"
+  },
+  "enpmr-bench-emotional-memory-retrieval": {
+    "alt": "Figure 1 from ENPMR-Bench: Benchmarking Proactive Memory Retrieval for Emotional Support Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.findings-acl.2080.pdf#page=1",
+    "source": "https://aclanthology.org/2026.findings-acl.2080.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/enpmr-bench-emotional-memory-retrieval.webp"
+  },
+  "eopa-personalized-interaction-initiation": {
+    "alt": "Figure 2 from Preference-Driven Online Adaptation for Personalized Interaction Initiation in Proactive AI Assistants",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.04416v1/method.png",
+    "source": "https://arxiv.org/html/2608.04416v1#S2.F2",
+    "src": "/awesome-proactive-agent/assets/figures/eopa-personalized-interaction-initiation.webp"
+  },
+  "event-driven-proactive-robot": {
+    "alt": "Figure 1 from Proactive Robot Assistance via Event-Driven Reasoning over State Changes",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.08344v2/motivation.png",
+    "source": "https://arxiv.org/html/2610.08344v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/event-driven-proactive-robot.webp"
+  },
+  "experience-activation-personal-gui-agents": {
+    "alt": "Figure 1 from Relevance Does Not Imply Applicability: Experience Activation for Personal GUI Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.33304v1/intro1_cropped.png",
+    "source": "https://arxiv.org/html/2609.33304v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/experience-activation-personal-gui-agents.webp"
+  },
+  "exploring-the-impact-of-proactive-generative-ai-agent-roles-in-time-sensitive-collabo-c08c58d": {
+    "alt": "Figure 1 from Exploring The Impact of Proactive Generative AI Agent Roles in Time-Sensitive Collaborative Problem-Solving Tasks",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2602.17864v1/fig_designfinding_v4.png",
+    "source": "https://arxiv.org/html/2602.17864v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/exploring-the-impact-of-proactive-generative-ai-agent-roles-in-time-sensitive-collabo-c08c58d.webp"
+  },
+  "eyes-wide-open-streaming": {
+    "alt": "Figure 1 from Eyes Wide Open: Ego Proactive Video-LLM for Streaming Video",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2510.14560v1/fig1.png",
+    "source": "https://arxiv.org/html/2510.14560v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/eyes-wide-open-streaming.webp"
+  },
+  "fingertip-20k": {
+    "alt": "Figure 2 from FingerTip 20K: A Benchmark for Proactive and Personalized Mobile LLM Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2507.21071v2/2_tracks.png",
+    "source": "https://arxiv.org/html/2507.21071v2#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/fingertip-20k.webp"
+  },
+  "fininteract-clarification-intent-integration": {
+    "alt": "Figure 1 from FinInteract: Benchmarking Clarification and Intent Integration in Ambiguous Financial Question Answering",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.24002v1/motivation_plot_v2.png",
+    "source": "https://arxiv.org/html/2609.24002v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/fininteract-clarification-intent-integration.webp"
+  },
+  "from-fragmentation-to-integration-exploring-the-design-space-of-ai-agents-for-human-a-a1acae2": {
+    "alt": "Figure 1 from From Fragmentation to Integration: Exploring the Design Space of AI Agents for Human-as-the-Unit Privacy Management",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2602.05016v2/imgs/teaser.png",
+    "source": "https://arxiv.org/html/2602.05016v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/from-fragmentation-to-integration-exploring-the-design-space-of-ai-agents-for-human-a-a1acae2.webp"
+  },
+  "full-duplex-take-the-floor": {
+    "alt": "Figure 1 from Full-Duplex Speech Models Take the Floor When Asked, Not When Needed",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.19596#page=1",
+    "source": "https://arxiv.org/pdf/2609.19596#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/full-duplex-take-the-floor.webp"
+  },
+  "gander-omni-interaction-agent": {
+    "alt": "Figure 1 from Multimodal Duplex Interaction Agent",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.08977v3/interaction_examples.png",
+    "source": "https://arxiv.org/html/2609.08977v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/gander-omni-interaction-agent.webp"
+  },
+  "generative-tutorial-live-visual-instructions": {
+    "alt": "Figure 1 from Generative Tutorial: Towards Live Contextualized Visual Instructions for Physical Tasks",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.24955v1/figures/teaser.png",
+    "source": "https://arxiv.org/html/2609.24955v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/generative-tutorial-live-visual-instructions.webp"
+  },
+  "governed-proactive-agency": {
+    "alt": "Figure 1 from When Intelligence Becomes Agency: A Theory of Governed, Proactive Agency for Symbiotic AI Systems",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.07741#page=4",
+    "source": "https://arxiv.org/pdf/2609.07741#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/governed-proactive-agency.webp"
+  },
+  "grove-temporally-stratified-video-memory": {
+    "alt": "Figure 1 from GROVE: Growing and Reasoning over Temporally Stratified Memory from Streaming Video Experience",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.02392v2/teasor.png",
+    "source": "https://arxiv.org/html/2608.02392v2#Sx1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/grove-temporally-stratified-video-memory.webp"
+  },
+  "guide-open-ended-gui-tasks": {
+    "alt": "Figure 1 from GUIDE: A Benchmark for Understanding and Assisting Users in Open-Ended GUI Tasks",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.25864v1/Frame_13.png",
+    "source": "https://arxiv.org/html/2603.25864v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/guide-open-ended-gui-tasks.webp"
+  },
+  "hisentinel-coding-agent-intervention": {
+    "alt": "Figure 1 from Learning When and How to Intervene: A Hindsight-Distilled Sentinel for Coding Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.39957#page=2",
+    "source": "https://arxiv.org/pdf/2609.39957#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/hisentinel-coding-agent-intervention.webp"
+  },
+  "hithink-turn-full-duplex": {
+    "alt": "Figure 1 from HiThink Turn: An Intent-Aware Turn-Taking Control Module for Full-Duplex Dialogue",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.34096v1/hithinkDuplex.png",
+    "source": "https://arxiv.org/html/2609.34096v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/hithink-turn-full-duplex.webp"
+  },
+  "ideaambig-implementation-clarification": {
+    "alt": "Figure 1 from IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.10539v1/teaser_task_setting.png",
+    "source": "https://arxiv.org/html/2609.10539v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ideaambig-implementation-clarification.webp"
+  },
+  "inquiremobile-proactive-human-assistance": {
+    "alt": "Figure 4 from InquireMobile: Teaching VLM-based Mobile Agent to Request Human Assistance via Reinforcement Fine-Tuning",
+    "caption": "Paper Figure 4 \u00b7 authors",
+    "description": "Figure excerpt from page 5. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.1487.pdf#page=5",
+    "source": "https://aclanthology.org/2026.acl-long.1487.pdf#page=5",
+    "src": "/awesome-proactive-agent/assets/figures/inquiremobile-proactive-human-assistance.webp"
+  },
+  "insighttoast-meeting-side-channel": {
+    "alt": "Figure 1 from InsightToast: Proactive Information Retrieval & Glanceable Visualization in the Side Channel of Data-Rich Meetings",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.31115v2/figures/Teaser.png",
+    "source": "https://arxiv.org/html/2608.31115v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/insighttoast-meeting-side-channel.webp"
+  },
+  "intent-drift-llm-agents": {
+    "alt": "Figure 1 from When Users Change Their Minds: Measuring and Repairing Intent Drift in LLM Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.32520v1/IntentFlux.png",
+    "source": "https://arxiv.org/html/2609.32520v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/intent-drift-llm-agents.webp"
+  },
+  "interactionbench-streaming-video": {
+    "alt": "Figure 1 from InteractionBench: A Real-Time Interaction Benchmark for Streaming Video Systems",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.05775#page=1",
+    "source": "https://arxiv.org/pdf/2610.05775#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/interactionbench-streaming-video.webp"
+  },
+  "interactive-visual-grounding": {
+    "alt": "Figure 1 from When Seeing Is Not Enough: Benchmarking Interactive Visual Grounding in LVLMs",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.23978v2/spiritFigure.png",
+    "source": "https://arxiv.org/html/2608.23978v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/interactive-visual-grounding.webp"
+  },
+  "ipibench-interactive-proactive-intelligence": {
+    "alt": "Figure 1 from IPIBench: Evaluating Interactive Proactive Intelligence of MLLMs under Continuous Streams",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.27074v1/IPIBench.png",
+    "source": "https://arxiv.org/html/2605.27074v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ipibench-interactive-proactive-intelligence.webp"
+  },
+  "ito-browser-tab-orchestration": {
+    "alt": "Figure 1 from ITO: Real-time Browser Tab Orchestration Through Intent Detection",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.09107v1/figures/teaser-text-on-path-v2.jpg",
+    "source": "https://arxiv.org/html/2608.09107v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/ito-browser-tab-orchestration.webp"
+  },
+  "jarvis-multiparty-proactive-speech": {
+    "alt": "Figure 1 from Jarvis: A Proactive Speech Agent for Multi-Party Conversations",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.07506v2/source/figures/proactive_agent_chi2027-teaser_ver4.png",
+    "source": "https://arxiv.org/html/2610.07506v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/jarvis-multiparty-proactive-speech.webp"
+  },
+  "jarvisbench-attention-coordination": {
+    "alt": "Figure 1 from JarvisBench: Always-on Intelligence Between Humans and Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2608.14870#page=3",
+    "source": "https://arxiv.org/pdf/2608.14870#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/jarvisbench-attention-coordination.webp"
+  },
+  "joint-gating-memory-hints": {
+    "alt": "Figure 1 from When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.40611#page=2",
+    "source": "https://arxiv.org/pdf/2610.40611#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/joint-gating-memory-hints.webp"
+  },
+  "joyai-vl-interaction": {
+    "alt": "Figure 1 from JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2606.14777v2/fig_overview.png",
+    "source": "https://arxiv.org/html/2606.14777v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/joyai-vl-interaction.webp"
+  },
+  "knowing-when-to-yield": {
+    "alt": "Figure 2 from Knowing When to Yield: Grounded Arbitration of User Corrections in Text-Based Embodied Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.00282#page=3",
+    "source": "https://arxiv.org/pdf/2610.00282#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/knowing-when-to-yield.webp"
+  },
+  "knowu-bench": {
+    "alt": "Figure 1 from KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.08455v1/realgui-bench_motivation.png",
+    "source": "https://arxiv.org/html/2604.08455v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/knowu-bench.webp"
+  },
+  "learning-to-clarify-limited-interaction": {
+    "alt": "Figure 1 from Learning to Clarify Underspecified Intents Under Limited Interaction",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.04719v1/main_figure.png",
+    "source": "https://arxiv.org/html/2610.04719v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/learning-to-clarify-limited-interaction.webp"
+  },
+  "live-assistant-social-streams": {
+    "alt": "Figure 1 from Live Assistant: Learning Whether, When, and Whom to Assist in Real-World Live Social Streams",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.27303v1/img/figure1_overview.png",
+    "source": "https://arxiv.org/html/2609.27303v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/live-assistant-social-streams.webp"
+  },
+  "long-term-task-oriented-agent": {
+    "alt": "Figure 1 from Long-term Task-oriented Agent: Proactive Long-term Intent Maintenance in Dynamic Environments",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.09382v1/simple_dialog.png",
+    "source": "https://arxiv.org/html/2601.09382v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/long-term-task-oriented-agent.webp"
+  },
+  "measuring-proactive-problem-solving": {
+    "alt": "Figure 1 from Beyond Reactivity: Measuring Proactive Problem Solving in LLM Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2510.19771v4/perfect_inp_fig1.jpg",
+    "source": "https://arxiv.org/html/2510.19771v4#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/measuring-proactive-problem-solving.webp"
+  },
+  "memeye-visual-centric-memory": {
+    "alt": "Figure 1 from MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.15128v1/headfigure.png",
+    "source": "https://arxiv.org/html/2605.15128v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/memeye-visual-centric-memory.webp"
+  },
+  "minicpm-o-45-full-duplex": {
+    "alt": "Figure 1 from MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.27393v1/media/radar_minicpmo4.5.png",
+    "source": "https://arxiv.org/html/2604.27393v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/minicpm-o-45-full-duplex.webp"
+  },
+  "mirai-a-wearable-proactive-ai-inner-voice-for-contextual-nudging-ff114ee": {
+    "alt": "Figure 3 from Mirai: A Wearable Proactive AI Inner-Voice for Contextual Nudging",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2502.02370v1/figures/scenario1.png",
+    "source": "https://arxiv.org/html/2502.02370v1#S4.F4.fig1",
+    "src": "/awesome-proactive-agent/assets/figures/mirai-a-wearable-proactive-ai-inner-voice-for-contextual-nudging-ff114ee.webp"
+  },
+  "mmpcbench-proactive-critique": {
+    "alt": "Figure 1 from MMPCBench: Benchmarking Multimodal Large Language Models on Proactive Critique of Flawed Inputs",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.29286v1/example_emnlp2026_cropped.png",
+    "source": "https://arxiv.org/html/2608.29286v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/mmpcbench-proactive-critique.webp"
+  },
+  "moss-vl-realtime-proactive-video": {
+    "alt": "Figure 1 from MOSS-VL Technical Report",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2608.15045#page=2",
+    "source": "https://arxiv.org/pdf/2608.15045#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/moss-vl-realtime-proactive-video.webp"
+  },
+  "muse-autoskill": {
+    "alt": "Figure 2 from MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.27366v2/overview.png",
+    "source": "https://arxiv.org/html/2605.27366v2#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/muse-autoskill.webp"
+  },
+  "need-help-proactive-programming": {
+    "alt": "Figure 1 from Need Help? Designing Proactive AI Assistants for Programming",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2410.04596#page=1",
+    "source": "https://arxiv.org/pdf/2410.04596#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/need-help-proactive-programming.webp"
+  },
+  "omni-pro-streaming-video": {
+    "alt": "Figure 1 from OmniPro: A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.18577v1/benchmark_v3.png",
+    "source": "https://arxiv.org/html/2605.18577v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/omni-pro-streaming-video.webp"
+  },
+  "omniassistbench-assistant-style-interaction": {
+    "alt": "Figure 4 from OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs",
+    "caption": "Paper Figure 4 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.21360v1/label.png",
+    "source": "https://arxiv.org/html/2608.21360v1#S1.F4",
+    "src": "/awesome-proactive-agent/assets/figures/omniassistbench-assistant-style-interaction.webp"
+  },
+  "omnimmi-streaming-interaction": {
+    "alt": "Figure 1 from OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2503.22952v1/teaser.png",
+    "source": "https://arxiv.org/html/2503.22952v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/omnimmi-streaming-interaction.webp"
+  },
+  "onestreamer-streaming-video": {
+    "alt": "Figure 1 from OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.01762v1/Fig_Benchmark_Overview.png",
+    "source": "https://arxiv.org/html/2610.01762v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/onestreamer-streaming-video.webp"
+  },
+  "overact-proactive-over-authorization": {
+    "alt": "Figure 2 from OverAct: Measuring and Mitigating Proactive Over-Authorization in LLM Tool-Calling Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.01508v1/fig_sir_heatmap.png",
+    "source": "https://arxiv.org/html/2610.01508v1#S4.F2",
+    "src": "/awesome-proactive-agent/assets/figures/overact-proactive-over-authorization.webp"
+  },
+  "pace-action-completion-assistance": {
+    "alt": "Figure 1 from PACE: Proactive Assistance in Human-Robot Collaboration Through Action-Completion Estimation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://www.merl.com/publications/docs/TR2025-064.pdf#page=3",
+    "source": "https://www.merl.com/publications/docs/TR2025-064.pdf#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/pace-action-completion-assistance.webp"
+  },
+  "pact-continual-robot-assistance": {
+    "alt": "Figure 1 from PACT: Proactive Asking for Continual Task Assistance in Human-Robot Collaboration",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.24350v1/figure1.png",
+    "source": "https://arxiv.org/html/2605.24350v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pact-continual-robot-assistance.webp"
+  },
+  "pare-proactive-agent-research-environment": {
+    "alt": "Figure 1 from Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.00842v1/overview.png",
+    "source": "https://arxiv.org/html/2604.00842v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pare-proactive-agent-research-environment.webp"
+  },
+  "pask-intent-aware-proactive-agent": {
+    "alt": "Figure 2 from PASK: Toward Intent-Aware Proactive Agents with Long-Term Memory",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.08000v1/x1.png",
+    "source": "https://arxiv.org/html/2604.08000v1#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/pask-intent-aware-proactive-agent.webp"
+  },
+  "passing-clarify-user-expertise": {
+    "alt": "Figure 1 from Clarify User Expertise: Towards Proactive Conversational Agents Tailoring Responses to User Proficiency",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.22266v2/fig/demo.png",
+    "source": "https://arxiv.org/html/2608.22266v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/passing-clarify-user-expertise.webp"
+  },
+  "pastabench-proactive-agent-safety": {
+    "alt": "Figure 1 from PASTABench: Proactive Assessment of Sequential Trajectories for Agent Safety",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.28197v1/main_figure1.png",
+    "source": "https://arxiv.org/html/2609.28197v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pastabench-proactive-agent-safety.webp"
+  },
+  "pcqpr-question-planning-reflection": {
+    "alt": "Figure 1 from PCQPR: Proactive Conversational Question Planning with Reflection",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2024.emnlp-main.631.pdf#page=1",
+    "source": "https://aclanthology.org/2024.emnlp-main.631.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/pcqpr-question-planning-reflection.webp"
+  },
+  "pearl-proactive-gameplay-support": {
+    "alt": "Figure 1 from Oops, Not Now: PEARL, a RAG-Based Support Agent for Gameplay and What Players Want from AI Help",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.13718v1/images/group256.png",
+    "source": "https://arxiv.org/html/2609.13718v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pearl-proactive-gameplay-support.webp"
+  },
+  "personalalign-long-term-gui-intent": {
+    "alt": "Figure 1 from PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.1669.pdf#page=1",
+    "source": "https://aclanthology.org/2026.acl-long.1669.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/personalalign-long-term-gui-intent.webp"
+  },
+  "physical-experiment-selection": {
+    "alt": "Figure 2 from New Evidence, Same Choice: Testing Physical Experiment Selection in Vision Language Models",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.11022v1/method.png",
+    "source": "https://arxiv.org/html/2609.11022v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/physical-experiment-selection.webp"
+  },
+  "pi-bench-long-horizon-workflows": {
+    "alt": "Figure 1 from \u03c0-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.14678v3/overview.png",
+    "source": "https://arxiv.org/html/2605.14678v3#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pi-bench-long-horizon-workflows.webp"
+  },
+  "precogui-proactive-gui": {
+    "alt": "Figure 1 from PrecogUI: Proactive GUI Agents via Pre-cognitive Simulation and Experience Retrieval",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.36923v1/figure1_intro.png",
+    "source": "https://arxiv.org/html/2609.36923v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/precogui-proactive-gui.webp"
+  },
+  "price-of-scale-proactive-recall": {
+    "alt": "Figure 1 from The Price of Scale in Proactive Memory Recall",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 6. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.34507#page=6",
+    "source": "https://arxiv.org/pdf/2610.34507#page=6",
+    "src": "/awesome-proactive-agent/assets/figures/price-of-scale-proactive-recall.webp"
+  },
+  "principles-synthetic-strategy-memory-for-proactive-dialogue-agents-37fe6db": {
+    "alt": "Figure 1 from PRINCIPLES: Synthetic Strategy Memory for Proactive Dialogue Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2509.17459v1/figure_challenge.png",
+    "source": "https://arxiv.org/html/2509.17459v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/principles-synthetic-strategy-memory-for-proactive-dialogue-agents-37fe6db.webp"
+  },
+  "proact-breakdown-aware-collaboration": {
+    "alt": "Figure 1 from ProACT: Towards Breakdown-Aware Proactive Agent in Multi-User Collaboration",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2607.03730#page=1",
+    "source": "https://arxiv.org/pdf/2607.03730#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/proact-breakdown-aware-collaboration.webp"
+  },
+  "proact-idle-time-compute": {
+    "alt": "Figure 2 from Anticipate and Learn: Unleashing Idle-Time Compute in Proactive Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.25971v2/overview.png",
+    "source": "https://arxiv.org/html/2605.25971v2#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/proact-idle-time-compute.webp"
+  },
+  "proact-vl-realtime-companions": {
+    "alt": "Figure 3 from Proact-VL: A Proactive VideoLLM for Real-Time AI Companions",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.03447v4/img/Benchmark/DataPipelineV11.png",
+    "source": "https://arxiv.org/html/2603.03447v4#S3.F3",
+    "src": "/awesome-proactive-agent/assets/figures/proact-vl-realtime-companions.webp"
+  },
+  "proactbench-conversational-proactivity": {
+    "alt": "Figure 1 from ProactBench: Beyond What The User Asked For",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2605.09228#page=4",
+    "source": "https://arxiv.org/pdf/2605.09228#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/proactbench-conversational-proactivity.webp"
+  },
+  "proactive-agent-shifting-llm": {
+    "alt": "Figure 1 from Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2410.12361v3/fig1.png",
+    "source": "https://arxiv.org/html/2410.12361v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-agent-shifting-llm.webp"
+  },
+  "proactive-assistant-dialogue-generation-from-streaming-egocentric-videos-a869206": {
+    "alt": "Figure 1 from Proactive Assistant Dialogue Generation from Streaming Egocentric Videos",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2506.05904v1/teaser-w-glasses.png",
+    "source": "https://arxiv.org/html/2506.05904v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-assistant-dialogue-generation-from-streaming-egocentric-videos-a869206.webp"
+  },
+  "proactive-conversational-inner-thoughts": {
+    "alt": "Figure 1 from Proactive Conversational Agents with Inner Thoughts",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2501.00383v2/00_teaser.png",
+    "source": "https://arxiv.org/html/2501.00383v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-conversational-inner-thoughts.webp"
+  },
+  "proactive-dialogue-cognitive-state": {
+    "alt": "Figure 2 from Proactive Dialogue Policy Optimization via Cognitive-State Transition",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.34948v1/Method.png",
+    "source": "https://arxiv.org/html/2609.34948v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-dialogue-cognitive-state.webp"
+  },
+  "proactive-robots-take-initiative": {
+    "alt": "Figure 1 from Robots That Take Initiative: A Framework for Building and Evaluating Proactive Robots",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.28910v1/figures/factorGraphOfProactivity.png",
+    "source": "https://arxiv.org/html/2609.28910v1#S2.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-robots-take-initiative.webp"
+  },
+  "proactive-service-agents-survey": {
+    "alt": "Figure 1 from Proactive Service Agents: A Unified Decision Framework, Methods, and Evaluation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.03727v1/unified_loop_en_v10.png",
+    "source": "https://arxiv.org/html/2609.03727v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-service-agents-survey.webp"
+  },
+  "proactive-thought-partners-writing": {
+    "alt": "Figure 1 from Designing Proactive Thought Partners for Writing",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.01588v1/figures/design_space.jpg",
+    "source": "https://arxiv.org/html/2609.01588v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactive-thought-partners-writing.webp"
+  },
+  "proactivebench-mllm": {
+    "alt": "Figure 1 from ProactiveBench: Benchmarking Proactiveness in Multimodal Large Language Models",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.19466v2/teaser_vero.png",
+    "source": "https://arxiv.org/html/2603.19466v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactivebench-mllm.webp"
+  },
+  "proactivecoach-hierarchical-procedures": {
+    "alt": "Figure 1 from Improving Proactive AI Assistance with Hierarchical Procedural Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.06505v2/fig1.png",
+    "source": "https://arxiv.org/html/2610.06505v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactivecoach-hierarchical-procedures.webp"
+  },
+  "proactiveeval-unified-evaluation-framework": {
+    "alt": "Figure 1 from ProactiveEval: A Unified Evaluation Framework for Proactive Dialogue Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2508.20973v1/final_banner.png",
+    "source": "https://arxiv.org/html/2508.20973v1#Sx1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactiveeval-unified-evaluation-framework.webp"
+  },
+  "proactivemobile": {
+    "alt": "Figure 1 from ProactiveMobile: A Comprehensive Benchmark for Boosting Proactive Intelligence on Mobile Devices",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2602.21858v4/img/overview_of_the_paper.png",
+    "source": "https://arxiv.org/html/2602.21858v4#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactivemobile.webp"
+  },
+  "proactiveva-visual-analytics-ui-agent": {
+    "alt": "Figure 1 from ProactiveVA: Proactive Visual Analytics with LLM-Based UI Agent",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2507.18165v1/comparison.png",
+    "source": "https://arxiv.org/html/2507.18165v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactiveva-visual-analytics-ui-agent.webp"
+  },
+  "proactivity-driven-personalized-agents-for-advancing-human-learning-through-engagemen-02ee6ad": {
+    "alt": "Figure 1 from Proactivity-driven Personalized Agents for Advancing Human Learning through Engagement, Reflection, and Self-Efficacy",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.09926v4/Images/motivation_teaser.png",
+    "source": "https://arxiv.org/html/2601.09926v4#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proactivity-driven-personalized-agents-for-advancing-human-learning-through-engagemen-02ee6ad.webp"
+  },
+  "proactivity-gym-foundations": {
+    "alt": "Figure 2 from Foundations of Proactive Agents: Principles, Technical Layers, and Proactivity-Gym",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.37267v1/Fig2.png",
+    "source": "https://arxiv.org/html/2609.37267v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/proactivity-gym-foundations.webp"
+  },
+  "proactmem-event-driven-memory": {
+    "alt": "Figure 1 from Proactive Memory for Event-Driven LLM Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.36967#page=1",
+    "source": "https://arxiv.org/pdf/2610.36967#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/proactmem-event-driven-memory.webp"
+  },
+  "proactor-timing-aware-task-scheduling": {
+    "alt": "Figure 1 from ProActor: Timing-Aware Reinforcement Learning for Proactive Task Scheduling Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.832.pdf#page=1",
+    "source": "https://aclanthology.org/2026.acl-long.832.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/proactor-timing-aware-task-scheduling.webp"
+  },
+  "proagent-on-demand-sensing": {
+    "alt": "Figure 1 from ProAgent: Harnessing On-Demand Sensory Contexts for Proactive LLM Agent Systems",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2512.06721v2/teaser.png",
+    "source": "https://arxiv.org/html/2512.06721v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proagent-on-demand-sensing.webp"
+  },
+  "proagentbench": {
+    "alt": "Figure 1 from ProAgentBench: Evaluating LLM Agents for Proactive Assistance with Real-World Data",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2602.04482v2/figures/main_figure_v3.jpg",
+    "source": "https://arxiv.org/html/2602.04482v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proagentbench.webp"
+  },
+  "procodebench-proactive-coding-assistants": {
+    "alt": "Figure 1 from An Empirical Study of Proactive Coding Assistants in Real-World Software Development",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.05700v1/motivation.png",
+    "source": "https://arxiv.org/html/2605.05700v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/procodebench-proactive-coding-assistants.webp"
+  },
+  "product-research-agents-customer-reengagement": {
+    "alt": "Figure 1 from Bridging Search and CRM: Productionizing AI Product Research Agents for Customer Re-Engagement",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.18543v1/agent_arch_4.png",
+    "source": "https://arxiv.org/html/2608.18543v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/product-research-agents-customer-reengagement.webp"
+  },
+  "proevent-event-centric-benchmark": {
+    "alt": "Figure 1 from ProEvent: An Event-centric Benchmark for Proactive Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2607.17701v1/Figure1.png",
+    "source": "https://arxiv.org/html/2607.17701v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/proevent-event-centric-benchmark.webp"
+  },
+  "promed-proactive-medical-llms": {
+    "alt": "Figure 3 from ProMed: Shapley Information Gain Guided Reinforcement Learning for Proactive Medical LLMs",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Figure excerpt from page 8. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.1500.pdf#page=8",
+    "source": "https://aclanthology.org/2026.acl-long.1500.pdf#page=8",
+    "src": "/awesome-proactive-agent/assets/figures/promed-proactive-medical-llms.webp"
+  },
+  "promediate-a-simulation-testbed-for-evaluating-proactive-mediation-in-multi-party-neg-dc19a08": {
+    "alt": "Figure 1 from ProMediate: A Simulation Testbed for Evaluating Proactive Mediation in Multi-Party Negotiation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2510.25224v3/general_framework.png",
+    "source": "https://arxiv.org/html/2510.25224v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/promediate-a-simulation-testbed-for-evaluating-proactive-mediation-in-multi-party-neg-dc19a08.webp"
+  },
+  "promediconv-legal-mediation": {
+    "alt": "Figure 1 from ProMediConv: Benchmarking Proactive Conversational Agents in Legal Dispute Mediation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.11101v1/dialogue_example_1.png",
+    "source": "https://arxiv.org/html/2609.11101v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/promediconv-legal-mediation.webp"
+  },
+  "promemassist-working-memory-wearable": {
+    "alt": "Figure 1 from ProMemAssist: Exploring Timely Proactive Assistance Through Working Memory Modeling in Multi-Modal Wearable Devices",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2507.21378v1/figures/system-workflow.png",
+    "source": "https://arxiv.org/html/2507.21378v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/promemassist-working-memory-wearable.webp"
+  },
+  "promise-a-proactive-multi-turn-dialogue-dataset-for-information-seeking-intent-resolu-000dd6c": {
+    "alt": "Figure 1 from ProMISe: A Proactive Multi-turn Dialogue Dataset for Information-seeking Intent Resolution",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2024.findings-eacl.124.pdf#page=1",
+    "source": "https://aclanthology.org/2024.findings-eacl.124.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/promise-a-proactive-multi-turn-dialogue-dataset-for-information-seeking-intent-resolu-000dd6c.webp"
+  },
+  "proper-agents-knowledge-gap-navigation": {
+    "alt": "Figure 1 from PROPER Agents: Proactivity Driven Personalized Agents for Advancing Knowledge Gap Navigation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.findings-acl.2082.pdf#page=2",
+    "source": "https://aclanthology.org/2026.findings-acl.2082.pdf#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/proper-agents-knowledge-gap-navigation.webp"
+  },
+  "propersim-developing-proactive-and-personalized-ai-assistants-through-user-assistant--da26ca2": {
+    "alt": "Figure 1 from ProPerSim: Developing Proactive and Personalized AI Assistants through User-Assistant Simulation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2509.21730v2/figure1.png",
+    "source": "https://arxiv.org/html/2509.21730v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/propersim-developing-proactive-and-personalized-ai-assistants-through-user-assistant--da26ca2.webp"
+  },
+  "prorobo-cognitive-action-reasoning": {
+    "alt": "Figure 1 from Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.23486v1/motivationk1.png",
+    "source": "https://arxiv.org/html/2609.23486v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/prorobo-cognitive-action-reasoning.webp"
+  },
+  "pros-scientific-poster-repair": {
+    "alt": "Figure 1 from Beyond Instruction-Driven Editing: Source-Grounded Problem Discovery with User-Governed Repair for Scientific Posters",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.01813v1/figures/figure1_final.png",
+    "source": "https://arxiv.org/html/2609.01813v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pros-scientific-poster-repair.webp"
+  },
+  "prose-evaluability-aware-assistance": {
+    "alt": "Figure 1 from Propose to Learn, Learn to Propose: Evaluability-Aware Assistance under Bounded Rationality",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 5. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.02242#page=5",
+    "source": "https://arxiv.org/pdf/2609.02242#page=5",
+    "src": "/awesome-proactive-agent/assets/figures/prose-evaluability-aware-assistance.webp"
+  },
+  "protod-proactive-task-oriented-dialogue-system-based-on-llms-90361b3": {
+    "alt": "Figure 1 from ProTOD: Proactive Task-oriented Dialogue System Based on LLMs",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2025.coling-main.614.pdf#page=1",
+    "source": "https://aclanthology.org/2025.coling-main.614.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/protod-proactive-task-oriented-dialogue-system-based-on-llms-90361b3.webp"
+  },
+  "provider-side-injection-proactive-agents": {
+    "alt": "Figure 1 from Who Is Your Agent Serving? Provider-Side Indirect Prompt Injection in Proactive Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.05266v1/Intro.png",
+    "source": "https://arxiv.org/html/2610.05266v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/provider-side-injection-proactive-agents.webp"
+  },
+  "provoice-bench-proactive-voice-agents": {
+    "alt": "Figure 2 from From Reactive to Proactive: Assessing the Proactivity of Voice Agents via ProVoice-Bench",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.15037v3/overview.png",
+    "source": "https://arxiv.org/html/2604.15037v3#S2.F2",
+    "src": "/awesome-proactive-agent/assets/figures/provoice-bench-proactive-voice-agents.webp"
+  },
+  "prpf-perceive-before-reasoning-mobile": {
+    "alt": "Figure 1 from Perceive Before Reasoning: A Pre-Reasoning Perception Framework for Efficient and Reliable Proactive Mobile Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2606.03236v2/Figure/Figure1_comparison.png",
+    "source": "https://arxiv.org/html/2606.03236v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/prpf-perceive-before-reasoning-mobile.webp"
+  },
+  "psi-bench-persona-sensitive-influencing": {
+    "alt": "Figure 1 from \u03a8-Bench: Evaluating Persona-Sensitive Influencing in Persuasive Dialogues",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2606.02754v1/intro_fig.png",
+    "source": "https://arxiv.org/html/2606.02754v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/psi-bench-persona-sensitive-influencing.webp"
+  },
+  "psyprobe-user-state-counseling": {
+    "alt": "Figure 1 from PsyProbe: Proactive and Interpretable Dialogue through User State Modeling for Exploratory Counseling",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 3. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.findings-eacl.336.pdf#page=3",
+    "source": "https://aclanthology.org/2026.findings-eacl.336.pdf#page=3",
+    "src": "/awesome-proactive-agent/assets/figures/psyprobe-user-state-counseling.webp"
+  },
+  "pushing-forward-pareto-frontiers-of-proactive-agents-with-behavioral-agentic-optimiza-4e62d6e": {
+    "alt": "Figure 1 from Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2602.11351v2/Teaser_Figure_0426.png",
+    "source": "https://arxiv.org/html/2602.11351v2#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/pushing-forward-pareto-frontiers-of-proactive-agents-with-behavioral-agentic-optimiza-4e62d6e.webp"
+  },
+  "rational-clarification-value-information": {
+    "alt": "Figure 3 from Rational Clarification by Assistive Agents via Value-of-Information Reasoning",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Figure excerpt from page 8. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.37588#page=8",
+    "source": "https://arxiv.org/pdf/2609.37588#page=8",
+    "src": "/awesome-proactive-agent/assets/figures/rational-clarification-value-information.webp"
+  },
+  "realtime-venus-full-duplex-delegation": {
+    "alt": "Figure 4 from Realtime-Venus: A Full-Duplex Interaction System with Asynchronous Delegation",
+    "caption": "Paper Figure 4 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.13814v3/case.png",
+    "source": "https://arxiv.org/html/2609.13814v3#S3.F4",
+    "src": "/awesome-proactive-agent/assets/figures/realtime-venus-full-duplex-delegation.webp"
+  },
+  "reasoning-while-asking-proactive-inquirers": {
+    "alt": "Figure 1 from Reasoning While Asking: Transforming Reasoning Large Language Models from Passive Solvers to Proactive Inquirers",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-long.1619.pdf#page=2",
+    "source": "https://aclanthology.org/2026.acl-long.1619.pdf#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/reasoning-while-asking-proactive-inquirers.webp"
+  },
+  "redefining-proactivity-for-information-seeking-dialogue-4226e1b": {
+    "alt": "Figure 1 from Redefining Proactivity for Information Seeking Dialogue",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2024.sicon-1.5.pdf#page=1",
+    "source": "https://aclanthology.org/2024.sicon-1.5.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/redefining-proactivity-for-information-seeking-dialogue-4226e1b.webp"
+  },
+  "referential-uncertainty-human-ai": {
+    "alt": "Figure 1 from Referential Uncertainty in Human--AI Collaboration",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 7. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.39518#page=7",
+    "source": "https://arxiv.org/pdf/2609.39518#page=7",
+    "src": "/awesome-proactive-agent/assets/figures/referential-uncertainty-human-ai.webp"
+  },
+  "remember-when-it-matters-proactive-memory-agent": {
+    "alt": "Figure 1 from Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2607.08716#page=4",
+    "source": "https://arxiv.org/pdf/2607.08716#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/remember-when-it-matters-proactive-memory-agent.webp"
+  },
+  "replannable-dialogue-timelines": {
+    "alt": "Figure 1 from Proactive AI: From Turns to Replannable Dialogue Timelines",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2610.05159#page=2",
+    "source": "https://arxiv.org/pdf/2610.05159#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/replannable-dialogue-timelines.webp"
+  },
+  "reqclarifybench-repository-requirements": {
+    "alt": "Figure 1 from Don't Guess, Just Ask: Evaluating Interactive Requirement Clarification for Repository-Level Software Development",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.13022v1/motivation_v5.png",
+    "source": "https://arxiv.org/html/2610.13022v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/reqclarifybench-repository-requirements.webp"
+  },
+  "response-g1-scene-graph-trigger": {
+    "alt": "Figure 1 from Response-G1: Explicit Scene Graph Modeling for Proactive Streaming Video Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.07575v2/Figure1.png",
+    "source": "https://arxiv.org/html/2605.07575v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/response-g1-scene-graph-trigger.webp"
+  },
+  "roboteq3-personalized-social-proactivity": {
+    "alt": "Figure 1 from RobotEQ 3.0: Towards Personalized Social Proactive Intelligence in Embodied Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.36618v1/figures/shufan_figure1.jpg",
+    "source": "https://arxiv.org/html/2609.36618v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/roboteq3-personalized-social-proactivity.webp"
+  },
+  "roma-streaming-omnimodal-assistant": {
+    "alt": "Figure 1 from ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.10323v1/task.png",
+    "source": "https://arxiv.org/html/2601.10323v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/roma-streaming-omnimodal-assistant.webp"
+  },
+  "rpcbench-proactive-premise-critique": {
+    "alt": "Figure 1 from RPCBench: A Benchmark for Proactive Premise Critique in LLM-based Recommendation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.00918v1/fig1.png",
+    "source": "https://arxiv.org/html/2609.00918v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/rpcbench-proactive-premise-critique.webp"
+  },
+  "safety-nudges-real-time-risk-awareness": {
+    "alt": "Figure 1 from Safety Nudges: User-Facing Interventions for Real-Time AI Risk Awareness",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.26865v2/updated-mainfig.png",
+    "source": "https://arxiv.org/html/2609.26865v2#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/safety-nudges-real-time-risk-awareness.webp"
+  },
+  "satori-proactive-ar-bdi": {
+    "alt": "Figure 1 from Satori: Towards Proactive AR Assistant with Belief-Desire-Intention User Modeling",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2410.16668#page=1",
+    "source": "https://arxiv.org/pdf/2410.16668#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/satori-proactive-ar-bdi.webp"
+  },
+  "scala-proactive-tutoring": {
+    "alt": "Figure 1 from Let LLM Tutors Ask First: Proactive LLM-Based Tutoring at Scale in a 1,500-Student Online Classroom",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2026.acl-industry.107.pdf#page=1",
+    "source": "https://aclanthology.org/2026.acl-industry.107.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/scala-proactive-tutoring.webp"
+  },
+  "see-infer-intervene-retail": {
+    "alt": "Figure 1 from See, Infer, Intervene: Proactive World Modeling for Goal-Oriented Social Intelligence",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2606.03371v6/figs/0.png",
+    "source": "https://arxiv.org/html/2606.03371v6#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/see-infer-intervene-retail.webp"
+  },
+  "selectively-quitting-agent-safety": {
+    "alt": "Figure 1 from Check Yourself Before You Wreck Yourself: Selectively Quitting Improves LLM Agent Safety",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2510.16492v4/quitting_example.png",
+    "source": "https://arxiv.org/html/2510.16492v4#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/selectively-quitting-agent-safety.webp"
+  },
+  "severity-aware-proactive-medical-dialogue": {
+    "alt": "Figure 1 from Beyond Information Seeking: Severity-Aware Question Supervision for Proactive Medical Dialogue",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.24521v3/Figure1_v3.png",
+    "source": "https://arxiv.org/html/2608.24521v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/severity-aware-proactive-medical-dialogue.webp"
+  },
+  "skill0-skill-internalization": {
+    "alt": "Figure 1 from SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2604.02268v2/motivation.png",
+    "source": "https://arxiv.org/html/2604.02268v2#S1.F1.fig1",
+    "src": "/awesome-proactive-agent/assets/figures/skill0-skill-internalization.webp"
+  },
+  "speak-for-me-meeting-delegation": {
+    "alt": "Figure 1 from Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.03923v1/final_capa.png",
+    "source": "https://arxiv.org/html/2609.03923v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/speak-for-me-meeting-delegation.webp"
+  },
+  "sprint-proactive-risk-inference": {
+    "alt": "Figure 2 from From Sports to Safety: Benchmarking Proactive Risk Inference in MLLMs",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.05560v1/sprint_overview.png",
+    "source": "https://arxiv.org/html/2608.05560v1#S0.F2",
+    "src": "/awesome-proactive-agent/assets/figures/sprint-proactive-risk-inference.webp"
+  },
+  "steps-self-triggered-push-recommendation": {
+    "alt": "Figure 1 from A Self-Triggered Agentic Push Recommendation System",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.01949v1/fig1_motivation_example.png",
+    "source": "https://arxiv.org/html/2608.01949v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/steps-self-triggered-push-recommendation.webp"
+  },
+  "streamarena-streaming-video-agents": {
+    "alt": "Figure 1 from StreamArena: Toward Continuous, Interactive, and Long-Horizon Agentic Streaming Video Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.05703v1/Benchmark.png",
+    "source": "https://arxiv.org/html/2608.05703v1#S2.F1",
+    "src": "/awesome-proactive-agent/assets/figures/streamarena-streaming-video-agents.webp"
+  },
+  "streamgaze-gaze-proactivity": {
+    "alt": "Figure 2 from StreamGaze: Gaze-Guided Temporal Reasoning and Proactive Understanding in Streaming Videos",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2512.01707v3/performance_model.png",
+    "source": "https://arxiv.org/html/2512.01707v3#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/streamgaze-gaze-proactivity.webp"
+  },
+  "streamov-omni-memory-trigger": {
+    "alt": "Figure 1 from StreamOV: Streaming Omni-Video Understanding via Evidence-Guided Memory and Response Triggering",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.25621v1/teaser.png",
+    "source": "https://arxiv.org/html/2605.25621v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/streamov-omni-memory-trigger.webp"
+  },
+  "streamready-long-streaming-videos": {
+    "alt": "Figure 2 from StreamReady: Learning What to Answer and When in Long Streaming Videos",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2603.08620v1/images/cvpr26-framework_last.jpg",
+    "source": "https://arxiv.org/html/2603.08620v1#S3.F2",
+    "src": "/awesome-proactive-agent/assets/figures/streamready-long-streaming-videos.webp"
+  },
+  "streamsoccer-event-driven-commentary": {
+    "alt": "Figure 2 from StreamSoccer: Event-Driven Memory for Streaming Soccer Commentary",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.19723v1/figure3_streamsoccer_system_overview_outlined.png",
+    "source": "https://arxiv.org/html/2608.19723v1#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/streamsoccer-event-driven-commentary.webp"
+  },
+  "structured-uncertainty-clarification": {
+    "alt": "Figure 1 from Structured Uncertainty guided Clarification for LLM Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2511.08798v2/Intro_new.png",
+    "source": "https://arxiv.org/html/2511.08798v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/structured-uncertainty-clarification.webp"
+  },
+  "time-aware-assistive-navigation": {
+    "alt": "Figure 1 from Time-Aware Assistive Navigation",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.05596v1/teaser_z9.png",
+    "source": "https://arxiv.org/html/2609.05596v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/time-aware-assistive-navigation.webp"
+  },
+  "toolcua-gui-tool-orchestration": {
+    "alt": "Figure 2 from ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.12481v2/figures/cartoon10.png",
+    "source": "https://arxiv.org/html/2605.12481v2#S1.F2",
+    "src": "/awesome-proactive-agent/assets/figures/toolcua-gui-tool-orchestration.webp"
+  },
+  "towards-human-centered-proactive-conversational-agents-98cf9f4": {
+    "alt": "Figure 2 from Towards Human-centered Proactive Conversational Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2404.12670v1/category.png",
+    "source": "https://arxiv.org/html/2404.12670v1#S2.F2",
+    "src": "/awesome-proactive-agent/assets/figures/towards-human-centered-proactive-conversational-agents-98cf9f4.webp"
+  },
+  "trace-streaming-video-audit": {
+    "alt": "Figure 1 from TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2609.30670#page=4",
+    "source": "https://arxiv.org/pdf/2609.30670#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/trace-streaming-video-audit.webp"
+  },
+  "training-proactive-personalized-llm-agents": {
+    "alt": "Figure 2 from Training Proactive and Personalized LLM Agents",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2511.02208v2/userville_v2.png",
+    "source": "https://arxiv.org/html/2511.02208v2#S2.F2",
+    "src": "/awesome-proactive-agent/assets/figures/training-proactive-personalized-llm-agents.webp"
+  },
+  "tunable-llm-based-proactive-recommendation-agent-9d3b5e1": {
+    "alt": "Figure 1 from Tunable LLM-based Proactive Recommendation Agent",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 1. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2025.acl-long.944.pdf#page=1",
+    "source": "https://aclanthology.org/2025.acl-long.944.pdf#page=1",
+    "src": "/awesome-proactive-agent/assets/figures/tunable-llm-based-proactive-recommendation-agent-9d3b5e1.webp"
+  },
+  "uncertainty-guided-clarification": {
+    "alt": "Figure 1 from Asking the Right Question at the Right Time: Human and Model Uncertainty Guidance to Ask Clarification Questions",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 2. The linked PDF contains the complete figure and caption.",
+    "original": "https://aclanthology.org/2024.eacl-long.16.pdf#page=2",
+    "source": "https://aclanthology.org/2024.eacl-long.16.pdf#page=2",
+    "src": "/awesome-proactive-agent/assets/figures/uncertainty-guided-clarification.webp"
+  },
+  "uncertainty-proactive-assistant-alignment": {
+    "alt": "Figure 1 from Vision: \"What Don't I Know About User's Preferences?\" How Uncertainty Estimation Improves Proactive Assistant Alignment",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2610.15948v1/teaser1.png",
+    "source": "https://arxiv.org/html/2610.15948v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/uncertainty-proactive-assistant-alignment.webp"
+  },
+  "uncertainty-routing-proactive-agents": {
+    "alt": "Figure 1 from Clarify the User or Verify the World? Uncertainty Routing for Proactive Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2609.32255v1/tau_airline_example.png",
+    "source": "https://arxiv.org/html/2609.32255v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/uncertainty-routing-proactive-agents.webp"
+  },
+  "value-of-information-human-agent-communication": {
+    "alt": "Figure 1 from Value of Information: A Framework for Human\u2013Agent Communication",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2601.06407v1/figures/main.jpg",
+    "source": "https://arxiv.org/html/2601.06407v1#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/value-of-information-human-agent-communication.webp"
+  },
+  "vera-rl-scientific-error-verification": {
+    "alt": "Figure 1 from Not Just Reason, Not Just Scan: Reinforcement Learning for Proactive Scientific Error Verification over Academic Paper",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.26596v1/Figure1.png",
+    "source": "https://arxiv.org/html/2608.26596v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/vera-rl-scientific-error-verification.webp"
+  },
+  "veriforge-latent-knowledge-gaps": {
+    "alt": "Figure 1 from VeriForge: Mitigating Latent Knowledge Gaps in Narrative Drafting via Mixed-Initiative Scaffolding",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.09698v1/fig1.png",
+    "source": "https://arxiv.org/html/2608.09698v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/veriforge-latent-knowledge-gaps.webp"
+  },
+  "verios-query-driven-os-agent": {
+    "alt": "Figure 1 from VeriOS: Query-Driven Proactive Human-Agent-GUI Interaction for Trustworthy OS Agents",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2509.07553v3/figures/interaction.png",
+    "source": "https://arxiv.org/html/2509.07553v3#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/verios-query-driven-os-agent.webp"
+  },
+  "vibelifebench-living-world": {
+    "alt": "Figure 1 from VibeLifeBench: Can Your Life Agent Be Proactive and Persistent in a Living World?",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2608.10875v2/introduction.png",
+    "source": "https://arxiv.org/html/2608.10875v2#S1.F1",
+    "src": "/awesome-proactive-agent/assets/figures/vibelifebench-living-world.webp"
+  },
+  "vigil-deployed-proactive-oncall": {
+    "alt": "Figure 2 from Help Without Being Asked: A Deployed Proactive Agent System for On-Call Support with Continuous Self-Improvement",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2604.09579#page=4",
+    "source": "https://arxiv.org/pdf/2604.09579#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/vigil-deployed-proactive-oncall.webp"
+  },
+  "vinci2-egoserve-proactive-video-assistance": {
+    "alt": "Figure 1 from Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2607.11523v1/teaser_mod.png",
+    "source": "https://arxiv.org/html/2607.11523v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/vinci2-egoserve-proactive-video-assistance.webp"
+  },
+  "vitabench-2-personalized-proactive-agents": {
+    "alt": "Figure 1 from VitaBench 2.0: Evaluating Personalized and Proactive Agents in Long-Term User Interactions",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2605.27141v1/vita2-figure.png",
+    "source": "https://arxiv.org/html/2605.27141v1#S3.F1",
+    "src": "/awesome-proactive-agent/assets/figures/vitabench-2-personalized-proactive-agents.webp"
+  },
+  "watchguardian-personalized-jiti": {
+    "alt": "Figure 1 from WatchGuardian: Enabling User-Defined Personalized Just-in-Time Intervention on Smartwatch",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2502.05783v1/figure/teaser.png",
+    "source": "https://arxiv.org/html/2502.05783v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/watchguardian-personalized-jiti.webp"
+  },
+  "when-ai-based-agents-are-proactive-implications-for-competence-and-system-satisfactio-5a0bc08": {
+    "alt": "Figure 1 from When AI-Based Agents Are Proactive: Implications for Competence and System Satisfaction in Human-AI Collaboration",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Original figure from the publisher.",
+    "original": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs12599-024-00918-y/MediaObjects/12599_2024_918_Fig1_HTML.png",
+    "source": "https://link.springer.com/article/10.1007/s12599-024-00918-y#Fig1",
+    "src": "/awesome-proactive-agent/assets/figures/when-ai-based-agents-are-proactive-implications-for-competence-and-system-satisfactio-5a0bc08.webp"
+  },
+  "when-not-to-help": {
+    "alt": "Figure 2 from When not to help: planning for lasting human-AI collaboration",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
+    "original": "https://arxiv.org/html/2508.01837v1/toyresults.png",
+    "source": "https://arxiv.org/html/2508.01837v1#S2.F2",
+    "src": "/awesome-proactive-agent/assets/figures/when-not-to-help.webp"
+  },
+  "why2speak-abstaining-action-policies": {
+    "alt": "Figure 1 from Why2Speak: Faithful Reasoning for Abstaining Action Policies",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure excerpt from page 4. The linked PDF contains the complete figure and caption.",
+    "original": "https://arxiv.org/pdf/2608.20670#page=4",
+    "source": "https://arxiv.org/pdf/2608.20670#page=4",
+    "src": "/awesome-proactive-agent/assets/figures/why2speak-abstaining-action-policies.webp"
+  }
+}

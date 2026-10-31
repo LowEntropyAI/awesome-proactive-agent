@@ -70,6 +70,7 @@ export function loadCatalog() {
   const papers = [...records.values()].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   const selected = JSON.parse(read('website/content/selected.json')).papers;
   const covers = JSON.parse(read('website/content/covers.json'));
+  const paperFigures = JSON.parse(read('website/content/paper-figures.json'));
   const recent = JSON.parse(read('website/content/recent.json'));
   const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
   validateFacets(recentFacets, recent.papers, recent.streamingPapers);
@@ -95,9 +96,11 @@ export function loadCatalog() {
       if (release) paper.release = { ...release, checkedAt: release.checkedAt ?? recent.checkedAt };
     }
     if (selected[paper.id]) Object.assign(paper, selected[paper.id], { selected: true, selectedOrder: Object.keys(selected).indexOf(paper.id) });
-    paper.thumbnail ??= covers[paper.id] ?? editorialThumbnail(paper.id, paper.displayTitle ?? paper.title, paper.primary, Object.values(sections).find(c=>c.key===paper.categories[0])?.short);
+    // Figure provenance is independent of editorial selection or release status.
+    paper.thumbnail = paperFigures[paper.id] ?? paper.thumbnail ?? covers[paper.id] ?? editorialThumbnail(paper.id, paper.displayTitle ?? paper.title, paper.primary, Object.values(sections).find(c=>c.key===paper.categories[0])?.short);
   }
   for (const id of Object.keys(selected)) if (!ids.has(id)) throw new Error(`Selected paper missing from catalog: ${id}`);
+  for (const id of Object.keys(paperFigures)) if (!ids.has(id)) throw new Error(`Figure missing its paper: ${id}`);
   for (const id of Object.keys(recent.papers)) if (!ids.has(id)) throw new Error(`Recent paper missing from catalog: ${id}`);
   const notes = [];
   function walk(dir) { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = resolve(dir, entry.name); if (entry.isDirectory()) walk(path); else if (entry.name.endsWith('.md')) notes.push(relative(root, path)); } }
@@ -134,6 +137,13 @@ export function loadCatalog() {
     const paper = papers.find(p => links.some(r => r.url === p.primary));
     projects.push({ id: slug(name), title: name, description: plain(row[1]), group: group.key, groupLabel: group.label, groupZh: group.zh, resources: links.map(r => ({ ...r, label: r.label === 'Repository' ? 'Repo' : r.label })), primary: links.find(r => r.label === 'Repository')?.url ?? links[0]?.url, ...(paper?.thumbnail ? { thumbnail: paper.thumbnail, selected: true } : {}) });
   }
-  for(const p of projects) p.thumbnail ??= editorialThumbnail('project-'+p.id,p.title,p.primary,p.groupLabel);
+  const projectMarks=JSON.parse(read('website/content/project-marks.json'));
+  for(const p of projects) {
+    p.thumbnail ??= editorialThumbnail('project-'+p.id,p.title,p.primary,p.groupLabel);
+    if(projectMarks[p.id]) {
+      const [original,caption]=projectMarks[p.id];
+      p.thumbnail={src:'/awesome-proactive-agent/assets/brands/'+p.id+'.png',original,source:original,caption,alt:caption+' — '+p.title,brand:true};
+    }
+  }
   return { papers, projects, projectGroups: Object.values(projectGroups), benchmarks, categories: Object.values(sections), archivedNotes: unlinked, stats: { papers: papers.length, notes: linked.size, streaming: papers.filter(p => p.streaming).length, benchmarks: benchmarks.length, projects: projects.length, latest: papers[0]?.date } };
 }

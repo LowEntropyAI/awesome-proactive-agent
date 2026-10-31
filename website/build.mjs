@@ -43,4 +43,6 @@ copyFileSync(resolve(root, 'website/paper-detail.mjs'), resolve(out, 'assets/pap
 copyFileSync(resolve(root, 'website/facets.mjs'), resolve(out, 'assets/facets.mjs'));
 cpSync(resolve(root, 'website/assets/cover'), resolve(out, 'assets/cover'), { recursive: true });
 cpSync(resolve(root, 'website/assets/overviews'), resolve(out, 'assets/overviews'), { recursive: true });
+cpSync(resolve(root, 'website/assets/brands'), resolve(out, 'assets/brands'), { recursive: true });
+cpSync(resolve(root, 'website/assets/figures'), resolve(out, 'assets/figures'), { recursive: true });
 console.log(`Built ${pages.length} directory pages: ${JSON.stringify(catalog.stats)}`);

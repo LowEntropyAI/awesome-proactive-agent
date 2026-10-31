@@ -1,6 +1,24 @@
 // Animation is opt-in to this script, so a missing script never hides content
 // or leaves an animation running without an available pause control.
 const cover = document.querySelector('.cover');
+const dock = document.querySelector('.browse-dock');
+if (dock) {
+  const summary = dock.querySelector('summary');
+  const hero = document.querySelector('.atlas-hero');
+  if (hero && 'IntersectionObserver' in window) {
+    const sync = hidden => { dock.hidden = hidden; if (hidden) dock.open = false; };
+    sync(hero.getBoundingClientRect().bottom > 80);
+    new IntersectionObserver(([entry]) => sync(entry.intersectionRatio > .15), {
+      threshold: [0,.15]
+    }).observe(hero);
+  }
+  document.addEventListener('click', e => {
+    if (!dock.contains(e.target) || e.target.closest('a')) dock.open = false;
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && dock.open) { dock.open = false; summary.focus(); }
+  });
+}
 const toggle = document.querySelector('#motion-toggle');
 if (cover && toggle) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
