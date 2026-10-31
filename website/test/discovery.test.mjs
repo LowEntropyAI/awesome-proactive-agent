@@ -7,12 +7,17 @@ import { paperDetail, paperPath } from '../paper-detail.mjs';
 import { galleryCard } from '../gallery.mjs';
 import { concepts } from '../discovery.mjs';
 const catalog=loadCatalog();
-test('product mastheads name the publisher, product and purpose without a pasted logo',()=>{
+test('product mastheads pair their name and purpose with a decorative transparent mark',()=>{
  const page=projectPage(catalog);
  for(const p of catalog.projects.filter(p=>p.group==='product')){
   const masthead=page.match(new RegExp('<a class="directory-cover type-cover" data-brand="'+p.id+'"[^>]+>(.*?)</a>'))?.[1];
-  assert.ok(masthead,p.id);assert.match(masthead,/<small>.+?<\/small><h3>.+?<\/h3>/);assert.match(masthead,/data-zh=/);assert.doesNotMatch(masthead,/<img/);
+  assert.ok(masthead,p.id);assert.match(masthead,/<small>.+?<\/small><h3>.+?<\/h3>/);assert.match(masthead,/data-zh=/);
+  assert.ok(masthead.includes('/brands/'+p.id+(p.id==='manus-cue'?'.png':'.clear.png')+'"'));assert.match(masthead,/<img class="product-mark"[^>]* alt=""/);
  }
+});
+test('WakeGate opens with its linked title, without a placeholder or figure credit',()=>{
+ const card=projectPage(catalog).match(/<article class="project-card"[^>]*data-search="WakeGate[^>]*>(.*?)<\/article>/)?.[1];
+ assert.ok(card);assert.match(card,/<h3><a[^>]*>WakeGate/);assert.doesNotMatch(card,/directory-cover|directory-credit|<img/);assert.match(card,/Wake request/);
 });
 test('arXiv-hosted artwork and its credit cannot point at a different arXiv paper',()=>{
  const id=url=>url?.match(/^https?:\/\/arxiv\.org\/(?:abs|html|pdf)\/(\d{4}\.\d+)/)?.[1];

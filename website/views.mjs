@@ -33,11 +33,12 @@ const productNames = {
 const hasTypeCover = p => Boolean((p.group==='product' && productNames[p.id]) || (p.group && p.thumbnail?.brand && /icon|logo|mark/i.test(p.thumbnail.caption)));
 export function cardCover(p,href) {
   const t=p.thumbnail;
-  if(!t) return '';
+  if(!t || (p.group==='component' && p.id==='wakegate')) return '';
   const names=p.group==='product' && productNames[p.id];
   if(hasTypeCover(p)) {
     const [publisher,name,en,zh]=names || ['Project',p.title,p.groupLabel,p.groupZh];
-    return `<a class="directory-cover type-cover" data-brand="${esc(p.id)}" href="${esc(href)}"><small>${esc(publisher)}</small><h3>${esc(name)}</h3><span>${bi(en,zh)}</span></a>`;
+    const mark=names && t.brand ? `<img class="product-mark" src="${esc(p.id==='manus-cue' ? t.src : t.src.replace(/\.png$/,'.clear.png'))}" width="42" height="42" alt="" decoding="async">` : '';
+    return `<a class="directory-cover type-cover" data-brand="${esc(p.id)}" href="${esc(href)}"><small>${esc(publisher)}</small><h3>${esc(name)}</h3><span>${bi(en,zh)}</span>${mark}</a>`;
   }
   return `<a class="directory-cover" href="${esc(href)}"><img src="${esc(t.src)}" alt="${esc(t.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><a class="directory-credit" href="${esc(t.source)}">${esc(t.caption)} ↗</a>`;
 }

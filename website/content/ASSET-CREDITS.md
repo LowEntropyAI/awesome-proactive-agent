@@ -2,7 +2,7 @@
 
 Paper cards prefer a numbered illustration from the paper. The entries in `paper-figures.json` link each local thumbnail to the exact source figure or PDF page. A PDF crop is labeled as an excerpt in the detail view. Previously curated author figures are retained where appropriate. When no suitable figure has been verified, a labeled editorial cover is used instead.
 
-`project-marks.json` retains the provenance of project, product, and publisher assets. The compact directory uses typeset names and purpose labels instead of isolated logo tiles. Author diagrams and banners keep their source credits.
+`project-marks.json` retains the provenance of project, product, and publisher assets. Product mastheads pair a typeset name and purpose with the publisher or official site mark. The OpenAI, Meta and xAI display copies remove the white matte; Cue uses its original transparent icon. Author diagrams and banners keep their source credits.
 
 Figures and marks remain credited to their respective authors and owners; inclusion here does not relicense them.
 
