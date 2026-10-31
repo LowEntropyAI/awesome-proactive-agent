@@ -3,17 +3,18 @@ const base = '/awesome-proactive-agent/';
 const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
 function initiativeScene() {
   return `<figure class="initiative-scene">
-    <figcaption><small>${bi('A thought experiment','一个思想实验')}</small>
-    <strong>${bi('Who makes the first move?','谁先迈出第一步？')}</strong></figcaption>
-    <div class="initiative-event"><span aria-hidden="true">↳</span> ${bi('09:10 · Your meeting now starts an hour earlier.','09:10 · 你的会议提前了一小时。')}</div>
-    <div class="initiative-plot">
-      <div class="plot-axis" aria-hidden="true"><time>09:10</time><time>09:25</time></div>
-      <div class="initiative-lane waiting"><small>${bi('Reactive','被动响应')}</small><div class="lane-line"><b>${bi('You ask','你先问')}</b></div>
-      <p>${bi('You ask for a briefing. The assistant starts writing.','你开口要简报，助手才开始准备。')}</p></div>
-      <div class="initiative-lane leading"><small>${bi('Proactive','主动协助')}</small><div class="lane-line"><b>${bi('AI offers','助手先提议')}</b></div>
-      <p>${bi('“I pulled the changes into your usual one-page brief. Want a look?”','「我把变动整理成了你惯用的一页简报，要看看吗？」')}</p></div>
+    <div class="timepiece" aria-hidden="true"><div class="dial-ticks"></div>
+      <span class="dial-number n12">12</span><span class="dial-number n3">3</span><span class="dial-number n6">6</span><span class="dial-number n9">9</span>
+      <i class="time-sector"></i><i class="hand previous"></i><i class="hand hour"></i><i class="hand minute"></i><i class="dial-pin"></i>
     </div>
-    <div class="initiative-note">${bi('No prompt needed. Only you decide whether to share the brief.','不用先提问。是否把简报发给参会者，由你决定。')}</div></figure>`;
+    <div class="schedule-slip"><small>${bi('Meeting moved','会议提前')}</small><div><del>11:00</del> <span aria-hidden="true">→</span> <strong>10:00</strong></div></div>
+    <div class="brief-leaf" aria-hidden="true"></div>
+    <div class="brief-sheet"><small><i aria-hidden="true">✦</i> ${bi('Prepared for you','为你备好')}</small>
+      <strong>${bi('Meeting brief','会前简报')}</strong>
+      <div class="brief-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="brief-seal"><b aria-hidden="true">✓</b> ${bi('Ready to review','等你过目')}</div>
+    </div>
+    <figcaption><span aria-hidden="true">01 /</span> ${bi('A schedule change. A brief ready before you ask.','日程有变。你还没开口，简报已备好。')}</figcaption></figure>`;
 }
 export function readingPaths(active = 'latest', onHome = false) {
   return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','#discover','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${onHome && id === 'latest' ? path : base + path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;

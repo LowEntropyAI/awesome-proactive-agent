@@ -59,7 +59,8 @@ test('home opens with an editorial hero before the research feed',()=>{
  assert.match(html,/href="#discover"/);
  const hero=html.slice(0,html.indexOf('id="discover"'));
  assert.ok(hero.includes('class="initiative-scene"'));
- for (const label of ['Reactive','Proactive','Who makes the first move?']) assert.ok(hero.includes('data-en="'+label+'"'));
+ for (const label of ['Meeting moved','Prepared for you','Ready to review']) assert.ok(hero.includes('data-en="'+label+'"'));
+ for (const element of ['timepiece','brief-sheet','schedule-slip']) assert.ok(hero.includes('class="'+element+'"'));
  assert.doesNotMatch(hero,/transit-map|step-free detour/);
  assert.doesNotMatch(hero,/<svg\b|<img\b|<canvas\b|<picture\b/);
  assert.match(html,/<details class="browse-dock"><summary>/);

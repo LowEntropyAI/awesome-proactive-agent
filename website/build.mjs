@@ -1,5 +1,6 @@
 import { mkdirSync, rmSync, writeFileSync, copyFileSync, cpSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import { loadCatalog, root, read } from './data.mjs';
 import { markdown } from './guides.mjs';
 import { layout, home, library, benchmarkPage, projectPage, guidePage, recentPage, understandPage, selectedPage, base, url, esc, bi } from './views.mjs';
@@ -8,7 +9,13 @@ import { renderCover } from './covers.mjs';
 const catalog = loadCatalog();
 const out = resolve(root, 'dist');
 rmSync(out, { recursive: true, force: true });
-function write(path, content) { const file = resolve(out, path); mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, content); }
+const discoveryVersion = createHash('sha256').update(read('website/discovery.css')).digest('hex').slice(0,12);
+function write(path, content) {
+  const file = resolve(out, path);
+  mkdirSync(dirname(file), { recursive: true });
+  if (path.endsWith('.html')) content = content.replace('assets/discovery.css"', 'assets/discovery.css?v='+discoveryVersion+'"');
+  writeFileSync(file, content);
+}
 const supplement = file => `<section class="prose guide-content">${markdown(read(file).replace(/^# /, '## '))}</section>`;
 const mustRead = read('README.md').split('## Must Read\n')[1]?.split('\n## ')[0];
 if (!mustRead) throw new Error('Missing Must Read source');
