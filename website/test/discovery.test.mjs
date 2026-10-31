@@ -17,7 +17,7 @@ test('product mastheads pair their name and purpose with a decorative transparen
 });
 test('WakeGate opens with its linked title, without a placeholder or figure credit',()=>{
  const card=projectPage(catalog).match(/<article class="project-card"[^>]*data-search="WakeGate[^>]*>(.*?)<\/article>/)?.[1];
- assert.ok(card);assert.match(card,/<h3><a[^>]*>WakeGate/);assert.doesNotMatch(card,/directory-cover|directory-credit|<img/);assert.match(card,/Wake request/);
+ assert.ok(card);assert.match(card,/<a class="directory-cover type-cover"[^>]+>.*?<h3>WakeGate/);assert.doesNotMatch(card,/directory-credit|<img/);assert.match(card,/Wake request/);
 });
 test('arXiv-hosted artwork and its credit cannot point at a different arXiv paper',()=>{
  const id=url=>url?.match(/^https?:\/\/arxiv\.org\/(?:abs|html|pdf)\/(\d{4}\.\d+)/)?.[1];
@@ -94,6 +94,8 @@ test('projects have five distinct groups, each entry rendered exactly once',()=>
  const html=projectPage(catalog);
  assert.equal((html.match(/data-project-section=/g)||[]).length,5);
  assert.equal((html.match(/class="project-card"/g)||[]).length,catalog.projects.length);
+ assert.equal((html.match(/class="directory-cover type-cover"/g)||[]).length,catalog.projects.length);
+ assert.match(html,/\/memu\.clear\.png/);assert.doesNotMatch(html,/class="directory-credit"|\/project-wakegate\.svg|\/memu\.png/);
  for(const g of catalog.projectGroups)assert.match(html,new RegExp('data-project-group="'+g.key+'"'));
  assert.match(html,/directory-reset/);assert.match(html,/directory-empty/);
  assert.equal(catalog.projects.find(p=>p.title.includes('WakeGate')).group,'component');

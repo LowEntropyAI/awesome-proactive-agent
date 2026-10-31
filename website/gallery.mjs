@@ -39,7 +39,7 @@ export function galleryCard(p) {
 export function galleryGroups(papers) {
   const days = new Map();
   for (const p of papers) { const month = p.publishedAt.slice(0, 7); if (!days.has(month)) days.set(month, []); days.get(month).push(p); }
-  return [...days].map(([date, group]) => `<section class="gallery-day"><div class="gallery-day-heading"><h3><time datetime="${esc(date)}">${esc(date)}</time></h3><span>${bi('Newest first · first-posted dates', '最新优先 · 首发日期')} · ${group.length} ${bi('papers shown', '篇展示')}</span></div><div class="research-gallery">${group.map(galleryCard).join('')}</div></section>`).join('');
+  return [...days].map(([date, group]) => `<section class="gallery-day"><div class="gallery-day-heading"><h3><time datetime="${esc(date)}">${esc(date)}</time></h3><span>${bi('Newest first · first-posted dates', '最新优先 · 首发日期')} · <span data-shown-count>${group.length}</span> ${bi('papers shown', '篇展示')}</span></div><div class="research-gallery">${group.map(galleryCard).join('')}</div></section>`).join('');
 }
 export function gallerySection(catalog, compact = false) {
   const papers = recentPapers(catalog.papers), initial = papers.slice(0, compact ? 6 : 9);

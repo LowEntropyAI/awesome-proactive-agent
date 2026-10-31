@@ -30,16 +30,18 @@ const productNames = {
   'manus-cue':['Manus','Cue','Group delegation','群聊任务委派'],
   'grok-bot':['xAI','Grok Bot','Scheduled routines','定时与事件触发']
 };
-const hasTypeCover = p => Boolean((p.group==='product' && productNames[p.id]) || (p.group && p.thumbnail?.brand && /icon|logo|mark/i.test(p.thumbnail.caption)));
+// Only artwork suitable for a small transparent mark belongs in this directory.
+const clearMarks = new Set(['openai-dot','grok-bot','meta-muse','openclaw','hermes-agent','letta-code','minecontext','gaia','memu','memubot','screenpipe']);
+const nativeMarks = new Set(['manus-cue','live-vlm-webui','proactivity-sdk']);
+function projectMasthead(p) {
+  const [publisher,name,en,zh]=productNames[p.id] || ['Project',p.title,p.groupLabel,p.groupZh];
+  const asset=clearMarks.has(p.id) ? p.id+'.clear.png' : nativeMarks.has(p.id) ? p.id+'.png' : '';
+  const mark=asset ? `<img class="product-mark" src="${url('assets/brands/'+asset)}" width="42" height="42" alt="" decoding="async">` : '';
+  return `<a class="directory-cover type-cover" data-brand="${esc(p.id)}" href="${esc(p.primary)}"><small>${esc(publisher)}</small><h3>${esc(name)}</h3><span>${bi(en,zh)}</span>${mark}</a>`;
+}
 export function cardCover(p,href) {
   const t=p.thumbnail;
-  if(!t || (p.group==='component' && p.id==='wakegate')) return '';
-  const names=p.group==='product' && productNames[p.id];
-  if(hasTypeCover(p)) {
-    const [publisher,name,en,zh]=names || ['Project',p.title,p.groupLabel,p.groupZh];
-    const mark=names && t.brand ? `<img class="product-mark" src="${esc(p.id==='manus-cue' ? t.src : t.src.replace(/\.png$/,'.clear.png'))}" width="42" height="42" alt="" decoding="async">` : '';
-    return `<a class="directory-cover type-cover" data-brand="${esc(p.id)}" href="${esc(href)}"><small>${esc(publisher)}</small><h3>${esc(name)}</h3><span>${bi(en,zh)}</span>${mark}</a>`;
-  }
+  if(!t) return '';
   return `<a class="directory-cover" href="${esc(href)}"><img src="${esc(t.src)}" alt="${esc(t.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><a class="directory-credit" href="${esc(t.source)}">${esc(t.caption)} ↗</a>`;
 }
 export function paperCard(p, { compact = false } = {}) {
@@ -84,7 +86,7 @@ export function projectPage(catalog) {
  product:['Commercial references; capabilities follow the linked vendor sources.','商业产品参考，能力以所链接的官方说明为准。'],
  component:['Memory, perception and gating tools—not complete proactive assistants.','记忆、感知与门控组件，不等于完整的主动助手。']
  };
- return `<div class="directory-layout">${directoryNav(catalog,'projects')}<div class="directory-content">${heading('Projects & Code','项目与代码','Find the right building block—or a complete assistant.','寻找适合的组件，或完整的助手。')}${simpleDirectorySearch(projects.length,'projects','个项目')}<div class="project-filters" role="group" aria-label="Project categories"><button data-project-group="all" aria-pressed="true">${bi('All','全部')} <small data-group-count>${projects.length}</small></button>${projectGroups.map(g=>`<button data-project-group="${g.key}" aria-pressed="false">${bi(g.label,g.zh)} <small data-group-count>${projects.filter(p=>p.group===g.key).length}</small></button>`).join('')}</div><div id="directory-results" class="project-sections">${projectGroups.map(g=>`<section class="project-section" data-project-section="${g.key}"><header><h2>${bi(g.label,g.zh)}</h2><p>${bi(...descriptions[g.key])}</p></header><div class="projects-grid">${projects.filter(p=>p.group===g.key).map(p=>`<article class="project-card" data-group="${g.key}" data-search="${esc([p.title,p.description,p.groupLabel,p.groupZh,...p.resources.map(r=>r.url)].join(' '))}">${cardCover(p,p.primary)}<div class="project-card-body">${hasTypeCover(p) ? '' : `<h3><a href="${esc(p.primary)}" target="_blank" rel="noopener noreferrer">${esc(p.title)} ${arrow}</a></h3>`}<p>${esc(p.description)}</p><div class="resource-links">${resourceLinks(p)}</div></div></article>`).join('')}</div></section>`).join('')}</div><p id="directory-empty" hidden>${bi('No matching projects. Try another category or search.','没有匹配项目，请尝试其他分类或关键词。')}</p><button id="directory-reset" class="button">${bi('Reset filters','重置筛选')}</button></div></div>`;
+ return `<div class="directory-layout">${directoryNav(catalog,'projects')}<div class="directory-content">${heading('Projects & Code','项目与代码','Find the right building block—or a complete assistant.','寻找适合的组件，或完整的助手。')}${simpleDirectorySearch(projects.length,'projects','个项目')}<div class="project-filters" role="group" aria-label="Project categories"><button data-project-group="all" aria-pressed="true">${bi('All','全部')} <small data-group-count>${projects.length}</small></button>${projectGroups.map(g=>`<button data-project-group="${g.key}" aria-pressed="false">${bi(g.label,g.zh)} <small data-group-count>${projects.filter(p=>p.group===g.key).length}</small></button>`).join('')}</div><div id="directory-results" class="project-sections">${projectGroups.map(g=>`<section class="project-section" data-project-section="${g.key}"><header><h2>${bi(g.label,g.zh)}</h2><p>${bi(...descriptions[g.key])}</p></header><div class="projects-grid">${projects.filter(p=>p.group===g.key).map(p=>`<article class="project-card" data-group="${g.key}" data-search="${esc([p.title,p.description,p.groupLabel,p.groupZh,...p.resources.map(r=>r.url)].join(' '))}">${projectMasthead(p)}<div class="project-card-body"><p>${esc(p.description)}</p><div class="resource-links">${resourceLinks(p)}</div></div></article>`).join('')}</div></section>`).join('')}</div><p id="directory-empty" hidden>${bi('No matching projects. Try another category or search.','没有匹配项目，请尝试其他分类或关键词。')}</p><button id="directory-reset" class="button">${bi('Reset filters','重置筛选')}</button></div></div>`;
 }
 
 export function benchmarkPage(catalog) {

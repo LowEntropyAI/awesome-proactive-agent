@@ -4,6 +4,8 @@ Paper cards prefer a numbered illustration from the paper. The entries in `paper
 
 `project-marks.json` retains the provenance of project, product, and publisher assets. Product mastheads pair a typeset name and purpose with the publisher or official site mark. The OpenAI, Meta and xAI display copies remove the white matte; Cue uses its original transparent icon. Author diagrams and banners keep their source credits.
 
+Other project mastheads also use transparent versions of the listed artwork. memU uses its [official site icon](https://memu.so/memu-logo-cat.svg) instead of the banner. Entries without a suitable mark use text only.
+
 Figures and marks remain credited to their respective authors and owners; inclusion here does not relicense them.
 
 Choose by caption and visual content, not by figure number or the first downloadable image. For a system, show what initiates its behavior; for an evaluation, show its tasks or protocol. Inspect the complete figure in the paper, including vector illustrations embedded as HTML objects. A screenshot or results plot can be appropriate when it actually illustrates the main contribution. Credit the specific figure or PDF page.
