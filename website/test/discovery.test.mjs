@@ -7,6 +7,13 @@ import { paperDetail, paperPath } from '../paper-detail.mjs';
 import { galleryCard } from '../gallery.mjs';
 import { concepts } from '../discovery.mjs';
 const catalog=loadCatalog();
+test('product mastheads name the publisher, product and purpose without a pasted logo',()=>{
+ const page=projectPage(catalog);
+ for(const p of catalog.projects.filter(p=>p.group==='product')){
+  const masthead=page.match(new RegExp('<a class="directory-cover type-cover" data-brand="'+p.id+'"[^>]+>(.*?)</a>'))?.[1];
+  assert.ok(masthead,p.id);assert.match(masthead,/<small>.+?<\/small><h3>.+?<\/h3>/);assert.match(masthead,/data-zh=/);assert.doesNotMatch(masthead,/<img/);
+ }
+});
 test('arXiv-hosted artwork and its credit cannot point at a different arXiv paper',()=>{
  const id=url=>url?.match(/^https?:\/\/arxiv\.org\/(?:abs|html|pdf)\/(\d{4}\.\d+)/)?.[1];
  for(const paper of catalog.papers) {
