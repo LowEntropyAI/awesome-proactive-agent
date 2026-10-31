@@ -70,6 +70,7 @@ export function loadCatalog() {
   const papers = [...records.values()].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   const selected = JSON.parse(read('website/content/selected.json')).papers;
   const covers = JSON.parse(read('website/content/covers.json'));
+  const shortSummaries = JSON.parse(read('website/content/paper-summaries.json'));
   const paperFigures = JSON.parse(read('website/content/paper-figures.json'));
   const recent = JSON.parse(read('website/content/recent.json'));
   const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
@@ -80,6 +81,7 @@ export function loadCatalog() {
     ids.add(paper.id);
     const pick = featured.find(f => f.resources.some(r => paper.resources.some(p => p.url === r.url)));
     paper.featured = Boolean(pick); paper.reason = pick?.reason ?? '';
+    if (!paper.summary) paper.summary = shortSummaries[paper.id] || paper.reason;
     paper.featureOrder = pick ? featured.indexOf(pick) : 999;
     if (paper.note) paper.evidenceUrl = 'https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/' + paper.note;
     if (recent.papers[paper.id]) {

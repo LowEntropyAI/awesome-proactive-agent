@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
-import { base } from './views.mjs';
+import { base, esc } from './views.mjs';
 const root = resolve('dist');
 let pages = 0, links = 0;
 function walk(dir) { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = resolve(dir, entry.name); if (entry.isDirectory()) walk(path); else if (entry.name.endsWith('.html')) check(path); } }
@@ -19,6 +19,18 @@ function check(path) {
 }
 walk(root);
 const catalog=JSON.parse(readFileSync(resolve(root,'catalog.json'),'utf8'));
+const sitemap = readFileSync(resolve(root, 'sitemap.xml'), 'utf8');
+const snippets = new Set();
+for (const paper of catalog.papers) {
+  const route = 'papers/' + paper.id + '/';
+  const html = readFileSync(resolve(root, route, 'index.html'), 'utf8');
+  const snippet = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
+  assert.ok(html.includes('<title>' + esc(paper.title) + '</title>'), route);
+  assert.ok(snippet && !snippets.has(snippet), 'Missing or repeated description: ' + route);
+  assert.ok(html.includes('property="og:description" content="' + snippet + '"'), route);
+  assert.ok(sitemap.includes(base + route + '</loc>'), route);
+  snippets.add(snippet);
+}
 for(const item of [...catalog.papers,...catalog.projects,...catalog.benchmarks]){
   assert.ok(item.thumbnail?.src,`Missing cover: ${item.title||item.name}`);
   assert.ok(existsSync(resolve(root,item.thumbnail.src.slice(base.length))),`Missing cover asset: ${item.thumbnail.src}`);

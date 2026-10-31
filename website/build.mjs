@@ -20,23 +20,30 @@ const supplement = file => `<section class="prose guide-content">${markdown(read
 const mustRead = read('README.md').split('## Must Read\n')[1]?.split('\n## ')[0];
 if (!mustRead) throw new Error('Missing Must Read source');
 const pages = [
-  ['', 'Awesome Proactive Agent', home(catalog)],
+  ['', 'Proactive AI Agents: Papers, Projects & Benchmarks', home(catalog), 'When should an AI agent offer help before you ask? Explore the latest papers, start with essential readings, and find open-source projects and benchmarks.'],
   ['understand/', 'Understand proactivity', understandPage(catalog)],
-  ['selected/', 'Essential reading', selectedPage(catalog)],
-  ['recent/', 'Recent papers gallery', recentPage(catalog)],
+  ['selected/', 'Proactive AI Agents: Essential Papers to Read First', selectedPage(catalog), 'New to proactive AI? Start with selected papers on when agents should act, ask or wait. Read why each paper matters and follow the links to the original work.'],
+  ['recent/', 'Latest Proactive AI Agent Papers', recentPage(catalog), 'Catch up on new proactive AI research in order of first publication. Filter papers by research question, context or mechanism, then open a brief or the original paper.'],
   ['library/', 'Research library', library(catalog)],
   ['streaming/', 'Streaming proactive models', library(catalog, true) + supplement('STREAMING.md')],
   ['benchmarks/', 'Benchmark comparison', benchmarkPage(catalog) + supplement('BENCHMARKS.md')],
   ['start/', 'Must Read: layered reading routes', guidePage(catalog, markdown('# Must Read\n' + mustRead), 'start')],
   ['map/', 'Research map', guidePage(catalog, markdown(read('RESEARCH_MAP.md')), 'map')],
-  ['projects/', 'Projects & implementations', projectPage(catalog) + `<details class="project-source-notes"><summary>Source guide / 完整来源说明</summary>${supplement('PROJECTS.md')}</details>`],
+  ['projects/', 'Proactive AI Agent Projects, Tools & Code', projectPage(catalog) + `<details class="project-source-notes"><summary>Source guide / 完整来源说明</summary>${supplement('PROJECTS.md')}</details>`, 'Find proactive assistants, agent frameworks and research implementations. Browse by project type and go directly to a code repository or the official product page.'],
   ['applications/', 'Agents & applications', guidePage(catalog, markdown(read('APPLICATIONS.md')), 'applications')],
   ['personal/', 'Proactive personal agents', guidePage(catalog, markdown(read('PERSONAL_AGENTS.md')), 'personal')],
   ['infrastructure/', 'Supporting infrastructure', guidePage(catalog, markdown(read('INFRASTRUCTURE.md')), 'infrastructure')]
 ];
-// Preserve the previously published PIRA brief even after it leaves Essential Reading.
-for (const p of catalog.papers.filter(p => p.publishedAt || p.selected || p.id === 'pira-bench')) pages.push([`papers/${p.id}/`, p.title, `<div class="standalone-brief"><a class="back-to-feed" href="${url('recent/')}">← ${bi('Back to research', '返回研究信息流')}</a>${paperDetail(p)}</div>`]);
-for (const [path, title, content] of pages) write(path + 'index.html', layout(title, content, path, catalog.stats));
+for (const p of catalog.papers) {
+  const summary = (p.gallerySummary || p.description || p.summary || '').trim();
+  if (!summary) throw new Error('Missing paper description: ' + p.id);
+  // Prefer a complete opening sentence over a snippet cut off mid-thought.
+  const description = summary.length > 200 ? summary.match(/^.+?[.!?](?=\s|$)/u)?.[0] || summary : summary;
+  pages.push([`papers/${p.id}/`, p.title, `<div class="standalone-brief"><a class="back-to-feed" href="${url('recent/')}">← ${bi('Back to research', '返回研究信息流')}</a>${paperDetail(p)}</div>`, description]);
+}
+for (const [path, title, content, description] of pages) {
+  write(path + 'index.html', layout(description ? title : title + ' · LowEntropyAI', content, path, catalog.stats, description));
+}
 write('404.html', layout('Page not found', `<div class="page-shell page-heading"><div class="eyebrow">404 / OFF THE MAP</div>${bi('Let’s find your way back.', '回到研究地图。', 'h1')}<p>The page may have moved. Browse the library to find the paper.</p><a class="button primary" href="${url('library/')}">Explore the library →</a></div>`, '404.html', catalog.stats));
 write('catalog.json', JSON.stringify({ ...catalog, selectionGuide: undefined, papers: catalog.papers.map(({ noteText, summary, reason, note, ...p }) => ({ ...p, hasNotes: Boolean(note) })) }));
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p => p[0]).map(path => `<url><loc>https://lowentropyai.github.io${base}${esc(path)}</loc></url>`).join('')}</urlset>`);
