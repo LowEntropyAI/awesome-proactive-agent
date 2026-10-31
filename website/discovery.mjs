@@ -1,5 +1,8 @@
 // Reading paths, not a mutually exclusive taxonomy of the field.
+import { facetGroups } from './facets.mjs';
+import { paperPath, roleBadge } from './paper-detail.mjs';
 const base = '/awesome-proactive-agent/';
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
 function initiativeScene() {
   return `<figure class="initiative-scene">
@@ -7,33 +10,42 @@ function initiativeScene() {
       <span class="dial-number n12">12</span><span class="dial-number n3">3</span><span class="dial-number n6">6</span><span class="dial-number n9">9</span>
       <i class="time-sector"></i><i class="hand previous"></i><i class="hand hour"></i><i class="hand minute"></i><i class="dial-pin"></i>
     </div>
-    <div class="schedule-slip"><small>${bi('Meeting moved','会议提前')}</small><div><del>11:00</del> <span aria-hidden="true">→</span> <strong>10:00</strong></div></div>
+    <div class="schedule-slip"><small>${bi('Flight delayed','航班延误')}</small><div><del>18:40</del> <span aria-hidden="true">→</span> <strong>19:25</strong></div></div>
     <div class="brief-leaf" aria-hidden="true"></div>
-    <div class="brief-sheet"><small><i aria-hidden="true">✦</i> ${bi('Prepared for you','为你备好')}</small>
-      <strong>${bi('Meeting brief','会前简报')}</strong>
-      <div class="brief-lines" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="brief-seal"><b aria-hidden="true">✓</b> ${bi('Ready to review','等你过目')}</div>
+    <div class="brief-sheet"><small><i aria-hidden="true">✦</i> ${bi('Nobody asked','没人开口')}</small>
+      <strong>${bi('You’ll miss your connection.','你会赶不上转机。')}</strong>
+      <p class="brief-offer">${bi('The 21:10 is ready to book.','21:10 的航班已备好，可直接预订。')}</p>
+      <div class="brief-choices"><span>${bi('Book it','预订')}</span><span>${bi('Not now','先不用')}</span></div>
     </div>
-    <figcaption><span aria-hidden="true">01 /</span> ${bi('A schedule change. A brief ready before you ask.','日程有变。你还没开口，简报已备好。')}</figcaption></figure>`;
-}
-export function readingPaths(active = 'latest', onHome = false) {
-  return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','#discover','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${onHome && id === 'latest' ? path : base + path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;
+    <figcaption><span aria-hidden="true">01 /</span> ${bi('It noticed the risk, prepared a fix and left the choice to you.','它发现了风险，备好方案，把选择留给你。')}</figcaption></figure>`;
 }
 export function feedIntro() {
-  return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('A field in motion', '持续演进的研究领域')}</p><h1>${bi('Discover what’s next', '发现新进展')}<br>${bi('in proactive AI.', '探索主动式 AI。')}</h1><p>${bi('Research that anticipates needs, takes initiative, and knows its boundaries.', '预判需求、主动提供帮助，也懂得边界。')}</p></div></header>`;
+  return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('Latest research', '最新研究')}</p><h1>${bi('All recent papers', '全部近期论文')}</h1></div></header>`;
 }
-export function homeHero() {
-  return `<section class="atlas-hero" aria-labelledby="hero-title"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('A Research Atlas','研究图谱')}</p><h1 id="hero-title">${bi('Proactive AI.','主动式 AI。')}<br><em>${bi('Before you ask.','在你开口之前。')}</em></h1><p class="hero-description">${bi('Explore agents that anticipate needs and offer help on your terms.','探索如何预判需求、准备帮助，并把选择留给用户。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div>${initiativeScene()}<div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
-
+export function homeHero(catalog, definition) {
+  return `<section class="atlas-hero" aria-labelledby="hero-title"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('Proactive Atlas · A field guide','Proactive Atlas · 领域指南')}</p><h1 id="hero-title">${bi('Proactive AI.','主动式 AI。')}<br><em>${bi('Before you ask.','在你开口之前。')}</em></h1><p class="hero-description">${bi(definition.en,definition.zh)}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest papers','浏览最新论文')} ↓</a><a href="${base}what-is-proactive-ai/">${bi('What counts as proactive?','什么算主动？')} →</a></div><p class="hero-count">${catalog.papers.length} ${bi('papers','篇论文')} · ${catalog.projects.length} ${bi('projects','个项目')} · ${catalog.benchmarks.length} ${bi('benchmarks','个评测')}</p></div>${initiativeScene()}</section>`;
 }
+// Labels come from the gallery's filter vocabulary, so a category reads the same everywhere.
 export const concepts = [
-  ['need','Anticipate Needs','预判需求','What might help before someone asks?','在用户开口前，什么可能有帮助？','PASK','pask-intent-aware-proactive-agent'],
-  ['planning','Prepare & Act','准备与行动','Plan ahead and take useful, authorized steps.','提前规划，在授权范围内推进任务。','Proactive Agent','proactive-agent-shifting-llm'],
-  ['clarification','Ask & Collaborate','提问与协作','Resolve uncertainty without wasting attention.','通过沟通减少不确定性，同时珍惜注意力。','AttriFy','attrify-soft-attribute-clarification'],
-  ['timing','Choose the Moment','选择时机','Speak, suggest, wait—or remain silent.','表达、建议、等待，或保持安静。','Gander','gander-omni-interaction-agent'],
-  ['personalization','Learn What Matters','理解所需','Adapt to goals, preferences and evolving context.','适应目标、偏好与不断变化的情境。','MemoProAgent','properagent-memory-driven-proactivity'],
-  ['safety','Respect Boundaries','尊重边界','Balance initiative with safety, control and consent.','让主动性与安全、控制权和同意相容。','SAFE-PRO','safe-pro-cross-modal-inquiry']
+  ['need','What might help before someone asks?','在用户开口前，什么可能有帮助？','pask-intent-aware-proactive-agent'],
+  ['planning','Plan ahead and take useful, authorized steps.','提前规划，在授权范围内推进任务。','proactive-agent-shifting-llm'],
+  ['clarification','Decide when a question is worth someone’s attention.','判断一个问题是否值得占用对方的注意力。','attrify-soft-attribute-clarification'],
+  ['timing','Speak, suggest, wait—or remain silent.','表达、建议、等待，或保持安静。','gander-omni-interaction-agent'],
+  ['personalization','Adapt to goals, preferences and evolving context.','适应目标、偏好与不断变化的情境。','properagent-memory-driven-proactivity'],
+  ['safety','Balance initiative with safety, control and consent.','让主动性与安全、控制权和同意相容。','safe-pro-cross-modal-inquiry']
 ];
-export function conceptGuide(catalog) {
-  return `<div class="concept-intro"><p class="feed-kicker">${bi('A starting point, not a rigid taxonomy', '理解起点，而非封闭分类')}</p><h1>${bi('More than answering. Knowing how to help.', '不止于回答， 更在于如何主动帮助。')}</h1><p>${bi('Proactive AI takes initiative toward a goal: anticipating needs, offering help, preparing next steps or acting within agreed boundaries. It may ask first, wait, or stay silent. Streaming and memory are parts of this landscape—not its definition.', '主动式 AI 围绕目标采取主动：预判需求、提出帮助、提前准备，或在约定的边界内行动。它也可能先询问、等待或保持沉默。流式交互与记忆是其中的一部分，而不是主动性的定义。')}</p></div><div class="concept-grid">${concepts.map(([filter,en,zh,desc,descZh,name,id],i) => {const p=catalog.papers.find(p=>p.id===id) ?? catalog.papers.find(p=>p.displayTitle===name); return `<section class="concept-card"><span class="concept-number">0${i+1}</span><h2>${bi(en,zh)}</h2><p>${bi(desc,descZh)}</p><div><a href="${base}recent/?question=${filter}">${bi('Explore this question','探索这个问题')} →</a>${p ? `<a href="${p.primary}" target="_blank" rel="noopener noreferrer">${name} ↗</a>` : ''}</div></section>`;}).join('')}</div><div class="concept-footnote">${bi('Across conversation, digital work, personal assistance and embodied environments. A paper can contribute to several questions at once.', '覆盖对话、数字工作、个人辅助与具身环境；同一篇工作可以同时回答多个问题。')} <a href="${base}map/">${bi('Full research map','完整研究地图')} →</a></div>`;
+export function categoryWorks(catalog, filter, leadId) {
+  const inCategory = catalog.papers.filter(p => p.facets?.question?.includes(filter));
+  const newest = (a, b) => (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '');
+  const lead = catalog.papers.find(p => p.id === leadId);
+  const works = [lead, ...inCategory.filter(p => p.selected).sort(newest), ...inCategory.filter(p => p.role === 'core').sort(newest), ...inCategory.sort(newest)];
+  return { count: inCategory.length, works: [...new Set(works)].slice(0, 3) };
+}
+export function conceptGrid(catalog) {
+  const options = facetGroups[0].options;
+  return `<div class="concept-grid">${concepts.map(([filter,desc,descZh,leadId],i) => {
+    const [, en, zh] = options.find(o => o[0] === filter);
+    const { count, works } = categoryWorks(catalog, filter, leadId), t = works[0].thumbnail;
+    return `<article class="concept-card"><a class="concept-cover" href="${paperPath(works[0])}" data-preview-paper="${esc(works[0].id)}"><img src="${esc(t.src)}" alt="${esc(t.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><div class="concept-body"><span class="concept-number">0${i+1}</span><h3>${bi(esc(en),esc(zh))}</h3><p>${bi(desc,descZh)}</p><ul>${works.map(p => `<li><a href="${paperPath(p)}" data-preview-paper="${esc(p.id)}">${esc(p.displayTitle ?? p.title.split(':')[0])}</a>${roleBadge(p)}</li>`).join('')}</ul><a class="concept-all" href="${base}recent/?question=${filter}">${bi(`All ${count} recent papers`,`全部 ${count} 篇近期论文`)} →</a></div></article>`;
+  }).join('')}</div>`;
 }

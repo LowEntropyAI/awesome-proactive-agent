@@ -1,0 +1,64 @@
+{
+  "picks": [
+    {
+      "key": "papers", "en": "Papers", "zh": "论文",
+      "items": [
+        { "type": "paper", "id": "proactive-agent-shifting-llm", "why": "The baseline to start with: anticipating tasks from desktop activity, with a benchmark to match.", "whyZh": "最适合入门的基线工作：从桌面活动预判任务，并配有对应评测。" },
+        { "type": "paper", "id": "pask-intent-aware-proactive-agent", "why": "Shows the whole decision: stay silent, step in briefly or assist in depth, with interruption cost made explicit.", "whyZh": "完整呈现主动决策：保持沉默、简短介入或深度协助，并明确打扰成本。" },
+        { "type": "paper", "id": "halo-human-grounded-proactivity", "why": "Asks what most evaluations skip: did people find the help acceptable, well-timed and the right intensity?", "whyZh": "回答多数评测忽略的问题：人们是否认为这次帮助可接受、时机合适、力度恰当？" }
+      ]
+    },
+    {
+      "key": "products", "en": "Products", "zh": "产品",
+      "items": [
+        { "type": "project", "id": "openai-dot", "why": "A mainstream example of ongoing responsibility: research and checks that continue between conversations.", "whyZh": "“持续负责”的主流案例：对话之外仍在继续调研和检查。" },
+        { "type": "project", "id": "meta-muse", "why": "A standing goal drives background work, and it returns when conditions change or approval is needed.", "whyZh": "由长期目标驱动后台工作，在情况变化或需要批准时回来找你。" },
+        { "type": "project", "id": "grok-bot", "why": "Scheduled and event-triggered routines in product form, including when to escalate to the user.", "whyZh": "以产品形态呈现定时与事件触发的例程，也包括何时上报给用户。" }
+      ]
+    },
+    {
+      "key": "projects", "en": "Open projects", "zh": "开源项目",
+      "items": [
+        { "type": "project", "id": "openclaw", "why": "Read its heartbeat design to see how a runtime checks for meaningful change and suppresses noise.", "whyZh": "读它的 heartbeat 设计，了解运行时如何检查有意义的变化并抑制噪音。" },
+        { "type": "project", "id": "proactivity-sdk", "why": "A compact reference for wake-up logic: durable goals, model-selected cadence and action caps.", "whyZh": "唤醒逻辑的精简参考：持久目标、模型选择节奏和行动上限。" },
+        { "type": "project", "id": "minecontext", "why": "An open desktop app that turns screen context into tips and todos: an ambient loop you can run yourself.", "whyZh": "开源桌面应用，把屏幕上下文变成提示和待办，可以亲手运行环境感知闭环。" }
+      ]
+    }
+  ],
+  "landscape": {
+    "columns": [
+      { "key": "suggest", "en": "Suggest or speak", "zh": "建议或发言" },
+      { "key": "prepare", "en": "Prepare in the background", "zh": "后台准备" },
+      { "key": "act", "en": "Act with tools", "zh": "调用工具行动" }
+    ],
+    "rows": [
+      {
+        "en": "A schedule or event you configured", "zh": "你配置的日程或事件",
+        "note": "On the boundary: it starts unprompted, but you chose when.", "noteZh": "处于边界：无需提示即可启动，但时机由你选定。",
+        "cells": {
+          "suggest": [],
+          "prepare": [],
+          "act": [{ "type": "project", "id": "hermes-agent" }, { "type": "project", "id": "letta-code" }, { "type": "project", "id": "grok-bot" }, { "type": "project", "id": "openclaw" }]
+        }
+      },
+      {
+        "en": "A standing goal you set", "zh": "你设定的长期目标",
+        "note": "The goal is yours. The agent chooses when to work and return.", "noteZh": "目标是你的，何时工作、何时回来由智能体决定。",
+        "cells": {
+          "suggest": [],
+          "prepare": [{ "type": "project", "id": "openai-dot" }, { "type": "project", "id": "meta-muse" }],
+          "act": [{ "type": "project", "id": "manus-cue" }, { "type": "project", "id": "proactivity-sdk" }]
+        }
+      },
+      {
+        "en": "The agent's own read of context", "zh": "智能体自己对情境的判断",
+        "note": "The strongest form: nobody specified this moment in advance.", "noteZh": "最强的形式：没有人预先指定这个时刻。",
+        "cells": {
+          "suggest": [{ "type": "paper", "id": "proactive-agent-shifting-llm" }, { "type": "paper", "id": "gander-omni-interaction-agent" }, { "type": "paper", "id": "joyai-vl-interaction" }, { "type": "paper", "id": "properagent-memory-driven-proactivity" }],
+          "prepare": [{ "type": "paper", "id": "pask-intent-aware-proactive-agent" }, { "type": "project", "id": "minecontext" }, { "type": "project", "id": "gaia" }],
+          "act": [{ "type": "project", "id": "contextagent" }, { "type": "paper", "id": "pam-proactive-robot-assistance" }]
+        }
+      }
+    ]
+  }
+}

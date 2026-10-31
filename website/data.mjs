@@ -74,6 +74,7 @@ export function loadCatalog() {
   const paperFigures = JSON.parse(read('website/content/paper-figures.json'));
   const recent = JSON.parse(read('website/content/recent.json'));
   const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
+  const paperRoles = JSON.parse(read('website/content/paper-roles.json'));
   validateFacets(recentFacets, recent.papers, recent.streamingPapers);
   const ids = new Set();
   for (const paper of papers) {
@@ -98,6 +99,8 @@ export function loadCatalog() {
       if (release) paper.release = { ...release, checkedAt: release.checkedAt ?? recent.checkedAt };
     }
     if (selected[paper.id]) Object.assign(paper, selected[paper.id], { selected: true, selectedOrder: Object.keys(selected).indexOf(paper.id) });
+    if (paperRoles[paper.id]) paper.role = paperRoles[paper.id];
+    if ((recent.papers[paper.id] || selected[paper.id]) && !paper.role) throw new Error(`Missing Core/Adjacent/Supporting role: ${paper.id}`);
     // Figure provenance is independent of editorial selection or release status.
     paper.thumbnail = paperFigures[paper.id] ?? paper.thumbnail ?? covers[paper.id] ?? editorialThumbnail(paper.id, paper.displayTitle ?? paper.title, paper.primary, Object.values(sections).find(c=>c.key===paper.categories[0])?.short);
   }
@@ -147,5 +150,6 @@ export function loadCatalog() {
       p.thumbnail={src:'/awesome-proactive-agent/assets/brands/'+p.id+'.png',original,source:original,caption,alt:caption+' — '+p.title,brand:true};
     }
   }
-  return { papers, projects, projectGroups: Object.values(projectGroups), benchmarks, categories: Object.values(sections), archivedNotes: unlinked, stats: { papers: papers.length, notes: linked.size, streaming: papers.filter(p => p.streaming).length, benchmarks: benchmarks.length, projects: projects.length, latest: papers[0]?.date } };
+  for (const [id, role] of Object.entries(paperRoles)) if (!ids.has(id) || !['core', 'adjacent', 'supporting'].includes(role)) throw new Error(`Invalid paper role: ${id}`);
+  return { atlas: JSON.parse(read('website/content/atlas.json')), papers, projects, projectGroups: Object.values(projectGroups), benchmarks, categories: Object.values(sections), archivedNotes: unlinked, stats: { papers: papers.length, notes: linked.size, streaming: papers.filter(p => p.streaming).length, benchmarks: benchmarks.length, projects: projects.length, latest: papers[0]?.date } };
 }

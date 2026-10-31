@@ -1,5 +1,5 @@
 import { navigationResources } from './resources.js';
-import { paperPath } from './paper-detail.mjs';
+import { paperPath, roleBadge } from './paper-detail.mjs';
 import { searchPapers } from './search.js';
 const $ = selector => document.querySelector(selector);
 let lang = document.documentElement.lang === 'zh' ? 'zh' : 'en';
@@ -23,7 +23,7 @@ document.addEventListener('keydown', event => { if (event.key === '/' && !['INPU
 let render = null, renderDirectory = null;
 function card(p) {
   const resources = navigationResources(p);
-  return `<article class="paper-card">${p.thumbnail ? `<a class="directory-cover" href="${esc(p.primary)}"><img src="${esc(p.thumbnail.src)}" alt="${esc(p.thumbnail.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><a class="directory-credit" href="${esc(p.thumbnail.source)}">${esc(p.thumbnail.caption)} ↗</a>` : ''}<div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span></div><h3><a href="${paperPath(p)}">${esc(p.title)}</a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
+  return `<article class="paper-card">${p.thumbnail ? `<a class="directory-cover" href="${esc(p.primary)}"><img src="${esc(p.thumbnail.src)}" alt="${esc(p.thumbnail.alt)}" width="600" height="360" loading="lazy" decoding="async"></a><a class="directory-credit" href="${esc(p.thumbnail.source)}">${esc(p.thumbnail.caption)} ↗</a>` : ''}<div class="paper-main"><div class="paper-meta"><span>${esc(p.date)}</span><span>${esc(p.venue)}</span>${roleBadge(p)}</div><h3><a href="${paperPath(p)}">${esc(p.title)}</a></h3><div class="tags">${p.tags.map(t => `<a href="${base}library/?tag=${encodeURIComponent(t)}">${esc(t)}</a>`).join('')}</div></div><div class="resource-links">${resources.map(r => `<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></article>`;
 }
 if ($('#catalog')) {
   const controls = ['category', 'tag', 'year', 'venue', 'code', 'featured', 'selected', 'sort'];

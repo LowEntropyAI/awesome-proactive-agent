@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { markdown } from '../guides.mjs';
 import { read, loadCatalog } from '../data.mjs';
-import { base, selectedPage } from '../views.mjs';
+import { base, picksPage } from '../views.mjs';
 
 test('essential reading balances agents, models and benchmarks without requiring images', () => {
   const catalog = loadCatalog();
@@ -10,10 +10,10 @@ test('essential reading balances agents, models and benchmarks without requiring
   for (const [group, count] of [['agent', 3], ['model', 3], ['interaction', 3], ['benchmark', 3]]) {
     assert.equal(selected.filter(p => p.selectionGroup === group).length, count, group);
   }
-  const html = selectedPage(catalog);
+  const html = picksPage(catalog);
   for (const p of selected) assert.ok(html.includes(p.displayTitle));
   const withoutFigures = { ...catalog, papers: catalog.papers.map(p => ({ ...p, thumbnail: undefined })) };
-  const textOnly = selectedPage(withoutFigures);
+  const textOnly = picksPage(withoutFigures);
   for (const p of selected) assert.ok(textOnly.includes(p.displayTitle));
   assert.ok(html.includes('Evaluation'));
 });
@@ -30,7 +30,7 @@ test('Must Read preserves tiers and non-paper resources in the website', () => {
 test('guide links resolve to site routes while evidence cards stay on GitHub', () => {
   const html = markdown('[App](APPLICATIONS.md#personal-assistance) [Read](README.md#must-read) [Papers](README.md#papers) [Card](papers/arxiv/example.md)');
   assert.ok(html.includes(`${base}applications/#personal-assistance`));
-  assert.ok(html.includes(`${base}start/`));
+  assert.ok(html.includes(`${base}picks/#reading-path`));
   assert.ok(html.includes(`${base}library/`));
   assert.ok(html.includes('https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/papers/arxiv/example.md'));
 });

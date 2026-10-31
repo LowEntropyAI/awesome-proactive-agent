@@ -16,7 +16,7 @@ test('new bibliography entries render inside Markdown tables, not stray pipe par
 test('recent edition uses verified first-posted dates, not monthly alphabetical order', () => {
   assert.equal(recent.length, 51);
   for (const p of catalog.papers.filter(p => p.date === catalog.stats.latest)) assert.ok(p.publishedAt && p.dateSource === p.primary, p.id);
-  assert.equal(recent[0].id, 'evolife-active-navigation-clarification');
+  assert.equal(recent[0].id, 'halo-human-grounded-proactivity');
   assert.ok(recent.every((p, i) => !i || recent[i - 1].publishedAt >= p.publishedAt));
   assert.equal(recent.at(-1).publishedAt, '2026-09-25'); // October arXiv ID, September first posting.
 });

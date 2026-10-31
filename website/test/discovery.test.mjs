@@ -1,11 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { read, loadCatalog } from '../data.mjs';
-import { home, selectedPage, understandPage, projectPage, paperCard, benchmarkPage, layout, base } from '../views.mjs';
+import { home, picksPage, projectPage, paperCard, benchmarkPage, layout, base } from '../views.mjs';
+import { definitionPage, definition } from '../atlas.mjs';
+import { recentPapers } from '../gallery.mjs';
+import { facetGroups } from '../facets.mjs';
 import { renderCover } from '../covers.mjs';
 import { paperDetail, paperPath } from '../paper-detail.mjs';
 import { galleryCard } from '../gallery.mjs';
-import { concepts } from '../discovery.mjs';
+import { concepts, categoryWorks } from '../discovery.mjs';
 const catalog=loadCatalog();
 test('product mastheads pair their name and purpose with a decorative transparent mark',()=>{
  const page=projectPage(catalog);
@@ -41,12 +44,12 @@ test('paper figures take precedence across every paper view and keep their sourc
   assert.match(t.caption,/^Paper Figure \d+/);assert.match(t.source,/^https:\/\//);
   assert.ok(paperCard(p).includes(t.src));
   if(p.publishedAt) assert.ok(galleryCard(p).includes(t.src));
-  if(p.selected) assert.ok(selectedPage(catalog).includes(t.src));
+  if(p.selected) assert.ok(picksPage(catalog).includes(t.src));
  }
 });
 test('Latest navigation lands below the cover without leaving the homepage',()=>{
  const html=layout('Home',home(catalog),'');
- for(const name of ['Latest','Latest Research']) {
+ for(const name of ['Latest']) {
   const links=[...html.matchAll(/<a href="([^"]+)"[^>]*>((?:(?!<\/a>)[\s\S])*?)<\/a>/g)].filter(m=>m[2].includes('data-en="'+name+'"'));
   assert.ok(links.length);assert.ok(links.every(m=>m[1]==='#discover'));
  }
@@ -61,25 +64,62 @@ test('verified project marks remain local and credit their original sources',()=
   assert.equal(p.thumbnail.original,source);assert.equal(p.thumbnail.caption,caption);
  }
 });
-test('home opens with an editorial hero before the research feed',()=>{
+test('home states the definition, then the latest work, the test, categories, the landscape and picks',()=>{
  const html=home(catalog);
- assert.match(html,/gallery-results/);
- assert.doesNotMatch(html,/class="cover"|selected-route-grid/);
- for(const path of ['recent/','understand/','selected/','projects/'])assert.ok(html.includes(path));
- assert.ok(html.indexOf('gallery-results')<html.indexOf('feed-next'));
- assert.ok(html.indexOf('atlas-hero')<html.indexOf('directory-sidebar'));
- assert.match(html,/href="#discover"/);
+ const order=['atlas-hero','id="discover"','test-cards','concept-grid','class="landscape"','picks-columns','atlas-contribute'].map(x=>html.indexOf(x));
+ assert.ok(order.every(i=>i>=0));assert.deepEqual(order,[...order].sort((a,b)=>a-b));
  const hero=html.slice(0,html.indexOf('id="discover"'));
+ assert.ok(hero.includes(definition.en));assert.match(hero,/href="#discover"/);
  assert.ok(hero.includes('class="initiative-scene"'));
- for (const label of ['Meeting moved','Prepared for you','Ready to review']) assert.ok(hero.includes('data-en="'+label+'"'));
+ for (const label of ['Flight delayed','Nobody asked','Not now']) assert.ok(hero.includes('data-en="'+label+'"'));
  for (const element of ['timepiece','brief-sheet','schedule-slip']) assert.ok(hero.includes('class="'+element+'"'));
- assert.doesNotMatch(hero,/transit-map|step-free detour/);
  assert.doesNotMatch(hero,/<svg\b|<img\b|<canvas\b|<picture\b/);
- assert.match(html,/<details class="browse-dock"><summary>/);
- assert.doesNotMatch(html,/Latest paper in this collection|Last updated|当前收录的最新首发|最后更新/);
- assert.match(selectedPage(catalog),/not a popularity ranking/);
- assert.match(understandPage(catalog),/not its definition/);
- for(const c of concepts)assert.ok(catalog.papers.some(p=>p.id===c[6]),c[6]);
+ assert.doesNotMatch(html,/browse-dock|directory-sidebar|reading-paths/);
+ for(const path of ['recent/','what-is-proactive-ai/','picks/','projects/'])assert.ok(html.includes(path));
+ for(const c of concepts)assert.ok(catalog.papers.some(p=>p.id===c[3]),c[3]);
+});
+test('the latest feed gives every card a cover, filters by category and leads with core work',()=>{
+ const section=home(catalog).match(/<section id="discover".*?<\/section>\s*<section class="atlas-section atlas-tinted"/s)[0];
+ const cards=section.match(/<article class="gallery-card"/g)||[];
+ assert.equal(cards.length,6);assert.equal((section.match(/gallery-preview/g)||[]).length,6);
+ assert.equal((section.match(/<img /g)||[]).length,6);
+ for(const [value] of facetGroups[0].options)assert.ok(section.includes('data-facet="question" data-value="'+value+'"'),value);
+ assert.doesNotMatch(section,/Week of|This week/);
+ assert.equal(recentPapers(catalog.papers)[0].id,'halo-human-grounded-proactivity');
+});
+test('every category shows a cover, three works and the shared filter label',()=>{
+ const html=home(catalog);
+ for(const [filter,,,lead] of concepts){
+  const {count,works}=categoryWorks(catalog,filter,lead);
+  assert.ok(count>=3,filter);assert.equal(works.length,3);assert.equal(works[0].id,lead);
+  assert.ok(html.includes('recent/?question='+filter));
+  const label=facetGroups[0].options.find(o=>o[0]===filter)[1];
+  assert.ok(html.match(new RegExp('<article class="concept-card">.*?'+label.replace('&','&amp;'),'s')),label);
+ }
+ assert.equal((html.match(/class="concept-cover"/g)||[]).length,concepts.length);
+});
+test('definition page carries the test, comparison and role boundaries',()=>{
+ const html=definitionPage(catalog);
+ assert.ok(html.includes(definition.en));
+ for(const text of ['test-cards','action-ladder','compare-proactive','id="roles"','concept-grid'])assert.ok(html.includes(text),text);
+ for(const role of ['core','adjacent','supporting'])assert.ok(html.includes('data-role="'+role+'"'),role);
+ assert.ok(html.includes(catalog.papers.filter(p=>p.role).length+' recent and selected papers'));
+});
+test('every recent and selected paper has a role; clarification-first work is not presented as core',()=>{
+ for(const p of catalog.papers.filter(p=>p.publishedAt||p.selected))assert.ok(['core','adjacent','supporting'].includes(p.role),p.id);
+ for(const id of ['evolife-active-navigation-clarification','askstream-streaming-clarification'])assert.equal(catalog.papers.find(p=>p.id===id).role,'adjacent');
+ assert.ok(paperCard(catalog.papers.find(p=>p.id==='halo-human-grounded-proactivity')).includes('data-role="core"'));
+});
+test('the navigation offers four jobs and marks directory pages as Directory',()=>{
+ const html=layout('Projects',projectPage(catalog),'projects/');
+ const nav=html.match(/<nav aria-label="Main navigation">.*?<\/nav>/s)[0];
+ for(const name of ['Latest','What is Proactive?','Picks','Directory'])assert.ok(nav.includes('data-en="'+name+'"'),name);
+ assert.match(nav,/aria-current="page"[^>]*>\s*<span data-en="Directory"/);
+ assert.equal((nav.match(/aria-current/g)||[]).length,1);
+ assert.match(html,/class="directory-nav"/);assert.doesNotMatch(html,/Add a paper[^<]*<\/span>[^<]*<span aria-hidden="true">↗<\/span><\/a><\/nav>/);
+});
+test('the AttriFy figure is not hidden behind its unfilled root mask',()=>{
+ assert.doesNotMatch(read('website/assets/overviews/attrify.svg'),/<g mask="url\(#mask_0\)">/);
 });
 test('all paper, benchmark and project cards have sourced or explicitly editorial covers',()=>{
  for(const p of [...catalog.papers,...catalog.projects,...catalog.benchmarks]){

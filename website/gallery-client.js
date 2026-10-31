@@ -12,7 +12,7 @@ if (root) {
     const params = new URLSearchParams(location.search);
     filters = normalizeFilters(Object.fromEntries(params));
     input.value = params.get('q') ?? '';
-    if (facetGroups.some(g => filters[g.key] !== 'all')) root.querySelector('.gallery-extra')?.setAttribute('open','');
+    if (facetGroups.slice(1).some(g => filters[g.key] !== 'all')) root.querySelector('.gallery-extra')?.setAttribute('open','');
   };
   readURL();
   const translate = (scope=root) => scope.querySelectorAll('[data-en]').forEach(el => { el.textContent = el.dataset[document.documentElement.lang === 'zh' ? 'zh' : 'en']; });

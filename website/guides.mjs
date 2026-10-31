@@ -25,7 +25,7 @@ export function markdown(text) {
     transformTags: { a: (tagName, attrs) => {
       const [file, hash] = (attrs.href ?? '').split('#');
       if (file === 'README.md' && hash) {
-        attrs.href = hash === 'must-read' ? url('start/') : hash === 'papers' ? url('library/') : `${repo}/blob/main/README.md#${hash}`;
+        attrs.href = hash === 'must-read' ? url('picks/#reading-path') : hash === 'papers' ? url('library/') : `${repo}/blob/main/README.md#${hash}`;
       } else if (file in routes) {
         attrs.href = url(routes[file]) + (hash ? '#' + hash : '');
       } else if (/^(papers|docs)\//.test(file)) {
