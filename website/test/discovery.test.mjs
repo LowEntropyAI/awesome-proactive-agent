@@ -7,6 +7,19 @@ import { paperDetail, paperPath } from '../paper-detail.mjs';
 import { galleryCard } from '../gallery.mjs';
 import { concepts } from '../discovery.mjs';
 const catalog=loadCatalog();
+test('arXiv-hosted artwork and its credit cannot point at a different arXiv paper',()=>{
+ const id=url=>url?.match(/^https?:\/\/arxiv\.org\/(?:abs|html|pdf)\/(\d{4}\.\d+)/)?.[1];
+ for(const paper of catalog.papers) {
+   const paperId=id(paper.primary);if(!paperId)continue;
+   for(const u of [paper.thumbnail.source,paper.thumbnail.original]) if(id(u))assert.equal(id(u),paperId,paper.id);
+ }
+});
+test('CoWriter uses the platform diagram on the card and in the brief, not the appendix UI',()=>{
+ const p=catalog.papers.find(x=>x.id==='cowriter-proactive-coauthoring');
+ assert.match(p.thumbnail.source,/2610\.31277v1#S0\.F1$/);
+ assert.match(p.thumbnail.original,/cowriter-v2\.svg$/);
+ for(const view of [galleryCard(p),paperCard(p),paperDetail(p)])assert.ok(view.includes(p.thumbnail.src)&&!view.includes('ui-screenshot'));
+});
 test('paper figures take precedence across every paper view and keep their source',()=>{
  const figures=JSON.parse(read('website/content/paper-figures.json'));
  assert.ok(Object.keys(figures).length>0);
@@ -45,7 +58,9 @@ test('home opens with an editorial hero before the research feed',()=>{
  assert.ok(html.indexOf('atlas-hero')<html.indexOf('directory-sidebar'));
  assert.match(html,/href="#discover"/);
  const hero=html.slice(0,html.indexOf('id="discover"'));
- assert.ok(hero.includes('class="transit-map"'));
+ assert.ok(hero.includes('class="initiative-scene"'));
+ for (const label of ['Reactive','Proactive','Who makes the first move?']) assert.ok(hero.includes('data-en="'+label+'"'));
+ assert.doesNotMatch(hero,/transit-map|step-free detour/);
  assert.doesNotMatch(hero,/<svg\b|<img\b|<canvas\b|<picture\b/);
  assert.match(html,/<details class="browse-dock"><summary>/);
  assert.doesNotMatch(html,/Latest paper in this collection|Last updated|当前收录的最新首发|最后更新/);

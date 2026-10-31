@@ -1,8 +1,20 @@
-import {transitScene} from './transit-scene.mjs';
-const landscape=transitScene();
 // Reading paths, not a mutually exclusive taxonomy of the field.
 const base = '/awesome-proactive-agent/';
 const bi = (en, zh) => `<span data-en="${en}" data-zh="${zh}">${en}</span>`;
+function initiativeScene() {
+  return `<figure class="initiative-scene">
+    <figcaption><small>${bi('A thought experiment','一个思想实验')}</small>
+    <strong>${bi('Who makes the first move?','谁先迈出第一步？')}</strong></figcaption>
+    <div class="initiative-event"><span aria-hidden="true">↳</span> ${bi('09:10 · Your meeting now starts an hour earlier.','09:10 · 你的会议提前了一小时。')}</div>
+    <div class="initiative-plot">
+      <div class="plot-axis" aria-hidden="true"><time>09:10</time><time>09:25</time></div>
+      <div class="initiative-lane waiting"><small>${bi('Reactive','被动响应')}</small><div class="lane-line"><b>${bi('You ask','你先问')}</b></div>
+      <p>${bi('You ask for a briefing. The assistant starts writing.','你开口要简报，助手才开始准备。')}</p></div>
+      <div class="initiative-lane leading"><small>${bi('Proactive','主动协助')}</small><div class="lane-line"><b>${bi('AI offers','助手先提议')}</b></div>
+      <p>${bi('“I pulled the changes into your usual one-page brief. Want a look?”','「我把变动整理成了你惯用的一页简报，要看看吗？」')}</p></div>
+    </div>
+    <div class="initiative-note">${bi('No prompt needed. Only you decide whether to share the brief.','不用先提问。是否把简报发给参会者，由你决定。')}</div></figure>`;
+}
 export function readingPaths(active = 'latest', onHome = false) {
   return `<nav class="reading-paths" aria-label="Reading paths">${[['latest','#discover','Latest','最新工作'],['understand','understand/','Understand Proactivity','理解主动性'],['selected','selected/','Essential Reading','代表性工作']].map(([id,path,en,zh]) => `<a href="${onHome && id === 'latest' ? path : base + path}"${id === active ? ' aria-current="page"' : ''}>${bi(en,zh)}<span aria-hidden="true">${id === active ? '●' : '↗'}</span></a>`).join('')}</nav>`;
 }
@@ -10,7 +22,7 @@ export function feedIntro() {
   return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('A field in motion', '持续演进的研究领域')}</p><h1>${bi('Discover what’s next', '发现新进展')}<br>${bi('in proactive AI.', '探索主动式 AI。')}</h1><p>${bi('Research that anticipates needs, takes initiative, and knows its boundaries.', '预判需求、主动提供帮助，也懂得边界。')}</p></div></header>`;
 }
 export function homeHero() {
-  return `<section class="atlas-hero" aria-labelledby="hero-title"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('A Research Atlas','研究图谱')}</p><h1 id="hero-title">${bi('Proactive AI.','主动式 AI。')}<br><em>${bi('Before you ask.','在你开口之前。')}</em></h1><p class="hero-description">${bi('Explore agents that anticipate needs and offer help on your terms.','探索如何预判需求、准备帮助，并把选择留给用户。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div><figure class="atlas-scene">${landscape}<figcaption><small>${bi('An Illustrated Example','情境示例')}</small><strong>${bi('Your usual stop just closed.','常去的车站临时关闭。')}</strong><span>${bi('A step-free detour is ready, just as you prefer.','按你的无台阶出行偏好，绕行路线已备好。')}</span></figcaption></figure><div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
+  return `<section class="atlas-hero" aria-labelledby="hero-title"><div class="atlas-hero-copy"><p class="hero-eyebrow">${bi('A Research Atlas','研究图谱')}</p><h1 id="hero-title">${bi('Proactive AI.','主动式 AI。')}<br><em>${bi('Before you ask.','在你开口之前。')}</em></h1><p class="hero-description">${bi('Explore agents that anticipate needs and offer help on your terms.','探索如何预判需求、准备帮助，并把选择留给用户。')}</p><div class="hero-actions"><a class="button primary" href="#discover">${bi('Explore the latest research','浏览最新研究')} ↓</a><a href="${base}understand/">${bi('What is proactive AI?','什么是主动式 AI？')} ↗</a></div></div>${initiativeScene()}<div class="hero-bottom"><span>${bi('Research · Models · Agents · Evaluation','研究 · 模型 · 智能体 · 评测')}</span><a href="#discover">${bi('Scroll to explore','向下探索')} ↓</a></div></section>`;
 
 }
 export const concepts = [

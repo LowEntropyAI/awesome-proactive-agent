@@ -16,11 +16,11 @@
     "src": "/awesome-proactive-agent/assets/figures/active-swe-proactive-bug-fixing.webp"
   },
   "agentfold-proactive-context-management": {
-    "alt": "Figure 1 from AgentFold: Long-Horizon Web Agents with Proactive Context Folding",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2510.24699v1/teaser_v3_logo.png",
-    "source": "https://arxiv.org/html/2510.24699v1#S0.F1",
+    "alt": "AgentFold: context management during an agent step",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure 2 \u2014 AgentFold: context management during an agent step.",
+    "original": "https://arxiv.org/html/2510.24699v1/agentfold.png",
+    "source": "https://arxiv.org/html/2510.24699v1#S3.F2",
     "src": "/awesome-proactive-agent/assets/figures/agentfold-proactive-context-management.webp"
   },
   "ai-assistants-overassist": {
@@ -271,6 +271,14 @@
     "source": "https://arxiv.org/html/2505.14668v2#S1.F1",
     "src": "/awesome-proactive-agent/assets/figures/context-agent.webp"
   },
+  "cowriter-proactive-coauthoring": {
+    "alt": "CoWriter: shared writing environment, Monitor, Leader and Reviewer",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure 1 \u2014 CoWriter: shared writing environment, Monitor, Leader and Reviewer.",
+    "original": "https://arxiv.org/html/2610.31277v1/cowriter-v2.svg",
+    "source": "https://arxiv.org/html/2610.31277v1#S0.F1",
+    "src": "/awesome-proactive-agent/assets/figures/cowriter-proactive-coauthoring.webp"
+  },
   "cpe-communication-policy-evolution": {
     "alt": "Figure 1 from Communication Policy Evolution for Proactive LLM Agents",
     "caption": "Paper Figure 1 \u00b7 authors",
@@ -288,11 +296,11 @@
     "src": "/awesome-proactive-agent/assets/figures/deduce-proactive-fact-correction.webp"
   },
   "delegationbench-ask-before-acting": {
-    "alt": "Figure 6 from DelegationBench: Measuring When AI Agents Should Ask Before Acting",
-    "caption": "Paper Figure 6 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2610.05532v1/figures/model_extension_v1/expanded_decision_composition.png",
-    "source": "https://arxiv.org/html/2610.05532v1#A3.F6",
+    "alt": "DelegationBench: matched scenarios for deciding whether to ask or act",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure 1 \u2014 DelegationBench: matched scenarios for deciding whether to ask or act.",
+    "original": "https://arxiv.org/html/2610.05532v1/overview.svg",
+    "source": "https://arxiv.org/html/2610.05532v1#S1.F1",
     "src": "/awesome-proactive-agent/assets/figures/delegationbench-ask-before-acting.webp"
   },
   "developer-interaction-patterns-proactive-ai": {
@@ -302,6 +310,14 @@
     "original": "https://arxiv.org/html/2601.10253v1/study_flow_2.png",
     "source": "https://arxiv.org/html/2601.10253v1#S0.F1",
     "src": "/awesome-proactive-agent/assets/figures/developer-interaction-patterns-proactive-ai.webp"
+  },
+  "dive-proactive-intervention": {
+    "alt": "DIVE: evaluating interaction decisions in duplex conversations",
+    "caption": "Paper Figure 4 \u00b7 authors",
+    "description": "Figure 4 \u2014 DIVE: evaluating interaction decisions in duplex conversations.",
+    "original": "https://arxiv.org/html/2610.28405v1/evaluate.png",
+    "source": "https://arxiv.org/html/2610.28405v1#S3.F4",
+    "src": "/awesome-proactive-agent/assets/figures/dive-proactive-intervention.webp"
   },
   "do-proactive-agents-need-llm-wake-anchor": {
     "alt": "Figure 1 from Do Proactive Agents Need an LLM to Decide When to Act?",
@@ -560,11 +576,11 @@
     "src": "/awesome-proactive-agent/assets/figures/ito-browser-tab-orchestration.webp"
   },
   "jarvis-multiparty-proactive-speech": {
-    "alt": "Figure 1 from Jarvis: A Proactive Speech Agent for Multi-Party Conversations",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2610.07506v2/source/figures/proactive_agent_chi2027-teaser_ver4.png",
-    "source": "https://arxiv.org/html/2610.07506v2#S0.F1",
+    "alt": "Jarvis: speech processing and proactive meeting participation",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure 2 \u2014 Jarvis: speech processing and proactive meeting participation.",
+    "original": "https://arxiv.org/html/2610.07506v2/fig_a_system_overview.png",
+    "source": "https://arxiv.org/html/2610.07506v2#S3.F2",
     "src": "/awesome-proactive-agent/assets/figures/jarvis-multiparty-proactive-speech.webp"
   },
   "jarvisbench-attention-coordination": {
@@ -600,11 +616,11 @@
     "src": "/awesome-proactive-agent/assets/figures/knowing-when-to-yield.webp"
   },
   "knowu-bench": {
-    "alt": "Figure 1 from KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2604.08455v1/realgui-bench_motivation.png",
-    "source": "https://arxiv.org/html/2604.08455v1#S0.F1",
+    "alt": "KnowU-Bench: environment and personalization evaluation",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure 2 \u2014 KnowU-Bench: environment and personalization evaluation.",
+    "original": "https://arxiv.org/html/2604.08455v1/figures/method.png",
+    "source": "https://arxiv.org/html/2604.08455v1#S3.F2",
     "src": "/awesome-proactive-agent/assets/figures/knowu-bench.webp"
   },
   "learning-to-clarify-limited-interaction": {
@@ -648,11 +664,11 @@
     "src": "/awesome-proactive-agent/assets/figures/memeye-visual-centric-memory.webp"
   },
   "minicpm-o-45-full-duplex": {
-    "alt": "Figure 1 from MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2604.27393v1/media/radar_minicpmo4.5.png",
-    "source": "https://arxiv.org/html/2604.27393v1#S0.F1",
+    "alt": "MiniCPM-o 4.5: architecture for full-duplex multimodal interaction",
+    "caption": "Paper Figure 4 \u00b7 authors",
+    "description": "Figure 4 \u2014 MiniCPM-o 4.5: architecture for full-duplex multimodal interaction.",
+    "original": "https://arxiv.org/html/2604.27393v1/arch.svg",
+    "source": "https://arxiv.org/html/2604.27393v1#S2.F4",
     "src": "/awesome-proactive-agent/assets/figures/minicpm-o-45-full-duplex.webp"
   },
   "mirai-a-wearable-proactive-ai-inner-voice-for-contextual-nudging-ff114ee": {
@@ -720,11 +736,11 @@
     "src": "/awesome-proactive-agent/assets/figures/omnimmi-streaming-interaction.webp"
   },
   "onestreamer-streaming-video": {
-    "alt": "Figure 1 from OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2610.01762v1/Fig_Benchmark_Overview.png",
-    "source": "https://arxiv.org/html/2610.01762v1#S1.F1",
+    "alt": "OneStreamer: online video architecture and state tokens",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Figure 3 \u2014 OneStreamer: online video architecture and state tokens.",
+    "original": "https://arxiv.org/html/2610.01762v1/Fig_Architecture_Online.png",
+    "source": "https://arxiv.org/html/2610.01762v1#S3.F3",
     "src": "/awesome-proactive-agent/assets/figures/onestreamer-streaming-video.webp"
   },
   "overact-proactive-over-authorization": {
@@ -1095,6 +1111,14 @@
     "source": "https://aclanthology.org/2026.findings-acl.2082.pdf#page=2",
     "src": "/awesome-proactive-agent/assets/figures/proper-agents-knowledge-gap-navigation.webp"
   },
+  "properagent-memory-driven-proactivity": {
+    "alt": "MemoProAgent: observation, personal memory and intervention",
+    "caption": "Paper Figure 8 \u00b7 authors",
+    "description": "Figure 8 \u2014 MemoProAgent: observation, personal memory and intervention.",
+    "original": "https://arxiv.org/html/2610.22671v2/PMA_harness_beautified.svg",
+    "source": "https://arxiv.org/html/2610.22671v2#S5.F8",
+    "src": "/awesome-proactive-agent/assets/figures/properagent-memory-driven-proactivity.webp"
+  },
   "propersim-developing-proactive-and-personalized-ai-assistants-through-user-assistant--da26ca2": {
     "alt": "Figure 1 from ProPerSim: Developing Proactive and Personalized AI Assistants through User-Assistant Simulation",
     "caption": "Paper Figure 1 \u00b7 authors",
@@ -1144,11 +1168,11 @@
     "src": "/awesome-proactive-agent/assets/figures/provider-side-injection-proactive-agents.webp"
   },
   "provoice-bench-proactive-voice-agents": {
-    "alt": "Figure 2 from From Reactive to Proactive: Assessing the Proactivity of Voice Agents via ProVoice-Bench",
-    "caption": "Paper Figure 2 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2604.15037v3/overview.png",
-    "source": "https://arxiv.org/html/2604.15037v3#S2.F2",
+    "alt": "ProVoice-Bench: the four voice-assistant tasks",
+    "caption": "Paper Figure 1 \u00b7 authors",
+    "description": "Figure 1 \u2014 ProVoice-Bench: the four voice-assistant tasks.",
+    "original": "https://arxiv.org/html/2604.15037v3/intro.svg",
+    "source": "https://arxiv.org/html/2604.15037v3#S1.F1",
     "src": "/awesome-proactive-agent/assets/figures/provoice-bench-proactive-voice-agents.webp"
   },
   "prpf-perceive-before-reasoning-mobile": {
@@ -1192,11 +1216,11 @@
     "src": "/awesome-proactive-agent/assets/figures/rational-clarification-value-information.webp"
   },
   "realtime-venus-full-duplex-delegation": {
-    "alt": "Figure 4 from Realtime-Venus: A Full-Duplex Interaction System with Asynchronous Delegation",
-    "caption": "Paper Figure 4 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2609.13814v3/case.png",
-    "source": "https://arxiv.org/html/2609.13814v3#S3.F4",
+    "alt": "Realtime-Venus: full-duplex interaction and task delegation",
+    "caption": "Paper Figure 3 \u00b7 authors",
+    "description": "Figure 3 \u2014 Realtime-Venus: full-duplex interaction and task delegation.",
+    "original": "https://arxiv.org/html/2609.13814v3/Realtime-Venus_system_overview.svg",
+    "source": "https://arxiv.org/html/2609.13814v3#S3.F3",
     "src": "/awesome-proactive-agent/assets/figures/realtime-venus-full-duplex-delegation.webp"
   },
   "reasoning-while-asking-proactive-inquirers": {
@@ -1352,11 +1376,11 @@
     "src": "/awesome-proactive-agent/assets/figures/sprint-proactive-risk-inference.webp"
   },
   "steps-self-triggered-push-recommendation": {
-    "alt": "Figure 1 from A Self-Triggered Agentic Push Recommendation System",
-    "caption": "Paper Figure 1 \u00b7 authors",
-    "description": "Original figure from the linked paper. Open the figure reference for the authors\u2019 full caption.",
-    "original": "https://arxiv.org/html/2608.01949v1/fig1_motivation_example.png",
-    "source": "https://arxiv.org/html/2608.01949v1#S0.F1",
+    "alt": "STEPS: the self-triggered recommendation framework",
+    "caption": "Paper Figure 2 \u00b7 authors",
+    "description": "Figure 2 \u2014 STEPS: the self-triggered recommendation framework.",
+    "original": "https://arxiv.org/html/2608.01949v1/fig2_framework.png",
+    "source": "https://arxiv.org/html/2608.01949v1#S1.F2",
     "src": "/awesome-proactive-agent/assets/figures/steps-self-triggered-push-recommendation.webp"
   },
   "streamarena-streaming-video-agents": {
