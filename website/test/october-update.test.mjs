@@ -43,3 +43,17 @@ test('WakeGate is a supporting gate; commercial products are not paper implement
   assert.match(read('PROJECTS.md'), /do \*\*not\*\* prevent the HTTP request/);
   assert.doesNotMatch(read('PROJECTS.md'), /Exceptions \(argument, promise, forced\) override every limit/);
 });
+test('November 1 backfill keeps first-posted dates, roles and evidence boundaries', () => {
+  const get = id => catalog.papers.find(p => p.id === id);
+  const added = { 'roboteq-video-social-proactive': ['2026-09-18', 'core'], 'pv-care-eeg-proactive-mci': ['2026-09-18', 'core'], 'visual-proactivity-handover': ['2026-09-18', 'core'], 'talk2escape-navigation-dialogue': ['2026-09-23', 'adjacent'], 'risk-adaptive-programming-feedback': ['2026-09-24', 'core'] };
+  for (const [id, [date, role]] of Object.entries(added)) {
+    const p = get(id);
+    assert.equal(p.publishedAt, date, id);
+    assert.equal(p.role, role, id);
+    assert.equal(p.release.checkedAt, '2026-11-01', id);
+    assert.ok(p.note && p.thumbnail.src.includes('/overviews/'), id);
+    assert.equal(p.streaming, false, id);
+  }
+  assert.ok(catalog.benchmarks.some(b => b.name === 'RobotEQ-Video'));
+  assert.doesNotMatch(read('website/assets/overviews/risk-adaptive-feedback.svg'), /<script|<foreignObject|(?:href|src)=["']https?:/);
+});

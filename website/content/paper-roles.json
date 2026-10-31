@@ -46,13 +46,18 @@
  "properagent-memory-driven-proactivity": "core",
  "prov-mem-streaming-response": "supporting",
  "provider-side-injection-proactive-agents": "adjacent",
+ "pv-care-eeg-proactive-mci": "core",
  "replannable-dialogue-timelines": "core",
  "reqclarifybench-repository-requirements": "adjacent",
+ "risk-adaptive-programming-feedback": "core",
+ "roboteq-video-social-proactive": "core",
  "safe-pro-cross-modal-inquiry": "adjacent",
  "streamingjev-proactive-physical-ai": "core",
  "streamvibe-evolving-user-intent": "core",
  "surgstreamer-request-driven-monitoring": "adjacent",
  "syncpro-dual-stream-reasoning": "core",
+ "talk2escape-navigation-dialogue": "adjacent",
  "uncertainty-proactive-assistant-alignment": "core",
- "visual-proactive-math-tutoring": "core"
+ "visual-proactive-math-tutoring": "core",
+ "visual-proactivity-handover": "core"
 }

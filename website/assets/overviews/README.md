@@ -57,3 +57,8 @@ Original figure URLs, author attribution, source pages and alternative text are 
 | `safe-pro.png` | [SAFE-PRO authors, Figure 1](https://arxiv.org/html/2610.22068v1/fig11.png) |
 | `proactgen.png` | [ProactGen authors, teaser](https://arxiv.org/html/2610.22608v1/teaser_formal.png) |
 | `masp.png` | [MASP authors, framework](https://arxiv.org/html/2610.21156v1/main.png) |
+| `roboteq-video.png` | [RobotEQ-Video authors, Figure 1](https://arxiv.org/html/2609.21371v1/figure1_8.png) |
+| `pv-care.png` | [PV-Care authors, Figure 1](https://arxiv.org/html/2609.22024v1/figures/scheme.png) |
+| `visual-proactivity.jpg` | [Visual Proactivity authors, Figure 1](https://arxiv.org/html/2609.21729v1/fig/intro.jpg) |
+| `talk2escape.png` | [Talk2Escape authors, Figure 2](https://arxiv.org/html/2609.28296v1/main.png) |
+| `risk-adaptive-feedback.svg` | [Risk-Adaptive Programming Feedback authors, Figure 1](https://arxiv.org/html/2609.29874v1/01_overall_research_framework.svg) |

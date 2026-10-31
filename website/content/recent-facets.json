@@ -1,4 +1,9 @@
 {
+  "roboteq-video-social-proactive": {"question":["need","safety"],"context":["embodied","multimodal"],"mechanism":[],"evidence":["benchmark","human"]},
+  "pv-care-eeg-proactive-mci": {"question":["need","timing"],"context":["personal","multimodal"],"mechanism":["learning"],"evidence":["human"]},
+  "visual-proactivity-handover": {"question":["planning","need"],"context":["embodied"],"mechanism":[],"evidence":["human"]},
+  "talk2escape-navigation-dialogue": {"question":["clarification","timing"],"context":["embodied"],"mechanism":["runtime"],"evidence":[]},
+  "risk-adaptive-programming-feedback": {"question":["timing"],"context":["digital"],"mechanism":["learning"],"evidence":[]},
   "clariedge-grounded-clarification": {"question":["clarification"],"context":["dialogue"],"mechanism":["learning"],"evidence":[]},
   "pam-proactive-robot-assistance": {"question":["need","timing","personalization"],"context":["embodied","personal"],"mechanism":["memory","reasoning"],"evidence":[]},
   "ask-less-attention-budgets": {"question":["clarification","timing"],"context":["dialogue"],"mechanism":["memory"],"evidence":["human"]},
