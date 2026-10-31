@@ -21,6 +21,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <a href="https://lowentropyai.github.io/awesome-proactive-agent/"><img src="https://img.shields.io/badge/Website-Proactive%20Atlas-176357" alt="Website: Proactive Atlas"></a>
   <a href="https://github.com/LowEntropyAI/awesome-proactive-agent/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
 </p>
 
