@@ -30,7 +30,9 @@ const productNames = {
   'openai-dot':['OpenAI','dot','Background research','后台研究'],
   'meta-muse':['Meta','Muse','Ongoing goals','持续跟进目标'],
   'manus-cue':['Manus','Cue','Group delegation','群聊任务委派'],
-  'grok-bot':['xAI','Grok Bot','Scheduled routines','定时与事件触发']
+  'grok-bot':['xAI','Grok Bot','Scheduled routines','定时与事件触发'],
+  'claude-duet':['Anthropic','Claude Duet','Connected work apps','连接工作应用'],
+  'mistlabs-ambi':['Mistlabs','Ambi','Ambient context','环境上下文']
 };
 function projectMasthead(p) {
   const [publisher,name,en,zh]=productNames[p.id] || ['Project',p.title,p.groupLabel,p.groupZh];

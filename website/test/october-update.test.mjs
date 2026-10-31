@@ -57,3 +57,16 @@ test('November 1 backfill keeps first-posted dates, roles and evidence boundarie
   assert.ok(catalog.benchmarks.some(b => b.name === 'RobotEQ-Video'));
   assert.doesNotMatch(read('website/assets/overviews/risk-adaptive-feedback.svg'), /<script|<foreignObject|(?:href|src)=["']https?:/);
 });
+test('November 1 products keep their access and evidence boundaries', () => {
+  for (const id of ['claude-duet', 'mistlabs-ambi']) {
+    const p = catalog.projects.find(p => p.id === id);
+    assert.equal(p?.group, 'product', id);
+    assert.ok(p.thumbnail.brand, id);
+  }
+  const source = read('PROJECTS.md');
+  const row = name => source.split('\n').find(line => line.startsWith('| **' + name + '**'));
+  assert.match(row('Claude Duet'), /research preview by waitlist/);
+  assert.match(row('Claude Duet'), /no open implementation or independent proactive benchmark/);
+  assert.match(row('Mistlabs Ambi'), /planned, not shipped/);
+  assert.match(row('Mistlabs Ambi'), /no decision mechanism, measured evaluation or independent privacy audit/);
+});

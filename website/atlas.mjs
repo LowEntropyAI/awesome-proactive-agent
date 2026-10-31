@@ -8,7 +8,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': 
 const bi = (en, zh) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
 const external = 'target="_blank" rel="noopener noreferrer"';
 // Only artwork suitable for a small transparent mark belongs in this directory.
-const clearMarks = new Set(['openai-dot','grok-bot','meta-muse','openclaw','hermes-agent','letta-code','minecontext','gaia','memu','memubot','screenpipe']);
+const clearMarks = new Set(['openai-dot','grok-bot','meta-muse','openclaw','hermes-agent','letta-code','minecontext','gaia','memu','memubot','screenpipe','claude-duet','mistlabs-ambi']);
 const nativeMarks = new Set(['manus-cue','live-vlm-webui','proactivity-sdk']);
 export const projectMarkFile = id => clearMarks.has(id) ? id + '.clear.png' : nativeMarks.has(id) ? id + '.png' : '';
 // A wide wordmark is unreadable at chip size, so it stays on the project card only.

@@ -28,6 +28,8 @@ The canonical release, licensing, and checked-date entries live in [PROJECTS.md]
 
 October 31 product references: [Meta Muse, Manus Cue, and Grok Bot](PROJECTS.md#product-reference) cover persistent personal-agent work, goal continuity and/or configured routines. Their official documentation is not a comparative research evaluation; Cue's personal-agent infrastructure is not by itself evidence of autonomous need detection. [WakeGate](PROJECTS.md#wakegate-implemented-mechanism-versus-integration-design) belongs to supporting activation components, separate from the agent that ultimately chooses whether to help.
 
+November 1 product references: [Claude Duet and Mistlabs Ambi](PROJECTS.md#product-reference) both describe unprompted monitoring with approval or confirmation before consequential actions. Duet's scope is connected work apps; Ambi's includes permitted conversations and screens. Both descriptions are vendor documentation, not comparative evaluation.
+
 ## Research across Devices
 
 | Interface / setting | Methods and systems | Matching evaluation or human evidence |
