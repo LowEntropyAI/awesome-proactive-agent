@@ -71,7 +71,7 @@ test('home states the definition, then the latest work, the test, categories, th
  const hero=html.slice(0,html.indexOf('id="discover"'));
  assert.ok(hero.includes(definition.en));assert.match(hero,/href="#discover"/);
  assert.ok(hero.includes('class="initiative-scene"'));
- for (const label of ['Flight delayed','Nobody asked','Not now']) assert.ok(hero.includes('data-en="'+label+'"'));
+ for (const label of ['Proactive AI.','Before you ask.','Flight delayed','Alternative found','Your decision','Nothing changed yet.']) assert.ok(hero.includes('data-en="'+label+'"'));
  for (const element of ['timepiece','brief-sheet','schedule-slip']) assert.ok(hero.includes('class="'+element+'"'));
  assert.doesNotMatch(hero,/<svg\b|<img\b|<canvas\b|<picture\b/);
  assert.doesNotMatch(html,/browse-dock|directory-sidebar|reading-paths/);
@@ -82,6 +82,12 @@ test('the latest feed gives every card a cover, filters by category and leads wi
  const section=home(catalog).match(/<section id="discover".*?<\/section>\s*<section class="atlas-section atlas-tinted"/s)[0];
  const cards=section.match(/<article class="gallery-card"/g)||[];
  assert.equal(cards.length,6);assert.equal((section.match(/gallery-preview/g)||[]).length,6);
+ assert.equal((section.match(/class="initiative-note"/g)||[]).length,cards.length);
+ for(const p of recentPapers(catalog.papers)){
+   const n=p.initiativeNote;assert.ok(n.en && n.zh,p.id);
+   const line=galleryCard(p).match(/<p class="initiative-note">.*?<\/p>/s)?.[0];
+   assert.ok(line?.includes(n.zh),p.id);
+ }
  assert.equal((section.match(/<img /g)||[]).length,6);
  for(const [value] of facetGroups[0].options)assert.ok(section.includes('data-facet="question" data-value="'+value+'"'),value);
  assert.doesNotMatch(section,/Week of|This week/);

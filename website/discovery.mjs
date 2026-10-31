@@ -10,14 +10,13 @@ function initiativeScene() {
       <span class="dial-number n12">12</span><span class="dial-number n3">3</span><span class="dial-number n6">6</span><span class="dial-number n9">9</span>
       <i class="time-sector"></i><i class="hand previous"></i><i class="hand hour"></i><i class="hand minute"></i><i class="dial-pin"></i>
     </div>
-    <div class="schedule-slip"><small>${bi('Flight delayed','航班延误')}</small><div><del>18:40</del> <span aria-hidden="true">→</span> <strong>19:25</strong></div></div>
-    <div class="brief-leaf" aria-hidden="true"></div>
-    <div class="brief-sheet"><small><i aria-hidden="true">✦</i> ${bi('Nobody asked','没人开口')}</small>
-      <strong>${bi('You’ll miss your connection.','你会赶不上转机。')}</strong>
-      <p class="brief-offer">${bi('The 21:10 is ready to book.','21:10 的航班已备好，可直接预订。')}</p>
-      <div class="brief-choices"><span>${bi('Book it','预订')}</span><span>${bi('Not now','先不用')}</span></div>
+    <div class="brief-sheet"><div class="schedule-slip"><i aria-hidden="true"></i>${bi('Flight delayed','航班延误')}<span class="arrival-time"><del>18:40</del> → 19:25</span></div>
+      <strong>${bi('Your connection leaves at 19:10.','你的转机航班 19:10 起飞。')}</strong>
+      <p class="risk-detail">${bi('You’ll land 15 minutes too late.','你落地时，下一班飞机已经起飞 15 分钟了。')}</p>
+      <div class="flight-option"><strong>21:10</strong><div><small>${bi('Alternative found','已找到备选')}</small>${bi('Later flight to the same destination','稍晚出发，目的地不变')}</div></div>
+      <div class="flight-choice"><small>${bi('Your decision','由你决定')}</small>${bi('Keep your booking or switch flights?','保留原预订，还是改乘这班？')} <em>${bi('Nothing changed yet.','尚未改签。')}</em></div>
     </div>
-    <figcaption><span aria-hidden="true">01 /</span> ${bi('It noticed the risk, prepared a fix and left the choice to you.','它发现了风险，备好方案，把选择留给你。')}</figcaption></figure>`;
+    <figcaption>${bi('Illustrative scenario · Travel assistance','情境示例 · 出行助手')}</figcaption></figure>`;
 }
 export function feedIntro() {
   return `<header class="feed-masthead"><div><p class="feed-kicker">${bi('Latest research', '最新研究')}</p><h1>${bi('All recent papers', '全部近期论文')}</h1></div></header>`;

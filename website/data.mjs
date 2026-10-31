@@ -73,6 +73,7 @@ export function loadCatalog() {
   const shortSummaries = JSON.parse(read('website/content/paper-summaries.json'));
   const paperFigures = JSON.parse(read('website/content/paper-figures.json'));
   const recent = JSON.parse(read('website/content/recent.json'));
+  const initiativeNotes = JSON.parse(read('website/content/recent-initiative.json'));
   const recentFacets = JSON.parse(read('website/content/recent-facets.json'));
   const paperRoles = JSON.parse(read('website/content/paper-roles.json'));
   validateFacets(recentFacets, recent.papers, recent.streamingPapers);
@@ -86,6 +87,9 @@ export function loadCatalog() {
     paper.featureOrder = pick ? featured.indexOf(pick) : 999;
     if (paper.note) paper.evidenceUrl = 'https://github.com/LowEntropyAI/awesome-proactive-agent/blob/main/' + paper.note;
     if (recent.papers[paper.id]) {
+      const line = initiativeNotes[paper.id];
+      if (!line?.en?.trim() || !line.zh?.trim() || !['act','ask','eval','support'].includes(line.kind)) throw new Error('Missing initiative note: '+paper.id);
+      paper.initiativeNote = line;
       const { figure, release, ...metadata } = recent.papers[paper.id];
       Object.assign(paper, metadata, { dateSource: paper.primary });
       paper.facets = recentFacets[paper.id];

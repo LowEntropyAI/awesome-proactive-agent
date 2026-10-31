@@ -1,0 +1,282 @@
+{
+  "clariedge-grounded-clarification": {
+    "kind": "ask",
+    "en": "Retrieved passages can expose a second meaning, prompting the system to ask one clarifying question before answering.",
+    "zh": "检索到的段落可能揭示另一种解释，系统会据此决定是否先追问一句。"
+  },
+  "pam-proactive-robot-assistance": {
+    "kind": "act",
+    "en": "The robot compares what it sees with the person’s routine to choose a helpful task or leave them alone.",
+    "zh": "机器人把当前观察与个人习惯对照，自行选择帮哪件事，或不介入。"
+  },
+  "ask-less-attention-budgets": {
+    "kind": "ask",
+    "en": "Before asking again, the agent checks earlier answers and whether the new question is worth another interruption.",
+    "zh": "再次开口前，系统先查已有答案，再判断这个问题是否值得又一次打断。"
+  },
+  "evolife-active-navigation-clarification": {
+    "kind": "ask",
+    "en": "When a navigation instruction is unclear, the agent can stop moving and ask for directions or help.",
+    "zh": "导航指令不清楚时，智能体可以停下来问路或求助，而不是继续猜。"
+  },
+  "ask-relax-or-act": {
+    "kind": "eval",
+    "en": "Tests whether conflicting interpretations of a preference actually change the action enough to justify asking.",
+    "zh": "评测偏好的不同解释是否真的会改变行动，从而值得向用户追问。"
+  },
+  "askstream-streaming-clarification": {
+    "kind": "ask",
+    "en": "Given a video question, the model decides as frames arrive whether to wait, ask for missing information or answer.",
+    "zh": "收到视频问题后，模型随新画面判断是继续等、追问缺失信息，还是作答。"
+  },
+  "beyond-correctness-agentic-text-to-sql": {
+    "kind": "ask",
+    "en": "Before committing to SQL, the agent decides which ambiguities to ask about and which no longer matter.",
+    "zh": "生成最终 SQL 前，智能体决定哪些歧义必须追问，哪些已不影响查询。"
+  },
+  "cleat-value-guided-clarification": {
+    "kind": "ask",
+    "en": "The agent asks only when clarifying the request is expected to help more than proceeding with what it knows.",
+    "zh": "智能体比较追问与直接推进的收益，再决定值不值得占用用户一轮对话。"
+  },
+  "cowriter-proactive-coauthoring": {
+    "kind": "act",
+    "en": "An edit to the shared document can prompt the assistant to suggest a next step without waiting for a chat message.",
+    "zh": "作者修改共享文档就能触发下一步写作建议，不必另发一条聊天指令。"
+  },
+  "delegationbench-ask-before-acting": {
+    "kind": "eval",
+    "en": "Tests whether an agent distinguishes permission to act from a need to ask for consent or missing details.",
+    "zh": "评测智能体能否区分已获授权、需要先征得同意，以及仍缺少任务信息。"
+  },
+  "dive-proactive-intervention": {
+    "kind": "eval",
+    "en": "Its intervention tasks test whether a sight or sound warrants speaking up before the next user turn.",
+    "zh": "其中的介入任务评测视觉或语音线索是否值得让模型在用户下一轮发言前开口。"
+  },
+  "reqclarifybench-repository-requirements": {
+    "kind": "eval",
+    "en": "Tests whether a coding agent asks about an underspecified requirement before turning a guess into an implementation plan.",
+    "zh": "评测编程智能体会不会先问清模糊需求，而不是把猜测写进实现计划。"
+  },
+  "duplexact-content-grounded-interruption": {
+    "kind": "eval",
+    "en": "The help and safety tasks test when a spoken assistant should interrupt an ongoing utterance with useful information.",
+    "zh": "其中的帮助与安全任务评测语音助手何时应打断正在说话的人，给出有用提示。"
+  },
+  "egovoice-proactive-spoken-assistance": {
+    "kind": "act",
+    "en": "While watching and listening to a task unfold, the assistant chooses each second whether to give spoken guidance or keep listening.",
+    "zh": "助手持续观察并聆听任务进展，每秒决定给出口头指导还是继续听。"
+  },
+  "visual-proactive-math-tutoring": {
+    "kind": "act",
+    "en": "The tutor checks handwritten work for an error or a stalled step before offering help; a pause alone is not enough.",
+    "zh": "辅导系统查看手写步骤，判断是否出错或卡住，而不会仅因学生停笔就插话。"
+  },
+  "p3i-proactive-video-assistants": {
+    "kind": "eval",
+    "en": "The benchmark scores whether a warning fits the hazard and its timing, and the companion model learns when to stay silent.",
+    "zh": "基准同时评测警告内容与危险发生时机是否匹配，配套模型则学习何时保持沉默。"
+  },
+  "arise-social-robot-interaction": {
+    "kind": "act",
+    "en": "The robot uses social cues and remembered context to decide when to start speaking or gesturing.",
+    "zh": "机器人结合社交线索和记忆中的情境，决定何时主动说话或做出手势。"
+  },
+  "halo-human-grounded-proactivity": {
+    "kind": "eval",
+    "en": "Human judgments test not just whether an agent notices a need, but whether it intervenes too soon or goes further than wanted.",
+    "zh": "通过人的判断评测助手是否发现需求，以及介入是否太早、行动是否超过用户期望。"
+  },
+  "proactivecoach-hierarchical-procedures": {
+    "kind": "act",
+    "en": "The coach decides whether to stay quiet or offer a hint at the level of a phase, step or individual action.",
+    "zh": "教练判断是否保持安静，还是针对当前阶段、步骤或单个动作给出提示。"
+  },
+  "interactionbench-streaming-video": {
+    "kind": "eval",
+    "en": "Tests whether a video assistant stays quiet when an expected trigger almost happens but never does.",
+    "zh": "用看似即将发生却没有发生的事件，评测视频助手能否避免误报。"
+  },
+  "iprefbench-infer-or-ask": {
+    "kind": "eval",
+    "en": "Tests when a mobile agent should recover a preference from history and when only a question to the user can resolve it.",
+    "zh": "评测移动智能体何时应从历史推断偏好，何时只有询问用户才能确定。"
+  },
+  "jarvis-multiparty-proactive-speech": {
+    "kind": "act",
+    "en": "The meeting assistant notices missing or mistaken information and waits to see whether participants correct it before speaking.",
+    "zh": "会议助手发现遗漏或错误后，会先等参与者自行纠正，再决定是否补充。"
+  },
+  "knowing-when-to-yield": {
+    "kind": "ask",
+    "en": "After a user correction, the agent checks available evidence to decide whether to accept it, investigate or ask back.",
+    "zh": "收到用户纠正后，智能体根据证据判断是采纳、核查，还是反问澄清。"
+  },
+  "learning-to-clarify-limited-interaction": {
+    "kind": "ask",
+    "en": "With only a few turns available, the agent chooses which question would most improve the requested image.",
+    "zh": "在有限的对话轮数内，智能体挑选最有助于弄清目标图像的问题。"
+  },
+  "apa-long-term-preference-acquisition": {
+    "kind": "ask",
+    "en": "The agent asks about a preference now if knowing it could help enough future tasks to justify the effort and disclosure.",
+    "zh": "系统衡量偏好对未来任务的价值与回答、披露成本，决定现在要不要问。"
+  },
+  "attrify-soft-attribute-clarification": {
+    "kind": "ask",
+    "en": "An ambiguous quality such as originality prompts the system to ask what the user means before turning it into a scoring rule.",
+    "zh": "面对“原创性”这样的主观要求，系统先追问用户的含义，再将其转成评分规则。"
+  },
+  "lexpilot-proactive-legal-clarification": {
+    "kind": "eval",
+    "en": "Tests whether a legal model asks for missing case facts before predicting the outcome of individual claims.",
+    "zh": "评测法律模型在预测各项诉求结果前，能否主动问出缺失的案情。"
+  },
+  "live-opsd-streaming-self-distillation": {
+    "kind": "support",
+    "en": "Training-time evidence hints teach a streaming model which moments warrant a response without giving it those hints at inference.",
+    "zh": "训练时用证据提示教模型识别值得回应的时刻，实际观看视频时不再提供提示。"
+  },
+  "properagent-memory-driven-proactivity": {
+    "kind": "act",
+    "en": "The assistant checks whether a retrieved personal memory matters now before turning it into a reminder.",
+    "zh": "助手先判断检索到的个人记忆此刻是否有用，再决定要不要提醒。"
+  },
+  "omni-interactscope-proactive-evaluation": {
+    "kind": "eval",
+    "en": "Tests whether an event in a continuous stream prompts a timely tool call, reminder or next step without a fresh request.",
+    "zh": "评测连续音视频中的事件能否在没有新请求时触发及时的工具调用、提醒或指导。"
+  },
+  "onestreamer-streaming-video": {
+    "kind": "act",
+    "en": "It records visual evidence before a question is asked and waits for sufficient evidence before replying.",
+    "zh": "模型在提问前就记录带时间的视觉线索，并等到证据足够时才回答。"
+  },
+  "overact-proactive-over-authorization": {
+    "kind": "eval",
+    "en": "Tests whether an agent reaches for private data beyond what the user’s request authorizes.",
+    "zh": "评测智能体是否为了完成任务而额外访问用户并未授权的私人数据。"
+  },
+  "pace-response-timing": {
+    "kind": "act",
+    "en": "Under a standing video question, the system revises what to watch for and withholds its answer until the evidence is ready.",
+    "zh": "针对已给出的视频问题，系统调整观察重点，等证据充分才作答。"
+  },
+  "proactegomem-ambient-memory": {
+    "kind": "eval",
+    "en": "Tests when a wearable assistant should notify the user or begin and end memory capture without a new query.",
+    "zh": "评测可穿戴助手在没有新提问时，何时应提醒用户、开始或结束记忆记录。"
+  },
+  "proactgen-video-clarification": {
+    "kind": "ask",
+    "en": "A low-cost draft video helps the model spot which unstated preference to ask about before generating again.",
+    "zh": "模型先看低成本生成的样片，从中找出值得在重新生成前询问的隐含偏好。"
+  },
+  "replannable-dialogue-timelines": {
+    "kind": "act",
+    "en": "A planned follow-up can be delayed, revised or cancelled when new events make the original message unhelpful.",
+    "zh": "新事件让原定跟进失去意义时，助手可以推迟、改写或取消尚未发出的消息。"
+  },
+  "proactmem-event-driven-memory": {
+    "kind": "act",
+    "en": "A new event triggers help only after the agent checks that a remembered pattern holds up against past events.",
+    "zh": "新事件与记忆中的规律相符时，助手先用历史事件验证这一规律，再据此介入。"
+  },
+  "streamingjev-proactive-physical-ai": {
+    "kind": "act",
+    "en": "A timing gate watches the stream and triggers speech or a device call while observation continues.",
+    "zh": "时机判断模块持续观察，决定何时开口或调用设备，介入时也不停止观察。"
+  },
+  "event-driven-proactive-robot": {
+    "kind": "act",
+    "en": "A change in the scene prompts the robot to compare before and after and decide whether any physical help is needed.",
+    "zh": "场景变化触发机器人对照前后状态，自行判断是否需要动手帮忙。"
+  },
+  "promemagent-prospective-memory": {
+    "kind": "act",
+    "en": "A time or event cue revives a previously formed intention so the assistant can follow up without being reminded.",
+    "zh": "时间或事件线索唤起先前形成的意图，让助手不必等用户再次提醒就能跟进。"
+  },
+  "prov-mem-streaming-response": {
+    "kind": "support",
+    "en": "A memory layer controls when a video QA model emits an answer and suppresses repeats; it does not infer a new user need.",
+    "zh": "记忆组件控制视频问答模型何时输出并过滤重复回答，不负责发现新的用户需求。"
+  },
+  "masp-proactive-dialogue-self-play": {
+    "kind": "support",
+    "en": "Simulated users who push back give dialogue agents practice choosing how to advance a conversation.",
+    "zh": "借助会提出异议的模拟用户，让对话智能体练习如何主动推进交流。"
+  },
+  "streamvibe-evolving-user-intent": {
+    "kind": "act",
+    "en": "As the user’s goal changes on video, the agent checks progress and prior replies to decide whether another intervention would help.",
+    "zh": "视频中用户目标发生变化时，智能体结合任务进度和先前回复，判断是否还需介入。"
+  },
+  "surgstreamer-request-driven-monitoring": {
+    "kind": "act",
+    "en": "A surgical event triggers a previously requested alert, not an independent decision that a patient needs treatment.",
+    "zh": "手术事件触发的是预先要求的提示，而不是系统自主判断患者需要治疗。"
+  },
+  "syncpro-dual-stream-reasoning": {
+    "kind": "act",
+    "en": "The model keeps updating its internal reasoning while a separate response branch decides when to speak.",
+    "zh": "模型持续更新内部推理，同时由独立的回应分支决定何时对用户开口。"
+  },
+  "price-of-scale-proactive-recall": {
+    "kind": "support",
+    "en": "A calibrated retrieval threshold helps stop a growing memory store from turning coincidental matches into interruptions.",
+    "zh": "校准记忆检索阈值，避免记忆库变大后把偶然匹配误当成打断用户的理由。"
+  },
+  "uncertainty-proactive-assistant-alignment": {
+    "kind": "support",
+    "en": "This position paper asks how uncertainty about a person’s preferences should limit the initiative an assistant takes.",
+    "zh": "这篇观点论文讨论：当助手不确定用户偏好时，应如何限制主动介入的程度。"
+  },
+  "safe-pro-cross-modal-inquiry": {
+    "kind": "ask",
+    "en": "When an image and its accompanying text leave a safety-critical fact unclear, the model asks rather than guessing.",
+    "zh": "当图像与文字未能说明某个关键安全事实时，模型会主动追问，而不是猜测。"
+  },
+  "pitch-multiparty-intervention-timing": {
+    "kind": "eval",
+    "en": "Given a useful message, the benchmark asks when to post it in a group conversation or whether to withhold it entirely.",
+    "zh": "给定一条有用的消息，基准评测何时适合插入群聊，或是否根本不该发送。"
+  },
+  "joint-gating-memory-hints": {
+    "kind": "act",
+    "en": "The model first decides whether a hint is needed and only then draws on memory to generate one.",
+    "zh": "模型先判断用户此刻是否需要提示，只有需要时才结合记忆生成内容。"
+  },
+  "provider-side-injection-proactive-agents": {
+    "kind": "eval",
+    "en": "Tests whether a provider can divert an agent’s unrequested follow-up away from the user’s interests.",
+    "zh": "检验外部服务方能否把助手主动发起的跟进引向偏离用户利益的目标。"
+  },
+  "risk-adaptive-programming-feedback": {
+    "kind": "act",
+    "en": "In replayed course logs, a failed submission triggers a hint only when estimated risk justifies spending the intervention budget.",
+    "zh": "在课程日志回放中，提交失败后只有风险达到阈值且仍有介入预算，系统才给提示。"
+  },
+  "pv-care-eeg-proactive-mci": {
+    "kind": "act",
+    "en": "In simulated scenarios, EEG cues trigger spoken help during learning or recall while the assistant stays quiet at rest.",
+    "zh": "在模拟场景中，脑电线索触发学习或回忆时的语音帮助，休息时则保持安静。"
+  },
+  "roboteq-video-social-proactive": {
+    "kind": "eval",
+    "en": "Tests whether a proposed robot action suits the social scene in a video, not whether a robot initiates that action live.",
+    "zh": "评测候选机器人动作是否适合视频中的社交场景，不测试真实机器人是否自行发起动作。"
+  },
+  "talk2escape-navigation-dialogue": {
+    "kind": "ask",
+    "en": "The navigating agent detects a loop or drift and asks for help with its own route rather than offering unsolicited help to a person.",
+    "zh": "导航智能体发现自己绕圈或偏航后主动问路，这是为自身任务求助，而非主动服务用户。"
+  },
+  "visual-proactivity-handover": {
+    "kind": "act",
+    "en": "The robot moves first to signal a handover location and guide its partner toward it.",
+    "zh": "机器人先以自身动作示意交接位置，引导协作者靠近。"
+  }
+}
