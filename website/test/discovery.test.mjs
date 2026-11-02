@@ -91,7 +91,7 @@ test('the latest feed gives every card a cover, filters by category and leads wi
  assert.equal((section.match(/<img /g)||[]).length,6);
  for(const [value] of facetGroups[0].options)assert.ok(section.includes('data-facet="question" data-value="'+value+'"'),value);
  assert.doesNotMatch(section,/Week of|This week/);
- assert.equal(recentPapers(catalog.papers)[0].id,'halo-human-grounded-proactivity');
+ assert.ok(section.includes('data-paper-id="'+recentPapers(catalog.papers)[0].id+'"'));
 });
 test('every category shows a cover, three works and the shared filter label',()=>{
  const html=home(catalog);

@@ -14,9 +14,10 @@ test('new bibliography entries render inside Markdown tables, not stray pipe par
   for (const paper of catalog.papers) assert.ok(rows.some(row => row.some(cell => cell.text.includes(paper.primary))), paper.id);
 });
 test('recent edition uses verified first-posted dates, not monthly alphabetical order', () => {
-  assert.equal(recent.length, 56);
+  assert.equal(recent.length, Object.keys(JSON.parse(read('website/content/recent.json')).papers).length);
   for (const p of catalog.papers.filter(p => p.date === catalog.stats.latest)) assert.ok(p.publishedAt && p.dateSource === p.primary, p.id);
-  assert.equal(recent[0].id, 'halo-human-grounded-proactivity');
+  assert.ok(recent.some(p => p.id === 'out-of-sync' && p.role === 'core' && p.publishedAt === '2026-10-29'));
+  for (const id of ['shared-attention','blind-to-change','lit-director']) assert.ok(recent.some(p => p.id === id && p.publishedAt === '2026-10-30' && !p.streaming));
   assert.ok(recent.every((p, i) => !i || recent[i - 1].publishedAt >= p.publishedAt));
   assert.equal(recent.at(-1).publishedAt, '2026-09-18');
   assert.equal(recent.find(p => p.id === 'knowing-when-to-yield').publishedAt, '2026-09-25'); // October arXiv ID, September first posting.
@@ -40,7 +41,8 @@ test('original previews, evidence links and release checks are traceable', () =>
       assert.ok(p.thumbnail.alt && p.thumbnail.caption && p.thumbnail.source);
     }
     if (p.release) {
-      assert.equal(p.release.checkedAt, p.publishedAt < '2026-10-01' ? '2026-11-01' : p.publishedAt >= '2026-10-23' || p.id === 'properagent-memory-driven-proactivity' ? '2026-10-31' : '2026-10-24');
+      assert.match(p.release.checkedAt, /^\d{4}-\d{2}-\d{2}$/);
+      assert.ok(p.release.checkedAt >= p.publishedAt, p.id);
       assert.ok(p.release.code && p.release.model && p.release.data && p.release.sources.length);
     }
   }

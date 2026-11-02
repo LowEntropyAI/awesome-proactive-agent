@@ -1,4 +1,10 @@
 {
+    "out-of-sync": {"kind":"act","en":"The teammate joins a group chat on a system trigger to challenge premature consensus or invite a quieter student to speak.","zh":"系统检测到讨论契机时，AI 队友会质疑过早形成的共识，或邀请较少发言的学生加入。"},
+    "shared-attention": {"kind":"ask","en":"An agent can ask now, search for the missing fact itself, or work on something else while another agent has the user’s attention.","zh":"多个智能体共用一位用户的注意力时，智能体要决定现在追问、自行查找，还是先推进其他工作。"},
+    "blind-to-change": {"kind":"eval","en":"Tests whether a search agent checks for an unmentioned real-world change that could invalidate its recommendation.","zh":"评测搜索助手是否会主动核查用户没提到、却会让推荐失效的现实变化。"},
+    "p-contextbench": {"kind":"eval","en":"Its constraint-conflict tasks test when personal evidence warrants a warning or clarification instead of straightforward compliance.","zh":"其中的约束冲突任务评测：个人情境何时足以让助手先警示或追问，而不是直接照做。"},
+    "lit-director": {"kind":"ask","en":"Within an assigned video brief, the director asks a simulated user to resolve creative choices before spending effort on production.","zh":"在已有视频委托内，导演智能体会先向模拟用户问清创作选择，再推进制作。"},
+    "adaptive-personalization": {"kind":"eval","en":"Tests whether the assistant asks or confirms when an old preference becomes uncertain, instead of simply using it again.","zh":"评测旧偏好变得不确定时，助手是否会追问或确认，而不是照搬上一次的选择。"},
   "clariedge-grounded-clarification": {
     "kind": "ask",
     "en": "Retrieved passages can expose a second meaning, prompting the system to ask one clarifying question before answering.",

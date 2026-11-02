@@ -26,7 +26,7 @@ function filterControls(papers, compact) {
   const [primary, ...more] = facetGroups;
   return `<div class="gallery-primary-filter">${row(primary)}</div><details class="gallery-extra gallery-filter-panel"><summary>${bi('More filters: context, mechanism, contribution','更多筛选：场景、机制、贡献')} <span id="filter-badge"></span></summary><div class="gallery-facets">${more.map(row).join('')}</div><p class="gallery-filter-help">${bi('One choice per row; rows combine. Overlapping editorial lenses, not a complete taxonomy.','每行选一项，跨行取交集；这些是可重叠的编辑视角，而非完整分类。')}</p></details>`;
 }
-const statusZh = { 'Available': '已开放', 'Available (harness)': '推理 / 评测框架已开放', 'Not applicable': '不适用', 'Partial': '部分开放', 'Announced': '宣布待开放', 'Not verified': '未核实开放', 'Planned Nov 2026': '计划 2026 年 11 月', 'Website / tools only': '仅网页 / 辅助工具' };
+const statusZh = { 'Available': '已开放', 'Available (harness)': '推理 / 评测框架已开放', 'Not applicable': '不适用', 'On request': '需向作者申请', 'Partial': '部分开放', 'Announced': '宣布待开放', 'Not verified': '未核实开放', 'Planned Nov 2026': '计划 2026 年 11 月', 'Website / tools only': '仅网页 / 辅助工具' };
 function releaseInfo(p) {
   const r = p.release;
   if (!r) return '';

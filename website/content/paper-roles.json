@@ -1,4 +1,10 @@
 {
+    "out-of-sync": "core",
+    "shared-attention": "adjacent",
+    "blind-to-change": "adjacent",
+    "p-contextbench": "supporting",
+    "lit-director": "adjacent",
+    "adaptive-personalization": "adjacent",
  "apa-long-term-preference-acquisition": "core",
  "arise-social-robot-interaction": "core",
  "ask-less-attention-budgets": "adjacent",

@@ -207,6 +207,7 @@ The complete bibliography retains five research areas for archival browsing. Use
 | 2026-09 | **Foundations of Proactive Agents: Principles, Technical Layers, and Proactivity-Gym** | arXiv 2609 | `Definition` · `Human Factors` · `Benchmark` | [![arXiv](https://img.shields.io/badge/arXiv-2609.37267-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.37267) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2026-09/proactivity-gym-foundations.md) |
 | 2026-09 | **Referential Uncertainty in Human--AI Collaboration** | arXiv 2609 | `Human Factors` · `Clarification` · `Collaboration` | [![arXiv](https://img.shields.io/badge/arXiv-2609.39518-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.39518) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2026-09/referential-uncertainty-human-ai.md) |
 | 2026-10 | **Vision: "What Don't I Know About User's Preferences?" How Uncertainty Estimation Improves Proactive Assistant Alignment** | UbiComp 2026 Companion · PEACE workshop (arXiv record) | `Definition` · `Personalization` · `Human Factors` | [![arXiv](https://img.shields.io/badge/arXiv-2610.15948-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.15948) [![Notes](https://img.shields.io/badge/Notes-local-64748b.svg)](papers/arxiv/2026-10/uncertainty-proactive-assistant-alignment.md) [DOI](https://doi.org/10.1145/3798063.3839206) |
+| 2026-10 | **Out of sync: Accommodation, evaluation, and emergence in five weeks with an agentic AI teammate** | arXiv 2610 | `Collaboration` · `Human Factors` · `Intervention Timing` | [Paper](https://arxiv.org/abs/2610.41057) [Notes](papers/arxiv/2026-10/out-of-sync.md) |
 
 ### Proactive Interaction and Planning
 
@@ -272,6 +273,8 @@ The complete bibliography retains five research areas for archival browsing. Use
 | 2026-10 | **Learning What to Ask for Tomorrow: Active Preference Acquisition for Long-Term Personalized Web Agents** | arXiv 2610 | `Clarification` · `Personalization` · `Benchmark` | [Paper](https://arxiv.org/abs/2610.31107) [Code](https://github.com/xiaoqi-7/Active-Preference-Acquisition) [Notes](papers/arxiv/2026-10/apa-long-term-preference-acquisition.md) |
 | 2026-10 | **CoWriter: Guiding Methodological and Synergetic Human-LLM Co-Authoring** | arXiv 2610 | `Collaboration` · `Human Factors` · `Runtime Activation` | [Paper](https://arxiv.org/abs/2610.31277) [Notes](papers/arxiv/2026-10/cowriter-proactive-coauthoring.md) |
 | 2026-10 | **When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder** | arXiv 2610 | `Dialogue` · `Memory` · `Intervention Timing` | [Paper](https://arxiv.org/abs/2610.40611)  [Notes](papers/arxiv/2026-10/joint-gating-memory-hints.md) |
+| 2026-10 | **When Should AI Agents Ask? Clarification Requests Under Limited Human Attention** | arXiv 2610 | `Clarification` · `Planning` · `Human Factors` | [Paper](https://arxiv.org/abs/2610.41129) [Notes](papers/arxiv/2026-10/shared-attention.md) |
+| 2026-10 | **Learning to Interact and Direct: Co-Evolving Video Director Agents** | arXiv 2610 | `Clarification` · `Collaboration` · `Planning` | [Paper](https://arxiv.org/abs/2610.41865) [Project](https://huggingface.co/LIT-review/LIT) [Notes](papers/arxiv/2026-10/lit-director.md) |
 
 ### GUI, Mobile, OS and Coding Agents
 
@@ -444,6 +447,9 @@ The complete bibliography retains five research areas for archival browsing. Use
 | 2026-10 | **Proactive Memory for Event-Driven LLM Agents** | arXiv 2610 | `Memory` · `Runtime Activation` · `Benchmark` | [Paper](https://arxiv.org/abs/2610.36967) [Code (access unverified)](https://anonymous.4open.science/r/ProactMem-5351/) [Notes](papers/arxiv/2026-10/proactmem-event-driven-memory.md) |
 | 2026-10 | **AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding** | arXiv 2610 | `Streaming` · `Clarification` · `Benchmark` | [Paper](https://arxiv.org/abs/2610.38678) [Code](https://github.com/wanglu-cs/AskStream) [Dataset](https://huggingface.co/datasets/wanglucs/AskStream) [Project](https://askstream.top/) [Notes](papers/arxiv/2026-10/askstream-streaming-clarification.md) |
 | 2026-10 | **HALO: Human-Grounded Granular Evaluation of Proactive Agents** | arXiv 2610 | `Benchmark` · `Human Factors` · `Intervention Timing` | [Paper](https://arxiv.org/abs/2610.39086) [Code](https://github.com/CedricPei/HALO/) [Dataset](https://huggingface.co/datasets/CedPei/HALO-8K) [Notes](papers/arxiv/2026-10/halo-human-grounded-proactivity.md) |
+| 2026-10 | **BlindToChange: AI Agents Can Find Changes When Asked But Do They Look When Needed?** | arXiv 2610 | `Benchmark` · `Planning` · `Tool Use` | [Paper](https://arxiv.org/abs/2610.41435) [Code](https://github.com/Anirudh-Phukan/blind-to-change) [Dataset](https://huggingface.co/datasets/Anirudh-Phukan/blind-to-change) [Notes](papers/arxiv/2026-10/blind-to-change.md) |
+| 2026-10 | **P-ContextBench: From Personal Fact Recall to Personalized Agent Behavior** | arXiv 2610 | `Benchmark` · `Personalization` · `Clarification` | [Paper](https://arxiv.org/abs/2610.40959) [Code](https://github.com/TruePersona/P-ContextBench) [Notes](papers/arxiv/2026-10/p-contextbench.md) |
+| 2026-10 | **Adaptive Personalization Under Preference Epistemic Uncertainty** | arXiv 2610 | `Clarification` · `Benchmark` · `Personalization` | [Paper](https://arxiv.org/abs/2610.40930) [Project](https://github.com/priyanka-dey/adaptive-personalization) [Notes](papers/arxiv/2026-10/adaptive-personalization.md) |
 
 ---
 
@@ -559,6 +565,9 @@ For detailed comparison, see [BENCHMARKS.md](BENCHMARKS.md).
 | 2026-10 | **Omni-InteractScope** | Omni-InteractScope | continuous audiovisual streams | timely tools, query-free reminders and complete guidance sequences | [Paper](https://arxiv.org/abs/2610.35439) [Code](https://github.com/YinsongYan/Omni-InteractScope) [Dataset](https://huggingface.co/datasets/Darden7/Omni-InteractScope) |
 | 2026-10 | **ProactiveStream** | ProactMem | longitudinal structured event streams | validated memory-conditioned service opportunities and abstention | [Paper](https://arxiv.org/abs/2610.36967) |
 | 2026-10 | **iPrefBench** | iPrefBench | personalized iOS tasks | history inference versus necessary clarification | [Paper](https://arxiv.org/abs/2610.34735) |
+| 2026-10 | **BlindToChange** | BlindToChange | Web recommendations | Check whether recent events invalidate a recommendation | [Paper](https://arxiv.org/abs/2610.41435) |
+| 2026-10 | **P-ContextBench** | P-ContextBench | Personal assistants | Warn or clarify when a request conflicts with personal constraints (T5) | [Paper](https://arxiv.org/abs/2610.40959) |
+| 2026-10 | **Adaptive Personalization** | Adaptive Personalization | Preference-aware dialogue | Elicit, confirm or recalibrate rather than blindly reuse a preference | [Paper](https://arxiv.org/abs/2610.40930) |
 
 ---
 
