@@ -68,6 +68,10 @@ Static HTML routes work directly on GitHub Pages without SPA rewrites. The catal
 
 Deployment is complete only when the Actions deployment succeeds and the live home page, catalog, streaming directory, and overview assets return successfully. Do not infer deployment from a commit or an uploaded artifact alone.
 
+## Analytics
+
+Every page loads [GoatCounter](https://www.goatcounter.com/) with no cookies, reporting to https://proactive-lowentropy.goatcounter.com/. Clicks on external links are recorded as events named `out:<host><path>`, with the source page as the title. Localhost visits are not counted. Ad blockers undercount this technical audience, so read the numbers as a lower bound.
+
 ## Discovery edition QA
 
 The 2026-10-31 interaction refresh passed 28 automated tests and validation of 71 HTML files / 1,978 internal links. Browser checks covered desktop and 390 px mobile layout, both themes and languages, combined search/facets, URL filters, empty-result reset, progressive loading, quick-read Escape/focus return, original SVG cover loading and static detail pages. The visual refresh does not change bibliography membership or imply a new literature scan.

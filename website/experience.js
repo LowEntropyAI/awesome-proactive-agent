@@ -8,6 +8,15 @@ addEventListener('scroll', () => {
   document.body.classList.toggle('nav-tucked', scrollY > lastY && scrollY > 120);
   lastY = scrollY;
 }, { passive: true });
+// Outbound links count as GoatCounter events, without the query string; a blocked script just skips them.
+function countOutbound(event) {
+  if (event.type === 'auxclick' && event.button !== 1) return;
+  const link = event.target.closest('a[href]');
+  if (!link || !/^https?:$/.test(link.protocol) || link.host === location.host) return;
+  window.goatcounter?.count?.({ path: `out:${link.host}${link.pathname}`, title: location.pathname, event: true });
+}
+document.addEventListener('click', countOutbound);
+document.addEventListener('auxclick', countOutbound);
 const toggle = document.querySelector('#motion-toggle');
 if (cover && toggle) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');

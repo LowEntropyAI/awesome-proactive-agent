@@ -171,3 +171,7 @@ test('requested covers retain source attribution and descriptive captions',()=>{
   assert.doesNotMatch(svg,/<script|<foreignObject|(?:href|src)=["']https?:/);
  }
 });
+test('every page reports to the site analytics and counts outbound links',()=>{
+ assert.match(layout('T','<p>x</p>','',catalog.stats),/data-goatcounter="https:\/\/proactive-lowentropy\.goatcounter\.com\/count" async src="https:\/\/gc\.zgo\.at\/count\.js"/);
+ assert.match(read('website/experience.js'),/path: `out:\$\{link\.host\}\$\{link\.pathname\}`/);
+});
