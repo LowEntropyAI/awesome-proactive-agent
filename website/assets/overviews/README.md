@@ -62,3 +62,15 @@ Original figure URLs, author attribution, source pages and alternative text are 
 | `visual-proactivity.jpg` | [Visual Proactivity authors, Figure 1](https://arxiv.org/html/2609.21729v1/fig/intro.jpg) |
 | `talk2escape.png` | [Talk2Escape authors, Figure 2](https://arxiv.org/html/2609.28296v1/main.png) |
 | `risk-adaptive-feedback.svg` | [Risk-Adaptive Programming Feedback authors, Figure 1](https://arxiv.org/html/2609.29874v1/01_overall_research_framework.svg) |
+| `surgstream.png` | [SurgStream authors, Figure 1](https://arxiv.org/html/2611.01982v1/figure1_overview.png) |
+| `pro-memory.png` | [Pro-Memory authors, Figure 1](https://arxiv.org/html/2611.05731v1/promem_fig_1_new.png) |
+| `omni-life.jpg` | [Omni-Life authors, Figure 1](https://arxiv.org/html/2611.02835v1/figure1_selectable_top_padding.png) |
+| `turnwise.jpg` | [TurnWise authors, Figure 1](https://arxiv.org/html/2611.06728v1/teaser_1024.png) |
+| `cognitive-symbionts.jpg` | [Cognitive Symbionts authors, Figure 12](https://arxiv.org/html/2611.05376v1/figures/fig12_duplex.png) |
+| `streamclarify.png` | [StreamClarify authors, Figure 1](https://arxiv.org/html/2611.01263v1/main_figure.png) |
+| `vaguebench.png` | [VagueBench authors, Figure 1](https://arxiv.org/html/2611.01878v1/figure1.png) |
+| `bace-clarification.png` | [When to Ask, When to Answer authors, Figure 1](https://arxiv.org/html/2611.05517v1/plots/task_diagram.png) |
+| `referclaw.png` | [ReferClaw authors, Figure 1](https://arxiv.org/html/2611.07683v1/teaser.png) |
+| `clarifying-questions-reliance.png` | [Is That Clear? authors, Figure 1](https://arxiv.org/html/2611.01087v1/study-design.png) |
+| `interactionbench-voice.png` | [InteractionBench (voice) authors, Figure 1](https://arxiv.org/pdf/2611.02430v1#page=2) |
+| `dialogue-backdoors.png` | [Proactive Dialogue Backdoors authors, Fig. 1](https://arxiv.org/html/2611.06969v1/figure1.png) |

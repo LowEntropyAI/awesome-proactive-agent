@@ -70,3 +70,19 @@ test('November 1 products keep their access and evidence boundaries', () => {
   assert.match(row('Mistlabs Ambi'), /planned, not shipped/);
   assert.match(row('Mistlabs Ambi'), /no decision mechanism, measured evaluation or independent privacy audit/);
 });
+test('November 6 additions keep roles, streaming membership and release boundaries', () => {
+  const recent = recentPapers(catalog.papers);
+  const get = id => recent.find(p => p.id === id);
+  const roles = { 'surgstream-workflow-anchored': 'core', 'pro-memory-prospective-intentions': 'core', 'omni-life-realtime-assistants': 'core', 'turnwise-streaming-turn-credit': 'core', 'cognitive-symbionts-ahi': 'core', 'streamclarify-streaming-clarification': 'adjacent', 'vaguebench-proactive-elicitation': 'adjacent', 'bace-strategic-clarification': 'adjacent', 'referclaw-egocentric-intent': 'adjacent', 'clarifying-questions-reliance': 'adjacent', 'interactionbench-voice-timing': 'supporting', 'proactive-dialogue-backdoors': 'supporting' };
+  for (const [id, role] of Object.entries(roles)) assert.equal(get(id)?.role, role, id);
+  const stream = recentPapers(catalog.papers, { lens: 'streaming' }).map(p => p.id);
+  for (const id of ['surgstream-workflow-anchored', 'omni-life-realtime-assistants', 'turnwise-streaming-turn-credit', 'interactionbench-voice-timing']) assert.ok(stream.includes(id), id);
+  for (const id of ['pro-memory-prospective-intentions', 'vaguebench-proactive-elicitation', 'cognitive-symbionts-ahi']) assert.ok(!stream.includes(id), id);
+  assert.equal(get('referclaw-egocentric-intent').release.code, 'Announced');
+  assert.equal(get('omni-life-realtime-assistants').release.data, 'Partial');
+  assert.equal(get('turnwise-streaming-turn-credit').release.model, 'Available');
+  assert.equal(get('streamclarify-streaming-clarification').publishedAt, '2026-10-31');
+  assert.match(read('papers/arxiv/2026-11/cognitive-symbionts-ahi.md'), /no algorithm, prototype or measured results/);
+  const names = read('BENCHMARKS.md').split('\n').filter(l => l.startsWith('| **InteractionBench')).map(l => l.split(' | ')[0]);
+  assert.deepEqual(names, ['| **InteractionBench**', '| **InteractionBench (voice)**']);
+});
